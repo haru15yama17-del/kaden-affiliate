@@ -1,0 +1,156 @@
+[
+  {
+    "slug": "sample-fridge-a455",
+    "name": "サンプル冷蔵庫 A455（型番に差し替え）",
+    "brand": "BrandA", "category": "refrigerator", "releaseYear": 2025,
+    "priceRange": "9万〜12万円", "image": "",
+    "specs": [
+      { "label": "定格容量", "value": "455L" },
+      { "label": "ドア", "value": "フレンチ（観音）" },
+      { "label": "年間消費電力量", "value": "約280kWh/年" },
+      { "label": "本体幅", "value": "650mm" }
+    ],
+    "pros": ["（※編集部記述）幅650mmで4人家族向けの容量を確保", "野菜室が中段で使いやすい配置"],
+    "cons": ["（※編集部記述）製氷タンクの手入れパーツがやや多い"],
+    "bestFor": ["4人前後の家族", "作り置きで野菜を多く保存する人"],
+    "notFor": ["設置幅60cm未満の場所", "単身世帯"],
+    "reviewSummary": "（※サンプル。実際は公開された購入者評価の傾向を編集部が要約し、出典を記事末に明記すること）",
+    "rating": 4.2, "affiliate": { "amazonAsin": "", "rakutenUrl": "", "yahooUrl": "" },
+    "competitors": ["sample-fridge-b500"], "updatedAt": "2026-05-01"
+  },
+  {
+    "slug": "sample-fridge-b500",
+    "name": "サンプル冷蔵庫 B500（型番に差し替え）",
+    "brand": "BrandB", "category": "refrigerator", "releaseYear": 2025,
+    "priceRange": "11万〜14万円", "image": "",
+    "specs": [
+      { "label": "定格容量", "value": "500L" },
+      { "label": "ドア", "value": "フレンチ（観音）" },
+      { "label": "年間消費電力量", "value": "約300kWh/年" },
+      { "label": "本体幅", "value": "685mm" }
+    ],
+    "pros": ["（※編集部記述）500Lの大容量で買い置きに強い", "急速冷凍が速い"],
+    "cons": ["（※編集部記述）本体幅685mmで設置場所を選ぶ"],
+    "bestFor": ["5人以上の家族", "まとめ買い派"], "notFor": ["設置スペースが狭い住宅"],
+    "reviewSummary": "（※サンプル。実データに差し替え）",
+    "rating": 4.0, "affiliate": { "amazonAsin": "", "rakutenUrl": "", "yahooUrl": "" },
+    "competitors": ["sample-fridge-a455"], "updatedAt": "2026-05-01"
+  },
+  {
+    "slug": "sample-vacuum-stick-x",
+    "name": "サンプルスティック掃除機 X（型番に差し替え）",
+    "brand": "BrandC", "category": "vacuum", "releaseYear": 2025,
+    "priceRange": "3万〜5万円", "image": "",
+    "specs": [
+      { "label": "タイプ", "value": "コードレススティック" },
+      { "label": "運転時間", "value": "最長60分" },
+      { "label": "重量", "value": "1.5kg" },
+      { "label": "集じん方式", "value": "サイクロン" }
+    ],
+    "pros": ["（※編集部記述）1.5kgで階段も取り回しやすい", "ワンタッチでゴミ捨て可"],
+    "cons": ["（※編集部記述）強モードだと運転時間が短い"],
+    "bestFor": ["階段の多い家", "サッと掃除したい人"], "notFor": ["広い面積を一度に掃除したい人"],
+    "reviewSummary": "（※サンプル。実データに差し替え）",
+    "rating": 4.3, "affiliate": { "amazonAsin": "", "rakutenUrl": "", "yahooUrl": "" },
+    "competitors": ["sample-vacuum-robot-y"], "updatedAt": "2026-05-10"
+  },
+  {
+    "slug": "sample-vacuum-robot-y",
+    "name": "サンプルロボット掃除機 Y（型番に差し替え）",
+    "brand": "BrandD", "category": "vacuum", "releaseYear": 2025,
+    "priceRange": "6万〜9万円", "image": "",
+    "specs": [
+      { "label": "タイプ", "value": "ロボット" },
+      { "label": "マッピング", "value": "LiDAR" },
+      { "label": "自動ゴミ収集", "value": "対応" },
+      { "label": "稼働時間", "value": "約180分" }
+    ],
+    "pros": ["（※編集部記述）外出中に自動清掃できる", "自動ゴミ収集でメンテ頻度が低い"],
+    "cons": ["（※編集部記述）本体＋ステーションで設置場所が必要"],
+    "bestFor": ["共働きで掃除時間を取りにくい人", "床がフラットな間取り"], "notFor": ["段差や障害物が多い部屋"],
+    "reviewSummary": "（※サンプル。実データに差し替え）",
+    "rating": 4.1, "affiliate": { "amazonAsin": "", "rakutenUrl": "", "yahooUrl": "" },
+    "competitors": ["sample-vacuum-stick-x"], "updatedAt": "2026-05-10"
+  },
+  {
+    "slug": "sample-rice-ih-3go",
+    "name": "サンプル圧力IH炊飯器 3合（型番に差し替え）",
+    "brand": "BrandE", "category": "rice-cooker", "releaseYear": 2025,
+    "priceRange": "2万〜3.5万円", "image": "",
+    "specs": [
+      { "label": "加熱方式", "value": "圧力IH" },
+      { "label": "容量", "value": "3合" },
+      { "label": "内釜", "value": "鉄釜コート" },
+      { "label": "保温", "value": "最長24時間" }
+    ],
+    "pros": ["（※編集部記述）少量でもムラなく炊ける", "手入れパーツが2点で簡単"],
+    "cons": ["（※編集部記述）3合のため大家族には不足"],
+    "bestFor": ["1〜2人世帯", "省スペース重視"], "notFor": ["4人以上の家族"],
+    "reviewSummary": "（※サンプル。実データに差し替え）",
+    "rating": 4.4, "affiliate": { "amazonAsin": "", "rakutenUrl": "", "yahooUrl": "" },
+    "competitors": [], "updatedAt": "2026-05-12"
+  },
+  {
+    "slug": "sample-dryer-nano-pro",
+    "name": "サンプル ナノケアドライヤー Pro（型番に差し替え）",
+    "brand": "BrandF", "category": "personal-care", "releaseYear": 2025,
+    "priceRange": "1.5万〜2.5万円", "image": "",
+    "specs": [
+      { "label": "出力", "value": "1200W" },
+      { "label": "重量", "value": "約620g" },
+      { "label": "イオン機能", "value": "マイナスイオン搭載" },
+      { "label": "温度設定", "value": "3段階" }
+    ],
+    "pros": ["（※編集部記述）速乾でキューティクルへのダメージが少ない", "軽量で長時間使用も疲れにくい"],
+    "cons": ["（※編集部記述）同価格帯でやや割高感がある"],
+    "bestFor": ["毎日ヘアケアに時間をかけたい人", "ロング〜ミディアムヘアの方"],
+    "notFor": ["価格重視で機能より安さを求める人"],
+    "reviewSummary": "（※サンプル。実際は公開された購入者評価の傾向を編集部が要約し、出典を記事末に明記すること）",
+    "rating": 4.5,
+    "affiliate": { "amazonAsin": "", "rakutenUrl": "", "yahooUrl": "" },
+    "competitors": ["sample-hair-iron-slim"],
+    "updatedAt": "2026-06-01"
+  },
+  {
+    "slug": "sample-hair-iron-slim",
+    "name": "サンプル スリムヘアアイロン 26mm（型番に差し替え）",
+    "brand": "BrandG", "category": "personal-care", "releaseYear": 2025,
+    "priceRange": "8千〜1.5万円", "image": "",
+    "specs": [
+      { "label": "プレート径", "value": "26mm" },
+      { "label": "最高温度", "value": "200℃" },
+      { "label": "予熱時間", "value": "約30秒" },
+      { "label": "コード長", "value": "2.5m" }
+    ],
+    "pros": ["（※編集部記述）26mmで巻き髪〜ストレートまで幅広く使える", "予熱が30秒と短く朝の準備に向く"],
+    "cons": ["（※編集部記述）高温になるため慣れるまで注意が必要"],
+    "bestFor": ["セルフヘアセットを毎朝する人", "巻き髪とストレート両方したい人"],
+    "notFor": ["ヒートスタイリングをほとんどしない人"],
+    "reviewSummary": "（※サンプル。実データに差し替え）",
+    "rating": 4.2,
+    "affiliate": { "amazonAsin": "", "rakutenUrl": "", "yahooUrl": "" },
+    "competitors": ["sample-dryer-nano-pro"],
+    "updatedAt": "2026-06-01"
+  },
+  {
+    "slug": "sample-sonic-brush-w1",
+    "name": "サンプル 音波式電動歯ブラシ W1（型番に差し替え）",
+    "brand": "BrandH", "category": "personal-care", "releaseYear": 2025,
+    "priceRange": "1万〜1.8万円", "image": "",
+    "specs": [
+      { "label": "振動方式", "value": "音波振動" },
+      { "label": "振動数", "value": "約31,000回/分" },
+      { "label": "モード数", "value": "3モード" },
+      { "label": "充電方式", "value": "USB充電" }
+    ],
+    "pros": ["（※編集部記述）高振動で歯間プラークを効率よく除去", "USB充電で旅行・出張にも携帯しやすい"],
+    "cons": ["（※編集部記述）替えブラシのランニングコストが月500〜800円程度かかる"],
+    "bestFor": ["ホワイトニング・オーラルケアを意識している人", "歯のケアに投資したい方"],
+    "notFor": ["歯や歯茎が非常に敏感な方（まず歯科相談を）"],
+    "reviewSummary": "（※サンプル。実データに差し替え）",
+    "rating": 4.3,
+    "affiliate": { "amazonAsin": "", "rakutenUrl": "", "yahooUrl": "" },
+    "competitors": [],
+    "updatedAt": "2026-06-01"
+  }
+]

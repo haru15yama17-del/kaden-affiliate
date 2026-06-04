@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem app -Recurse | Select-Object FullName | ForEach-Object { $_.FullName.Replace\\(\"C:\\\\dev\\\\kaden-affiliate\\\\\", \"\"\\) })",
+      "PowerShell(Get-ChildItem components, lib, data, content -Recurse -ErrorAction SilentlyContinue | Select-Object FullName | ForEach-Object { $_.FullName.Replace\\(\"C:\\\\dev\\\\kaden-affiliate\\\\\", \"\"\\) })",
+      "PowerShell(Get-Process *)",
+      "PowerShell(cd C:\\\\dev\\\\kaden-affiliate; Start-Process powershell -ArgumentList \"-NoExit\", \"-Command\", \"cd C:\\\\dev\\\\kaden-affiliate; npm run dev\")",
+      "PowerShell(Stop-Process *)",
+      "PowerShell(head *)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\dev\\\\kaden-affiliate\\\\app\" -Recurse -Force | Select-Object FullName | ForEach-Object { $_.FullName.Replace\\('C:\\\\dev\\\\kaden-affiliate\\\\app\\\\', ''\\) } | Select-Object -First 50)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\dev\\\\kaden-affiliate\\\\components\" -Recurse -Force | Select-Object FullName | ForEach-Object { $_.FullName.Replace\\('C:\\\\dev\\\\kaden-affiliate\\\\components\\\\', ''\\) } | Select-Object -First 50)"
+    ]
+  }
+}
