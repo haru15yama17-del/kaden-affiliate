@@ -10,7 +10,9 @@ export type CategorySlug =
   | "aircon"         // エアコン
   | "beauty"         // 美容家電（美顔器・脱毛器・LEDマスク等）
   | "personal-care"  // パーソナルケア（ドライヤー・電動歯ブラシ・マッサージ器等）
-  | "gadget";        // ガジェット家電
+  | "gadget"         // ガジェット家電
+  | "cooking"        // 調理家電（ホットクック・電気圧力鍋・食洗機等）
+  | "seasonal";      // 季節家電（除湿機・扇風機・サーキュレーター・布団乾燥機等）
 
 export interface Category {
   slug: CategorySlug;

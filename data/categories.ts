@@ -2,6 +2,20 @@ import type { Category } from "./types";
 
 export const categories: Category[] = [
   {
+    slug: "cooking",
+    name: "調理家電",
+    intro:
+      "ホットクック・電気圧力鍋・食洗機など、調理の手間を省く電動調理家電。放置調理・時短・節水効果を軸に、ライフスタイルに合った一台を選ぶのがポイントです。",
+    selectionPoints: ["調理方式（圧力/無水/蒸し/低温）", "容量（人数×料理頻度）", "Wi-Fi・スマートアプリ連携", "お手入れのしやすさ", "給水・設置方式（食洗機）"]
+  },
+  {
+    slug: "seasonal",
+    name: "季節家電",
+    intro:
+      "除湿機・扇風機・サーキュレーター・布団乾燥機など、季節や室内環境に合わせて快適さを整える家電。省エネ・静音性・多機能のバランスで選びます。",
+    selectionPoints: ["用途（除湿/送風/乾燥）", "モーター方式（DC/AC）", "静音性（dB）", "消費電力・電気代", "対応畳数・タンク容量"]
+  },
+  {
     slug: "refrigerator",
     name: "冷蔵庫",
     intro:
