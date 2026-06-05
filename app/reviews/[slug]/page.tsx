@@ -61,6 +61,18 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
       { q: `${p.name}はどんな人向け？`, a: p.bestFor.join("／") },
     ];
 
+  // 内部リンク判定
+  const showFoodDeliveryLink =
+    p.category === "cooking" && !p.slug.includes("dishwasher");
+  const showWaterServerLink = p.slug.includes("dishwasher");
+
+  // 結論ボックスにCTAを表示するか
+  const hasCta =
+    !!(p.affiliate.ctaLabel) ||
+    !!(p.affiliate.amazonAsin) ||
+    !!(p.affiliate.rakutenUrl) ||
+    !!(p.affiliate.moshimoUrl);
+
   return (
     <article className="prose-article max-w-none pb-20">
       <JsonLd data={reviewJsonLd(p, `/reviews/${p.slug}`)} />
@@ -72,6 +84,22 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
           { name: p.name, path: `/reviews/${p.slug}` },
         ]}
       />
+
+      {/* ✅ この記事の結論（本文最上部） */}
+      <div className="not-prose my-4 rounded-2xl border-2 border-sub/30 bg-moss/40 p-5">
+        <p className="mb-1.5 text-xs font-bold uppercase tracking-widest text-sub">
+          ✅ この記事の結論
+        </p>
+        <p className="font-bold text-ink">{p.name}</p>
+        <p className="mt-1 text-sm text-ink/65">
+          こんな人におすすめ：{p.bestFor[0]}
+        </p>
+        {hasCta && (
+          <div className="mt-3">
+            <AffiliateButtons aff={p.affiliate} />
+          </div>
+        )}
+      </div>
 
       {/* Title */}
       <h1 className="font-serif text-3xl font-bold leading-tight">{p.name}のレビュー・評価</h1>
@@ -200,11 +228,43 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
       <h2>まとめ</h2>
       <p>{body.summary ?? `${p.name}は${p.bestFor.join("・")}におすすめできる一台です。一方で${p.notFor[0]}には別の選択肢も検討しましょう。`}</p>
 
+      {/* 内部リンク：調理家電 → 食材宅配 */}
+      {showFoodDeliveryLink && (
+        <div className="not-prose my-6 rounded-xl border border-accent/20 bg-blush/40 p-4">
+          <p className="text-sm font-bold text-ink">🥘 相性のいい食材宅配・ミールキット</p>
+          <p className="mt-1 text-xs text-ink/60">
+            ホットクック・電気圧力鍋と組み合わせると、食材宅配のカット済み食材で時短効果がさらにアップします。
+          </p>
+          <Link
+            href="/category/food-delivery"
+            className="mt-2 inline-block text-sm font-bold text-accent hover:underline"
+          >
+            食材宅配・ミールキット比較を見る →
+          </Link>
+        </div>
+      )}
+
+      {/* 内部リンク：食洗機 → ウォーターサーバー */}
+      {showWaterServerLink && (
+        <div className="not-prose my-6 rounded-xl border border-accent/20 bg-blush/40 p-4">
+          <p className="text-sm font-bold text-ink">💧 キッチンをもっと快適に</p>
+          <p className="mt-1 text-xs text-ink/60">
+            食洗機と合わせてウォーターサーバーを導入すると、キッチン全体の家事負担が大幅に軽減されます。
+          </p>
+          <Link
+            href="/category/water-server"
+            className="mt-2 inline-block text-sm font-bold text-accent hover:underline"
+          >
+            ウォーターサーバー比較を見る →
+          </Link>
+        </div>
+      )}
+
       {/* Final buy CTA */}
-      <div className="not-prose my-8 rounded-2xl border-2 border-accent/30 bg-orange-50/70 p-5">
-        <p className="mb-1 text-sm font-bold text-ink">{p.name} の購入はこちら</p>
+      <div className="not-prose my-8 rounded-2xl border-2 border-accent/30 bg-blush/50 p-5">
+        <p className="mb-1 text-sm font-bold text-ink">{p.name} の購入・申し込みはこちら</p>
         <p className="mb-4 text-xs text-ink/55">
-          価格は変動します。下記の各ストアで最新価格をご確認ください。
+          価格は変動します。下記の各ストアで最新価格・特典をご確認ください。
         </p>
         <AffiliateButtons aff={p.affiliate} />
       </div>

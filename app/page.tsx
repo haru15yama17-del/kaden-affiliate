@@ -27,6 +27,8 @@ export const metadata: Metadata = {
 };
 
 const catEmoji: Record<string, string> = {
+  "water-server": "💧", "food-delivery": "🥘",
+  cooking: "🍳", seasonal: "🌤️",
   refrigerator: "❄️", washer: "🌀", vacuum: "🌪️",
   microwave: "📡", "rice-cooker": "🍚", tv: "📺",
   aircon: "🌡️", beauty: "✨", gadget: "📱",
@@ -39,7 +41,7 @@ const trustItems = [
   { icon: "⚖️", text: "広告主優遇なし" },
 ];
 
-const hotCategories = ["refrigerator", "washer", "vacuum", "beauty", "personal-care"];
+const hotCategories = ["water-server", "food-delivery", "vacuum", "beauty", "personal-care"];
 
 export default async function HomePage() {
   const products = await getAllProducts();
@@ -75,7 +77,7 @@ export default async function HomePage() {
       {/* ─── Category grid ─── */}
       <section className="mb-10">
         <h2 className="mb-4 font-serif text-xl font-bold">カテゴリから探す</h2>
-        <div className="grid grid-cols-3 gap-2.5 sm:grid-cols-5">
+        <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4 lg:grid-cols-5">
           {categories.map((c) => (
             <Link
               key={c.slug}

@@ -12,7 +12,9 @@ export type CategorySlug =
   | "personal-care"  // パーソナルケア（ドライヤー・電動歯ブラシ・マッサージ器等）
   | "gadget"         // ガジェット家電
   | "cooking"        // 調理家電（ホットクック・電気圧力鍋・食洗機等）
-  | "seasonal";      // 季節家電（除湿機・扇風機・サーキュレーター・布団乾燥機等）
+  | "seasonal"       // 季節家電（除湿機・扇風機・サーキュレーター・布団乾燥機等）
+  | "water-server"   // ウォーターサーバー（天然水・RO水）
+  | "food-delivery"; // 食材宅配・ミールキット
 
 export interface Category {
   slug: CategorySlug;
@@ -27,6 +29,8 @@ export interface AffiliateLinks {
   yahooUrl?: string;
   moshimoUrl?: string;
   a8Url?: string;
+  officialUrl?: string;  // サービス系商品の公式サイトCTAリンク
+  ctaLabel?: string;     // ボタン文言（例："無料お試しに申し込む"）
 }
 
 export interface SpecRow {

@@ -3,6 +3,8 @@ import type { Product } from "@/data/types";
 import { Rating } from "./Rating";
 
 const catEmoji: Record<string, string> = {
+  "water-server": "💧", "food-delivery": "🥘",
+  cooking: "🍳", seasonal: "🌤️",
   refrigerator: "❄️", washer: "🌀", vacuum: "🌪️",
   microwave: "📡", "rice-cooker": "🍚", tv: "📺",
   aircon: "🌡️", beauty: "✨", gadget: "📱",

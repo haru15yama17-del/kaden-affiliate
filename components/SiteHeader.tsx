@@ -3,6 +3,10 @@ import { site } from "@/data/site";
 import { categories } from "@/data/categories";
 
 const catEmoji: Record<string, string> = {
+  "water-server": "💧",
+  "food-delivery": "🥘",
+  cooking: "🍳",
+  seasonal: "🌤️",
   refrigerator: "❄️",
   washer: "🌀",
   vacuum: "🌪️",
@@ -28,7 +32,7 @@ export function SiteHeader() {
             家
           </span>
           <span className="hidden sm:inline">{site.name}</span>
-          <span className="sm:hidden">家電えらび</span>
+          <span className="sm:hidden">主婦研究室</span>
         </Link>
 
         {/* Desktop nav */}

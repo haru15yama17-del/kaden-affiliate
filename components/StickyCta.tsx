@@ -22,9 +22,13 @@ export function StickyCta({
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  if (buttons.length === 0) return null;
+  // officialUrl または通常ストアボタンのどちらかがあれば表示
+  const ctaHref = aff.officialUrl || buttons[0]?.href;
+  const ctaLabel = aff.officialUrl
+    ? (aff.ctaLabel ?? "公式サイトで確認")
+    : "🛒 最安値を確認";
 
-  const primary = buttons[0];
+  if (!ctaHref) return null;
 
   return (
     <div
@@ -39,12 +43,12 @@ export function StickyCta({
             <p className="text-xs text-accent font-medium">{priceRange}</p>
           </div>
           <a
-            href={primary.href}
+            href={ctaHref}
             target="_blank"
             rel="nofollow sponsored noopener"
             className="shrink-0 rounded-xl bg-accent px-5 py-2.5 text-sm font-bold text-white shadow-cta transition-all hover:-translate-y-0.5 hover:brightness-110"
           >
-            🛒 最安値を確認
+            {ctaLabel}
           </a>
         </div>
       </div>
