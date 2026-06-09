@@ -10,6 +10,7 @@
     "gen:article": "node scripts/generate-article.mjs"
   },
   "dependencies": {
+    "@next/third-parties": "^16.2.7",
     "@supabase/supabase-js": "^2.107.0",
     "lucide-react": "^1.17.0",
     "next": "^14.2.35",
