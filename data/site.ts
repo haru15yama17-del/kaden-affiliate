@@ -1,5 +1,5 @@
 export const site = {
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.shufu-kaden.com",
   name: process.env.NEXT_PUBLIC_SITE_NAME ?? "主婦の家電と暮らし研究室",
   description:
     "主婦目線で家電・暮らしのサービスを比べるメディア。ウォーターサーバー・食材宅配から白物家電まで、忖度なしの比較と評価で失敗しない選び方をお届けします。",
