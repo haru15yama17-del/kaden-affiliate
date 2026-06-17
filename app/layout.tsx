@@ -8,7 +8,10 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: site.name, template: `%s | ${site.name}` },
-  description: site.description
+  description: site.description,
+  verification: {
+    google: "y5exJqVbjDJMOL-5MhSbDgCL90xMZnaqLNWvR6Z5NhE",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
