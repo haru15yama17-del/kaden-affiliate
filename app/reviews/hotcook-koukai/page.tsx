@@ -8,6 +8,32 @@ import { AffiliateButtons } from "@/components/AffiliateButtons";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import Link from "next/link";
 
+const IMG_BASE = "/images/reviews/hotcook-koukai";
+
+function ArticleImage({
+  src,
+  alt,
+  caption,
+}: {
+  src: string;
+  alt: string;
+  caption?: string;
+}) {
+  return (
+    <figure className="not-prose my-5">
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        className="w-full rounded-xl border border-ink/10 object-cover shadow-card"
+      />
+      {caption && (
+        <figcaption className="mt-1.5 text-center text-xs text-ink/45">{caption}</figcaption>
+      )}
+    </figure>
+  );
+}
+
 const PATH = "/reviews/hotcook-koukai";
 const TITLE = "ホットクックで後悔しない？店頭で聞いた5つのデメリットと、それでも共働き家庭に選ばれる理由";
 
@@ -61,6 +87,12 @@ export default async function HotcookKoukaiPage() {
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
       <p className="mt-2 text-sm text-ink/55">更新日：2026-06-18</p>
+
+      <ArticleImage
+        src={`${IMG_BASE}/hero.jpg`}
+        alt="シャープ ヘルシオ ホットクックで作った料理を家族で食べている様子"
+        caption="材料を入れてボタンを押すだけ。共働き家庭の夕食づくりを支えるホットクック"
+      />
 
       <RecommendBox
         name="ホットクック（ヘルシオ）"
@@ -117,6 +149,12 @@ export default async function HotcookKoukaiPage() {
         ：購入前に必ず設置場所の幅・奥行き・高さを測ること。2021年以降のモデルは横幅がコンパクトになり、1.0Lモデルは持ち手がなくさらにすっきりします。置き場所に不安があるなら、まずはレンタルで実物の大きさを確かめてから買うのが一番失敗しません。
       </p>
 
+      <ArticleImage
+        src={`${IMG_BASE}/size-comparison.jpg`}
+        alt="ホットクック2.4Lモデルと5合炊き炊飯器を並べて大きさを比較した写真"
+        caption="2.4Lモデルは5合炊き炊飯器よりひと回り大きいサイズ感"
+      />
+
       <div className="not-prose my-5 rounded-xl border border-accent/20 bg-blush/40 p-4">
         <p className="mb-1 text-sm font-bold text-ink">【はるの実機レビュー】</p>
         <p className="text-sm text-ink/75 leading-relaxed">
@@ -124,6 +162,10 @@ export default async function HotcookKoukaiPage() {
           <strong>横幅35cm×奥行31cm</strong>
           のスペースが確保できるか、巻き尺でしっかり確認してくださいね！
         </p>
+        <ArticleImage
+          src={`${IMG_BASE}/haru-store-check.jpg`}
+          alt="家電量販店の店頭でホットクックの横幅をメジャーで測っているはるの写真"
+        />
       </div>
 
       <h3>② 「時短家電」と思って買うと裏切られる</h3>
@@ -170,23 +212,77 @@ export default async function HotcookKoukaiPage() {
       <h2>後悔しないモデルの選び方（2026年・現行モデル）</h2>
       <p>容量＝家族の人数で選ぶのが基本です。</p>
 
+      <div className="not-prose my-5 grid grid-cols-3 gap-3">
+        <figure>
+          <img
+            src={`${IMG_BASE}/model-hw24h.jpg`}
+            alt="シャープ ヘルシオ ホットクック KN-HW24H（2.4L）の商品写真"
+            loading="lazy"
+            className="aspect-square w-full rounded-xl border border-ink/10 object-cover shadow-card"
+          />
+          <figcaption className="mt-1.5 text-center text-xs font-bold text-ink/55">KN-HW24H（2.4L）</figcaption>
+        </figure>
+        <figure>
+          <img
+            src={`${IMG_BASE}/model-hw16h.jpg`}
+            alt="シャープ ヘルシオ ホットクック KN-HW16H（1.6L）の商品写真"
+            loading="lazy"
+            className="aspect-square w-full rounded-xl border border-ink/10 object-cover shadow-card"
+          />
+          <figcaption className="mt-1.5 text-center text-xs font-bold text-ink/55">KN-HW16H（1.6L）</figcaption>
+        </figure>
+        <figure>
+          <img
+            src={`${IMG_BASE}/model-hw10g.jpg`}
+            alt="シャープ ヘルシオ ホットクック KN-HW10G（1.0L）の商品写真"
+            loading="lazy"
+            className="aspect-square w-full rounded-xl border border-ink/10 object-cover shadow-card"
+          />
+          <figcaption className="mt-1.5 text-center text-xs font-bold text-ink/55">KN-HW10G（1.0L）</figcaption>
+        </figure>
+      </div>
+
       <ComparisonTable items={[hw24h, hw16h, hw10g]} />
 
       <p>
         迷ったら、容量と価格と置きやすさのバランスが良い <strong>KN-HW16H</strong> が無難です。
       </p>
 
-      <div className="not-prose my-6 space-y-5">
+      <div className="not-prose my-6 space-y-6">
         <div>
-          <p className="mb-2 text-sm font-bold text-ink">▶ 楽天市場で KN-HW24H（2.4L）の最安値を見る</p>
+          <div className="mb-2 flex items-center gap-3">
+            <img
+              src={`${IMG_BASE}/model-hw24h.jpg`}
+              alt="シャープ ヘルシオ ホットクック KN-HW24H（2.4L）の商品写真"
+              loading="lazy"
+              className="h-14 w-14 shrink-0 rounded-lg border border-ink/10 object-cover"
+            />
+            <p className="text-sm font-bold text-ink">▶ 楽天市場で KN-HW24H（2.4L）の最安値を見る</p>
+          </div>
           <AffiliateButtons aff={hw24h.affiliate} />
         </div>
         <div>
-          <p className="mb-2 text-sm font-bold text-ink">▶ 楽天市場で KN-HW16H（1.6L）の最安値を見る</p>
+          <div className="mb-2 flex items-center gap-3">
+            <img
+              src={`${IMG_BASE}/model-hw16h.jpg`}
+              alt="シャープ ヘルシオ ホットクック KN-HW16H（1.6L）の商品写真"
+              loading="lazy"
+              className="h-14 w-14 shrink-0 rounded-lg border border-ink/10 object-cover"
+            />
+            <p className="text-sm font-bold text-ink">▶ 楽天市場で KN-HW16H（1.6L）の最安値を見る</p>
+          </div>
           <AffiliateButtons aff={hw16h.affiliate} />
         </div>
         <div>
-          <p className="mb-2 text-sm font-bold text-ink">▶ 楽天市場で KN-HW10G（1.0L）の最安値を見る</p>
+          <div className="mb-2 flex items-center gap-3">
+            <img
+              src={`${IMG_BASE}/model-hw10g.jpg`}
+              alt="シャープ ヘルシオ ホットクック KN-HW10G（1.0L）の商品写真"
+              loading="lazy"
+              className="h-14 w-14 shrink-0 rounded-lg border border-ink/10 object-cover"
+            />
+            <p className="text-sm font-bold text-ink">▶ 楽天市場で KN-HW10G（1.0L）の最安値を見る</p>
+          </div>
           <AffiliateButtons aff={hw10g.affiliate} />
         </div>
       </div>
@@ -199,6 +295,13 @@ export default async function HotcookKoukaiPage() {
         おすすめは、<strong>カット済み食材やミールキットを“入れるだけ”にできる食材宅配との組み合わせ</strong>
         です。献立を考える時間も、買い物も、下ごしらえも省けるので、「材料を入れてボタンを押すだけ」というホットクック本来のラクさを毎日味わえます。
       </p>
+
+      <ArticleImage
+        src={`${IMG_BASE}/meal-kit.jpg`}
+        alt="ホットクックで作った料理とオイシックスのミールキット食材を並べた写真"
+        caption="カット済み食材を入れるだけにすれば、献立も下ごしらえも手放せる"
+      />
+
       <ul>
         <li>
           <strong>オイシックスの「Kit Oisix」</strong>
@@ -230,6 +333,10 @@ export default async function HotcookKoukaiPage() {
           <br />
           最初は操作に戸惑うかもしれませんが、一度「予約調理」のラクさを覚えてしまえば、主婦にとってこれ以上ない最強の相棒になってくれますよ。気になっている方は、まずはご自宅のキッチンのサイズを測ることから始めてみてくださいね！
         </p>
+        <ArticleImage
+          src={`${IMG_BASE}/haru-portrait.jpg`}
+          alt="自宅のキッチンでホットクックを使っているはるの写真"
+        />
       </div>
 
       <h2>よくある質問</h2>

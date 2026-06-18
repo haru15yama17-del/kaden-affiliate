@@ -28,6 +28,7 @@
     "brand": "シャープ",
     "category": "cooking",
     "priceRange": "5.2万円前後",
+    "image": "/images/reviews/hotcook-koukai/model-hw24h.jpg",
     "specs": [
       {"label": "容量", "value": "2.4L（2〜6人向け）"},
       {"label": "調理方式", "value": "水なし自動調理・蒸し・低温調理・強火調理"},
@@ -51,6 +52,7 @@
     "brand": "シャープ",
     "category": "cooking",
     "priceRange": "4.2万円前後",
+    "image": "/images/reviews/hotcook-koukai/model-hw16h.jpg",
     "specs": [
       {"label": "容量", "value": "1.6L（2〜4人向け）"},
       {"label": "調理方式", "value": "水なし自動調理・蒸し・低温調理・強火調理"},
@@ -74,6 +76,7 @@
     "brand": "シャープ",
     "category": "cooking",
     "priceRange": "3.8万円前後",
+    "image": "/images/reviews/hotcook-koukai/model-hw10g.jpg",
     "specs": [
       {"label": "容量", "value": "1.0L（1〜2人向け）"},
       {"label": "調理方式", "value": "水なし自動調理・蒸し・低温調理"},
