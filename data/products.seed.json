@@ -23,6 +23,75 @@
     "updatedAt": "2026-06-04"
   },
   {
+    "slug": "sharp-kn-hw24h-hotkook",
+    "name": "シャープ ヘルシオ ホットクック KN-HW24H（2〜6人用 2.4L）",
+    "brand": "シャープ",
+    "category": "cooking",
+    "priceRange": "5.2万円前後",
+    "specs": [
+      {"label": "容量", "value": "2.4L（2〜6人向け）"},
+      {"label": "調理方式", "value": "水なし自動調理・蒸し・低温調理・強火調理"},
+      {"label": "Wi-Fi連携", "value": "あり（メニュー追加可能）"},
+      {"label": "自動メニュー数", "value": "100以上"},
+      {"label": "まぜ技ユニット", "value": "搭載（自動かき混ぜ）"}
+    ],
+    "pros": ["子ども含む大家族でも作り置きしやすい大容量", "強火調理に対応し焼き目・炒め系メニューの幅が広がった", "予約調理で帰宅後すぐ温かい料理が食べられる"],
+    "cons": ["横幅約35cmと設置スペースを取る", "加熱に30〜60分かかり即食には不向き", "3モデル中もっとも価格が高い"],
+    "bestFor": ["子どもがいて作り置きもしたいファミリー", "最新の強火調理機能を使いたい人", "2〜6人分をまとめて調理したい家庭"],
+    "notFor": ["置き場所に余裕がない家庭", "すぐ食べたい時短調理がメインの人"],
+    "rating": 4.4,
+    "reviewSummary": "",
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=616&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fwinkstore%2F263866%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fwinkstore%2Fi%2F10038469%2F", "yahooUrl": ""},
+    "competitors": ["sharp-kn-hw16h-hotkook", "sharp-kn-hw10g-hotkook", "iris-kpc-ma4-pressurecooker"],
+    "updatedAt": "2026-06-18"
+  },
+  {
+    "slug": "sharp-kn-hw16h-hotkook",
+    "name": "シャープ ヘルシオ ホットクック KN-HW16H（2〜4人用 1.6L）",
+    "brand": "シャープ",
+    "category": "cooking",
+    "priceRange": "4.2万円前後",
+    "specs": [
+      {"label": "容量", "value": "1.6L（2〜4人向け）"},
+      {"label": "調理方式", "value": "水なし自動調理・蒸し・低温調理・強火調理"},
+      {"label": "Wi-Fi連携", "value": "あり（メニュー追加可能）"},
+      {"label": "自動メニュー数", "value": "100以上"},
+      {"label": "まぜ技ユニット", "value": "搭載（自動かき混ぜ）"}
+    ],
+    "pros": ["24Hより約1万円安く価格と容量のバランスが良い", "夫婦+子ども1〜2人にちょうど良いサイズ", "強火調理対応で料理の幅が広い"],
+    "cons": ["大家族や作り置き多めだと容量不足になりやすい", "加熱に30〜60分かかり即食には不向き", "本体サイズはコンロ脇に置くとやや大きい"],
+    "bestFor": ["夫婦と子ども1〜2人の家庭", "価格と容量のバランスを重視する人", "置きやすさも価格も妥協したくない人"],
+    "notFor": ["4人以上で作り置きも多い家庭", "とにかく安いモデルを探している人"],
+    "rating": 4.4,
+    "reviewSummary": "",
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=616&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fd-shop1one%2F4550556130202%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fd-shop1one%2Fi%2F10240488%2F", "yahooUrl": ""},
+    "competitors": ["sharp-kn-hw24h-hotkook", "sharp-kn-hw10g-hotkook", "iris-kpc-ma4-pressurecooker"],
+    "updatedAt": "2026-06-18"
+  },
+  {
+    "slug": "sharp-kn-hw10g-hotkook",
+    "name": "シャープ ヘルシオ ホットクック KN-HW10G（1〜2人用 1.0L）",
+    "brand": "シャープ",
+    "category": "cooking",
+    "priceRange": "3.8万円前後",
+    "specs": [
+      {"label": "容量", "value": "1.0L（1〜2人向け）"},
+      {"label": "調理方式", "value": "水なし自動調理・蒸し・低温調理"},
+      {"label": "Wi-Fi連携", "value": "あり（メニュー追加可能）"},
+      {"label": "自動メニュー数", "value": "100以上"},
+      {"label": "持ち手", "value": "なし（よりコンパクト）"}
+    ],
+    "pros": ["3モデル中もっとも価格が安く小型", "持ち手がなくキッチンに置きやすい", "一人暮らし・夫婦のみの量にちょうど良い"],
+    "cons": ["子どもが増えると容量不足になりやすい", "強火調理など上位モデル限定機能は非対応", "作り置きを多めに作りたい場合は不向き"],
+    "bestFor": ["夫婦のみ・一人暮らしの家庭", "置き場所をできるだけコンパクトにしたい人", "初めてホットクックを試したい人"],
+    "notFor": ["3人以上の家族で作り置きしたい人", "強火調理など最新機能を使いたい人"],
+    "rating": 4.2,
+    "reviewSummary": "",
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=616&url=https%3A%2F%2Fitem.rakuten.co.jp%2Ftno%2Fkn-hw10g%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ftno%2Fi%2F10002642%2F", "yahooUrl": ""},
+    "competitors": ["sharp-kn-hw24h-hotkook", "sharp-kn-hw16h-hotkook", "iris-kpc-ma4-pressurecooker"],
+    "updatedAt": "2026-06-18"
+  },
+  {
     "slug": "iris-kpc-ma4-pressurecooker",
     "name": "アイリスオーヤマ 電気圧力鍋 KPC-MA4（4.0L）",
     "brand": "アイリスオーヤマ",

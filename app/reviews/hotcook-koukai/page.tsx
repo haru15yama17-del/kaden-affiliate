@@ -1,0 +1,246 @@
+import { getAllProducts } from "@/lib/data";
+import { buildMetadata } from "@/lib/seo";
+import { reviewJsonLd, faqJsonLd } from "@/lib/jsonld";
+import { JsonLd } from "@/components/JsonLd";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { RecommendBox } from "@/components/RecommendBox";
+import { AffiliateButtons } from "@/components/AffiliateButtons";
+import { ComparisonTable } from "@/components/ComparisonTable";
+import Link from "next/link";
+
+const PATH = "/reviews/hotcook-koukai";
+const TITLE = "ホットクックで後悔しない？店頭で聞いた5つのデメリットと、それでも共働き家庭に選ばれる理由";
+
+const faq = [
+  {
+    q: "ホットクックの型番（KN-HW24H/16H/10G）の違いは何ですか？",
+    a: "型番の数字は容量を表します（24＝2.4L／16＝1.6L／10＝1.0L）。末尾のアルファベットは発売世代で、Hが2024年モデル、Gが2021年モデルです。容量が大きいほど対応人数が増え、価格も上がります。",
+  },
+  {
+    q: "ホットクックを置くにはどれくらいのスペースが必要ですか？",
+    a: "2.4Lモデルは横幅約35cm×奥行31cmが目安です。左右の持ち手が張り出すぶん横幅を取るので、購入前に必ず設置場所をメジャーで確認してください。",
+  },
+  {
+    q: "ホットクックは時短家電ですか？",
+    a: "加熱自体は30〜60分かかるため、コンロのような「すぐできる」家電ではありません。朝に予約調理をセットしておき、帰宅後すぐ食べられるようにする使い方が本来の強みです。",
+  },
+  {
+    q: "迷ったらどのモデルを選べばいいですか？",
+    a: "容量・価格・置きやすさのバランスが良いKN-HW16H（1.6L）が、夫婦＋子ども1〜2人の家庭には無難な選択です。",
+  },
+];
+
+export async function generateMetadata() {
+  return buildMetadata({
+    title: `${TITLE}｜主婦の家電と暮らし研究室`,
+    description:
+      "ホットクックで後悔しやすい5つのポイントと、KN-HW24H/16H/10Gの選び方を主婦目線で解説。店頭で聞いたリアルな声と実機レビューも掲載。",
+    path: PATH,
+    type: "article",
+    modifiedTime: "2026-06-18",
+  });
+}
+
+export default async function HotcookKoukaiPage() {
+  const all = await getAllProducts();
+  const hw24h = all.find((p) => p.slug === "sharp-kn-hw24h-hotkook")!;
+  const hw16h = all.find((p) => p.slug === "sharp-kn-hw16h-hotkook")!;
+  const hw10g = all.find((p) => p.slug === "sharp-kn-hw10g-hotkook")!;
+
+  return (
+    <article className="prose-article max-w-none pb-20">
+      <JsonLd data={reviewJsonLd(hw24h, PATH)} />
+      <JsonLd data={faqJsonLd(faq)} />
+      <Breadcrumbs
+        items={[
+          { name: "トップ", path: "/" },
+          { name: "調理家電", path: "/category/cooking" },
+          { name: "ホットクックは後悔する？", path: PATH },
+        ]}
+      />
+
+      <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
+      <p className="mt-2 text-sm text-ink/55">更新日：2026-06-18</p>
+
+      <RecommendBox
+        name="ホットクック（ヘルシオ）"
+        bestFor={["帰宅後すぐ温かいご飯を食べたい共働き・子育て家庭"]}
+        aff={hw16h.affiliate}
+      />
+
+      <h2>最初に結論：ホットクックは「人を選ぶ」家電です</h2>
+      <p>
+        材料を入れてボタンを押すだけで、煮込み・無水調理・低温調理までほったらかしでできるシャープの「ヘルシオ
+        ホットクック」。共働き家庭の救世主と言われる一方で、「後悔した」「やめた」という声も一定数あります。
+      </p>
+      <p>
+        先に結論をお伝えすると、ホットクックは
+        <strong>合う人にはこれ以上ない時短家電、合わない人には“大きな置き物”</strong>
+        になります。下の早見表で、まず自分が向いているか確認してみてください。
+      </p>
+
+      <div className="not-prose grid gap-3 sm:grid-cols-2">
+        <div className="rounded-xl border border-ok/20 bg-ok/5 p-4">
+          <p className="mb-2 text-sm font-bold text-ink">▼ こんな人には向いています</p>
+          <ul className="space-y-1.5 text-sm text-ink/75">
+            <li>帰宅後すぐ温かいご飯を食べたい（＝予約調理を使いたい）共働き・子育て家庭</li>
+            <li>火のそばに立ちたくない、その間に別のことをしたい</li>
+            <li>毎日の献立を考えるのがしんどい</li>
+          </ul>
+        </div>
+        <div className="rounded-xl border border-ng/20 bg-ng/5 p-4">
+          <p className="mb-2 text-sm font-bold text-ink">▼ こんな人には向きません</p>
+          <ul className="space-y-1.5 text-sm text-ink/75">
+            <li>買い物してきて「今すぐパッと」作って食べたい人</li>
+            <li>キッチンに置く場所の余裕がほとんどない人</li>
+            <li>コンロで手早く作るのが好き・苦じゃない人</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="not-prose my-5 rounded-xl border border-accent/20 bg-blush/40 p-4">
+        <p className="mb-1 text-sm font-bold text-ink">【はるのワンポイント】</p>
+        <p className="text-sm text-ink/75 leading-relaxed">
+          実は私、家電量販店の店頭で店員さんに「正直、どんな人が返品したり後悔しがちですか？」とこっそり聞いてみたんです。すると店員さんは苦笑いしながら、「電子レンジのような『すぐ温まるスピード』を期待していた方と、サイズを測らずに買ってしまって『台所に置けなかった』という方ですね」と教えてくれました。このリアルな声を聞いて、ホットクックは「魔法の箱」ではなく、自分の生活スタイルやキッチンの環境に合うかどうかが一番重要なのだと痛感しました。
+        </p>
+      </div>
+
+      <h2>ホットクックで後悔しやすい5つのデメリット</h2>
+      <p>ここからは、実際に購入者が「後悔した」と感じやすいポイントを、対策とセットで正直にお伝えします。</p>
+
+      <h3>① とにかく大きい・置き場所に困る</h3>
+      <p>
+        一番多い後悔がこれです。2.4Lサイズは5合炊きの炊飯器より大きく、左右の持ち手が張り出しているぶん横幅をとります。「想像以上に大きかった」「置き場所がなくて出し入れが面倒になり、結局使わなくなった」という声はSNSでも定番です。
+      </p>
+      <p>
+        <strong>対策</strong>
+        ：購入前に必ず設置場所の幅・奥行き・高さを測ること。2021年以降のモデルは横幅がコンパクトになり、1.0Lモデルは持ち手がなくさらにすっきりします。置き場所に不安があるなら、まずはレンタルで実物の大きさを確かめてから買うのが一番失敗しません。
+      </p>
+
+      <div className="not-prose my-5 rounded-xl border border-accent/20 bg-blush/40 p-4">
+        <p className="mb-1 text-sm font-bold text-ink">【はるの実機レビュー】</p>
+        <p className="text-sm text-ink/75 leading-relaxed">
+          実際に店頭で2.4Lモデルを見たときの第一印象は、「えっ、炊飯器より全然デカい！」でした（笑）。念のため持参したメジャーで測ってみると、2.4Lモデルは横幅が約35cm。左右の持ち手がガッツリ張り出しているので、我が家の5合炊き炊飯器と並べたらキッチンの作業スペースが完全に消滅するサイズ感でした。購入前は「何となく置けそう」ではなく、必ず
+          <strong>横幅35cm×奥行31cm</strong>
+          のスペースが確保できるか、巻き尺でしっかり確認してくださいね！
+        </p>
+      </div>
+
+      <h3>② 「時短家電」と思って買うと裏切られる</h3>
+      <p>
+        ホットクックは“ほったらかし家電”であって、“スピード家電”ではありません。たとえばカレーの加熱は約50分かかります。コンロ感覚で「すぐできる」と思って使うと、「まだ？」とイライラする原因になります。
+      </p>
+      <p>
+        <strong>対策</strong>
+        ：朝に材料をセットして予約調理にしておけば、帰宅時に出来たてが完成しています。この「予約調理」こそホットクックの本領です。逆に“即・食べたい”人には電気圧力鍋のほうが向きます。
+      </p>
+
+      <h3>③ 価格が高い（本体4〜5万円台）</h3>
+      <p>
+        現行モデルは4〜5万円台が中心で、決して安い買い物ではありません。「高かったのに使わなくなった」が最大の後悔パターンです。
+      </p>
+      <p>
+        <strong>対策</strong>
+        ：いきなり買わず、月数千円のレンタルで「自分の生活に定着するか」を試すのが堅実です。型落ちモデル（後述）を狙えば1万円前後安く買えることもあります。
+      </p>
+
+      <h3>④ 型番がわかりにくく、世代で機能差がある</h3>
+      <p>
+        「KN-HW24H」のような型番は、はじめて見ると暗号のようです。さらに新しい世代でしか作れないメニュー（強火調理など）も増えているため、「安い旧型を買ったら欲しい機能がなかった」という後悔も起きます。
+      </p>
+      <p>
+        <strong>型番の読み方はシンプルです</strong>：
+      </p>
+      <ul>
+        <li><code>24 / 16 / 10</code> ＝ 容量（2.4L / 1.6L / 1.0L）</li>
+        <li>末尾のアルファベット ＝ 発売年（<strong>H＝2024年 / G＝2021年 / F＝2020年</strong>）</li>
+        <li><code>KN-HW</code> ＝ 自動かきまぜ＋Wi-Fi対応の上位「proシリーズ」</li>
+        <li><code>KN-MN</code> ＝ Wi-Fi非搭載・手動かきまぜの入門「withシリーズ」</li>
+      </ul>
+
+      <h3>⑤ 慣れとレシピの“最適化”が必要</h3>
+      <p>
+        最初は「思った味にならない」と感じる人もいます。これは多くが分量や加熱設定への慣れの問題で、公式レシピやレシピ本で勘所をつかむと一気に世界が変わります。
+      </p>
+      <p>
+        <strong>対策</strong>
+        ：最初の1〜2週間は公式アプリのレシピ通りに作るのがおすすめ。Wi-Fi対応モデルならメニューを追加ダウンロードしてレパートリーを増やせます。
+      </p>
+
+      <h2>後悔しないモデルの選び方（2026年・現行モデル）</h2>
+      <p>容量＝家族の人数で選ぶのが基本です。</p>
+
+      <ComparisonTable items={[hw24h, hw16h, hw10g]} />
+
+      <p>
+        迷ったら、容量と価格と置きやすさのバランスが良い <strong>KN-HW16H</strong> が無難です。
+      </p>
+
+      <div className="not-prose my-6 space-y-5">
+        <div>
+          <p className="mb-2 text-sm font-bold text-ink">▶ 楽天市場で KN-HW24H（2.4L）の最安値を見る</p>
+          <AffiliateButtons aff={hw24h.affiliate} />
+        </div>
+        <div>
+          <p className="mb-2 text-sm font-bold text-ink">▶ 楽天市場で KN-HW16H（1.6L）の最安値を見る</p>
+          <AffiliateButtons aff={hw16h.affiliate} />
+        </div>
+        <div>
+          <p className="mb-2 text-sm font-bold text-ink">▶ 楽天市場で KN-HW10G（1.0L）の最安値を見る</p>
+          <AffiliateButtons aff={hw10g.affiliate} />
+        </div>
+      </div>
+
+      <h2>ホットクック×食材宅配で「後悔ゼロ」に近づける</h2>
+      <p>
+        ホットクック最大の弱点は「結局、献立を考えて材料を切る手間は残る」こと。ここを解決すると、満足度が一気に上がります。
+      </p>
+      <p>
+        おすすめは、<strong>カット済み食材やミールキットを“入れるだけ”にできる食材宅配との組み合わせ</strong>
+        です。献立を考える時間も、買い物も、下ごしらえも省けるので、「材料を入れてボタンを押すだけ」というホットクック本来のラクさを毎日味わえます。
+      </p>
+      <ul>
+        <li>
+          <strong>オイシックスの「Kit Oisix」</strong>
+          ：必要な食材とレシピが2人前20分でセット。ホットクック対応に置き換えやすく、献立に悩みません。
+          <br />
+          ▶ <Link href="/reviews/oisix" className="font-bold text-accent hover:underline">はるのオイシックス（Kit Oisix）体験レビュー記事はこちら</Link>
+        </li>
+        <li>
+          <strong>ヨシケイのミールキット</strong>
+          ：毎日届くから買い物が不要。共働きの平日にぴったり。
+          <br />
+          ▶ <Link href="/reviews/yoshikei" className="font-bold text-accent hover:underline">はるのヨシケイ体験レビュー記事はこちら</Link>
+        </li>
+      </ul>
+      <p>「ホットクックを買ったのに結局使わない」を防ぐ一番の近道は、“材料の準備すら手放す”ことです。</p>
+
+      <h2>まとめ：ホットクックは「予約調理を使う人」なら後悔しない</h2>
+      <p>
+        ホットクックの後悔ポイントは、大きさ・スピード・価格・型番・慣れの5つ。でもそのほとんどは「予約調理を前提に使う」「置き場所を先に決める」「容量を正しく選ぶ」で回避できます。
+      </p>
+      <p>
+        火のそばに立たずに、帰宅したら温かいご飯ができている——その生活に価値を感じる共働き・子育て家庭なら、ホットクックは間違いなく“買ってよかった家電”になります。置き場所とサイズだけ確認して、まずは自分の暮らしに合う1台を選んでみてください。
+      </p>
+
+      <div className="not-prose my-5 rounded-xl border border-accent/20 bg-blush/40 p-4">
+        <p className="mb-1 text-sm font-bold text-ink">【最後にはるから】</p>
+        <p className="text-sm text-ink/75 leading-relaxed">
+          私自身、一番「買ってよかった！」と救われているのは、仕事でクタクタな平日夕方です。中学生の子どもがサッカーの練習から「お腹空いたー！」と帰ってきた瞬間、すでにアツアツのカレーやホロホロの牛すじ煮込みが完成している安心感たるや……！コンロの前に立ちっぱなしで調理する時間がゼロになるだけで、心と体力にものすごい余裕が生まれました。
+          <br />
+          最初は操作に戸惑うかもしれませんが、一度「予約調理」のラクさを覚えてしまえば、主婦にとってこれ以上ない最強の相棒になってくれますよ。気になっている方は、まずはご自宅のキッチンのサイズを測ることから始めてみてくださいね！
+        </p>
+      </div>
+
+      <h2>よくある質問</h2>
+      <div className="not-prose space-y-3">
+        {faq.map((x, i) => (
+          <div key={i} className="rounded-xl border border-ink/15 bg-white p-4 shadow-card">
+            <p className="font-bold text-sm text-ink">Q. {x.q}</p>
+            <p className="mt-1.5 text-sm text-ink/75 leading-relaxed">A. {x.a}</p>
+          </div>
+        ))}
+      </div>
+    </article>
+  );
+}
