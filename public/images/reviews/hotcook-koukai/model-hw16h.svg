@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="シャープ ヘルシオ ホットクック KN-HW16H 1.6Lの容量と価格を示すイラスト">
+  <rect width="240" height="240" rx="20" fill="#fef1f4"/>
+
+  <!-- pot icon (medium) -->
+  <rect x="84" y="86" width="72" height="58" rx="14" fill="#c45c78"/>
+  <rect x="84" y="86" width="72" height="17" rx="8" fill="#d77890"/>
+  <circle cx="120" cy="94" r="4.5" fill="#fef1f4"/>
+  <rect x="72" y="104" width="12" height="16" rx="5" fill="#c45c78"/>
+  <rect x="156" y="104" width="12" height="16" rx="5" fill="#c45c78"/>
+
+  <text x="120" y="178" text-anchor="middle" font-size="26" font-weight="800" fill="#2d2420">1.6L</text>
+  <text x="120" y="200" text-anchor="middle" font-size="15" font-weight="700" fill="#c4924a">4.2万円前後</text>
+
+  <!-- people icons: 2~4 -->
+  <g fill="#6a9e7f">
+    <circle cx="92" cy="222" r="6"/><rect x="86" y="228" width="12" height="10" rx="3"/>
+    <circle cx="110" cy="222" r="6"/><rect x="104" y="228" width="12" height="10" rx="3"/>
+  </g>
+  <text x="168" y="234" text-anchor="middle" font-size="13" font-weight="700" fill="#2d2420">2〜4人</text>
+</svg>

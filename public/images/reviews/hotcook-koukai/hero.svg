@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="ホットクックで作った料理を家族で囲むイメージイラスト">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fef1f4"/>
+      <stop offset="1" stop-color="#e8f0e9"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="28" fill="url(#bg)"/>
+
+  <!-- table -->
+  <ellipse cx="400" cy="235" rx="320" ry="170" fill="#f3e3c4"/>
+  <ellipse cx="400" cy="235" rx="320" ry="170" fill="none" stroke="#d9bd8e" stroke-width="3"/>
+
+  <!-- steam -->
+  <g stroke="#ffffff" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.75">
+    <path d="M372 95 C 360 75, 384 60, 372 40"/>
+    <path d="M400 90 C 388 70, 412 55, 400 35"/>
+    <path d="M428 95 C 416 75, 440 60, 428 40"/>
+  </g>
+
+  <!-- hot cook pot -->
+  <ellipse cx="400" cy="222" rx="92" ry="34" fill="#a8445b"/>
+  <rect x="308" y="170" width="184" height="60" rx="30" fill="#c45c78"/>
+  <ellipse cx="400" cy="170" rx="92" ry="22" fill="#d77890"/>
+  <circle cx="400" cy="170" r="9" fill="#fef1f4"/>
+  <rect x="296" y="190" width="20" height="14" rx="6" fill="#c45c78"/>
+  <rect x="484" y="190" width="20" height="14" rx="6" fill="#c45c78"/>
+
+  <!-- bowls around the pot -->
+  <g>
+    <ellipse cx="240" cy="300" rx="46" ry="26" fill="#fdf9f5" stroke="#e3d3bd" stroke-width="2"/>
+    <circle cx="240" cy="296" r="12" fill="#c4924a"/>
+    <ellipse cx="560" cy="300" rx="46" ry="26" fill="#fdf9f5" stroke="#e3d3bd" stroke-width="2"/>
+    <circle cx="560" cy="296" r="12" fill="#6a9e7f"/>
+    <ellipse cx="260" cy="190" rx="38" ry="22" fill="#fdf9f5" stroke="#e3d3bd" stroke-width="2"/>
+    <circle cx="260" cy="187" r="9" fill="#c45c78"/>
+    <ellipse cx="540" cy="190" rx="38" ry="22" fill="#fdf9f5" stroke="#e3d3bd" stroke-width="2"/>
+    <circle cx="540" cy="187" r="9" fill="#c4924a"/>
+  </g>
+
+  <!-- family peeking from table edges (flat-lay style) -->
+  <g>
+    <!-- parent top -->
+    <circle cx="400" cy="60" r="42" fill="#f4c89a"/>
+    <path d="M358 40 C 358 10, 442 10, 442 40 L 442 55 C 410 30, 390 30, 358 55 Z" fill="#5a4334"/>
+    <!-- parent bottom -->
+    <circle cx="400" cy="410" r="42" fill="#f6d4ad"/>
+    <path d="M360 392 C 360 425, 440 425, 440 392 L 440 380 C 410 405, 390 405, 360 380 Z" fill="#caa46b"/>
+    <!-- child left -->
+    <circle cx="118" cy="235" r="34" fill="#f6d4ad"/>
+    <path d="M90 215 C 90 192, 146 192, 146 215 L 146 226 C 122 206, 114 206, 90 226 Z" fill="#7a5a3c"/>
+    <!-- child right -->
+    <circle cx="682" cy="235" r="34" fill="#f4c89a"/>
+    <path d="M654 215 C 654 192, 710 192, 710 215 L 710 226 C 686 206, 678 206, 654 226 Z" fill="#3d2e22"/>
+  </g>
+</svg>

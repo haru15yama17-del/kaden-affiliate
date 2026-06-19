@@ -7,6 +7,7 @@ import { RecommendBox } from "@/components/RecommendBox";
 import { AffiliateButtons } from "@/components/AffiliateButtons";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import Link from "next/link";
+import type { ReactNode } from "react";
 
 const IMG_BASE = "/images/reviews/hotcook-koukai";
 
@@ -31,6 +32,20 @@ function ArticleImage({
         <figcaption className="mt-1.5 text-center text-xs text-ink/45">{caption}</figcaption>
       )}
     </figure>
+  );
+}
+
+function HaruBubble({ label, children }: { label: string; children: ReactNode }) {
+  return (
+    <div className="not-prose my-5 flex items-start gap-3">
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent/15 text-2xl">
+        🙋‍♀️
+      </div>
+      <div className="relative flex-1 rounded-2xl rounded-tl-none border border-accent/20 bg-blush/40 p-4">
+        <p className="mb-1 text-xs font-bold uppercase tracking-wide text-accent/75">{label}</p>
+        <div className="text-sm text-ink/75 leading-relaxed">{children}</div>
+      </div>
+    </div>
   );
 }
 
@@ -89,8 +104,8 @@ export default async function HotcookKoukaiPage() {
       <p className="mt-2 text-sm text-ink/55">更新日：2026-06-18</p>
 
       <ArticleImage
-        src={`${IMG_BASE}/hero.jpg`}
-        alt="シャープ ヘルシオ ホットクックで作った料理を家族で食べている様子"
+        src={`${IMG_BASE}/hero.svg`}
+        alt="ホットクックで作った料理を家族で囲むイメージイラスト"
         caption="材料を入れてボタンを押すだけ。共働き家庭の夕食づくりを支えるホットクック"
       />
 
@@ -150,23 +165,18 @@ export default async function HotcookKoukaiPage() {
       </p>
 
       <ArticleImage
-        src={`${IMG_BASE}/size-comparison.jpg`}
-        alt="ホットクック2.4Lモデルと5合炊き炊飯器を並べて大きさを比較した写真"
-        caption="2.4Lモデルは5合炊き炊飯器よりひと回り大きいサイズ感"
+        src={`${IMG_BASE}/size-comparison.svg`}
+        alt="ホットクック2.4Lと5合炊き炊飯器の大きさを比較した図解イラスト"
+        caption="2.4Lモデルは5合炊き炊飯器よりひと回り大きいサイズ感（目安）"
       />
 
-      <div className="not-prose my-5 rounded-xl border border-accent/20 bg-blush/40 p-4">
-        <p className="mb-1 text-sm font-bold text-ink">【はるの実機レビュー】</p>
-        <p className="text-sm text-ink/75 leading-relaxed">
+      <HaruBubble label="はるの実機レビュー">
+        <p>
           実際に店頭で2.4Lモデルを見たときの第一印象は、「えっ、炊飯器より全然デカい！」でした（笑）。念のため持参したメジャーで測ってみると、2.4Lモデルは横幅が約35cm。左右の持ち手がガッツリ張り出しているので、我が家の5合炊き炊飯器と並べたらキッチンの作業スペースが完全に消滅するサイズ感でした。購入前は「何となく置けそう」ではなく、必ず
           <strong>横幅35cm×奥行31cm</strong>
           のスペースが確保できるか、巻き尺でしっかり確認してくださいね！
         </p>
-        <ArticleImage
-          src={`${IMG_BASE}/haru-store-check.jpg`}
-          alt="家電量販店の店頭でホットクックの横幅をメジャーで測っているはるの写真"
-        />
-      </div>
+      </HaruBubble>
 
       <h3>② 「時短家電」と思って買うと裏切られる</h3>
       <p>
@@ -215,8 +225,8 @@ export default async function HotcookKoukaiPage() {
       <div className="not-prose my-5 grid grid-cols-3 gap-3">
         <figure>
           <img
-            src={`${IMG_BASE}/model-hw24h.jpg`}
-            alt="シャープ ヘルシオ ホットクック KN-HW24H（2.4L）の商品写真"
+            src={`${IMG_BASE}/model-hw24h.svg`}
+            alt="シャープ ヘルシオ ホットクック KN-HW24H（2.4L）の容量と価格を示すイラスト"
             loading="lazy"
             className="aspect-square w-full rounded-xl border border-ink/10 object-cover shadow-card"
           />
@@ -224,8 +234,8 @@ export default async function HotcookKoukaiPage() {
         </figure>
         <figure>
           <img
-            src={`${IMG_BASE}/model-hw16h.jpg`}
-            alt="シャープ ヘルシオ ホットクック KN-HW16H（1.6L）の商品写真"
+            src={`${IMG_BASE}/model-hw16h.svg`}
+            alt="シャープ ヘルシオ ホットクック KN-HW16H（1.6L）の容量と価格を示すイラスト"
             loading="lazy"
             className="aspect-square w-full rounded-xl border border-ink/10 object-cover shadow-card"
           />
@@ -233,8 +243,8 @@ export default async function HotcookKoukaiPage() {
         </figure>
         <figure>
           <img
-            src={`${IMG_BASE}/model-hw10g.jpg`}
-            alt="シャープ ヘルシオ ホットクック KN-HW10G（1.0L）の商品写真"
+            src={`${IMG_BASE}/model-hw10g.svg`}
+            alt="シャープ ヘルシオ ホットクック KN-HW10G（1.0L）の容量と価格を示すイラスト"
             loading="lazy"
             className="aspect-square w-full rounded-xl border border-ink/10 object-cover shadow-card"
           />
@@ -252,8 +262,8 @@ export default async function HotcookKoukaiPage() {
         <div>
           <div className="mb-2 flex items-center gap-3">
             <img
-              src={`${IMG_BASE}/model-hw24h.jpg`}
-              alt="シャープ ヘルシオ ホットクック KN-HW24H（2.4L）の商品写真"
+              src={`${IMG_BASE}/model-hw24h.svg`}
+              alt="ホットクック KN-HW24H（2.4L）の容量を示すイラスト"
               loading="lazy"
               className="h-14 w-14 shrink-0 rounded-lg border border-ink/10 object-cover"
             />
@@ -264,8 +274,8 @@ export default async function HotcookKoukaiPage() {
         <div>
           <div className="mb-2 flex items-center gap-3">
             <img
-              src={`${IMG_BASE}/model-hw16h.jpg`}
-              alt="シャープ ヘルシオ ホットクック KN-HW16H（1.6L）の商品写真"
+              src={`${IMG_BASE}/model-hw16h.svg`}
+              alt="ホットクック KN-HW16H（1.6L）の容量を示すイラスト"
               loading="lazy"
               className="h-14 w-14 shrink-0 rounded-lg border border-ink/10 object-cover"
             />
@@ -276,8 +286,8 @@ export default async function HotcookKoukaiPage() {
         <div>
           <div className="mb-2 flex items-center gap-3">
             <img
-              src={`${IMG_BASE}/model-hw10g.jpg`}
-              alt="シャープ ヘルシオ ホットクック KN-HW10G（1.0L）の商品写真"
+              src={`${IMG_BASE}/model-hw10g.svg`}
+              alt="ホットクック KN-HW10G（1.0L）の容量を示すイラスト"
               loading="lazy"
               className="h-14 w-14 shrink-0 rounded-lg border border-ink/10 object-cover"
             />
@@ -297,8 +307,8 @@ export default async function HotcookKoukaiPage() {
       </p>
 
       <ArticleImage
-        src={`${IMG_BASE}/meal-kit.jpg`}
-        alt="ホットクックで作った料理とオイシックスのミールキット食材を並べた写真"
+        src={`${IMG_BASE}/meal-kit.svg`}
+        alt="ホットクックの鍋アイコンとカット済み食材のアイコンを組み合わせた図解イラスト"
         caption="カット済み食材を入れるだけにすれば、献立も下ごしらえも手放せる"
       />
 
@@ -326,18 +336,14 @@ export default async function HotcookKoukaiPage() {
         火のそばに立たずに、帰宅したら温かいご飯ができている——その生活に価値を感じる共働き・子育て家庭なら、ホットクックは間違いなく“買ってよかった家電”になります。置き場所とサイズだけ確認して、まずは自分の暮らしに合う1台を選んでみてください。
       </p>
 
-      <div className="not-prose my-5 rounded-xl border border-accent/20 bg-blush/40 p-4">
-        <p className="mb-1 text-sm font-bold text-ink">【最後にはるから】</p>
-        <p className="text-sm text-ink/75 leading-relaxed">
+      <HaruBubble label="最後にはるから">
+        <p>
           私自身、一番「買ってよかった！」と救われているのは、仕事でクタクタな平日夕方です。中学生の子どもがサッカーの練習から「お腹空いたー！」と帰ってきた瞬間、すでにアツアツのカレーやホロホロの牛すじ煮込みが完成している安心感たるや……！コンロの前に立ちっぱなしで調理する時間がゼロになるだけで、心と体力にものすごい余裕が生まれました。
-          <br />
+        </p>
+        <p className="mt-2">
           最初は操作に戸惑うかもしれませんが、一度「予約調理」のラクさを覚えてしまえば、主婦にとってこれ以上ない最強の相棒になってくれますよ。気になっている方は、まずはご自宅のキッチンのサイズを測ることから始めてみてくださいね！
         </p>
-        <ArticleImage
-          src={`${IMG_BASE}/haru-portrait.jpg`}
-          alt="自宅のキッチンでホットクックを使っているはるの写真"
-        />
-      </div>
+      </HaruBubble>
 
       <h2>よくある質問</h2>
       <div className="not-prose space-y-3">
