@@ -105,8 +105,8 @@ export default async function HotcookKoukaiPage() {
 
       <ArticleImage
         src={`${IMG_BASE}/hero.svg`}
-        alt="ホットクックで作った料理を家族で囲むイメージイラスト"
-        caption="材料を入れてボタンを押すだけ。共働き家庭の夕食づくりを支えるホットクック"
+        alt="ホットクック本体のシルエットと、無水調理・予約調理・自動かきまぜ・保温の機能アイコンを示す図解"
+        caption="無水調理・予約調理・自動かきまぜ・保温——材料を入れてボタンを押すだけの理由"
       />
 
       <RecommendBox
