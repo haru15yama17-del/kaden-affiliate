@@ -122,7 +122,7 @@
     "notFor": ["少人数で大容量が不要な人", "炒め調理を重視する人"],
     "rating": 4.1,
     "reviewSummary": "",
-    "affiliate": {"amazonAsin": "", "rakutenUrl": "", "yahooUrl": ""},
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fyamada-denki%2F3449743019%2F", "yahooUrl": ""},
     "competitors": ["sharp-kn-hw24g-hotkook"],
     "updatedAt": "2026-06-04"
   },
