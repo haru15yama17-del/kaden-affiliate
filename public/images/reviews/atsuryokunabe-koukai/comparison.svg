@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="電気圧力鍋の「加圧式」と、ホットクックの「無水・自動かきまぜ式」の調理方式の違いを示す図解">
+  <rect width="640" height="400" rx="20" fill="#fdf9f5"/>
+
+  <!-- divider -->
+  <line x1="320" y1="60" x2="320" y2="340" stroke="#2d2420" stroke-opacity="0.12" stroke-width="2" stroke-dasharray="4 6"/>
+
+  <!-- LEFT: 加圧式 (electric pressure cooker) -->
+  <g>
+    <text x="160" y="44" text-anchor="middle" font-size="20" font-weight="800" fill="#c45c78">加圧式</text>
+
+    <!-- sealed pot -->
+    <rect x="92" y="150" width="136" height="92" rx="22" fill="#c45c78"/>
+    <rect x="88" y="120" width="144" height="40" rx="18" fill="#d77890"/>
+    <!-- valve -->
+    <rect x="150" y="100" width="20" height="20" rx="5" fill="#a8445b"/>
+    <!-- pressure arrows pushing inward -->
+    <g stroke="#a8445b" stroke-width="4" stroke-linecap="round" fill="none">
+      <path d="M160 176 v26"/>
+      <path d="M152 194 l8 8 l8 -8"/>
+      <path d="M120 196 l24 0"/>
+      <path d="M138 188 l-8 8 l8 8"/>
+      <path d="M200 196 l-24 0"/>
+      <path d="M182 188 l8 8 l-8 8"/>
+    </g>
+    <text x="160" y="284" text-anchor="middle" font-size="16" font-weight="700" fill="#2d2420">密閉して圧力をかける</text>
+    <text x="160" y="310" text-anchor="middle" font-size="13" fill="#2d2420" opacity="0.6">硬い肉をやわらかく・煮込みが得意</text>
+    <text x="160" y="332" text-anchor="middle" font-size="13" fill="#2d2420" opacity="0.6">予熱・減圧で総時間はかかる</text>
+  </g>
+
+  <!-- RIGHT: 無水・自動かきまぜ式 (hot cook) -->
+  <g>
+    <text x="480" y="44" text-anchor="middle" font-size="20" font-weight="800" fill="#6a9e7f">無水・自動かきまぜ式</text>
+
+    <!-- open pot -->
+    <rect x="412" y="150" width="136" height="92" rx="22" fill="#6a9e7f"/>
+    <rect x="408" y="138" width="144" height="22" rx="11" fill="#8bb89e"/>
+    <!-- stirring paddle arc -->
+    <path d="M444 178 C 470 166, 506 178, 512 206" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="512" cy="206" r="4" fill="#ffffff"/>
+    <!-- rotation arrows -->
+    <path d="M470 158 a 30 30 0 0 1 40 8" fill="none" stroke="#3f6b53" stroke-width="3" stroke-linecap="round"/>
+    <path d="M510 166 l-2 -10 l-9 5" fill="none" stroke="#3f6b53" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="480" y="284" text-anchor="middle" font-size="16" font-weight="700" fill="#2d2420">水を使わず自動でかきまぜ</text>
+    <text x="480" y="310" text-anchor="middle" font-size="13" fill="#2d2420" opacity="0.6">無水カレー・煮物・かきまぜ調理が得意</text>
+    <text x="480" y="332" text-anchor="middle" font-size="13" fill="#2d2420" opacity="0.6">予約調理は加熱後に適温キープ</text>
+  </g>
+
+  <text x="320" y="372" text-anchor="middle" font-size="13" fill="#2d2420" opacity="0.5">※方式の特長を示した一般的な図解です。実際の機能・所要時間は機種により異なります。</text>
+</svg>
