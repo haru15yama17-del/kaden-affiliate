@@ -263,26 +263,26 @@
   },
   {
     "slug": "sharp-cv-l120-dehumidifier",
-    "name": "シャープ 衣類乾燥除湿機 CV-L120",
+    "name": "シャープ 衣類乾燥除湿機 CV-S71",
     "brand": "シャープ",
     "category": "seasonal",
-    "priceRange": "3万〜4万円",
+    "priceRange": "2万〜3万円",
     "specs": [
       {"label": "除湿方式", "value": "コンプレッサー式"},
-      {"label": "除湿能力", "value": "12L/日（60Hz）"},
-      {"label": "対応畳数（木造）", "value": "14畳"},
-      {"label": "タンク容量", "value": "4.5L"},
-      {"label": "プラズマクラスター", "value": "搭載"}
+      {"label": "除湿能力", "value": "最大7.1L/日"},
+      {"label": "対応畳数（木造）", "value": "9畳まで"},
+      {"label": "対応畳数（鉄筋）", "value": "18畳まで"},
+      {"label": "プラズマクラスター", "value": "7000搭載"}
     ],
-    "pros": ["プラズマクラスターで部屋干しの生乾き臭を抑制", "コンプレッサー式で夏の高温多湿に強い", "連続排水対応で外出中も長時間運転OK"],
+    "pros": ["プラズマクラスター7000搭載・コンパクトで設置しやすい", "コンプレッサー式で梅雨〜夏の高温多湿に強い", "省エネ機能付きで毎日の衣類乾燥に使いやすい"],
     "cons": ["コンプレッサー式は動作音が大きめ", "冬場（低温）は除湿能力が低下", "本体がやや大きい"],
     "bestFor": ["梅雨〜夏の部屋干し乾燥", "クローゼットのカビ対策", "湿気の多い北向き・1階の部屋"],
     "notFor": ["冬の結露対策（デシカント式向き）", "寝室の夜間静音運転重視"],
     "rating": 4.1,
     "reviewSummary": "",
-    "affiliate": {"amazonAsin": "", "rakutenUrl": "", "yahooUrl": ""},
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fa-price%2F2980000208638%2F", "yahooUrl": ""},
     "competitors": [],
-    "updatedAt": "2026-06-04"
+    "updatedAt": "2026-06-29"
   },
   {
     "slug": "iris-kararie-fk-wh1-futondryer",
