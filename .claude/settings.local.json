@@ -23,7 +23,11 @@
       "Bash(node *)",
       "Bash(npx tsc *)",
       "Bash(npx next *)",
-      "Bash(python *)"
+      "Bash(python *)",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\dev\\\\kaden-affiliate\\\\public\\\\images\\\\reviews\\\\joshitsuki-koukai\")",
+      "Bash(Out-Null)",
+      "Bash(Write-Output \"OK\")",
+      "Skill(claude-in-chrome)"
     ]
   }
 }

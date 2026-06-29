@@ -377,6 +377,188 @@
     "updatedAt": "2026-06-04"
   },
   {
+    "slug": "aircon-set-6jo-omakase",
+    "name": "エアコン 6畳 工事費込みセット（メーカーおまかせ）",
+    "brand": "各メーカー（おまかせ）",
+    "category": "seasonal",
+    "priceRange": "要確認（時期により変動）",
+    "specs": [
+      {"label": "対応畳数", "value": "6畳用（冷暖房2.2kW相当）"},
+      {"label": "電源", "value": "100V"},
+      {"label": "工事", "value": "工事費込み・全国工事対応"},
+      {"label": "メーカー", "value": "おまかせ（機種・メーカーは選択不可）"}
+    ],
+    "pros": [
+      "工事費込みで最安クラス・寝室・子供部屋・1人暮らしに",
+      "全国工事対応でスムーズに設置まで依頼できる",
+      "6畳用スタンダードとして費用を抑えたい場合の第一選択肢"
+    ],
+    "cons": [
+      "届くメーカー・型番は選べない",
+      "省エネ性能は上位モデルより劣る傾向",
+      "設置環境によっては追加工事費が発生する場合がある"
+    ],
+    "bestFor": [
+      "費用を最大限に抑えて6畳用エアコンを工事費込みで導入したい方",
+      "1人暮らしの新居・寝室・子供部屋にシンプルなエアコンを手配したい方"
+    ],
+    "notFor": [
+      "メーカーや機種にこだわりたい人",
+      "省エネ・静音・スマート機能重視の人"
+    ],
+    "rating": 3.8,
+    "reviewSummary": "",
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fa-price%2F2980000071386%2F"},
+    "competitors": ["iris-g-aircon-set"],
+    "updatedAt": "2026-06-29"
+  },
+  {
+    "slug": "iris-g-aircon-set",
+    "name": "アイリスオーヤマ エアコン Gシリーズ（工事費込み・施工ありセット）",
+    "brand": "アイリスオーヤマ",
+    "category": "seasonal",
+    "priceRange": "要確認（畳数・時期により変動）",
+    "specs": [
+      {"label": "対応畳数", "value": "6〜20畳の展開あり"},
+      {"label": "工事", "value": "施工あり（工事費込み）"},
+      {"label": "シリーズ", "value": "スタンダードモデル"},
+      {"label": "内部清浄", "value": "あり"}
+    ],
+    "pros": [
+      "メーカー指定でアイリスオーヤマが届く安心感",
+      "6〜20畳と畳数展開が広く部屋に合わせやすい",
+      "工事費込みでセット価格・費用を抑えて導入できる"
+    ],
+    "cons": [
+      "大手メーカーより省エネ性能・機能は控えめな傾向",
+      "設置環境によっては追加工事費が発生する場合がある",
+      "全国の工事対応エリアは事前確認を推奨"
+    ],
+    "bestFor": [
+      "安く抑えつつメーカーを指定してアイリスオーヤマを選びたい方",
+      "6〜20畳まで幅広い畳数から選びたい方"
+    ],
+    "notFor": [
+      "大手有名メーカーにこだわる人",
+      "高機能・省エネ最上位モデルが必要な人"
+    ],
+    "rating": 3.9,
+    "reviewSummary": "",
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fe-akari%2F518007%2F"},
+    "competitors": ["aircon-set-6jo-omakase"],
+    "updatedAt": "2026-06-29"
+  },
+  {
+    "slug": "daikin-s285ates-aircon",
+    "name": "ダイキン エアコン S285ATES-W（10畳用・工事費込み）",
+    "brand": "ダイキン",
+    "category": "seasonal",
+    "priceRange": "要確認（時期により変動）",
+    "specs": [
+      {"label": "対応畳数", "value": "10畳用"},
+      {"label": "冷暖房", "value": "冷暖房"},
+      {"label": "工事", "value": "工事費込み・全国工事対応"},
+      {"label": "シリーズ", "value": "Eシリーズ（スタンダード）"}
+    ],
+    "pros": [
+      "ダイキンのスタンダードモデルで信頼性・ブランド力",
+      "10畳のリビング・ファミリーユースに対応",
+      "工事費込みでスムーズに導入できる"
+    ],
+    "cons": [
+      "自動お掃除などの上位機能はなし",
+      "設置環境によっては追加工事費が発生する場合がある",
+      "安さ重視グループより価格は高め"
+    ],
+    "bestFor": [
+      "10畳のリビング・ファミリー向けにダイキンを選びたい方",
+      "メーカー信頼性を重視しつつ工事費込みで手配したい方"
+    ],
+    "notFor": [
+      "費用を最大限に抑えたい人",
+      "自動掃除・AI機能など上位機能が必要な人"
+    ],
+    "rating": 4.1,
+    "reviewSummary": "",
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fa-price%2F2980000563133%2F"},
+    "competitors": ["mitsubishi-msz-zw5625s-aircon", "panasonic-cs-635dex2-aircon"],
+    "updatedAt": "2026-06-29"
+  },
+  {
+    "slug": "mitsubishi-msz-zw5625s-aircon",
+    "name": "三菱 霧ヶ峰 MSZ-ZW5625S-W（18畳用・工事費込み・省エネ上位機）",
+    "brand": "三菱電機",
+    "category": "seasonal",
+    "priceRange": "要確認（時期により変動）",
+    "specs": [
+      {"label": "対応畳数", "value": "18畳用"},
+      {"label": "電源", "value": "単相200V"},
+      {"label": "シリーズ", "value": "霧ヶ峰Zシリーズ（省エネ上位機）"},
+      {"label": "冷暖房", "value": "冷暖房"},
+      {"label": "工事", "value": "工事費込み"}
+    ],
+    "pros": [
+      "三菱 霧ヶ峰Zシリーズの省エネ上位機",
+      "18畳の広いリビングに対応",
+      "工事費込みでセット導入できる"
+    ],
+    "cons": [
+      "単相200V（コンセント工事が必要な場合あり）",
+      "設置環境によっては追加工事費が発生する場合がある",
+      "本体・工事込みで高価格帯"
+    ],
+    "bestFor": [
+      "18畳の広いリビングに省エネ上位機を入れたい方",
+      "三菱 霧ヶ峰の信頼性・省エネ性能を重視する方"
+    ],
+    "notFor": [
+      "費用を最大限に抑えたい人",
+      "10畳以下の部屋"
+    ],
+    "rating": 4.3,
+    "reviewSummary": "",
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fa-price%2F2980000528422%2F"},
+    "competitors": ["daikin-s285ates-aircon", "panasonic-cs-635dex2-aircon"],
+    "updatedAt": "2026-06-29"
+  },
+  {
+    "slug": "panasonic-cs-635dex2-aircon",
+    "name": "パナソニック エオリア CS-635DEX2-W（20畳用・工事費込み・省エネ上位機）",
+    "brand": "パナソニック",
+    "category": "seasonal",
+    "priceRange": "要確認（時期により変動）",
+    "specs": [
+      {"label": "対応畳数", "value": "20畳用"},
+      {"label": "電源", "value": "単相200V"},
+      {"label": "シリーズ", "value": "エオリアEXシリーズ（省エネ上位機）"},
+      {"label": "冷暖房", "value": "冷暖房"},
+      {"label": "工事", "value": "工事費込み"}
+    ],
+    "pros": [
+      "パナソニック エオリアEXシリーズの省エネ上位機",
+      "20畳の広いLDKにも対応",
+      "工事費込みでセット導入できる"
+    ],
+    "cons": [
+      "単相200V（コンセント工事が必要な場合あり）",
+      "設置環境によっては追加工事費が発生する場合がある",
+      "本体・工事込みで高価格帯"
+    ],
+    "bestFor": [
+      "20畳の広いLDKにパナソニックの省エネ上位機を入れたい方",
+      "省エネ性能を最重視する方"
+    ],
+    "notFor": [
+      "費用を最大限に抑えたい人",
+      "10畳以下の部屋"
+    ],
+    "rating": 4.3,
+    "reviewSummary": "",
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fa-price%2F2980000549663%2F"},
+    "competitors": ["daikin-s285ates-aircon", "mitsubishi-msz-zw5625s-aircon"],
+    "updatedAt": "2026-06-29"
+  },
+  {
     "slug": "daikin-s223ates-aircon",
     "name": "ダイキン エアコン Eシリーズ S223ATES（6畳用）",
     "brand": "ダイキン",
