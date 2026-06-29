@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="除湿機のシルエットと、部屋干し乾燥・カビ対策・タンク・夏梅雨に強いの機能アイコンを示す図解">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fef1f4"/>
+      <stop offset="1" stop-color="#e8f0e9"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" rx="28" fill="url(#bg)"/>
+
+  <!-- connector lines from unit to feature icons -->
+  <g stroke="#5b8fb9" stroke-width="2" stroke-dasharray="4 6" opacity="0.45">
+    <line x1="350" y1="192" x2="192" y2="115"/>
+    <line x1="450" y1="192" x2="608" y2="115"/>
+    <line x1="350" y1="300" x2="192" y2="370"/>
+    <line x1="450" y1="300" x2="608" y2="370"/>
+  </g>
+
+  <!-- dehumidifier body (center) -->
+  <g>
+    <!-- shadow -->
+    <ellipse cx="400" cy="368" rx="90" ry="13" fill="#2d2420" opacity="0.08"/>
+    <!-- main body -->
+    <rect x="350" y="148" width="100" height="212" rx="20" fill="#5b8fb9"/>
+    <!-- top handle -->
+    <rect x="372" y="134" width="56" height="20" rx="10" fill="#4a7fa8"/>
+    <!-- front air outlet grill area -->
+    <rect x="360" y="168" width="80" height="90" rx="8" fill="#3d6f93"/>
+    <!-- grill horizontal lines -->
+    <g stroke="#6fa8d0" stroke-width="2" opacity="0.7">
+      <line x1="362" y1="182" x2="438" y2="182"/>
+      <line x1="362" y1="196" x2="438" y2="196"/>
+      <line x1="362" y1="210" x2="438" y2="210"/>
+      <line x1="362" y1="224" x2="438" y2="224"/>
+      <line x1="362" y1="238" x2="438" y2="238"/>
+      <line x1="362" y1="252" x2="438" y2="252"/>
+    </g>
+    <!-- control panel -->
+    <rect x="362" y="272" width="76" height="32" rx="8" fill="#d5e8f5"/>
+    <!-- power indicator light (green = running) -->
+    <circle cx="386" cy="288" r="6" fill="#7ecba8"/>
+    <!-- display area -->
+    <rect x="398" y="280" width="32" height="16" rx="4" fill="#4a7fa8"/>
+    <!-- water tank (translucent blue, bottom part) -->
+    <rect x="356" y="318" width="88" height="38" rx="10" fill="#a8cfe8"/>
+    <!-- water level inside tank -->
+    <rect x="362" y="336" width="76" height="16" rx="5" fill="#5b8fb9" opacity="0.55"/>
+    <!-- tank label line -->
+    <line x1="362" y1="336" x2="438" y2="336" stroke="#ffffff" stroke-width="1.2" opacity="0.6"/>
+  </g>
+
+  <!-- feature: 部屋干し乾燥 (top left) -->
+  <g>
+    <circle cx="162" cy="105" r="52" fill="#ffffff" stroke="#5b8fb9" stroke-width="2.5"/>
+    <!-- clothes line -->
+    <line x1="128" y1="92" x2="196" y2="92" stroke="#5b8fb9" stroke-width="3" stroke-linecap="round"/>
+    <!-- shirt 1 (simplified) -->
+    <path d="M134 92 l-8 10 l8 4 v16 h12 v-16 l4 -4 l4 4 v16 h12 v-16 l8 -4 l-8 -10" fill="none" stroke="#5b8fb9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- wind / dry arrows below -->
+    <path d="M130 128 C 144 122, 158 126, 172 122" fill="none" stroke="#5b8fb9" stroke-width="2" stroke-linecap="round"/>
+    <path d="M168 118 l4 4 l-4 4" fill="none" stroke="#5b8fb9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="162" y="178" text-anchor="middle" font-size="18" font-weight="800" fill="#2d2420">部屋干し乾燥</text>
+  </g>
+
+  <!-- feature: カビ対策 (top right) -->
+  <g>
+    <circle cx="638" cy="105" r="52" fill="#ffffff" stroke="#6a9e7f" stroke-width="2.5"/>
+    <!-- shield shape -->
+    <path d="M638 72 C 616 80, 610 98, 614 116 C 618 132, 638 138, 638 138 C 638 138, 658 132, 662 116 C 666 98, 660 80, 638 72Z" fill="none" stroke="#6a9e7f" stroke-width="3"/>
+    <!-- check mark inside shield -->
+    <path d="M624 106 l10 10 l20 -20" fill="none" stroke="#6a9e7f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="638" y="178" text-anchor="middle" font-size="18" font-weight="800" fill="#2d2420">カビ対策</text>
+  </g>
+
+  <!-- feature: タンク (bottom left) -->
+  <g>
+    <circle cx="162" cy="370" r="52" fill="#ffffff" stroke="#4a7fa8" stroke-width="2.5"/>
+    <!-- tank container -->
+    <rect x="136" y="344" width="52" height="38" rx="8" fill="none" stroke="#4a7fa8" stroke-width="3"/>
+    <!-- water inside -->
+    <rect x="140" y="360" width="44" height="18" rx="4" fill="#a8cfe8"/>
+    <!-- water drop above -->
+    <path d="M162 330 C 162 330, 152 340, 152 346 C 152 352, 156 356, 162 356 C 168 356, 172 352, 172 346 C 172 340, 162 330, 162 330Z" fill="#5b8fb9"/>
+    <!-- drain arrow down -->
+    <line x1="162" y1="382" x2="162" y2="392" stroke="#4a7fa8" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M156 389 l6 5 l6 -5" fill="none" stroke="#4a7fa8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="162" y="442" text-anchor="middle" font-size="18" font-weight="800" fill="#2d2420">タンク式</text>
+  </g>
+
+  <!-- feature: 夏・梅雨に強い (bottom right) -->
+  <g>
+    <circle cx="638" cy="370" r="52" fill="#ffffff" stroke="#e08a4a" stroke-width="2.5"/>
+    <!-- sun circle -->
+    <circle cx="638" cy="370" r="16" fill="none" stroke="#e08a4a" stroke-width="3"/>
+    <!-- sun rays -->
+    <g stroke="#e08a4a" stroke-width="2.5" stroke-linecap="round">
+      <line x1="638" y1="345" x2="638" y2="339"/>
+      <line x1="638" y1="395" x2="638" y2="401"/>
+      <line x1="613" y1="370" x2="607" y2="370"/>
+      <line x1="663" y1="370" x2="669" y2="370"/>
+      <line x1="621" y1="353" x2="617" y2="349"/>
+      <line x1="655" y1="387" x2="659" y2="391"/>
+      <line x1="655" y1="353" x2="659" y2="349"/>
+      <line x1="621" y1="387" x2="617" y2="391"/>
+    </g>
+    <!-- rain drops (rainy season) -->
+    <path d="M624 344 C 624 344, 622 348, 622 350 C 622 352, 623 353, 624 353 C 625 353, 626 352, 626 350 C 626 348, 624 344, 624 344Z" fill="#5b8fb9"/>
+    <path d="M638 336 C 638 336, 636 340, 636 342 C 636 344, 637 345, 638 345 C 639 345, 640 344, 640 342 C 640 340, 638 336, 638 336Z" fill="#5b8fb9"/>
+    <path d="M652 344 C 652 344, 650 348, 650 350 C 650 352, 651 353, 652 353 C 653 353, 654 352, 654 350 C 654 348, 652 344, 652 344Z" fill="#5b8fb9"/>
+    <text x="638" y="442" text-anchor="middle" font-size="17" font-weight="800" fill="#2d2420">夏・梅雨に強い</text>
+  </g>
+</svg>
