@@ -290,11 +290,6 @@ export default async function AirconKoukaiPage() {
         caption="「安さ重視」と「省エネ・メーカー重視」の2グループ——まず方向性を決めてから畳数で絞り込む"
       />
 
-      {/* TODO: はるの実体験（エアコン選び・工事費込みセット購入・工事立ち合い体験談）を取材後に追記 */}
-      <HaruBubble label="はるの体験談">
-        <p className="italic text-ink/55">（取材メモ準備中）エアコン工事費込みセットの購入・工事立ち合い体験談を後日追記予定です。</p>
-      </HaruBubble>
-
       {/* ── 中段CTA（2027問題→商品へのブリッジ） ── CV-3 */}
       <div className="not-prose my-6 rounded-2xl border-2 border-accent/30 bg-blush p-5">
         <p className="mb-3 text-xs font-bold uppercase tracking-widest text-accent/70">
@@ -357,6 +352,12 @@ export default async function AirconKoukaiPage() {
         「アイリスオーヤマでOK・工事費込みで費用を抑えたい」という方に向いています。
       </p>
 
+      <HaruBubble label="はるの店頭レポート">
+        <p>大手のエントリー機より、さらに1〜2万円ほど安い価格設定。そのぶん本体のプラは少し薄く感じ、リモコンは大きな文字で最低限のボタンだけ。</p>
+        <p className="mt-2">店員さんは正直に「冷やす・暖めるだけの<strong>単機能</strong>。省エネは大手に劣るので、毎日長時間使うと電気代で逆転することも。室外機の音も少し大きめ」と。</p>
+        <p className="mt-2">来客用の和室や1日1〜2時間だけ使う部屋、急ぎで安く揃えたいときの間に合わせ向き。メインのLDKには不向きという印象でした。</p>
+      </HaruBubble>
+
       {/* CV-5 */}
       <AffiliateButtons aff={iris.affiliate} />
 
@@ -376,6 +377,12 @@ export default async function AirconKoukaiPage() {
         自動掃除などの上位機能はありませんが、全国工事対応でスムーズに導入できます。
       </p>
 
+      <HaruBubble label="はるの店頭レポート">
+        <p>店員さんいわく「Eシリーズは一番ベーシックだけど、コンプレッサーと室外機が頑丈で猛暑でも冷えが落ちにくい。だから<strong>指名買いが多い</strong>」とのこと。</p>
+        <p className="mt-2">実機はデザインこそ無骨ですが、奥行きが薄めで壁付けの圧迫感は少なめ。自動お掃除機能が無いぶん中がシンプルで、自分で手入れする派には扱いやすそうでした。</p>
+        <p className="mt-2">寝室・子ども部屋・書斎など、夏に長時間つけっぱなしにする個室にちょうど良い印象です。</p>
+      </HaruBubble>
+
       {/* CV-6 */}
       <AffiliateButtons aff={daikin.affiliate} />
 
@@ -386,6 +393,12 @@ export default async function AirconKoukaiPage() {
         単相200Vのため、既存コンセントが100Vの場合は電気工事が別途必要になる場合があります（購入前に確認を）。
       </p>
 
+      <HaruBubble label="はるの店頭レポート">
+        <p>上位機を下位モデルの後に見ると、壁からの"張り出し"の厚みにまず驚きます。</p>
+        <p className="mt-2">霧ヶ峰のムーブアイは動きが細かく、左右のフラップが独立してウネウネ。暑がりさんと寒がりさんに別々の風を当てるデモが分かりやすかったです。</p>
+        <p className="mt-2">店員さん談：「足元までしっかり暖めたい、間取りが複雑なリビングなら<strong>ムーブアイが強い</strong>」。</p>
+      </HaruBubble>
+
       {/* CV-7 */}
       <AffiliateButtons aff={mitsu.affiliate} />
 
@@ -395,6 +408,12 @@ export default async function AirconKoukaiPage() {
         20畳用・単相200Vで<strong>大きなLDKに省エネ性能を最重視して導入したい方</strong>向け。
         こちらも単相200V対応のため、コンセント環境の事前確認をおすすめします。
       </p>
+
+      <HaruBubble label="はるの店頭レポート">
+        <p>私が見た範囲でいちばん印象的だったのは<strong>動作音の静かさ</strong>。風が直接体に当たらないよう、天井や壁を這わせるような気流でした。</p>
+        <p className="mt-2">ナノイーX搭載のためか、デモ機の風はニオイを感じずすっきり。</p>
+        <p className="mt-2">店員さん談：「キッチンの油やペットのニオイが気になるLDKならパナソニック。内部の自動洗浄も強力」。</p>
+      </HaruBubble>
 
       {/* CV-8 */}
       <AffiliateButtons aff={panasonic.affiliate} />
