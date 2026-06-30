@@ -32,7 +32,7 @@ export function ProductCard({ p }: { p: Product }) {
 
       {/* Body */}
       <div className="flex flex-1 flex-col p-4">
-        <Rating value={p.rating} size="sm" />
+        {p.rating != null && <Rating value={p.rating} size="sm" />}
         <h3 className="mt-1.5 line-clamp-2 font-serif text-base leading-snug text-ink transition-colors group-hover:text-accent">
           {p.name}
         </h3>

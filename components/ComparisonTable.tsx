@@ -9,7 +9,7 @@ export function ComparisonTable({ items }: { items: Product[] }) {
     p.specs.find((s) => s.label === label)?.value ?? "—";
 
   const bestIdx = items.reduce(
-    (best, p, i) => (p.rating > items[best].rating ? i : best),
+    (best, p, i) => ((p.rating ?? 0) > (items[best].rating ?? 0) ? i : best),
     0
   );
 
@@ -36,7 +36,7 @@ export function ComparisonTable({ items }: { items: Product[] }) {
             <td className="p-3 font-medium text-ink/60">編集部評価</td>
             {items.map((p, i) => (
               <td key={p.slug} className={`p-3 ${i === bestIdx ? "bg-accent/5" : ""}`}>
-                <Rating value={p.rating} />
+                {p.rating != null ? <Rating value={p.rating} /> : "—"}
               </td>
             ))}
           </tr>

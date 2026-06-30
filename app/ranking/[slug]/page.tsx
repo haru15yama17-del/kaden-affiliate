@@ -105,7 +105,7 @@ export default async function RankingPage({ params }: { params: { slug: string }
                         {p.name}
                       </Link>
                       <div className="mt-1.5 flex flex-wrap items-center gap-3">
-                        <Rating value={p.rating} size="sm" />
+                        {p.rating != null && <Rating value={p.rating} size="sm" />}
                         <span className="text-sm font-bold text-accent">{p.priceRange}</span>
                       </div>
                     </div>

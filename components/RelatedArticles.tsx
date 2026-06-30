@@ -19,7 +19,7 @@ export function RelatedArticles({ items }: { items: Product[] }) {
                   {p.name}
                 </p>
                 <div className="mt-1">
-                  <Rating value={p.rating} size="sm" />
+                  {p.rating != null && <Rating value={p.rating} size="sm" />}
                 </div>
               </div>
               <span className="shrink-0 text-sm font-bold text-accent">→</span>

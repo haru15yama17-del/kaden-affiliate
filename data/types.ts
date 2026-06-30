@@ -54,7 +54,7 @@ export interface Product {
   notFor: string[];         // おすすめできない人
   // 口コミは「要約」のみ。原文転載・捏造は不可。出典は記事側に明記。
   reviewSummary: string;
-  rating: number;           // 編集部評価 1.0〜5.0
+  rating?: number;          // 編集部評価 1.0〜5.0（省略時は★非表示）
   affiliate: AffiliateLinks;
   competitors: string[];    // 比較対象の product.slug
   updatedAt: string;        // ISO日付（更新日＝E-E-A-T）

@@ -45,7 +45,7 @@ const hotCategories = ["water-server", "food-delivery", "vacuum", "beauty", "per
 
 export default async function HomePage() {
   const products = await getAllProducts();
-  const featured = [...products].sort((a, b) => b.rating - a.rating).slice(0, 6);
+  const featured = [...products].sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0)).slice(0, 6);
 
   return (
     <div>

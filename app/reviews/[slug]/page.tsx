@@ -104,7 +104,7 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
       {/* Title */}
       <h1 className="font-serif text-3xl font-bold leading-tight">{p.name}のレビュー・評価</h1>
       <div className="mt-2 flex flex-wrap items-center gap-3 text-sm text-ink/55">
-        <Rating value={p.rating} />
+        {p.rating != null && <Rating value={p.rating} />}
         <span>価格帯：<strong className="text-accent">{p.priceRange}</strong></span>
         <span>更新日：{p.updatedAt}</span>
       </div>
@@ -115,7 +115,7 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
           編集部の総合評価
         </p>
         <div className="mb-4 flex items-center gap-5">
-          <Rating value={p.rating} size="lg" />
+          {p.rating != null && <Rating value={p.rating} size="lg" />}
           <div>
             <p className="font-bold text-ink">{p.priceRange}</p>
             <p className="text-xs text-ink/45">最終更新：{p.updatedAt}</p>

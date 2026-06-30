@@ -19,7 +19,7 @@ function mapRow(r: Record<string, unknown>): Product {
     bestFor: (r.best_for as string[]) ?? [],
     notFor: (r.not_for as string[]) ?? [],
     reviewSummary: (r.review_summary as string) ?? "",
-    rating: Number(r.rating ?? 0),
+    rating: r.rating != null ? Number(r.rating) : undefined,
     affiliate: (r.affiliate as Product["affiliate"]) ?? {},
     competitors: (r.competitors as string[]) ?? [],
     updatedAt: (r.updated_at as string) ?? ""
@@ -53,12 +53,12 @@ export async function getProduct(slug: string): Promise<Product | undefined> {
 export async function getProductsByCategory(cat: CategorySlug): Promise<Product[]> {
   return (await getAllProducts())
     .filter((p) => p.category === cat)
-    .sort((a, b) => b.rating - a.rating);
+    .sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
 }
 
 export async function getRanking(cat: CategorySlug, limit = 10): Promise<Product[]> {
   return (await getProductsByCategory(cat))
-    .sort((a, b) => b.rating - a.rating || (b.releaseYear ?? 0) - (a.releaseYear ?? 0))
+    .sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0) || (b.releaseYear ?? 0) - (a.releaseYear ?? 0))
     .slice(0, limit);
 }
 
