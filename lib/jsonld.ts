@@ -17,24 +17,30 @@ export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
 
 // レビュー記事の Product + Review 構造化データ
 // ※ ratingは編集部の一次評価。架空のaggregateRatingは付けない。
-export function reviewJsonLd(p: Product, path: string) {
+export function reviewJsonLd(
+  p: Product,
+  path: string,
+  { includeReview = true }: { includeReview?: boolean } = {}
+) {
   return {
     "@context": "https://schema.org",
     "@type": "Product",
     name: p.name,
     brand: { "@type": "Brand", name: p.brand },
     ...(p.image && { image: p.image }),
-    review: {
-      "@type": "Review",
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: p.rating,
-        bestRating: 5,
-        worstRating: 1
-      },
-      author: { "@type": "Organization", name: site.operator.name },
-      datePublished: p.updatedAt
-    },
+    ...(includeReview && {
+      review: {
+        "@type": "Review",
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: p.rating,
+          bestRating: 5,
+          worstRating: 1
+        },
+        author: { "@type": "Organization", name: site.operator.name },
+        datePublished: p.updatedAt
+      }
+    }),
     url: `${site.url}${path}`
   };
 }

@@ -7,6 +7,7 @@ import { RecommendBox } from "@/components/RecommendBox";
 import { AffiliateButtons } from "@/components/AffiliateButtons";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import type { Product } from "@/data/types";
 
 const IMG_BASE = "/images/reviews/joshitsuki-koukai";
 
@@ -49,7 +50,7 @@ function HaruBubble({ label, children }: { label: string; children: ReactNode })
 }
 
 const PATH = "/reviews/joshitsuki-koukai";
-const TITLE = "除湿機で後悔しない？コンプレッサー式・デシカント式の違いとシャープ CV-S71のデメリットを正直に解説";
+const TITLE = "除湿機おすすめ比較【2026年】コンプレッサー・デシカント・ハイブリッド式の違いと部屋干し向け4選";
 
 const faq = [
   {
@@ -74,20 +75,59 @@ export async function generateMetadata() {
   return buildMetadata({
     title: `${TITLE}｜主婦の家電と暮らし研究室`,
     description:
-      "シャープ 衣類乾燥除湿機 CV-S71（コンプレッサー式）の後悔しやすいポイントを、コンプレッサー式・デシカント式・ハイブリッド式の方式の違いとあわせて中立に解説。梅雨・部屋干し・カビ対策で除湿機を検討中の方はこちら。",
+      "コンプレッサー式・デシカント式・ハイブリッド式の特徴と選び方を比較表で解説。部屋干し・梅雨・結露対策に向くおすすめ4台をスペック・用途別に紹介します。主婦目線のレポートつき。",
     path: PATH,
     type: "article",
-    modifiedTime: "2026-06-04",
+    modifiedTime: "2026-06-30",
   });
 }
 
 export default async function JoshitsukiKoukaiPage() {
   const all = await getAllProducts();
   const cv = all.find((p) => p.slug === "sharp-cv-l120-dehumidifier")!;
+  const dehumidifiers = [
+    "sharp-cv-l120-dehumidifier",
+    "mitsubishi-mj-p180yx-dehumidifier",
+    "panasonic-f-yex120b-dehumidifier",
+    "iris-circulator-desiccant-dehumidifier",
+  ]
+    .map((slug) => all.find((p) => p.slug === slug))
+    .filter((p): p is Product => p !== undefined);
+
+  const haruContents: Record<string, ReactNode> = {
+    "sharp-cv-l120-dehumidifier": (
+      <>
+        <p>コンプレッサー式で電気代を抑えやすく、プラズマクラスター搭載の小型モデル。設置面積がほぼ<strong>A4サイズ</strong>相当で、置き場所に困りにくいのが魅力です。</p>
+        <p className="mt-2">大容量モデルに比べるとパワーは控えめですが、そのぶん狭い空間での使用に向いています。</p>
+        <p className="mt-2">👉 狭い脱衣所でも邪魔になりにくいA4サイズ。寝室や脱衣所のジメジメ・生乾き対策に。</p>
+      </>
+    ),
+    "mitsubishi-mj-p180yx-dehumidifier": (
+      <>
+        <p>除湿能力は最大18L/日（60Hz時／50Hzは15.5L/日）と家庭用でもトップクラスのコンプレッサー式。広いリビングや大量の洗濯物をスピーディに乾かしたい人向け。</p>
+        <p className="mt-2">コンプレッサー式は冬に弱いのが一般的ですが、この機種は<strong>「冬モード」＋自動霜取り</strong>で室温1℃でも運転できるのが他のコンプレッサー機との違いです。</p>
+        <p className="mt-2">👉 パワー重視。広いリビングや梅雨の大量部屋干しを一気に乾かしたい人に。</p>
+      </>
+    ),
+    "panasonic-f-yex120b-dehumidifier": (
+      <>
+        <p>夏に強いコンプレッサー式と、冬に強いデシカント式を切り替える<strong>ハイブリッド方式</strong>。ナノイーX搭載で部屋干し臭のケアも期待できます。木造16畳／鉄筋32畳までの対応で、家じゅう使いやすい1台。</p>
+        <p className="mt-2">季節による乾きにくさのムラが出にくいのが強みですが、そのぶん本体価格は高めです。</p>
+        <p className="mt-2">👉 1年中オールマイティに使いたい・初期費用より日々のラクさを取りたい人に。</p>
+      </>
+    ),
+    "iris-circulator-desiccant-dehumidifier": (
+      <>
+        <p>冬に強いデシカント式の除湿機に、首振りサーキュレーターを組み合わせたモデル。乾いた風を洗濯物に直接当てて乾かす設計です。</p>
+        <p className="mt-2">部屋全体の除湿というより<strong>「洗濯物を風で乾かす」</strong>ことに特化。デシカント式なので冬の冷えた脱衣所でも乾燥スピードが落ちにくいのが持ち味です（そのぶん夏は室温が上がりやすい点は注意）。</p>
+        <p className="mt-2">👉 冬の寒い部屋・厚手の服の部屋干しに。「空間除湿」より「洗濯物を乾かす」目的の人に。</p>
+      </>
+    ),
+  };
 
   return (
     <article className="prose-article max-w-none pb-20">
-      <JsonLd data={reviewJsonLd(cv, PATH)} />
+      <JsonLd data={reviewJsonLd(cv, PATH, { includeReview: false })} />
       <JsonLd data={faqJsonLd(faq)} />
       <Breadcrumbs
         items={[
@@ -98,7 +138,7 @@ export default async function JoshitsukiKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
-      <p className="mt-2 text-sm text-ink/55">更新日：2026-06-04</p>
+      <p className="mt-2 text-sm text-ink/55">更新日：2026-06-30</p>
 
       <ArticleImage
         src={`${IMG_BASE}/hero.svg`}
@@ -176,7 +216,7 @@ export default async function JoshitsukiKoukaiPage() {
         </p>
         <p className="mt-2">
           置き場所は、店頭で見るより家に実際に置くと大きく感じました。
-          コンプレッサー式やハイブリッド式は<strong>重め（12〜15kg程度の機種も多い）</strong>で、
+          コンプレッサー式やハイブリッド式は大容量機種では<strong>重め（12〜15kg程度の機種も多い）</strong>で、
           キャスター付きでないと移動がかなり大変に感じました。電源コードも短めで配置場所に少し悩みました。
         </p>
 
@@ -300,9 +340,34 @@ export default async function JoshitsukiKoukaiPage() {
         </p>
       </div>
 
-      <h2>シャープ CV-S71を購入できるストア</h2>
-      <p>価格は変動するため、最新の価格は各ストアでご確認ください。</p>
-      <AffiliateButtons aff={cv.affiliate} />
+      <h2>この記事で取り上げた4台——楽天で詳細・在庫を確認</h2>
+      <p>価格・在庫は時期によって変動します。最新情報は各ストアでご確認ください。</p>
+      <div className="not-prose space-y-6">
+        {dehumidifiers.map((p) => {
+          const methodSpec = p.specs.find((s) => s.label === "除湿方式")?.value ?? "";
+          return (
+            <div key={p.slug} className="rounded-2xl border border-ink/15 bg-white p-5 shadow-card">
+              <span className="inline-block rounded-full bg-accent/10 px-3 py-1 text-xs font-bold text-accent">
+                {methodSpec}
+              </span>
+              <h3 className="mt-2 text-base font-bold text-ink">{p.name}</h3>
+              <ul className="mt-3 space-y-1 text-sm text-ink/75">
+                {p.specs
+                  .filter((s) => s.label !== "特徴タグ" && s.value !== "")
+                  .map((s, i) => (
+                    <li key={i}>
+                      <span className="text-ink/50">{s.label}：</span>{s.value}
+                    </li>
+                  ))}
+              </ul>
+              <HaruBubble label="はるの店頭レポート">
+                {haruContents[p.slug]}
+              </HaruBubble>
+              <AffiliateButtons aff={p.affiliate} />
+            </div>
+          );
+        })}
+      </div>
 
       <h2>まとめ：除湿機は「方式と使う季節」を確認してから選ぶのがポイント</h2>
       <p>
