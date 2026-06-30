@@ -285,6 +285,117 @@
     "updatedAt": "2026-06-29"
   },
   {
+    "slug": "mitsubishi-mj-p180yx-dehumidifier",
+    "name": "三菱電機 衣類乾燥除湿機 サラリPro MJ-P180YX-W",
+    "brand": "三菱電機",
+    "category": "seasonal",
+    "priceRange": "",
+    "specs": [
+      {"label": "除湿方式", "value": "コンプレッサー式"},
+      {"label": "除湿能力", "value": "最大18L/日（60Hz時）・15.5L/日（50Hz時）"},
+      {"label": "適用畳数（木造）", "value": "〜19畳（50Hz基準）"},
+      {"label": "適用畳数（プレハブ洋室）", "value": "〜29畳（50Hz基準）"},
+      {"label": "適用畳数（コンクリート洋室）", "value": "〜39畳（50Hz基準）"},
+      {"label": "タンク容量", "value": "約4.7L"},
+      {"label": "特徴タグ", "value": "大容量・コンプレッサー式・冬モード・パワー重視"}
+    ],
+    "pros": [
+      "最大18L/日の大容量除湿でパワーを重視したい用途に",
+      "コンプレッサー式で梅雨〜夏の高温多湿に強い",
+      "冬モード搭載で低温時の除湿力低下を補助"
+    ],
+    "cons": [
+      "コンプレッサー式のため冬場は除湿能力が低下する傾向がある",
+      "大容量・高パワーのため本体が大きく重い傾向がある",
+      "消費電力・騒音値はメーカー仕様を要確認"
+    ],
+    "bestFor": [
+      "広い部屋・大量の洗濯物をまとめて乾かしたい方",
+      "業務用途・大家族で乾燥力を最優先する方"
+    ],
+    "notFor": [
+      "冬の結露対策中心でデシカント式を求める方",
+      "コンパクトさ・静音性重視の方"
+    ],
+    "rating": 4.0,
+    "reviewSummary": "",
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fjyousui%2Fmj-p180yx-001%2F", "yahooUrl": ""},
+    "competitors": [],
+    "updatedAt": "2026-06-30"
+  },
+  {
+    "slug": "panasonic-f-yex120b-dehumidifier",
+    "name": "パナソニック 衣類乾燥除湿機 F-YEX120B-W",
+    "brand": "パナソニック",
+    "category": "seasonal",
+    "priceRange": "",
+    "specs": [
+      {"label": "除湿方式", "value": "ハイブリッド式（エコ・ハイブリッド）"},
+      {"label": "除湿能力", "value": ""},
+      {"label": "適用畳数（木造）", "value": "16畳まで（60Hzの場合）"},
+      {"label": "適用畳数（鉄筋）", "value": "32畳まで（60Hzの場合）"},
+      {"label": "タンク容量", "value": ""},
+      {"label": "特徴タグ", "value": "ハイブリッド式・ナノイーX・1年中・大容量"}
+    ],
+    "pros": [
+      "ハイブリッド式で季節を問わず安定した除湿力を発揮",
+      "ナノイーX搭載で衣類の除菌・消臭効果を期待できる"
+    ],
+    "cons": [
+      "ハイブリッド式は本体価格がコンプレッサー式・デシカント式より高い傾向がある",
+      "除湿能力・タンク容量はメーカー仕様を要確認"
+    ],
+    "bestFor": [
+      "1年を通じて除湿機を使いたい方",
+      "ナノイーXによる消臭・除菌効果を重視する方"
+    ],
+    "notFor": [
+      "コストを最優先したい方",
+      "夏の除湿力だけを重視する方"
+    ],
+    "rating": 4.0,
+    "reviewSummary": "",
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fpanasonic-store%2Ff-yex120b-w%2F", "yahooUrl": ""},
+    "competitors": [],
+    "updatedAt": "2026-06-30"
+  },
+  {
+    "slug": "iris-circulator-desiccant-dehumidifier",
+    "name": "アイリスオーヤマ サーキュレーター付き衣類乾燥除湿機（デシカント式）",
+    "brand": "アイリスオーヤマ",
+    "category": "seasonal",
+    "priceRange": "",
+    "specs": [
+      {"label": "除湿方式", "value": "デシカント式"},
+      {"label": "除湿能力", "value": ""},
+      {"label": "適用畳数めやす", "value": ""},
+      {"label": "タンク容量", "value": ""},
+      {"label": "特徴タグ", "value": "デシカント式・サーキュレーター付・部屋干し特化・冬に強い"}
+    ],
+    "pros": [
+      "デシカント式で冬の低温環境でも安定した除湿力を発揮",
+      "サーキュレーター付きで洗濯物へ直接送風・乾燥を同時に行える",
+      "コンプレッサー式と比べ運転音が静かな傾向がある"
+    ],
+    "cons": [
+      "デシカント式は消費電力が大きく室温が上がりやすい傾向がある",
+      "除湿能力・スペック詳細はメーカー仕様を要確認"
+    ],
+    "bestFor": [
+      "冬場も除湿機を使いたい・結露対策をしたい方",
+      "サーキュレーターで洗濯物に直接風を当てて乾かしたい方"
+    ],
+    "notFor": [
+      "夏の除湿・省エネを最優先する方",
+      "室温上昇を避けたい方（夏はエアコンと相殺しやすい）"
+    ],
+    "rating": 4.0,
+    "reviewSummary": "",
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fu-denki%2F274018%2F", "yahooUrl": ""},
+    "competitors": [],
+    "updatedAt": "2026-06-30"
+  },
+  {
     "slug": "iris-kararie-fk-wh1-futondryer",
     "name": "アイリスオーヤマ ふとん乾燥機 カラリエ FK-WH1（ツインノズル）",
     "brand": "アイリスオーヤマ",
