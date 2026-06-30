@@ -92,20 +92,13 @@ function CtaRow({
   );
 }
 
-/** 各商品の Product 構造化データ（offers: 在庫あり） */
-function productJsonLd(name: string, brand: string, rakutenUrl: string) {
+/** 各商品の Product 構造化データ（price不明のためoffersは含めない） */
+function productJsonLd(name: string, brand: string) {
   return {
     "@context": "https://schema.org",
     "@type": "Product",
     name,
     brand: { "@type": "Brand", name: brand },
-    offers: {
-      "@type": "Offer",
-      url: rakutenUrl,
-      availability: "https://schema.org/InStock",
-      priceCurrency: "JPY",
-      seller: { "@type": "Organization", name: "楽天市場" },
-    },
   };
 }
 
@@ -161,10 +154,10 @@ export default async function AirconKoukaiPage() {
       <JsonLd data={reviewJsonLd(omakase, PATH)} />
       <JsonLd data={faqJsonLd(faq)} />
       {/* 各商品の Product 構造化データ（omakase は reviewJsonLd で兼用） */}
-      <JsonLd data={productJsonLd(iris.name,      iris.brand,      iris.affiliate.rakutenUrl!)} />
-      <JsonLd data={productJsonLd(daikin.name,    daikin.brand,    daikin.affiliate.rakutenUrl!)} />
-      <JsonLd data={productJsonLd(mitsu.name,     mitsu.brand,     mitsu.affiliate.rakutenUrl!)} />
-      <JsonLd data={productJsonLd(panasonic.name, panasonic.brand, panasonic.affiliate.rakutenUrl!)} />
+      <JsonLd data={productJsonLd(iris.name,      iris.brand)} />
+      <JsonLd data={productJsonLd(daikin.name,    daikin.brand)} />
+      <JsonLd data={productJsonLd(mitsu.name,     mitsu.brand)} />
+      <JsonLd data={productJsonLd(panasonic.name, panasonic.brand)} />
 
       {/* ── スティッキーCTA（スクロール500px後に表示） ── */}
       <StickyCta
