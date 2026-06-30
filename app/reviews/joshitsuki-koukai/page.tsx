@@ -412,6 +412,13 @@ export default async function JoshitsukiKoukaiPage() {
           </Link>
           （水まわりの快適さをもう一段上げたい方に）
         </li>
+        <li>
+          ▶{" "}
+          <Link href="/reviews/aircon-2027-koukai" className="font-bold text-accent hover:underline">
+            エアコンの除湿運転と除湿機の違い・梅雨〜夏の湿気対策
+          </Link>
+          （冷房と除湿機を組み合わせてカビ・生乾きをまとめて対策したい方に）
+        </li>
       </ul>
     </article>
   );
