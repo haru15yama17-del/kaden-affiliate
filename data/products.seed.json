@@ -217,28 +217,6 @@
     "updatedAt": "2026-06-04"
   },
   {
-    "slug": "balmuda-greenfan-cirq-egf1700",
-    "name": "バルミューダ GreenFan Cirq EGF-1700 サーキュレーター",
-    "brand": "バルミューダ",
-    "category": "seasonal",
-    "priceRange": "3万〜4万円",
-    "specs": [
-      {"label": "風の到達距離", "value": "最大8m"},
-      {"label": "首振り", "value": "360°自動回転"},
-      {"label": "騒音レベル（最小）", "value": "13dB"},
-      {"label": "消費電力", "value": "3〜21W"}
-    ],
-    "pros": ["独自2重羽根で自然に近いやさしい風", "最小13dBの静音で寝室でも快適", "360°首振りで部屋全体に空気循環、冷暖房効率UP"],
-    "cons": ["3〜4万円と高価格", "風量はパワー型より控えめ", "リモコン別売り"],
-    "bestFor": ["エアコン効率を上げたいリビング・寝室", "静音にこだわる人", "インテリアにこだわる部屋"],
-    "notFor": ["短時間で強力に冷やしたい用途", "コスパ重視の人"],
-    "rating": 4.4,
-    "reviewSummary": "",
-    "affiliate": {"amazonAsin": "", "rakutenUrl": "", "yahooUrl": ""},
-    "competitors": ["iris-dcf-jm151t-fan"],
-    "updatedAt": "2026-06-04"
-  },
-  {
     "slug": "iris-dcf-jm151t-fan",
     "name": "アイリスオーヤマ DCモーター扇風機 DCF-JM151T",
     "brand": "アイリスオーヤマ",
@@ -258,7 +236,7 @@
     "rating": 4.0,
     "reviewSummary": "",
     "affiliate": {"amazonAsin": "", "rakutenUrl": "", "yahooUrl": ""},
-    "competitors": ["balmuda-greenfan-cirq-egf1700"],
+    "competitors": ["balmuda-egf1800-fan"],
     "updatedAt": "2026-06-04"
   },
   {
@@ -331,10 +309,10 @@
     "priceRange": "",
     "specs": [
       {"label": "除湿方式", "value": "ハイブリッド式（エコ・ハイブリッド）"},
-      {"label": "除湿能力", "value": ""},
+      {"label": "除湿能力", "value": "50Hz 10.5L/日(消費電力205W)/60Hz 12.5L/日(消費電力225W)"},
       {"label": "適用畳数（木造）", "value": "16畳まで（60Hzの場合）"},
       {"label": "適用畳数（鉄筋）", "value": "32畳まで（60Hzの場合）"},
-      {"label": "タンク容量", "value": ""},
+      {"label": "タンク容量", "value": "約3.2L"},
       {"label": "特徴タグ", "value": "ハイブリッド式・ナノイーX・1年中・大容量"}
     ],
     "pros": [
@@ -367,9 +345,9 @@
     "priceRange": "",
     "specs": [
       {"label": "除湿方式", "value": "デシカント式"},
-      {"label": "除湿能力", "value": ""},
-      {"label": "適用畳数めやす", "value": ""},
-      {"label": "タンク容量", "value": ""},
+      {"label": "除湿能力", "value": "5.0L/日"},
+      {"label": "適用畳数めやす", "value": "木造10㎡(6畳)/プレハブ16㎡(10畳)/鉄筋コンクリート21㎡(13畳)"},
+      {"label": "タンク容量", "value": "約2.5L"},
       {"label": "特徴タグ", "value": "デシカント式・サーキュレーター付・部屋干し特化・冬に強い"}
     ],
     "pros": [
@@ -1134,6 +1112,7 @@
       "コストを抑えて扇風機を選びたい方"
     ],
     "reviewSummary": "",
+    "rating": 4.4,
     "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Froomy%2F0001gft%2F"},
     "competitors": ["balmuda-egf3400-cirq", "iris-woozoo-stf-dc15tec"],
     "updatedAt": "2026-06-30"
