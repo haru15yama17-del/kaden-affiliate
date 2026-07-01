@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { categories, categoryMap } from "@/data/categories";
+import { articles } from "@/data/articles";
 import { getProductsByCategory } from "@/lib/data";
 import { buildMetadata } from "@/lib/seo";
 import { itemListJsonLd } from "@/lib/jsonld";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ProductCard } from "@/components/ProductCard";
+import { ArticleCard } from "@/components/ArticleCard";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { JsonLd } from "@/components/JsonLd";
 
@@ -52,6 +54,7 @@ export default async function CategoryPage({ params }: { params: { slug: string 
   const items = await getProductsByCategory(c.slug);
   const hub = HUB_META[params.slug];
   const topProduct = items[0];
+  const relatedArticles = articles.filter((a) => a.category === c.slug);
 
   return (
     <div>
@@ -127,6 +130,18 @@ export default async function CategoryPage({ params }: { params: { slug: string 
           <h2 className="mb-4 font-serif text-xl font-bold">各社を横並びで比較</h2>
           <div className="overflow-x-auto">
             <ComparisonTable items={items.slice(0, 5)} />
+          </div>
+        </div>
+      )}
+
+      {/* 比較記事（該当カテゴリの記事が無ければ非表示） */}
+      {relatedArticles.length > 0 && (
+        <div className="mb-10">
+          <h2 className="mb-4 font-serif text-xl font-bold">{c.name}の比較記事</h2>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {relatedArticles.map((a) => (
+              <ArticleCard key={a.slug} a={a} />
+            ))}
           </div>
         </div>
       )}
