@@ -257,11 +257,20 @@ export default async function AtsuryokunabeKoukaiPage() {
         </p>
       </div>
 
-      <h2>KPC-MA4を購入できるストア</h2>
+      <h2>2台を購入できるストア——比較して選ぶ</h2>
       <p>
         価格は変動するため、最新の価格は各ストアでご確認ください。
       </p>
-      <AffiliateButtons aff={kpc.affiliate} />
+      <div className="not-prose grid gap-4 sm:grid-cols-2">
+        <div className="rounded-xl border border-ink/15 bg-white p-4 shadow-card">
+          <p className="mb-3 text-sm font-bold text-ink">電気圧力鍋 KPC-MA4</p>
+          <AffiliateButtons aff={kpc.affiliate} />
+        </div>
+        <div className="rounded-xl border border-ink/15 bg-white p-4 shadow-card">
+          <p className="mb-3 text-sm font-bold text-ink">ホットクック KN-HW24H</p>
+          <AffiliateButtons aff={hw24h.affiliate} />
+        </div>
+      </div>
 
       <h2>あわせて読みたい・暮らしをラクにする組み合わせ</h2>
       <p>
