@@ -1,26 +1,24 @@
 [
   {
-    "slug": "sharp-kn-hw24g-hotkook",
-    "name": "シャープ ヘルシオ ホットクック KN-HW24G（2〜4人用 2.4L）",
+    "slug": "sharp-kn-mn16h-hotkook",
+    "name": "シャープ ヘルシオ ホットクック withシリーズ KN-MN16H（2〜4人用 1.6L）",
     "brand": "シャープ",
     "category": "cooking",
-    "priceRange": "5万〜7万円",
+    "priceRange": "3.9万円前後（市場想定価格）",
     "specs": [
-      {"label": "容量", "value": "2.4L（2〜4人向け）"},
-      {"label": "調理方式", "value": "水なし自動調理・蒸し・低温調理"},
-      {"label": "Wi-Fi連携", "value": "あり（メニュー追加可能）"},
-      {"label": "自動メニュー数", "value": "100以上"},
-      {"label": "まぜ技ユニット", "value": "搭載（自動かき混ぜ）"}
+      {"label": "容量", "value": "1.6L（2〜4人向け）"},
+      {"label": "センサー", "value": "温度・蒸気のダブルセンサーで無水調理を自動制御"},
+      {"label": "かきまぜ機能", "value": "自動かきまぜ機能なし。「まぜナビ」機能が調理中のかきまぜタイミング・コツを音声・液晶表示で案内"},
+      {"label": "Wi-Fi連携", "value": "非搭載（proシリーズのHW24H/HW16Hとの違い）"}
     ],
-    "pros": ["材料を入れてスイッチを押すだけでほったらかし調理", "無水調理で野菜の甘みと栄養素を引き出せる", "Wi-Fiで新メニューを追加でき使うほど料理の幅が広がる"],
-    "cons": ["本体が大きく置き場所を選ぶ", "調理に30〜60分かかり急ぎの食事には不向き", "5〜7万円と高価"],
-    "bestFor": ["共働きで帰宅後の調理時間を減らしたい家庭", "栄養のある手作り料理を手軽に出したい人", "煮込み・カレー・スープをよく作る家庭"],
-    "notFor": ["炒め物・揚げ物がメインの人", "すぐ食べたい時短だけが目的の人"],
-    "rating": 4.3,
+    "pros": ["HW24H/HW16H（proシリーズ）より価格を抑えた入門モデル", "無水調理・ダブルセンサーによる自動制御はproシリーズと共通", "「まぜナビ」機能で初めてでもかきまぜのタイミングが分かりやすい"],
+    "cons": ["自動かきまぜ機能がなく、メニューによっては手動でかき混ぜるひと手間が必要", "Wi-Fi非搭載でスマホからのメニュー追加はできない", "上位モデルに比べて対応調理方式がシンプル"],
+    "bestFor": ["価格を抑えてホットクックを試したい人", "手動でかき混ぜるひと手間があっても気にならない人", "2〜4人分の無水調理をしたい家庭"],
+    "notFor": ["完全放置の自動かきまぜを重視する人", "Wi-Fi連携でメニューを追加したい人"],
     "reviewSummary": "",
-    "affiliate": {"amazonAsin": "", "rakutenUrl": "", "yahooUrl": ""},
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fwinkstore%2F263860%2F", "yahooUrl": ""},
     "competitors": ["iris-kpc-ma4-pressurecooker"],
-    "updatedAt": "2026-06-04"
+    "updatedAt": "2026-07-01"
   },
   {
     "slug": "sharp-kn-hw24h-hotkook",
@@ -123,7 +121,7 @@
     "rating": 4.1,
     "reviewSummary": "",
     "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fyamada-denki%2F3449743019%2F", "yahooUrl": ""},
-    "competitors": ["sharp-kn-hw24g-hotkook"],
+    "competitors": ["sharp-kn-mn16h-hotkook"],
     "updatedAt": "2026-06-04"
   },
   {
