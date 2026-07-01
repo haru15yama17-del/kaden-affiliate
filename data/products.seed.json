@@ -143,9 +143,9 @@
     "notFor": ["3人以上の家族の食器をまとめて洗いたい人", "鍋・フライパンも入れたい人"],
     "rating": 4.0,
     "reviewSummary": "",
-    "affiliate": {"amazonAsin": "", "rakutenUrl": "", "yahooUrl": ""},
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fpanasonic-store%2Fnp-tml1-w%2F", "yahooUrl": ""},
     "competitors": [],
-    "updatedAt": "2026-06-04"
+    "updatedAt": "2026-07-01"
   },
   {
     "slug": "panasonic-eh-na0k-dryer",
