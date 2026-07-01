@@ -420,6 +420,13 @@ export default async function JoshitsukiKoukaiPage() {
           </Link>
           （冷房と除湿機を組み合わせてカビ・生乾きをまとめて対策したい方に）
         </li>
+        <li>
+          ▶{" "}
+          <Link href="/reviews/drum-washer-koukai" className="font-bold text-accent hover:underline">
+            ドラム式洗濯機おすすめ5選比較——乾燥方式（ヒーター・無排気・ヒートポンプ）の違いで選ぶ
+          </Link>
+          （洗濯乾燥まで完結させて部屋干しゼロを目指したい方に）
+        </li>
       </ul>
     </article>
   );

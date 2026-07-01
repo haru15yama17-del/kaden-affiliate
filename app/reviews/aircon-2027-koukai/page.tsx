@@ -638,6 +638,13 @@ export default async function AirconKoukaiPage() {
           </Link>
           （夏の水分補給・赤ちゃんのミルクに天然水ウォーターサーバーを検討している方に）
         </li>
+        <li>
+          ▶{" "}
+          <Link href="/reviews/drum-washer-koukai" className="font-bold text-accent hover:underline">
+            ドラム式洗濯機おすすめ5選比較——乾燥方式（ヒーター・無排気・ヒートポンプ）の違いで選ぶ
+          </Link>
+          （エアコンで夏の環境を整えつつ洗濯乾燥まで自動化したい方に）
+        </li>
       </ul>
     </article>
   );

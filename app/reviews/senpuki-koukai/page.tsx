@@ -299,6 +299,13 @@ export default async function SenpukiKoukaiPage() {
           </Link>
           （エアコン本体の選び方・2027年問題が気になる方に）
         </li>
+        <li>
+          ▶{" "}
+          <Link href="/reviews/drum-washer-koukai" className="font-bold text-accent hover:underline">
+            ドラム式洗濯機おすすめ5選比較——乾燥方式（ヒーター・無排気・ヒートポンプ）の違いで選ぶ
+          </Link>
+          （部屋干し乾燥をドラム式洗濯乾燥機でまとめて解決したい方に）
+        </li>
       </ul>
     </article>
   );
