@@ -1227,5 +1227,209 @@
     "affiliate": {"officialUrl": "", "ctaLabel": "公式サイトを見る"},
     "competitors": ["palsystem"],
     "updatedAt": "2026-06-04"
+  },
+  {
+    "slug": "iris-flk842-washer",
+    "name": "アイリスオーヤマ ドラム式洗濯乾燥機 FLK842",
+    "brand": "アイリスオーヤマ",
+    "category": "washer",
+    "priceRange": "",
+    "specs": [
+      {"label": "特徴タグ", "value": "低価格・温水洗浄・Ag+抗菌・コンパクト"},
+      {"label": "洗濯/乾燥容量", "value": "洗濯8kg / 乾燥4kg"},
+      {"label": "乾燥方式", "value": "ヒーター乾燥（外気取入れ＋センサー制御の温風）"},
+      {"label": "運転音", "value": "洗濯約40dB / 脱水約46dB / 乾燥約44dB"},
+      {"label": "消費電力", "value": "電動機200W / 温水用800W / 温風用800W（定格入力1000W）"},
+      {"label": "本体寸法", "value": "幅595×奥行652×高さ1065mm（ホース含む）"},
+      {"label": "質量", "value": "約80kg"},
+      {"label": "設置目安", "value": "防水パン奥行内寸54cm以上"},
+      {"label": "おもな機能", "value": "温水洗浄(40/60℃)、Ag+(銀イオン)、ふんわりシワ取りコース、チャイルドロック"}
+    ],
+    "pros": [
+      "低価格でドラム式に手が届く",
+      "温水洗浄(40/60℃)とAg+抗菌で清潔に洗える",
+      "チャイルドロック搭載で小さい子がいる家庭も安心"
+    ],
+    "cons": [
+      "ヒーター乾燥のため乾燥時の電気代が高め",
+      "乾燥容量4kgはやや少なめ",
+      "質量約80kgと重く搬入時に注意が必要"
+    ],
+    "bestFor": [
+      "コストを抑えてドラム式を導入したい方",
+      "温水洗浄・抗菌機能を重視する方"
+    ],
+    "notFor": [
+      "乾燥電気代を抑えたい方（ヒートポンプ式向き）",
+      "乾燥容量を多く必要とする大家族"
+    ],
+    "reviewSummary": "",
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fenetroom%2F516583%2F"},
+    "competitors": ["nitori-nd100kl1-washer", "panasonic-na-sd10hbl-washer", "sharp-es11k1-washer", "toshiba-tw127xm4l-washer"],
+    "updatedAt": "2026-07-01"
+  },
+  {
+    "slug": "nitori-nd100kl1-washer",
+    "name": "ニトリ ドラム式洗濯乾燥機 ND100KL1",
+    "brand": "ニトリ",
+    "category": "washer",
+    "priceRange": "",
+    "specs": [
+      {"label": "特徴タグ", "value": "低価格・乾燥フィルター自動洗浄・奥行スリム・温水洗浄"},
+      {"label": "洗濯/乾燥容量", "value": "洗濯10kg / 乾燥5kg"},
+      {"label": "乾燥方式", "value": "ヒーター式（水冷除湿）"},
+      {"label": "運転音", "value": "洗濯約30dB / 脱水約45dB"},
+      {"label": "消費電力", "value": "洗濯時220W / 脱水時500W / 乾燥時1150W"},
+      {"label": "本体寸法", "value": "幅600×奥行595×高さ857mm"},
+      {"label": "標準使用水量", "value": "洗濯〜乾燥時 約109L"},
+      {"label": "おもな機能", "value": "乾燥フィルター自動洗浄（手入れ不要）、特急洗乾コース、温水洗浄"},
+      {"label": "注意点", "value": "ヒーター式のため乾燥1回の電気代はメーカー回答で約55円、乾燥時間は長め"}
+    ],
+    "pros": [
+      "乾燥フィルター自動洗浄でメンテナンスが楽",
+      "奥行595mmのスリム設計で設置場所を選ばない",
+      "温水洗浄対応で洗浄力が高い"
+    ],
+    "cons": [
+      "ヒーター式のため乾燥1回約55円と電気代が高め",
+      "乾燥時間が長め",
+      "乾燥時の運転音はスペックに記載なし"
+    ],
+    "bestFor": [
+      "コストを抑えてフィルター自動洗浄を使いたい方",
+      "奥行に制約がある設置場所"
+    ],
+    "notFor": [
+      "乾燥電気代を最重視する方",
+      "乾燥時間を短くしたい方"
+    ],
+    "reviewSummary": "",
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fnitori%2F2113400001596s%2F"},
+    "competitors": ["iris-flk842-washer", "panasonic-na-sd10hbl-washer", "sharp-es11k1-washer", "toshiba-tw127xm4l-washer"],
+    "updatedAt": "2026-07-01"
+  },
+  {
+    "slug": "panasonic-na-sd10hbl-washer",
+    "name": "パナソニック ななめドラム洗濯乾燥機 SDシリーズ NA-SD10HBL",
+    "brand": "パナソニック",
+    "category": "washer",
+    "priceRange": "",
+    "specs": [
+      {"label": "特徴タグ", "value": "温水泡洗浄・液体洗剤自動投入・コンパクト・ダウンジャケットコース"},
+      {"label": "洗濯/乾燥容量", "value": "洗濯10kg / 乾燥5kg"},
+      {"label": "乾燥方式", "value": "低温の大風量ヒーター乾燥（排気式）"},
+      {"label": "運転音", "value": "洗濯37dB / 脱水41dB / 乾燥46dB"},
+      {"label": "消費電力量", "value": "洗濯〜乾燥時 約1980Wh"},
+      {"label": "本体寸法", "value": "幅639×奥行650×高さ1010mm（ホース含む・ボディ幅600mm）"},
+      {"label": "質量", "value": "約65kg"},
+      {"label": "設置目安", "value": "防水パン奥行内寸540mm"},
+      {"label": "おもな機能", "value": "温水スゴ落ち泡洗浄、業界最大タンクの液体洗剤自動投入（柔軟剤は手動）、ダウンジャケットコース、本体高さ低めで設置しやすい"}
+    ],
+    "pros": [
+      "温水スゴ落ち泡洗浄で頑固な皮脂汚れをしっかり落とす",
+      "業界最大タンクの液体洗剤自動投入で補充の手間が少ない",
+      "本体高さが低く約65kgと軽量で設置しやすい"
+    ],
+    "cons": [
+      "ヒーター乾燥のためヒートポンプ式より電気代が高い",
+      "柔軟剤は手動投入（液体洗剤のみ自動）",
+      "乾燥容量5kgはやや少なめ"
+    ],
+    "bestFor": [
+      "洗剤の計量・補充を楽にしたい共働き家庭",
+      "ダウンジャケットを家で洗いたい方",
+      "設置スペースが限られる家庭"
+    ],
+    "notFor": [
+      "乾燥電気代を最重視する方（ヒートポンプ式向き）",
+      "柔軟剤も自動投入したい方"
+    ],
+    "reviewSummary": "",
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fbiccamera%2F4550719001738%2F"},
+    "competitors": ["iris-flk842-washer", "nitori-nd100kl1-washer", "sharp-es11k1-washer", "toshiba-tw127xm4l-washer"],
+    "updatedAt": "2026-07-01"
+  },
+  {
+    "slug": "sharp-es11k1-washer",
+    "name": "シャープ プラズマクラスター ドラム式洗濯乾燥機 ES-11K1",
+    "brand": "シャープ",
+    "category": "washer",
+    "priceRange": "",
+    "specs": [
+      {"label": "特徴タグ", "value": "無排気乾燥・マイクロ高圧洗浄・プラズマクラスター・自動お掃除"},
+      {"label": "洗濯/乾燥容量", "value": "洗濯11kg / 乾燥6kg"},
+      {"label": "乾燥方式", "value": "ヒーターセンサー乾燥＋無排気乾燥方式（湿気を室内に出さない）"},
+      {"label": "運転音", "value": "洗濯26dB / 脱水39dB / 乾燥41dB"},
+      {"label": "消費電力量", "value": "洗濯80Wh / 洗濯〜乾燥1880Wh"},
+      {"label": "標準使用水量", "value": "洗濯75L / 洗濯〜乾燥96L"},
+      {"label": "本体寸法", "value": "幅645×奥行732×高さ1100mm（ホース含む）"},
+      {"label": "質量", "value": "約71kg"},
+      {"label": "おもな機能", "value": "マイクロ高圧洗浄、プラズマクラスター(除菌・消臭)、3つの自動お掃除(乾燥ダクト/洗濯槽/ドアパッキン)、業界最高水準の節水"}
+    ],
+    "pros": [
+      "無排気乾燥で湿気を室内に出さずマンション・賃貸でも安心",
+      "洗濯26dBの超静音で深夜・早朝運転がしやすい",
+      "3つの自動お掃除でフィルター・槽・パッキンのメンテナンスが楽"
+    ],
+    "cons": [
+      "ヒーター乾燥のためヒートポンプ式より乾燥電気代が高い",
+      "奥行732mmと設置スペースを選ぶ",
+      "上位機能搭載のため価格が高め"
+    ],
+    "bestFor": [
+      "マンション・賃貸で乾燥時の湿気を気にする方",
+      "深夜・早朝に静かに運転したい方",
+      "自動お掃除でメンテナンスを最小化したい方"
+    ],
+    "notFor": [
+      "設置奥行が浅い防水パンの家庭",
+      "乾燥電気代を最優先する方"
+    ],
+    "reviewSummary": "",
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Febest%2Fiset000005191%2F"},
+    "competitors": ["iris-flk842-washer", "nitori-nd100kl1-washer", "panasonic-na-sd10hbl-washer", "toshiba-tw127xm4l-washer"],
+    "updatedAt": "2026-07-01"
+  },
+  {
+    "slug": "toshiba-tw127xm4l-washer",
+    "name": "東芝 ドラム式洗濯乾燥機 ZABOON TW-127XM4L",
+    "brand": "東芝",
+    "category": "washer",
+    "priceRange": "",
+    "specs": [
+      {"label": "特徴タグ", "value": "ヒートポンプ乾燥・大容量・ウルトラファインバブル・自動投入"},
+      {"label": "洗濯/乾燥容量", "value": "洗濯12kg / 乾燥7kg（業界トップクラスの乾燥容量）"},
+      {"label": "乾燥方式", "value": "ふんわリッチ速乾（ヒートポンプ除湿乾燥）　低温で衣類にやさしく省エネ"},
+      {"label": "運転音", "value": "洗い約32dB / 脱水約37dB / 乾燥約48dB（乾燥節電 約42dB）"},
+      {"label": "消費電力", "value": "洗濯時135W / 乾燥時1190W"},
+      {"label": "消費電力量", "value": "洗濯約70Wh / 洗濯〜乾燥約1330Wh（乾燥節電 約720Wh）"},
+      {"label": "本体寸法", "value": "幅645×奥行722×高さ1060mm（ホース含む・ボディ幅600mm）"},
+      {"label": "質量", "value": "約88kg"},
+      {"label": "設置目安", "value": "防水パン奥行内寸520mm以上"},
+      {"label": "おもな機能", "value": "抗菌ウルトラファインバブル洗浄W＋Ag+抗菌水、液体洗剤・柔軟剤自動投入、自動おそうじ(乾燥ダクト・熱交換器・ドアパッキン)、排水3方向"}
+    ],
+    "pros": [
+      "5機種で唯一のヒートポンプ乾燥で長期的な電気代を大幅に節約",
+      "洗濯12kg/乾燥7kgの大容量で大家族でも1回で完結",
+      "液体洗剤・柔軟剤の両方を自動投入し計量の手間ゼロ"
+    ],
+    "cons": [
+      "ヒートポンプ搭載のため本体価格が高め",
+      "質量約88kgと重く搬入・設置に注意が必要",
+      "奥行722mmで設置スペースを選ぶ"
+    ],
+    "bestFor": [
+      "乾燥電気代を長期的に抑えたい方",
+      "大家族で洗濯〜乾燥を1回で済ませたい方",
+      "洗剤・柔軟剤の自動投入と自動お掃除で完全自動化したい方"
+    ],
+    "notFor": [
+      "設置奥行や予算に制約がある方",
+      "コンパクトなドラム式を探している方"
+    ],
+    "reviewSummary": "",
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fa-price%2F4904530128714%2F"},
+    "competitors": ["iris-flk842-washer", "nitori-nd100kl1-washer", "panasonic-na-sd10hbl-washer", "sharp-es11k1-washer"],
+    "updatedAt": "2026-07-01"
   }
 ]
