@@ -4,6 +4,7 @@ import { reviewJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { AffiliateButtons } from "@/components/AffiliateButtons";
+import { ComparisonTable } from "@/components/ComparisonTable";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { Product } from "@/data/types";
@@ -35,6 +36,25 @@ function productJsonLd(name: string, brand: string) {
 const PATH = "/reviews/senpuki-koukai";
 const TITLE =
   "扇風機とサーキュレーターの違いは？主婦目線でおすすめ3台を比較【2026年】";
+
+/** ざっくり比較表用に「静音性・消費電力・最大の強み」だけへ絞ったスペック */
+const compactSpecs: Record<string, { label: string; value: string }[]> = {
+  "balmuda-egf1800-fan": [
+    { label: "静音性", value: "最小13dB（風量1・メーカー調べ）と3台で最も静か" },
+    { label: "消費電力", value: "1.5W〜20W" },
+    { label: "最大の強み", value: "柔らかい風質と静音性" },
+  ],
+  "balmuda-egf3400-cirq": [
+    { label: "静音性", value: "非公表（大風量到達を優先した設計）" },
+    { label: "消費電力", value: "3W〜20W" },
+    { label: "最大の強み", value: "15m届く大風量とエアコン電気代の削減効果" },
+  ],
+  "iris-woozoo-stf-dc15tec": [
+    { label: "静音性", value: "非公表（強風重視のため音はやや大きめ）" },
+    { label: "消費電力", value: "24W（定格）" },
+    { label: "最大の強み", value: "分解丸洗いのお手入れ性とコスパ" },
+  ],
+};
 
 const faq = [
   {
@@ -77,6 +97,12 @@ export default async function SenpukiKoukaiPage() {
     .filter((p): p is Product => p !== undefined);
 
   const cv = fans[0];
+
+  const compactItems = fans.map((p) => ({
+    ...p,
+    rating: undefined,
+    specs: compactSpecs[p.slug] ?? [],
+  }));
 
   const roleBadge: Record<string, string> = {
     "balmuda-egf1800-fan":      "扇風機",
@@ -214,6 +240,13 @@ export default async function SenpukiKoukaiPage() {
         </p>
       </div>
 
+      <h2>3機種をざっくり比較</h2>
+      <ComparisonTable items={compactItems} highlightBest={false} />
+      <p className="text-sm text-ink/55">
+        ※「優劣」ではなく「扇風機かサーキュレーターか、兼用モデルか」を軸にしているため、おすすめバッジは表示していません。
+        静音性・消費電力はメーカー公表値、非公表の項目は「非公表」と記載しています。詳しい仕様は各商品の見出し以降で解説します。
+      </p>
+
       {/* ── 3機種カード ── */}
       <h2>この記事で取り上げた3台——楽天で詳細・在庫を確認</h2>
       <p>価格・在庫は時期によって変動します。最新情報は各ストアでご確認ください。</p>
@@ -235,6 +268,24 @@ export default async function SenpukiKoukaiPage() {
                   </li>
                 ))}
             </ul>
+
+            <div className="mt-4 rounded-xl border-2 border-ok/30 bg-ok/10 p-3.5">
+              <p className="mb-1.5 text-sm font-bold text-ink">🎯 こんな人におすすめ</p>
+              <ul className="space-y-1 text-sm text-ink/80">
+                {p.bestFor.map((x, i) => (
+                  <li key={i}>・{x}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-2 rounded-lg bg-ink/5 p-3">
+              <p className="mb-1 text-xs font-bold text-ink/50">⚠️ こんな人には向かないかも</p>
+              <ul className="space-y-0.5 text-xs text-ink/55">
+                {p.notFor.map((x, i) => (
+                  <li key={i}>・{x}</li>
+                ))}
+              </ul>
+            </div>
+
             <HaruBubble label="はるの店頭レポート">
               {haruContents[p.slug]}
             </HaruBubble>

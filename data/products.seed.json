@@ -1178,7 +1178,7 @@
     "name": "バルミューダ ザ・グリーンファン EGF-1800",
     "brand": "バルミューダ",
     "category": "seasonal",
-    "priceRange": "",
+    "priceRange": "39,600円",
     "specs": [
       {"label": "特徴タグ", "value": "DCモーター・超静音・コードレス対応・プレミアム"},
       {"label": "最小運転音", "value": "13dB（風量1・メーカー調べ）"},
@@ -1215,7 +1215,7 @@
     "name": "バルミューダ GreenFan Cirq EGF-3400",
     "brand": "バルミューダ",
     "category": "seasonal",
-    "priceRange": "",
+    "priceRange": "27,500円",
     "specs": [
       {"label": "特徴タグ", "value": "DCモーター・大風量・エアコン併用向け・部屋干し"},
       {"label": "消費電力", "value": "3W〜20W"},
@@ -1252,7 +1252,7 @@
     "name": "アイリスオーヤマ サーキュレーター扇風機 WOOZOO STF-DC15TEC",
     "brand": "アイリスオーヤマ",
     "category": "seasonal",
-    "priceRange": "",
+    "priceRange": "7,980〜11,800円",
     "specs": [
       {"label": "特徴タグ", "value": "DCモーター・分解丸洗い・コスパ・1台5役"},
       {"label": "消費電力", "value": "24W（定格）"},
