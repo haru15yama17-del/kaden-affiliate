@@ -52,6 +52,25 @@ function HaruBubble({ label, children }: { label: string; children: ReactNode })
 const PATH = "/reviews/hotcook-koukai";
 const TITLE = "ホットクックで後悔しない？店頭で聞いた5つのデメリットと、それでも共働き家庭に選ばれる理由";
 
+/** ざっくり比較表用に「容量・かきまぜ機能・最大の強み」だけへ絞ったスペック */
+const compactSpecs: Record<string, { label: string; value: string }[]> = {
+  "sharp-kn-hw24h-hotkook": [
+    { label: "容量", value: "2.4L（2〜6人向け）" },
+    { label: "かきまぜ機能", value: "あり（まぜ技ユニット搭載・自動かき混ぜ）" },
+    { label: "最大の強み", value: "3モデル中最大容量で作り置き・大家族向き、強火調理にも対応" },
+  ],
+  "sharp-kn-hw16h-hotkook": [
+    { label: "容量", value: "1.6L（2〜4人向け）" },
+    { label: "かきまぜ機能", value: "あり（まぜ技ユニット搭載・自動かき混ぜ）" },
+    { label: "最大の強み", value: "価格と容量のバランスが良く、夫婦+子ども1〜2人にちょうど良いサイズ" },
+  ],
+  "sharp-kn-hw10g-hotkook": [
+    { label: "容量", value: "1.0L（1〜2人向け）" },
+    { label: "かきまぜ機能", value: "あり（まぜ技ユニット搭載・自動かき混ぜ、proシリーズ共通機能）" },
+    { label: "最大の強み", value: "3モデル中もっとも価格が安く小型、持ち手がなく置きやすい" },
+  ],
+};
+
 const faq = [
   {
     q: "ホットクックの型番（KN-HW24H/16H/10G）の違いは何ですか？",
@@ -87,6 +106,12 @@ export default async function HotcookKoukaiPage() {
   const hw24h = all.find((p) => p.slug === "sharp-kn-hw24h-hotkook")!;
   const hw16h = all.find((p) => p.slug === "sharp-kn-hw16h-hotkook")!;
   const hw10g = all.find((p) => p.slug === "sharp-kn-hw10g-hotkook")!;
+
+  const compactItems = [hw24h, hw16h, hw10g].map((p) => ({
+    ...p,
+    rating: undefined,
+    specs: compactSpecs[p.slug] ?? [],
+  }));
 
   return (
     <article className="prose-article max-w-none pb-20">
@@ -252,7 +277,11 @@ export default async function HotcookKoukaiPage() {
         </figure>
       </div>
 
-      <ComparisonTable items={[hw24h, hw16h, hw10g]} />
+      <ComparisonTable items={compactItems} highlightBest={false} />
+      <p className="text-sm text-ink/55">
+        ※「優劣」ではなく「容量・価格・置きやすさのどれを優先するか」を軸にしているため、おすすめバッジは表示していません。
+        3モデルとも自動かきまぜ（まぜ技ユニット）を搭載しています。より詳しい仕様は各商品の見出し以降で解説します。
+      </p>
 
       <p>
         迷ったら、容量と価格と置きやすさのバランスが良い <strong>KN-HW16H</strong> が無難です。
@@ -269,6 +298,22 @@ export default async function HotcookKoukaiPage() {
             />
             <p className="text-sm font-bold text-ink">▶ 楽天市場で KN-HW24H（2.4L）の最安値を見る</p>
           </div>
+          <div className="mb-3 rounded-xl border-2 border-ok/30 bg-ok/10 p-3.5">
+            <p className="mb-1.5 text-sm font-bold text-ink">🎯 こんな人におすすめ</p>
+            <ul className="space-y-1 text-sm text-ink/80">
+              {hw24h.bestFor.map((x, i) => (
+                <li key={i}>・{x}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="mb-3 rounded-lg bg-ink/5 p-3">
+            <p className="mb-1 text-xs font-bold text-ink/50">⚠️ こんな人には向かないかも</p>
+            <ul className="space-y-0.5 text-xs text-ink/55">
+              {hw24h.notFor.map((x, i) => (
+                <li key={i}>・{x}</li>
+              ))}
+            </ul>
+          </div>
           <AffiliateButtons aff={hw24h.affiliate} />
         </div>
         <div>
@@ -281,6 +326,22 @@ export default async function HotcookKoukaiPage() {
             />
             <p className="text-sm font-bold text-ink">▶ 楽天市場で KN-HW16H（1.6L）の最安値を見る</p>
           </div>
+          <div className="mb-3 rounded-xl border-2 border-ok/30 bg-ok/10 p-3.5">
+            <p className="mb-1.5 text-sm font-bold text-ink">🎯 こんな人におすすめ</p>
+            <ul className="space-y-1 text-sm text-ink/80">
+              {hw16h.bestFor.map((x, i) => (
+                <li key={i}>・{x}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="mb-3 rounded-lg bg-ink/5 p-3">
+            <p className="mb-1 text-xs font-bold text-ink/50">⚠️ こんな人には向かないかも</p>
+            <ul className="space-y-0.5 text-xs text-ink/55">
+              {hw16h.notFor.map((x, i) => (
+                <li key={i}>・{x}</li>
+              ))}
+            </ul>
+          </div>
           <AffiliateButtons aff={hw16h.affiliate} />
         </div>
         <div>
@@ -292,6 +353,22 @@ export default async function HotcookKoukaiPage() {
               className="h-14 w-14 shrink-0 rounded-lg border border-ink/10 object-cover"
             />
             <p className="text-sm font-bold text-ink">▶ 楽天市場で KN-HW10G（1.0L）の最安値を見る</p>
+          </div>
+          <div className="mb-3 rounded-xl border-2 border-ok/30 bg-ok/10 p-3.5">
+            <p className="mb-1.5 text-sm font-bold text-ink">🎯 こんな人におすすめ</p>
+            <ul className="space-y-1 text-sm text-ink/80">
+              {hw10g.bestFor.map((x, i) => (
+                <li key={i}>・{x}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="mb-3 rounded-lg bg-ink/5 p-3">
+            <p className="mb-1 text-xs font-bold text-ink/50">⚠️ こんな人には向かないかも</p>
+            <ul className="space-y-0.5 text-xs text-ink/55">
+              {hw10g.notFor.map((x, i) => (
+                <li key={i}>・{x}</li>
+              ))}
+            </ul>
           </div>
           <AffiliateButtons aff={hw10g.affiliate} />
         </div>
