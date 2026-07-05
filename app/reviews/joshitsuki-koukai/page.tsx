@@ -420,7 +420,7 @@ export default async function JoshitsukiKoukaiPage() {
               <HaruBubble label="はるの店頭レポート">
                 {haruContents[p.slug]}
               </HaruBubble>
-              <AffiliateButtons aff={p.affiliate} />
+              <AffiliateButtons aff={p.affiliate} productName={p.name} />
             </div>
           );
         })}

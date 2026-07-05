@@ -309,7 +309,7 @@ export default async function DrumWasherKoukaiPage() {
           </HaruBubble>
         )}
 
-        <AffiliateButtons aff={p.affiliate} />
+        <AffiliateButtons aff={p.affiliate} productName={p.name} />
       </div>
     );
   }

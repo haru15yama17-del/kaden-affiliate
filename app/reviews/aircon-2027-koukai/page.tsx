@@ -392,7 +392,7 @@ export default async function AirconKoukaiPage() {
       </div>
 
       {/* CV-4 */}
-      <AffiliateButtons aff={omakase.affiliate} />
+      <AffiliateButtons aff={omakase.affiliate} productName={omakase.name} />
 
       <h3>② アイリスオーヤマ エアコン Gシリーズ（工事費込み・施工ありセット）——メーカー指定で安く・畳数展開が広い</h3>
       <p>
@@ -429,7 +429,7 @@ export default async function AirconKoukaiPage() {
       </div>
 
       {/* CV-5 */}
-      <AffiliateButtons aff={iris.affiliate} />
+      <AffiliateButtons aff={iris.affiliate} productName={iris.name} />
 
       {/* ================================================================
           グループ2: メーカー・省エネ重視
@@ -471,7 +471,7 @@ export default async function AirconKoukaiPage() {
       </div>
 
       {/* CV-6 */}
-      <AffiliateButtons aff={daikin.affiliate} />
+      <AffiliateButtons aff={daikin.affiliate} productName={daikin.name} />
 
       <h3>④ 三菱 霧ヶ峰 MSZ-ZW5625S-W（18畳用・工事費込み・省エネ上位機）——広いリビングに省エネ重視</h3>
       <p>
@@ -504,7 +504,7 @@ export default async function AirconKoukaiPage() {
       </div>
 
       {/* CV-7 */}
-      <AffiliateButtons aff={mitsu.affiliate} />
+      <AffiliateButtons aff={mitsu.affiliate} productName={mitsu.name} />
 
       <h3>⑤ パナソニック エオリア CS-635DEX2-W（20畳用・工事費込み・省エネ上位機）——広いLDKに省エネ最重視</h3>
       <p>
@@ -537,7 +537,7 @@ export default async function AirconKoukaiPage() {
       </div>
 
       {/* CV-8 */}
-      <AffiliateButtons aff={panasonic.affiliate} />
+      <AffiliateButtons aff={panasonic.affiliate} productName={panasonic.name} />
 
       {/* ================================================================
           比較表（compactItems）

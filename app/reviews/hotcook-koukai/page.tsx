@@ -314,7 +314,7 @@ export default async function HotcookKoukaiPage() {
               ))}
             </ul>
           </div>
-          <AffiliateButtons aff={hw24h.affiliate} />
+          <AffiliateButtons aff={hw24h.affiliate} productName={hw24h.name} />
         </div>
         <div>
           <div className="mb-2 flex items-center gap-3">
@@ -342,7 +342,7 @@ export default async function HotcookKoukaiPage() {
               ))}
             </ul>
           </div>
-          <AffiliateButtons aff={hw16h.affiliate} />
+          <AffiliateButtons aff={hw16h.affiliate} productName={hw16h.name} />
         </div>
         <div>
           <div className="mb-2 flex items-center gap-3">
@@ -370,7 +370,7 @@ export default async function HotcookKoukaiPage() {
               ))}
             </ul>
           </div>
-          <AffiliateButtons aff={hw10g.affiliate} />
+          <AffiliateButtons aff={hw10g.affiliate} productName={hw10g.name} />
         </div>
       </div>
 

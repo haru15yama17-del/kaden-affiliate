@@ -96,7 +96,7 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
         </p>
         {hasCta && (
           <div className="mt-3">
-            <AffiliateButtons aff={p.affiliate} />
+            <AffiliateButtons aff={p.affiliate} productName={p.name} />
           </div>
         )}
       </div>
@@ -138,7 +138,7 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
           ))}
         </div>
 
-        <AffiliateButtons aff={p.affiliate} />
+        <AffiliateButtons aff={p.affiliate} productName={p.name} />
       </div>
 
       <h2>はじめに</h2>
@@ -266,7 +266,7 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
         <p className="mb-4 text-xs text-ink/55">
           価格は変動します。下記の各ストアで最新価格・特典をご確認ください。
         </p>
-        <AffiliateButtons aff={p.affiliate} />
+        <AffiliateButtons aff={p.affiliate} productName={p.name} />
       </div>
 
       <RelatedArticles items={related} />

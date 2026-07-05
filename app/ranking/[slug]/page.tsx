@@ -135,7 +135,7 @@ export default async function RankingPage({ params }: { params: { slug: string }
 
                   {/* Buy buttons */}
                   <div className="mt-4">
-                    <AffiliateButtons aff={p.affiliate} />
+                    <AffiliateButtons aff={p.affiliate} productName={p.name} />
                   </div>
                 </div>
               </div>

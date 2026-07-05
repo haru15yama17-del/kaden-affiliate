@@ -59,7 +59,7 @@ export default async function ComparePage({ params }: { params: { slug: string }
         <section key={p.slug} className="mt-8">
           <h2>{p.name}が向いている人</h2>
           <ul>{p.bestFor.map((x, i) => <li key={i}>{x}</li>)}</ul>
-          <div className="my-3"><AffiliateButtons aff={p.affiliate} /></div>
+          <div className="my-3"><AffiliateButtons aff={p.affiliate} productName={p.name} /></div>
         </section>
       ))}
 

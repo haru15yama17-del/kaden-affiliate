@@ -181,7 +181,7 @@ export default async function PersonalDishwasherKoukaiPage() {
         )}
 
         <div className="mt-4">
-          <AffiliateButtons aff={p.affiliate} />
+          <AffiliateButtons aff={p.affiliate} productName={p.name} />
         </div>
       </div>
     );

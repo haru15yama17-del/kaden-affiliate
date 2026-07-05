@@ -303,7 +303,7 @@ export default async function AtsuryokunabeKoukaiPage() {
               ))}
             </ul>
           </div>
-          <AffiliateButtons aff={kpc.affiliate} />
+          <AffiliateButtons aff={kpc.affiliate} productName={kpc.name} />
         </div>
         <div className="rounded-xl border border-ink/15 bg-white p-4 shadow-card">
           <p className="mb-3 text-sm font-bold text-ink">ホットクック KN-HW24H</p>
@@ -323,7 +323,7 @@ export default async function AtsuryokunabeKoukaiPage() {
               ))}
             </ul>
           </div>
-          <AffiliateButtons aff={hw24h.affiliate} />
+          <AffiliateButtons aff={hw24h.affiliate} productName={hw24h.name} />
         </div>
       </div>
 

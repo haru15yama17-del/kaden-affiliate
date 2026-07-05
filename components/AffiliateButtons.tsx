@@ -1,5 +1,6 @@
 import type { AffiliateLinks } from "@/data/types";
 import { buildStoreButtons } from "@/lib/affiliate";
+import { TrackedLink } from "@/components/TrackedLink";
 
 type StoreKey = "amazon" | "rakuten" | "yahoo" | "moshimo" | "a8";
 
@@ -11,9 +12,16 @@ const storeConfig: Record<StoreKey, { cls: string; icon: string; primary: boolea
   a8:      { cls: "bg-ink text-white hover:brightness-125",         icon: "🏬", primary: false },
 };
 
-export function AffiliateButtons({ aff }: { aff: AffiliateLinks }) {
+export function AffiliateButtons({
+  aff,
+  productName,
+}: {
+  aff: AffiliateLinks;
+  productName?: string;
+}) {
   // サービス系商品（officialUrl or ctaLabel が定義されている）はCTAモード
   const isServiceType = aff.ctaLabel !== undefined || aff.officialUrl !== undefined;
+  const affiliateType: "rakuten" | "official" = isServiceType ? "official" : "rakuten";
 
   if (isServiceType) {
     const label = aff.ctaLabel ?? "公式サイトで確認";
@@ -23,10 +31,10 @@ export function AffiliateButtons({ aff }: { aff: AffiliateLinks }) {
           <p className="mb-3 text-xs font-bold uppercase tracking-widest text-accent/75">
             ▼ 公式サイトで詳細を確認
           </p>
-          <a
+          <TrackedLink
             href={aff.officialUrl}
-            target="_blank"
-            rel="nofollow sponsored noopener"
+            productName={productName}
+            affiliateType={affiliateType}
             className="flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-5 py-4 text-base font-bold text-white shadow-cta transition-all hover:-translate-y-0.5 hover:brightness-110 sm:text-lg"
           >
             <span>✨</span>
@@ -34,7 +42,7 @@ export function AffiliateButtons({ aff }: { aff: AffiliateLinks }) {
             <svg className="ml-1 h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-          </a>
+          </TrackedLink>
           <p className="mt-3 text-center text-xs text-ink/40">
             ※アフィリエイト広告を利用しています
           </p>
@@ -79,11 +87,12 @@ export function AffiliateButtons({ aff }: { aff: AffiliateLinks }) {
       {primary.map((b) => {
         const cfg = storeConfig[b.store as StoreKey];
         return (
-          <a
+          <TrackedLink
             key={b.store}
             href={b.href}
-            target="_blank"
-            rel="nofollow sponsored noopener"
+            productName={productName}
+            affiliateType={affiliateType}
+            store={b.store}
             className={`mb-2.5 flex w-full items-center justify-center gap-2 rounded-xl px-5 py-4 text-base font-bold transition-all hover:-translate-y-0.5 hover:brightness-105 ${cfg.cls}`}
           >
             <span className="text-lg">{cfg.icon}</span>
@@ -91,7 +100,7 @@ export function AffiliateButtons({ aff }: { aff: AffiliateLinks }) {
             <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-          </a>
+          </TrackedLink>
         );
       })}
 
@@ -100,16 +109,17 @@ export function AffiliateButtons({ aff }: { aff: AffiliateLinks }) {
           {secondary.map((b) => {
             const cfg = storeConfig[b.store as StoreKey];
             return (
-              <a
+              <TrackedLink
                 key={b.store}
                 href={b.href}
-                target="_blank"
-                rel="nofollow sponsored noopener"
+                productName={productName}
+                affiliateType={affiliateType}
+                store={b.store}
                 className={`flex items-center justify-center gap-1.5 rounded-lg px-4 py-2.5 text-sm font-bold transition-all hover:brightness-105 ${cfg?.cls ?? "bg-ink/10 text-ink"}`}
               >
                 <span>{cfg?.icon}</span>
                 <span>{b.label}</span>
-              </a>
+              </TrackedLink>
             );
           })}
         </div>
