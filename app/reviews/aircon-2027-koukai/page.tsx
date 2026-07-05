@@ -5,6 +5,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RecommendBox } from "@/components/RecommendBox";
 import { AffiliateButtons } from "@/components/AffiliateButtons";
+import { ComparisonTable } from "@/components/ComparisonTable";
 import { StickyCta } from "@/components/StickyCta";
 import Link from "next/link";
 import type { ReactNode } from "react";
@@ -106,6 +107,35 @@ const PATH = "/reviews/aircon-2027-koukai";
 const TITLE =
   "エアコンは2027年問題で値上がり前に？工事費込みで安いうちに選ぶおすすめモデル【2026年】";
 
+/** ざっくり比較表用に「畳数目安・工事費込み/別・最大の強み」だけへ絞ったスペック */
+const compactSpecs: Record<string, { label: string; value: string }[]> = {
+  "aircon-set-6jo-omakase": [
+    { label: "畳数目安", value: "6畳用（冷暖房2.2kW相当）" },
+    { label: "工事費込み/別", value: "工事費込み・全国工事対応（メーカー・型番はおまかせ）" },
+    { label: "最大の強み", value: "工事費込みで最安クラス。ただしメーカー・型番は選べない" },
+  ],
+  "iris-g-aircon-set": [
+    { label: "畳数目安", value: "6〜20畳の展開あり" },
+    { label: "工事費込み/別", value: "施工あり（工事費込み）" },
+    { label: "最大の強み", value: "工事費込みでメーカー指定（アイリスオーヤマ）ができる価格の安さ" },
+  ],
+  "daikin-s285ates-aircon": [
+    { label: "畳数目安", value: "10畳用" },
+    { label: "工事費込み/別", value: "工事費込み・全国工事対応" },
+    { label: "最大の強み", value: "工事費込みでダイキンブランドの信頼性を選べること" },
+  ],
+  "mitsubishi-msz-zw5625s-aircon": [
+    { label: "畳数目安", value: "18畳用" },
+    { label: "工事費込み/別", value: "工事費込み" },
+    { label: "最大の強み", value: "工事費込みで霧ヶ峰の省エネ上位機・ムーブアイを選べること" },
+  ],
+  "panasonic-cs-635dex2-aircon": [
+    { label: "畳数目安", value: "20畳用" },
+    { label: "工事費込み/別", value: "工事費込み" },
+    { label: "最大の強み", value: "工事費込みでエオリアの省エネ上位機・ナノイーXを選べること" },
+  ],
+};
+
 const faq = [
   {
     q: "エアコンの2027年問題とは？",
@@ -147,6 +177,12 @@ export default async function AirconKoukaiPage() {
   const daikin    = all.find((p) => p.slug === "daikin-s285ates-aircon")!;
   const mitsu     = all.find((p) => p.slug === "mitsubishi-msz-zw5625s-aircon")!;
   const panasonic = all.find((p) => p.slug === "panasonic-cs-635dex2-aircon")!;
+
+  const compactItems = [omakase, iris, daikin, mitsu, panasonic].map((p) => ({
+    ...p,
+    rating: undefined,
+    specs: compactSpecs[p.slug] ?? [],
+  }));
 
   return (
     <article className="prose-article max-w-none pb-20">
@@ -338,6 +374,23 @@ export default async function AirconKoukaiPage() {
         </ul>
       </div>
 
+      <div className="not-prose mt-4 rounded-xl border-2 border-ok/30 bg-ok/10 p-3.5">
+        <p className="mb-1.5 text-sm font-bold text-ink">🎯 こんな人におすすめ</p>
+        <ul className="space-y-1 text-sm text-ink/80">
+          {omakase.bestFor.map((x, i) => (
+            <li key={i}>・{x}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="not-prose mt-2 rounded-lg bg-ink/5 p-3">
+        <p className="mb-1 text-xs font-bold text-ink/50">⚠️ こんな人には向かないかも</p>
+        <ul className="space-y-0.5 text-xs text-ink/55">
+          {omakase.notFor.map((x, i) => (
+            <li key={i}>・{x}</li>
+          ))}
+        </ul>
+      </div>
+
       {/* CV-4 */}
       <AffiliateButtons aff={omakase.affiliate} />
 
@@ -357,6 +410,23 @@ export default async function AirconKoukaiPage() {
         <p className="mt-2">店員さんは正直に「冷やす・暖めるだけの<strong>単機能</strong>。省エネは大手に劣るので、毎日長時間使うと電気代で逆転することも。室外機の音も少し大きめ」と。</p>
         <p className="mt-2">来客用の和室や1日1〜2時間だけ使う部屋、急ぎで安く揃えたいときの間に合わせ向き。メインのLDKには不向きという印象でした。</p>
       </HaruBubble>
+
+      <div className="not-prose mt-4 rounded-xl border-2 border-ok/30 bg-ok/10 p-3.5">
+        <p className="mb-1.5 text-sm font-bold text-ink">🎯 こんな人におすすめ</p>
+        <ul className="space-y-1 text-sm text-ink/80">
+          {iris.bestFor.map((x, i) => (
+            <li key={i}>・{x}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="not-prose mt-2 rounded-lg bg-ink/5 p-3">
+        <p className="mb-1 text-xs font-bold text-ink/50">⚠️ こんな人には向かないかも</p>
+        <ul className="space-y-0.5 text-xs text-ink/55">
+          {iris.notFor.map((x, i) => (
+            <li key={i}>・{x}</li>
+          ))}
+        </ul>
+      </div>
 
       {/* CV-5 */}
       <AffiliateButtons aff={iris.affiliate} />
@@ -383,6 +453,23 @@ export default async function AirconKoukaiPage() {
         <p className="mt-2">寝室・子ども部屋・書斎など、夏に長時間つけっぱなしにする個室にちょうど良い印象です。</p>
       </HaruBubble>
 
+      <div className="not-prose mt-4 rounded-xl border-2 border-ok/30 bg-ok/10 p-3.5">
+        <p className="mb-1.5 text-sm font-bold text-ink">🎯 こんな人におすすめ</p>
+        <ul className="space-y-1 text-sm text-ink/80">
+          {daikin.bestFor.map((x, i) => (
+            <li key={i}>・{x}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="not-prose mt-2 rounded-lg bg-ink/5 p-3">
+        <p className="mb-1 text-xs font-bold text-ink/50">⚠️ こんな人には向かないかも</p>
+        <ul className="space-y-0.5 text-xs text-ink/55">
+          {daikin.notFor.map((x, i) => (
+            <li key={i}>・{x}</li>
+          ))}
+        </ul>
+      </div>
+
       {/* CV-6 */}
       <AffiliateButtons aff={daikin.affiliate} />
 
@@ -398,6 +485,23 @@ export default async function AirconKoukaiPage() {
         <p className="mt-2">霧ヶ峰のムーブアイは動きが細かく、左右のフラップが独立してウネウネ。暑がりさんと寒がりさんに別々の風を当てるデモが分かりやすかったです。</p>
         <p className="mt-2">店員さん談：「足元までしっかり暖めたい、間取りが複雑なリビングなら<strong>ムーブアイが強い</strong>」。</p>
       </HaruBubble>
+
+      <div className="not-prose mt-4 rounded-xl border-2 border-ok/30 bg-ok/10 p-3.5">
+        <p className="mb-1.5 text-sm font-bold text-ink">🎯 こんな人におすすめ</p>
+        <ul className="space-y-1 text-sm text-ink/80">
+          {mitsu.bestFor.map((x, i) => (
+            <li key={i}>・{x}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="not-prose mt-2 rounded-lg bg-ink/5 p-3">
+        <p className="mb-1 text-xs font-bold text-ink/50">⚠️ こんな人には向かないかも</p>
+        <ul className="space-y-0.5 text-xs text-ink/55">
+          {mitsu.notFor.map((x, i) => (
+            <li key={i}>・{x}</li>
+          ))}
+        </ul>
+      </div>
 
       {/* CV-7 */}
       <AffiliateButtons aff={mitsu.affiliate} />
@@ -415,8 +519,36 @@ export default async function AirconKoukaiPage() {
         <p className="mt-2">店員さん談：「キッチンの油やペットのニオイが気になるLDKならパナソニック。内部の自動洗浄も強力」。</p>
       </HaruBubble>
 
+      <div className="not-prose mt-4 rounded-xl border-2 border-ok/30 bg-ok/10 p-3.5">
+        <p className="mb-1.5 text-sm font-bold text-ink">🎯 こんな人におすすめ</p>
+        <ul className="space-y-1 text-sm text-ink/80">
+          {panasonic.bestFor.map((x, i) => (
+            <li key={i}>・{x}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="not-prose mt-2 rounded-lg bg-ink/5 p-3">
+        <p className="mb-1 text-xs font-bold text-ink/50">⚠️ こんな人には向かないかも</p>
+        <ul className="space-y-0.5 text-xs text-ink/55">
+          {panasonic.notFor.map((x, i) => (
+            <li key={i}>・{x}</li>
+          ))}
+        </ul>
+      </div>
+
       {/* CV-8 */}
       <AffiliateButtons aff={panasonic.affiliate} />
+
+      {/* ================================================================
+          比較表（compactItems）
+      ================================================================ */}
+      <h2>5機種をざっくり比較</h2>
+      <ComparisonTable items={compactItems} highlightBest={false} />
+      <p className="text-sm text-ink/55">
+        ※「優劣」ではなく「安さ重視か、省エネ・メーカー重視か」を軸にしているため、おすすめバッジは表示していません。
+        価格帯は時期による変動が大きいため「要確認」としています。畳数目安・工事費・最大の強みはメーカー公表情報をもとにした編集部の要約です。
+        詳しいグループ分け・購入リンクは下の一覧表もあわせてご確認ください。
+      </p>
 
       {/* ================================================================
           比較表（購入ボタン付き）
