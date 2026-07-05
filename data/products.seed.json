@@ -360,7 +360,7 @@
     "name": "三菱電機 衣類乾燥除湿機 サラリPro MJ-P180YX-W",
     "brand": "三菱電機",
     "category": "seasonal",
-    "priceRange": "",
+    "priceRange": "47,700円",
     "specs": [
       {"label": "除湿方式", "value": "コンプレッサー式"},
       {"label": "除湿能力", "value": "最大18L/日（60Hz時）・15.5L/日（50Hz時）"},
@@ -399,7 +399,7 @@
     "name": "パナソニック 衣類乾燥除湿機 F-YEX120B-W",
     "brand": "パナソニック",
     "category": "seasonal",
-    "priceRange": "",
+    "priceRange": "69,935円",
     "specs": [
       {"label": "除湿方式", "value": "ハイブリッド式（エコ・ハイブリッド）"},
       {"label": "除湿能力", "value": "50Hz 10.5L/日(消費電力205W)/60Hz 12.5L/日(消費電力225W)"},
@@ -426,7 +426,7 @@
     ],
     "rating": 4.0,
     "reviewSummary": "",
-    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fpanasonic-store%2Ff-yex120b-w%2F", "yahooUrl": ""},
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Febest%2F4549980784358%2F", "yahooUrl": ""},
     "competitors": [],
     "updatedAt": "2026-06-30"
   },
@@ -435,7 +435,7 @@
     "name": "アイリスオーヤマ サーキュレーター付き衣類乾燥除湿機（デシカント式）",
     "brand": "アイリスオーヤマ",
     "category": "seasonal",
-    "priceRange": "",
+    "priceRange": "16,800〜26,980円",
     "specs": [
       {"label": "除湿方式", "value": "デシカント式"},
       {"label": "除湿能力", "value": "5.0L/日"},

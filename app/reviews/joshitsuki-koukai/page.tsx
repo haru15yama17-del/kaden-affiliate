@@ -5,6 +5,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RecommendBox } from "@/components/RecommendBox";
 import { AffiliateButtons } from "@/components/AffiliateButtons";
+import { ComparisonTable } from "@/components/ComparisonTable";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { Product } from "@/data/types";
@@ -52,6 +53,30 @@ function HaruBubble({ label, children }: { label: string; children: ReactNode })
 const PATH = "/reviews/joshitsuki-koukai";
 const TITLE = "除湿機おすすめ比較【2026年】コンプレッサー・デシカント・ハイブリッド式の違いと部屋干し向け4選";
 
+/** ざっくり比較表用に「除湿方式・除湿能力・最大の強み」だけへ絞ったスペック */
+const compactSpecs: Record<string, { label: string; value: string }[]> = {
+  "sharp-cv-l120-dehumidifier": [
+    { label: "除湿方式", value: "コンプレッサー式" },
+    { label: "除湿能力", value: "最大7.1L/日" },
+    { label: "最大の強み", value: "コンパクト設計とプラズマクラスターによる清潔ケア" },
+  ],
+  "mitsubishi-mj-p180yx-dehumidifier": [
+    { label: "除湿方式", value: "コンプレッサー式（冬モード搭載）" },
+    { label: "除湿能力", value: "最大18L/日（60Hz時）" },
+    { label: "最大の強み", value: "家庭用トップクラスの除湿パワー" },
+  ],
+  "panasonic-f-yex120b-dehumidifier": [
+    { label: "除湿方式", value: "ハイブリッド式" },
+    { label: "除湿能力", value: "10.5〜12.5L/日" },
+    { label: "最大の強み", value: "通年安定した除湿力とナノイーXの消臭・除菌" },
+  ],
+  "iris-circulator-desiccant-dehumidifier": [
+    { label: "除湿方式", value: "デシカント式" },
+    { label: "除湿能力", value: "5.0L/日" },
+    { label: "最大の強み", value: "サーキュレーター搭載で洗濯物に直接送風・冬に強い" },
+  ],
+};
+
 const faq = [
   {
     q: "コンプレッサー式とデシカント式の除湿機の違いは何ですか？",
@@ -93,6 +118,12 @@ export default async function JoshitsukiKoukaiPage() {
   ]
     .map((slug) => all.find((p) => p.slug === slug))
     .filter((p): p is Product => p !== undefined);
+
+  const compactItems = dehumidifiers.map((p) => ({
+    ...p,
+    rating: undefined,
+    specs: compactSpecs[p.slug] ?? [],
+  }));
 
   const haruContents: Record<string, ReactNode> = {
     "sharp-cv-l120-dehumidifier": (
@@ -341,6 +372,13 @@ export default async function JoshitsukiKoukaiPage() {
         </p>
       </div>
 
+      <h2>4台をざっくり比較</h2>
+      <ComparisonTable items={compactItems} highlightBest={false} />
+      <p className="text-sm text-ink/55">
+        ※「優劣」ではなく「除湿方式・使う季節が何に向いているか」を軸にしているため、おすすめバッジは表示していません。
+        除湿方式・除湿能力はメーカー公表値です。詳しい仕様は各商品の見出し以降で解説します。
+      </p>
+
       <h2>この記事で取り上げた4台——楽天で詳細・在庫を確認</h2>
       <p>価格・在庫は時期によって変動します。最新情報は各ストアでご確認ください。</p>
       <div className="not-prose space-y-6">
@@ -361,6 +399,24 @@ export default async function JoshitsukiKoukaiPage() {
                     </li>
                   ))}
               </ul>
+
+              <div className="mt-4 rounded-xl border-2 border-ok/30 bg-ok/10 p-3.5">
+                <p className="mb-1.5 text-sm font-bold text-ink">🎯 こんな人におすすめ</p>
+                <ul className="space-y-1 text-sm text-ink/80">
+                  {p.bestFor.map((x, i) => (
+                    <li key={i}>・{x}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-2 rounded-lg bg-ink/5 p-3">
+                <p className="mb-1 text-xs font-bold text-ink/50">⚠️ こんな人には向かないかも</p>
+                <ul className="space-y-0.5 text-xs text-ink/55">
+                  {p.notFor.map((x, i) => (
+                    <li key={i}>・{x}</li>
+                  ))}
+                </ul>
+              </div>
+
               <HaruBubble label="はるの店頭レポート">
                 {haruContents[p.slug]}
               </HaruBubble>
