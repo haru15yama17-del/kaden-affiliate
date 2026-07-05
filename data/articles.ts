@@ -48,4 +48,10 @@ export const articles: Article[] = [
     category: "aircon",
     description: "2027年の省エネ基準引き上げを踏まえ、工事費込みで選べるモデルを比較",
   },
+  {
+    slug: "hairdryer-koukai",
+    title: "ヘアドライヤーおすすめ4台を比較",
+    category: "personal-care",
+    description: "ブライト・ReFa・KINUJO・パナソニックEH-NA0Kを風量・重量・価格帯で比較",
+  },
 ];

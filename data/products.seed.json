@@ -179,10 +179,12 @@
     "category": "personal-care",
     "priceRange": "3万〜4万円",
     "specs": [
+      {"label": "風量", "value": "1.6㎥/分"},
       {"label": "重量", "value": "約560g"},
       {"label": "消費電力", "value": "1200W"},
       {"label": "ナノイー", "value": "搭載（高浸透ナノイー）"},
-      {"label": "折りたたみ", "value": "なし（固定ノズル）"}
+      {"label": "折りたたみ", "value": "なし（固定ノズル）"},
+      {"label": "特徴タグ", "value": "高浸透ナノイー・大風量・速乾・小型軽量化"}
     ],
     "pros": ["高浸透ナノイーで乾燥後も髪にうるおいが続く", "大風量で速乾、忙しい朝の時短に", "前モデルより小型・軽量化"],
     "cons": ["3万円台と価格が高め", "折りたためず携帯には不向き", "長期耐久性に一部口コミで指摘あり"],
@@ -190,9 +192,77 @@
     "notFor": ["旅行用にコンパクトなものが欲しい人", "コストを抑えたい人"],
     "rating": 4.4,
     "reviewSummary": "",
-    "affiliate": {"amazonAsin": "", "rakutenUrl": "", "yahooUrl": ""},
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fpanasonic-store%2Feh-na0j-a%2F", "yahooUrl": ""},
     "competitors": [],
-    "updatedAt": "2026-06-04"
+    "updatedAt": "2026-07-01"
+  },
+  {
+    "slug": "brighte-shower-dryer",
+    "name": "ブライト シャワードライヤー BRT-SD173",
+    "brand": "Aiロボティクス（Brighte）",
+    "category": "personal-care",
+    "priceRange": "約3.2万〜3.6万円",
+    "specs": [
+      {"label": "風量", "value": "2.58㎥/分（自社測定・ブーストアタッチメント装着・強時）"},
+      {"label": "重量", "value": "約357g（本体のみ）"},
+      {"label": "マイナスイオン", "value": "あり"},
+      {"label": "冷風機能", "value": "あり"},
+      {"label": "特徴", "value": "ナノミスト（1μm以下の微粒子化した美容液成分）を噴射しながら乾かす「次世代型ドライヤー」。グラフェンによる遠赤外線効果も搭載"},
+      {"label": "特徴タグ", "value": "ナノミスト・美容液成分配合・大風量・速乾"}
+    ],
+    "pros": ["ナノミストが美容液成分を髪に浸透させながら乾かせる", "2.58㎥/分の大風量で速乾性が高い"],
+    "cons": ["4商品の中で価格帯が最も高い（3.2万〜3.6万円）", "ミスト機能ゆえ本体重量はやや重め（約357g）"],
+    "bestFor": ["乾かしながら髪の保湿・美容ケアも同時にしたい人", "とにかく風量重視で時短したい人"],
+    "notFor": ["価格を抑えてシンプルに乾かしたいだけの人"],
+    "reviewSummary": "",
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fbrighte-onlineshop%2Fbrt-sd173%2F", "yahooUrl": ""},
+    "competitors": [],
+    "updatedAt": "2026-07-01"
+  },
+  {
+    "slug": "refa-beautech-dryer-splus",
+    "name": "ReFa ビューテック ドライヤー S+",
+    "brand": "ReFa（MTG）",
+    "category": "personal-care",
+    "priceRange": "39,600円（税込）",
+    "specs": [
+      {"label": "カラー", "value": "ホワイト・ブラック・ピンク"},
+      {"label": "発売日", "value": "2024年10月16日"},
+      {"label": "特徴", "value": "「センシングプログラム」により頭皮アンダー50℃・毛先アンダー60℃を目指して温風と冷風を自動切り替え。ハイドロイオン発生量は従来品から30%アップ。クールボタン搭載"},
+      {"label": "注意点", "value": "海外対応（マルチボルテージ）ではない"},
+      {"label": "特徴タグ", "value": "センシングプログラム・自動温度調整・コンパクト・速乾"}
+    ],
+    "pros": ["センシングプログラムで頭皮・毛先の温度を自動管理し熱ダメージを抑えられる", "クールボタンで温風・冷風をワンタッチ切替できる"],
+    "cons": ["海外対応（マルチボルテージ）ではない", "4商品の中で唯一、風量の具体的な数値が公表されていない"],
+    "bestFor": ["熱ダメージが気になる人", "サロン帰りのようなツヤ・まとまりを求める人"],
+    "notFor": ["海外旅行にも持って行きたい人"],
+    "reviewSummary": "",
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fmtgec-beauty%2F1850320101%2F", "yahooUrl": ""},
+    "competitors": [],
+    "updatedAt": "2026-07-01"
+  },
+  {
+    "slug": "kinujo-kh301-dryer",
+    "name": "KINUJO ヘアドライヤー 絹女 KH301/KH302",
+    "brand": "KINUJO",
+    "category": "personal-care",
+    "priceRange": "約3.1万〜3.5万円",
+    "specs": [
+      {"label": "風量", "value": "2.2㎥/分"},
+      {"label": "重量", "value": "約348g（本体のみ）"},
+      {"label": "消費電力", "value": "1250W"},
+      {"label": "カラー", "value": "ホワイト（KH301）・モカ（KH302）"},
+      {"label": "特徴", "value": "「超遠赤外線」を発生させる特殊天然鉱石で髪内部から熱を生み出す設計。GLOSS/SCULP/SWINGの3モード、マイナスイオン搭載"},
+      {"label": "特徴タグ", "value": "超遠赤外線・超軽量・大風量・折りたたみ可"}
+    ],
+    "pros": ["約348gと4商品中もっとも軽量", "折りたたみ可能でコンパクトに収納・持ち運びできる"],
+    "cons": ["ナイトケアや美容液ミストのような特殊機能は無く、乾燥・速乾に特化したシンプル設計"],
+    "bestFor": ["軽さ・携帯性を最優先したい人", "旅行や出張にも持って行きたい人"],
+    "notFor": ["多機能なケア機能を求める人"],
+    "reviewSummary": "",
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fkinujo%2Fdry%2F", "yahooUrl": ""},
+    "competitors": [],
+    "updatedAt": "2026-07-01"
   },
   {
     "slug": "irobot-roomba-j9plus",
