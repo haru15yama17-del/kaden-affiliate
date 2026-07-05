@@ -4,6 +4,7 @@ import { reviewJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { AffiliateButtons } from "@/components/AffiliateButtons";
+import { ComparisonTable } from "@/components/ComparisonTable";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { Product } from "@/data/types";
@@ -36,14 +37,43 @@ const PATH = "/reviews/drum-washer-koukai";
 const TITLE =
   "ドラム式洗濯機おすすめ5選比較【2026年】低価格グループと人気ブランドグループで選ぶ乾燥方式の違い";
 
+/** ざっくり比較表用に「洗濯容量・乾燥容量・最大の強み」だけへ絞ったスペック */
+const compactSpecs: Record<string, { label: string; value: string }[]> = {
+  "iris-flk842-washer": [
+    { label: "洗濯容量", value: "8kg" },
+    { label: "乾燥容量", value: "4kg" },
+    { label: "最大の強み", value: "低価格でドラム式に手が届く導入のしやすさ" },
+  ],
+  "nitori-nd60ul1-washer": [
+    { label: "洗濯容量", value: "6kg" },
+    { label: "乾燥容量", value: "なし（乾燥機能非搭載）" },
+    { label: "最大の強み", value: "乾燥機能なしのシンプル設計・省スペースで一人暮らし向け" },
+  ],
+  "panasonic-na-sd10hbl-washer": [
+    { label: "洗濯容量", value: "10kg" },
+    { label: "乾燥容量", value: "5kg" },
+    { label: "最大の強み", value: "温水泡洗浄と液体洗剤自動投入による手間軽減" },
+  ],
+  "sharp-es11k1-washer": [
+    { label: "洗濯容量", value: "11kg" },
+    { label: "乾燥容量", value: "6kg" },
+    { label: "最大の強み", value: "無排気乾燥と自動お掃除、業界最高水準の静音・節水" },
+  ],
+  "toshiba-tw127xm4l-washer": [
+    { label: "洗濯容量", value: "12kg" },
+    { label: "乾燥容量", value: "7kg（業界トップクラス）" },
+    { label: "最大の強み", value: "唯一のヒートポンプ乾燥による長期的な電気代の安さ" },
+  ],
+};
+
 const faq = [
   {
     q: "ヒーター式とヒートポンプ式の乾燥、どちらを選べばいいですか？",
     a: "乾燥電気代を長期的に抑えたいならヒートポンプ式がおすすめです。ただし本体価格が高めになります。初期費用を抑えたい場合やコンパクトな設置スペースを優先する場合はヒーター式が現実的な選択肢になります。乾燥の頻度・家族の人数・設置環境を踏まえて判断するのがポイントです。",
   },
   {
-    q: "ニトリのドラム式洗濯機の乾燥電気代はどのくらいかかりますか？",
-    a: "ニトリ ND100KL1はヒーター式（水冷除湿）です。メーカー回答では乾燥1回あたり約55円とされています。また乾燥時間は長めで、口コミでは5時間程度という声もあります。毎日乾燥まで使う場合は年間の電気代を見積もって他機種と比較するのをおすすめします。",
+    q: "乾燥機能が無い洗濯機（ニトリ ND60UL1）を選ぶメリットは何ですか？",
+    a: "乾燥機能を省くことで本体をコンパクトにでき、洗濯専用モデルとして設置スペースを抑えやすくなります。部屋干しや除湿機・サーキュレーターとの組み合わせで乾燥をまかなえる方や、洗濯機能だけをシンプルに使いたい一人暮らしの方には有力な選択肢です。ただし乾燥までまとめて自動化したい方は、他の4台（ヒーター式・無排気式・ヒートポンプ式）を検討してください。",
   },
   {
     q: "シャープの無排気乾燥とは何ですか？賃貸でも使えますか？",
@@ -66,14 +96,14 @@ export async function generateMetadata() {
       "ドラム式洗濯乾燥機を低価格グループ（アイリス・ニトリ）と人気ブランドグループ（パナソニック・シャープ・東芝）の2グループに分けて比較。乾燥方式（ヒーター式・無排気式・ヒートポンプ式）の違いをわかりやすく解説します。",
     path: PATH,
     type: "article",
-    modifiedTime: "2026-07-01",
+    modifiedTime: "2026-07-05",
   });
 }
 
 export default async function DrumWasherKoukaiPage() {
   const all = await getAllProducts();
 
-  const lowPriceSlugs = ["iris-flk842-washer", "nitori-nd100kl1-washer"];
+  const lowPriceSlugs = ["iris-flk842-washer", "nitori-nd60ul1-washer"];
   const popularSlugs = [
     "panasonic-na-sd10hbl-washer",
     "sharp-es11k1-washer",
@@ -91,9 +121,15 @@ export default async function DrumWasherKoukaiPage() {
   const allWashers = [...lowPrice, ...popular];
   const cv = allWashers[0];
 
+  const compactItems = allWashers.map((p) => ({
+    ...p,
+    rating: undefined,
+    specs: compactSpecs[p.slug] ?? [],
+  }));
+
   const dryMethodLabel: Record<string, string> = {
     "iris-flk842-washer":           "ヒーター乾燥",
-    "nitori-nd100kl1-washer":        "ヒーター式（水冷除湿）",
+    "nitori-nd60ul1-washer":        "乾燥機能なし・洗濯専用",
     "panasonic-na-sd10hbl-washer":   "ヒーター乾燥（排気式）",
     "sharp-es11k1-washer":           "無排気乾燥",
     "toshiba-tw127xm4l-washer":      "ヒートポンプ乾燥",
@@ -124,28 +160,25 @@ export default async function DrumWasherKoukaiPage() {
         </p>
       </>
     ),
-    "nitori-nd100kl1-washer": (
+    "nitori-nd60ul1-washer": (
       <>
         <p className="mb-0.5 text-xs font-bold text-ink/60">▶ 店員さんに聞いた話</p>
         <p>
-          「新生活や買い替えでコストを抑えつつ大容量を求める方によく選ばれています。
-          機能は毎日の洗濯に必要な最低限に絞り、操作のシンプルさを重視した設計」とのことでした。
+          「乾燥機能をあえて省き、洗濯専用に機能を絞ったモデルです。ワンルームや一人暮らしの洗面所に置きやすいサイズ感で、
+          『乾燥は部屋干しや除湿機でまかなえる』という方に選ばれています」とのことでした。
         </p>
         <p className="mt-3 mb-0.5 text-xs font-bold text-ink/60">▶ 見た印象・使い勝手</p>
         <p>
           白を基調とした極めてシンプルなデザイン。ボタン類が少なく直感的に操作できます。
-          インテリアの邪魔をしないプレーンな見た目で、洗面所にすっきり収まりそうでした。
+          洗濯容量6kgとコンパクトなので、一人暮らし向けの洗面所にもすっきり収まりそうな印象でした。
         </p>
         <p className="mt-3 mb-0.5 text-xs font-bold text-ink/60">▶ 気になった点（正直に記載）</p>
         <p>
-          洗剤自動投入・スマホ連携・ヒートポンプ乾燥といった最新機能は省かれています。
-          また乾燥方式はヒーター式（水冷除湿）のため、<strong>メーカー回答で乾燥1回あたり約55円</strong>と
-          電気代はやや高めです。乾燥時間も長めで、口コミでは1回5時間程度という声もあります。
-          毎日乾燥まで使う予定なら、年間の電気代を他機種と比較してから判断するのをおすすめします
-          （なお第三者の測定環境によって実際の時間・電気代は変わるため、ご自宅の使い方で見積もることが大切です）。
+          そもそも<strong>乾燥機能が搭載されていない</strong>ため、洗濯後は部屋干しや別途の乾燥機・除湿機での乾燥が前提になります。
+          洗濯容量も6kgのため、大人数分の洗濯物や毛布などの大物をまとめて洗うのには向きません。
         </p>
         <p className="mt-2">
-          👉 コスパ重視・操作をシンプルにしたい方、乾燥は補助的に使う方に向いています。
+          👉 洗濯機能だけでシンプルに使いたい一人暮らしの方、乾燥は別の方法で行いたい方に向いています。
         </p>
       </>
     ),
@@ -225,7 +258,7 @@ export default async function DrumWasherKoukaiPage() {
   };
 
   function ProductCard({ p }: { p: Product }) {
-    const isNitori = p.slug === "nitori-nd100kl1-washer";
+    const isNitori = p.slug === "nitori-nd60ul1-washer";
     return (
       <div className="rounded-2xl border border-ink/15 bg-white p-5 shadow-card">
         <span className="inline-block rounded-full bg-accent/10 px-3 py-1 text-xs font-bold text-accent">
@@ -243,14 +276,29 @@ export default async function DrumWasherKoukaiPage() {
             ))}
         </ul>
 
+        <div className="mt-4 rounded-xl border-2 border-ok/30 bg-ok/10 p-3.5">
+          <p className="mb-1.5 text-sm font-bold text-ink">🎯 こんな人におすすめ</p>
+          <ul className="space-y-1 text-sm text-ink/80">
+            {p.bestFor.map((x, i) => (
+              <li key={i}>・{x}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="mt-2 rounded-lg bg-ink/5 p-3">
+          <p className="mb-1 text-xs font-bold text-ink/50">⚠️ こんな人には向かないかも</p>
+          <ul className="space-y-0.5 text-xs text-ink/55">
+            {p.notFor.map((x, i) => (
+              <li key={i}>・{x}</li>
+            ))}
+          </ul>
+        </div>
+
         {isNitori && (
           <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-ink/75">
             <p className="font-bold text-amber-700">⚠ 正直な注意点</p>
             <p className="mt-1">
-              ニトリ ND100KL1の最大の魅力は価格の安さです。一方でヒーター式のため、
-              <strong>メーカー回答で乾燥1回あたり約55円</strong>と電気代はやや高め。
-              乾燥時間も長めで、口コミでは5時間程度という声もあります。
-              毎日乾燥まで使う予定なら、年間の電気代を他機種と比較してから判断するのをおすすめします。
+              ND60UL1は<strong>乾燥機能を搭載していない洗濯専用モデル</strong>です。他の4台とは異なり「乾燥方式」の比較対象にはなりません。
+              洗濯後の乾燥は部屋干し・除湿機・サーキュレーターなどと組み合わせる前提で検討してください。
             </p>
           </div>
         )}
@@ -284,7 +332,7 @@ export default async function DrumWasherKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
-      <p className="mt-2 text-sm text-ink/55">更新日：2026-07-01</p>
+      <p className="mt-2 text-sm text-ink/55">更新日：2026-07-05</p>
 
       {/* ── 結論ファースト：2グループ振り分け案内 ── */}
       <div className="not-prose my-5 rounded-xl border-2 border-accent/40 bg-blush/60 p-4">
@@ -297,7 +345,7 @@ export default async function DrumWasherKoukaiPage() {
             <strong>まず価格を抑えてドラム式を試したい・コスト重視</strong>
             　→{" "}
             <span className="text-accent">
-              低価格グループ（アイリスオーヤマ FLK842 ／ ニトリ ND100KL1）
+              低価格グループ（アイリスオーヤマ FLK842 ／ ニトリ ND60UL1・乾燥機能なし）
             </span>
           </li>
           <li>
@@ -346,7 +394,7 @@ export default async function DrumWasherKoukaiPage() {
           <tbody className="text-ink/75">
             <tr className="border-t border-ink/10">
               <td className="p-3 font-medium text-ink/60">この記事での該当機種</td>
-              <td className="p-3">アイリス・ニトリ・パナソニック</td>
+              <td className="p-3">アイリス・パナソニック</td>
               <td className="p-3">シャープ ES-11K1</td>
               <td className="p-3">東芝 TW-127XM4L</td>
             </tr>
@@ -378,6 +426,7 @@ export default async function DrumWasherKoukaiPage() {
         </table>
         <p className="px-3 pb-3 pt-1 text-xs text-ink/45">
           ※方式の一般的な傾向を示した比較表です。具体的なスペックは各メーカー公式ページでご確認ください。
+          ニトリ ND60UL1は乾燥機能を搭載していないため、この比較には含まれません（洗濯専用モデル）。
         </p>
       </div>
 
@@ -394,12 +443,24 @@ export default async function DrumWasherKoukaiPage() {
         空気中の熱を使って低温で乾かすため、電気代・衣類へのやさしさの両面で優位性があります。
         ただし本体価格は高めになる傾向があります。
       </p>
+      <p>
+        なお、低価格グループの<strong>ニトリ ND60UL1</strong>は今回唯一乾燥機能を搭載していない「洗濯専用モデル」です。
+        乾燥方式の比較には含まれませんが、洗濯機能に絞って価格・設置スペースを抑えたい方には検討の価値があります。
+      </p>
+
+      <h2>5台をざっくり比較</h2>
+      <ComparisonTable items={compactItems} highlightBest={false} />
+      <p className="text-sm text-ink/55">
+        ※「優劣」ではなく「低価格グループか人気ブランドグループか、乾燥方式は何を優先するか」を軸にしているため、おすすめバッジは表示していません。
+        洗濯・乾燥容量はメーカー公表値です（ニトリ ND60UL1は乾燥機能非搭載のため「乾燥容量」は「なし」と記載）。詳しい仕様は各商品の見出し以降で解説します。
+      </p>
 
       {/* ── 低価格グループ ── */}
       <h2>低価格グループ——まずコストを抑えてドラム式を導入したい方に</h2>
       <p>
-        ヒーター式乾燥を採用することで本体価格を抑えた2台です。
-        乾燥機能を毎日フル活用するよりも、<strong>洗濯をメインに使いつつドラム式の使いやすさを試してみたい</strong>方や、
+        アイリスオーヤマは乾燥機能付き、ニトリは乾燥機能を省いた洗濯専用モデルと方向性は異なりますが、
+        どちらも本体価格を抑えつつドラム式の使いやすさを取り入れられる2台です。
+        <strong>洗濯をメインに使いつつドラム式の使いやすさを試してみたい</strong>方や、
         設置スペース・予算の都合でまず手が届く1台を選びたい方に向いています。
       </p>
       <div className="not-prose space-y-6">
@@ -424,7 +485,7 @@ export default async function DrumWasherKoukaiPage() {
       {/* ── まとめ ── */}
       <h2>まとめ：乾燥方式とグループで選択肢を絞るのが近道</h2>
       <p>
-        ドラム式洗濯乾燥機を選ぶときは、まず「乾燥をどのくらい使うか」「乾燥の電気代を長期的に気にするか」を確認するのがポイントです。
+        ドラム式洗濯機を選ぶときは、まず「乾燥機能が必要かどうか」「乾燥をどのくらい使うか」「乾燥の電気代を長期的に気にするか」を確認するのがポイントです。
       </p>
       <ul>
         <li>
@@ -432,8 +493,8 @@ export default async function DrumWasherKoukaiPage() {
           　→ アイリスオーヤマ FLK842（低価格・温水洗浄・Ag+抗菌）
         </li>
         <li>
-          <strong>フィルター自動洗浄・奥行スリム・コスト重視</strong>（乾燥電気代・時間に注意）
-          　→ ニトリ ND100KL1
+          <strong>洗濯専用でシンプル・省スペース重視</strong>（乾燥機能は非搭載）
+          　→ ニトリ ND60UL1
         </li>
         <li>
           <strong>液体洗剤自動投入・設置しやすさ・パナソニックブランド</strong>
