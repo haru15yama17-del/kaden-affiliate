@@ -36,12 +36,12 @@ export function SiteHeader() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex flex-wrap gap-x-4 gap-y-1 text-sm">
-          {categories.slice(0, 6).map((c) => (
+        <nav className="hidden md:flex min-w-0 flex-1 gap-x-4 overflow-x-auto scrollbar-hide text-sm">
+          {categories.map((c) => (
             <Link
               key={c.slug}
               href={`/category/${c.slug}`}
-              className="whitespace-nowrap text-ink/65 transition-colors hover:text-accent"
+              className="shrink-0 whitespace-nowrap text-ink/65 transition-colors hover:text-accent"
             >
               <span className="mr-0.5 text-xs">{catEmoji[c.slug]}</span>
               {c.name}
@@ -52,7 +52,7 @@ export function SiteHeader() {
         {/* Search */}
         <Link
           href="/search"
-          className="ml-auto flex shrink-0 items-center gap-1.5 rounded-full border border-ink/20 px-3 py-1.5 text-sm text-ink/65 transition-colors hover:border-accent hover:text-accent"
+          className="flex shrink-0 items-center gap-1.5 rounded-full border border-ink/20 px-3 py-1.5 text-sm text-ink/65 transition-colors hover:border-accent hover:text-accent"
         >
           <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
