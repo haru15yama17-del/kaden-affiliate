@@ -4,6 +4,7 @@ import { reviewJsonLd } from "@/lib/jsonld";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { AffiliateButtons } from "@/components/AffiliateButtons";
+import { ComparisonTable } from "@/components/ComparisonTable";
 import type { ReactNode } from "react";
 import type { Product } from "@/data/types";
 
@@ -33,6 +34,20 @@ const featureTags: Record<string, string[]> = {
     "くすみカラー",
     "大容量収納",
     "ダブルノズル洗浄",
+  ],
+};
+
+/** ざっくり比較表用に「対象人数・収納容量・最大の強み」だけへ絞ったスペック */
+const compactSpecs: Record<string, { label: string; value: string }[]> = {
+  "panasonic-np-tml1-solota-dishwasher": [
+    { label: "対象人数", value: "1人用" },
+    { label: "収納容量", value: "食器点数6点（1人分）" },
+    { label: "最大の強み", value: "大手メーカーの安心感・ストリーム除菌洗浄" },
+  ],
+  "sanko-rakua-mini-color-dishwasher": [
+    { label: "対象人数", value: "1〜2人用" },
+    { label: "収納容量", value: "11〜12点" },
+    { label: "最大の強み", value: "収納力とくすみカラーのデザイン性" },
   ],
 };
 
@@ -90,6 +105,11 @@ export default async function PersonalDishwasherKoukaiPage() {
   const rakua = all.find((p) => p.slug === "sanko-rakua-mini-color-dishwasher")!;
   const items = [solota, rakua];
   const cv = solota;
+  const compactItems = items.map((p) => ({
+    ...p,
+    rating: undefined,
+    specs: compactSpecs[p.slug] ?? [],
+  }));
 
   function ProductCard({ p }: { p: Product }) {
     return (
@@ -116,6 +136,23 @@ export default async function PersonalDishwasherKoukaiPage() {
               </li>
             ))}
         </ul>
+
+        <div className="mt-4 rounded-xl border-2 border-ok/30 bg-ok/10 p-3.5">
+          <p className="mb-1.5 text-sm font-bold text-ink">🎯 こんな人におすすめ</p>
+          <ul className="space-y-1 text-sm text-ink/80">
+            {p.bestFor.map((x, i) => (
+              <li key={i}>・{x}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="mt-2 rounded-lg bg-ink/5 p-3">
+          <p className="mb-1 text-xs font-bold text-ink/50">⚠️ こんな人には向かないかも</p>
+          <ul className="space-y-0.5 text-xs text-ink/55">
+            {p.notFor.map((x, i) => (
+              <li key={i}>・{x}</li>
+            ))}
+          </ul>
+        </div>
 
         <div className="not-prose mt-4 grid gap-3 sm:grid-cols-2">
           <div>
@@ -188,6 +225,13 @@ export default async function PersonalDishwasherKoukaiPage() {
           どちらも工事不要・タンク式で賃貸でも使えます。違いは下の比較で詳しく解説します。
         </p>
       </div>
+
+      <h2>2台をざっくり比較</h2>
+      <ComparisonTable items={compactItems} highlightBest={false} />
+      <p className="text-sm text-ink/55">
+        ※優劣ではなく用途（1人用か1〜2人用か）で選ぶ記事のため、おすすめバッジは表示していません。
+        詳しい仕様は各商品の見出し以降で解説します。
+      </p>
 
       <p>
         パーソナル食洗機は分岐水栓の工事が不要な<strong>タンク式</strong>が主流ですが、モデルによって収納力・洗浄方式・デザインが異なります。
