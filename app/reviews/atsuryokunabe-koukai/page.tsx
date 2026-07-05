@@ -102,6 +102,7 @@ export default async function AtsuryokunabeKoukaiPage() {
   const all = await getAllProducts();
   const kpc = all.find((p) => p.slug === "iris-kpc-ma4-pressurecooker")!;
   const hw24h = all.find((p) => p.slug === "sharp-kn-hw24h-hotkook")!;
+  const yoshikei = all.find((p) => p.slug === "yoshikei")!;
 
   const compactItems = [kpc, hw24h].map((p) => ({
     ...p,
@@ -371,6 +372,18 @@ export default async function AtsuryokunabeKoukaiPage() {
             <p className="mt-1.5 text-sm text-ink/75 leading-relaxed">A. {x.a}</p>
           </div>
         ))}
+      </div>
+
+      <div className="not-prose my-8 rounded-2xl border-2 border-accent/30 bg-blush p-5">
+        <p className="mb-2 text-xs font-bold uppercase tracking-widest text-accent/70">
+          ▼ 材料を切る手間まで減らしたい方へ
+        </p>
+        <p className="mb-4 text-sm leading-relaxed text-ink/75">
+          電気圧力鍋もホットクックも、加熱そのものはほったらかしにできますが、「材料を切って揃える」下ごしらえの手間は残ります。
+          ここまで軽くしたい方には、カット済み食材が届くヨシケイのミールキットとの組み合わせも一案です。
+          私自身、忙しい平日はミールキットをそのまま入れるだけで済ませる日が増え、下ごしらえの負担が減った実感があります。
+        </p>
+        <AffiliateButtons aff={yoshikei.affiliate} productName={yoshikei.name} />
       </div>
     </article>
   );
