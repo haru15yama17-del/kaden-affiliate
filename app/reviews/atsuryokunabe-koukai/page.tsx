@@ -52,6 +52,22 @@ function HaruBubble({ label, children }: { label: string; children: ReactNode })
 const PATH = "/reviews/atsuryokunabe-koukai";
 const TITLE = "電気圧力鍋で後悔しない？アイリスオーヤマ KPC-MA4の弱点と、ホットクックとの方式の違いを正直に解説";
 
+/** ざっくり比較表用に「容量・調理方式・得意料理・最大の強み」だけへ絞ったスペック */
+const compactSpecs: Record<string, { label: string; value: string }[]> = {
+  "iris-kpc-ma4-pressurecooker": [
+    { label: "容量", value: "4.0L（最大4人分）" },
+    { label: "調理方式", value: "加圧・無水・蒸し・低温・発酵・炊飯" },
+    { label: "得意料理", value: "角煮・チャーシュー・カレー・豆類・煮込み料理" },
+    { label: "最大の強み", value: "価格を抑えて加圧調理を試せること" },
+  ],
+  "sharp-kn-hw24h-hotkook": [
+    { label: "容量", value: "2.4L（2〜6人向け）" },
+    { label: "調理方式", value: "水なし自動調理・蒸し・低温調理・強火調理（加圧なし）" },
+    { label: "得意料理", value: "無水カレー・炒め煮・蒸し料理・低温調理" },
+    { label: "最大の強み", value: "無水調理と自動かきまぜでほったらかし調理できること" },
+  ],
+};
+
 const faq = [
   {
     q: "電気圧力鍋とホットクックの違いは何ですか？",
@@ -86,6 +102,12 @@ export default async function AtsuryokunabeKoukaiPage() {
   const all = await getAllProducts();
   const kpc = all.find((p) => p.slug === "iris-kpc-ma4-pressurecooker")!;
   const hw24h = all.find((p) => p.slug === "sharp-kn-hw24h-hotkook")!;
+
+  const compactItems = [kpc, hw24h].map((p) => ({
+    ...p,
+    rating: undefined,
+    specs: compactSpecs[p.slug] ?? [],
+  }));
 
   return (
     <article className="prose-article max-w-none pb-20">
@@ -207,12 +229,13 @@ export default async function AtsuryokunabeKoukaiPage() {
         ここで、電気圧力鍋の代表としてアイリスオーヤマ KPC-MA4、無水・自動かきまぜ式の代表としてシャープのホットクック KN-HW24H をスペックで並べてみます。
       </p>
 
-      <ComparisonTable items={[kpc, hw24h]} />
+      <ComparisonTable items={compactItems} highlightBest={false} />
 
       <p className="text-sm text-ink/55">
-        ※上の表は編集部の総合評価をもとに「おすすめ」を表示しています。価格を抑えて加圧調理をしたいなら KPC-MA4、無水・自動かきまぜや加熱後の適温キープを重視するなら KN-HW24H、というように
+        ※「優劣」ではなく「加圧式か、無水・自動かきまぜ式か」を軸にしているため、おすすめバッジは表示していません。
+        価格を抑えて加圧調理をしたいなら KPC-MA4、無水・自動かきまぜや加熱後の適温キープを重視するなら KN-HW24H、というように
         <strong>得意分野で選ぶ</strong>
-        のがポイントです。
+        のがポイントです。より詳しい仕様は下の「方式での違い」表もあわせてご確認ください。
       </p>
 
       <div className="not-prose my-5 overflow-x-auto rounded-xl border border-ink/15 shadow-card">
@@ -264,10 +287,42 @@ export default async function AtsuryokunabeKoukaiPage() {
       <div className="not-prose grid gap-4 sm:grid-cols-2">
         <div className="rounded-xl border border-ink/15 bg-white p-4 shadow-card">
           <p className="mb-3 text-sm font-bold text-ink">電気圧力鍋 KPC-MA4</p>
+          <div className="mb-3 rounded-lg border-2 border-ok/30 bg-ok/10 p-3">
+            <p className="mb-1.5 text-xs font-bold text-ink">🎯 こんな人におすすめ</p>
+            <ul className="space-y-1 text-xs text-ink/80">
+              {kpc.bestFor.map((x, i) => (
+                <li key={i}>・{x}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="mb-3 rounded-lg bg-ink/5 p-3">
+            <p className="mb-1 text-xs font-bold text-ink/50">⚠️ こんな人には向かないかも</p>
+            <ul className="space-y-0.5 text-xs text-ink/55">
+              {kpc.notFor.map((x, i) => (
+                <li key={i}>・{x}</li>
+              ))}
+            </ul>
+          </div>
           <AffiliateButtons aff={kpc.affiliate} />
         </div>
         <div className="rounded-xl border border-ink/15 bg-white p-4 shadow-card">
           <p className="mb-3 text-sm font-bold text-ink">ホットクック KN-HW24H</p>
+          <div className="mb-3 rounded-lg border-2 border-ok/30 bg-ok/10 p-3">
+            <p className="mb-1.5 text-xs font-bold text-ink">🎯 こんな人におすすめ</p>
+            <ul className="space-y-1 text-xs text-ink/80">
+              {hw24h.bestFor.map((x, i) => (
+                <li key={i}>・{x}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="mb-3 rounded-lg bg-ink/5 p-3">
+            <p className="mb-1 text-xs font-bold text-ink/50">⚠️ こんな人には向かないかも</p>
+            <ul className="space-y-0.5 text-xs text-ink/55">
+              {hw24h.notFor.map((x, i) => (
+                <li key={i}>・{x}</li>
+              ))}
+            </ul>
+          </div>
           <AffiliateButtons aff={hw24h.affiliate} />
         </div>
       </div>
