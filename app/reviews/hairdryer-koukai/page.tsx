@@ -4,6 +4,7 @@ import { reviewJsonLd } from "@/lib/jsonld";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { AffiliateButtons } from "@/components/AffiliateButtons";
+import { ComparisonTable } from "@/components/ComparisonTable";
 import type { ReactNode } from "react";
 import type { Product } from "@/data/types";
 
@@ -26,6 +27,30 @@ const featureTags: Record<string, string[]> = {
   "refa-beautech-dryer-splus": ["センシングプログラム", "自動温度調整", "コンパクト", "速乾"],
   "kinujo-kh301-dryer": ["超遠赤外線", "超軽量", "大風量", "折りたたみ可"],
   "panasonic-eh-na0k-dryer": ["高浸透ナノイー", "大風量", "速乾", "小型軽量化"],
+};
+
+/** ざっくり比較表用に「風量・重量・最大の強み」だけへ絞ったスペック */
+const compactSpecs: Record<string, { label: string; value: string }[]> = {
+  "brighte-shower-dryer": [
+    { label: "風量", value: "2.58㎥/分" },
+    { label: "重量", value: "約357g" },
+    { label: "最大の強み", value: "ナノミスト美容液成分" },
+  ],
+  "refa-beautech-dryer-splus": [
+    { label: "風量", value: "非公表" },
+    { label: "重量", value: "非公表" },
+    { label: "最大の強み", value: "センシングプログラム自動温度調整" },
+  ],
+  "kinujo-kh301-dryer": [
+    { label: "風量", value: "2.2㎥/分" },
+    { label: "重量", value: "約348g" },
+    { label: "最大の強み", value: "超遠赤外線・軽量・折りたたみ可" },
+  ],
+  "panasonic-eh-na0k-dryer": [
+    { label: "風量", value: "1.6㎥/分" },
+    { label: "重量", value: "約560g" },
+    { label: "最大の強み", value: "高浸透ナノイー・実績No.1" },
+  ],
 };
 
 const editorialNotes: Record<string, ReactNode> = {
@@ -105,6 +130,11 @@ export default async function HairdryerKoukaiPage() {
   const naZeroK = all.find((p) => p.slug === "panasonic-eh-na0k-dryer")!;
   const items = [brighte, refa, kinujo, naZeroK];
   const cv = brighte;
+  const compactItems = items.map((p) => ({
+    ...p,
+    rating: undefined,
+    specs: compactSpecs[p.slug] ?? [],
+  }));
 
   function ProductCard({ p }: { p: Product }) {
     return (
@@ -131,6 +161,23 @@ export default async function HairdryerKoukaiPage() {
               </li>
             ))}
         </ul>
+
+        <div className="mt-4 rounded-xl border-2 border-ok/30 bg-ok/10 p-3.5">
+          <p className="mb-1.5 text-sm font-bold text-ink">🎯 こんな人におすすめ</p>
+          <ul className="space-y-1 text-sm text-ink/80">
+            {p.bestFor.map((x, i) => (
+              <li key={i}>・{x}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="mt-2 rounded-lg bg-ink/5 p-3">
+          <p className="mb-1 text-xs font-bold text-ink/50">⚠️ こんな人には向かないかも</p>
+          <ul className="space-y-0.5 text-xs text-ink/55">
+            {p.notFor.map((x, i) => (
+              <li key={i}>・{x}</li>
+            ))}
+          </ul>
+        </div>
 
         <div className="not-prose mt-4 grid gap-3 sm:grid-cols-2">
           <div>
@@ -211,6 +258,13 @@ export default async function HairdryerKoukaiPage() {
           4台とも1〜2万円台の入門機ではなく、3万円前後の本格派モデルです。違いは下の比較で詳しく解説します。
         </p>
       </div>
+
+      <h2>4台をざっくり比較</h2>
+      <ComparisonTable items={compactItems} highlightBest={false} />
+      <p className="text-sm text-ink/55">
+        ※この記事は「優劣」ではなく「悩み・優先度別にどれを選ぶか」を軸にしているため、おすすめバッジは表示していません。
+        風量・重量はメーカー公表値、非公表の項目は「非公表」と記載しています。詳しい仕様は各商品の見出し以降で解説します。
+      </p>
 
       <p>
         ヘアドライヤーは風量・重量・機能によって毎日の使い心地が大きく変わります。
