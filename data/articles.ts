@@ -54,4 +54,10 @@ export const articles: Article[] = [
     category: "personal-care",
     description: "ブライト・ReFa・KINUJO・パナソニックEH-NA0Kを風量・重量・価格帯で比較",
   },
+  {
+    slug: "waterserver-koukai",
+    title: "ウォーターサーバー3社を比較",
+    category: "water-server",
+    description: "アクアクララ・フレシャス・プレミアムウォーターを注文ノルマ・水交換・お得さで比較",
+  },
 ];
