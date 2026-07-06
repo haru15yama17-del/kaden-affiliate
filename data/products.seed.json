@@ -868,7 +868,7 @@
     "rating": 4.2,
     "reviewSummary": "",
     "affiliate": {"officialUrl": "https://px.a8.net/svt/ejp?a8mat=4B5RS9+D2CGOI+2NB4+5ZEMQ", "ctaLabel": "公式サイトで料金を見る"},
-    "competitors": ["cosmo-water", "humming-water"],
+    "competitors": ["cosmo-water"],
     "updatedAt": "2026-06-04"
   },
   {
@@ -905,46 +905,8 @@
     ],
     "rating": 4.3,
     "reviewSummary": "",
-    "affiliate": {"officialUrl": "", "ctaLabel": "公式サイトで料金を見る"},
-    "competitors": ["premium-water", "humming-water"],
-    "updatedAt": "2026-06-04"
-  },
-  {
-    "slug": "humming-water",
-    "name": "ハミングウォーター（浄水型・定額）",
-    "brand": "コスモライフ",
-    "category": "water-server",
-    "priceRange": "月額 定額3,300円（使い放題）",
-    "specs": [
-      {"label": "タイプ", "value": "浄水型（水道水をろ過）"},
-      {"label": "料金", "value": "定額制・使い放題"},
-      {"label": "水代", "value": "1Lあたり約0.2円（水道代のみ）"},
-      {"label": "ボトル交換", "value": "なし（タンクに水道水を補充）"},
-      {"label": "温水・冷水", "value": "対応"}
-    ],
-    "pros": [
-      "定額で使い放題、たくさん飲んでも料金が変わらない",
-      "ボトル交換・保管・注文が一切不要",
-      "水代が水道代だけで圧倒的に安い"
-    ],
-    "cons": [
-      "天然水ではなく水道水のろ過水",
-      "フィルター交換が定期的に必要",
-      "手動で水道水を補充する手間はある"
-    ],
-    "bestFor": [
-      "料理・お茶・赤ちゃんで水をたくさん使う家庭",
-      "コスパ最優先の人",
-      "ボトル交換・保管が面倒な人"
-    ],
-    "notFor": [
-      "天然水のおいしさにこだわる人",
-      "ミネラル豊富な水を求める人"
-    ],
-    "rating": 4.4,
-    "reviewSummary": "",
-    "affiliate": {"officialUrl": "", "ctaLabel": "公式サイトで料金を見る"},
-    "competitors": ["premium-water", "cosmo-water"],
+    "affiliate": {"officialUrl": "https://px.a8.net/svt/ejp?a8mat=4B7USV+EAZZ1U+4K9C+NUMHT", "ctaLabel": "詳細・料金を見る"},
+    "competitors": ["premium-water"],
     "updatedAt": "2026-06-04"
   },
   {
@@ -1019,7 +981,7 @@
     "rating": 4.0,
     "reviewSummary": "",
     "affiliate": {"officialUrl": "https://px.a8.net/svt/ejp?a8mat=4B5RS9+DBVECY+YK6+5YZ76", "ctaLabel": "無料お試しを見る"},
-    "competitors": ["humming-water"],
+    "competitors": [],
     "updatedAt": "2026-06-04"
   },
   {

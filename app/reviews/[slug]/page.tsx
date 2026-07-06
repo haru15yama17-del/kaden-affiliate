@@ -14,6 +14,7 @@ import { ComparisonTable } from "@/components/ComparisonTable";
 import { RelatedArticles } from "@/components/RelatedArticles";
 import { StickyCta } from "@/components/StickyCta";
 import Link from "next/link";
+import type { Product } from "@/data/types";
 
 interface ArticleBody {
   intro?: string;
