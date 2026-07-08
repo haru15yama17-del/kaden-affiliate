@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getAllProducts } from "@/lib/data";
 import { compareSlug, effectiveCompetitors } from "@/lib/links";
+import { buildSpecDiffParagraphs } from "@/lib/compareInsights";
 import { categoryMap } from "@/data/categories";
 import { buildMetadata } from "@/lib/seo";
 import { itemListJsonLd } from "@/lib/jsonld";
@@ -39,6 +40,8 @@ export default async function ComparePage({ params }: { params: { slug: string }
   const items = parse(params.slug, await getAllProducts());
   if (items.length < 2) notFound();
   const cat = categoryMap[items[0].category];
+  const specDiffParagraphs = buildSpecDiffParagraphs(items);
+  const hasProsConsData = items.some((p) => p.pros.length > 0 || p.cons.length > 0 || p.notFor.length > 0);
 
   return (
     <div className="prose-article max-w-none">
@@ -62,6 +65,45 @@ export default async function ComparePage({ params }: { params: { slug: string }
           <div className="my-3"><AffiliateButtons aff={p.affiliate} productName={p.name} /></div>
         </section>
       ))}
+
+      {hasProsConsData && (
+        <>
+          <h2>メリット・デメリット</h2>
+          {items.map((p) => {
+            if (p.pros.length === 0 && p.cons.length === 0 && p.notFor.length === 0) return null;
+            return (
+              <div key={p.slug} className="mt-4">
+                <h3>{p.name}</h3>
+                {p.pros.length > 0 && (
+                  <>
+                    <p className="font-semibold">メリット</p>
+                    <ul>{p.pros.map((x, i) => <li key={i}>{x}</li>)}</ul>
+                  </>
+                )}
+                {p.cons.length > 0 && (
+                  <>
+                    <p className="font-semibold">デメリット</p>
+                    <ul>{p.cons.map((x, i) => <li key={i}>{x}</li>)}</ul>
+                  </>
+                )}
+                {p.notFor.length > 0 && (
+                  <>
+                    <p className="font-semibold">向いていない人</p>
+                    <ul>{p.notFor.map((x, i) => <li key={i}>{x}</li>)}</ul>
+                  </>
+                )}
+              </div>
+            );
+          })}
+        </>
+      )}
+
+      {specDiffParagraphs.length > 0 && (
+        <>
+          <h2>型番の違いをふまえた選び方</h2>
+          {specDiffParagraphs.map((text, i) => <p key={i}>{text}</p>)}
+        </>
+      )}
 
       <h2>結論</h2>
       <p>
