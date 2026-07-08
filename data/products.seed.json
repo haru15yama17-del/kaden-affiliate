@@ -635,7 +635,7 @@
     "slug": "daikin-s285ates-aircon",
     "name": "ダイキン エアコン S285ATES-W（10畳用・工事費込み）",
     "brand": "ダイキン",
-    "category": "seasonal",
+    "category": "aircon",
     "priceRange": "要確認（時期により変動）",
     "specs": [
       {"label": "対応畳数", "value": "10畳用"},
@@ -671,7 +671,7 @@
     "slug": "mitsubishi-msz-zw5625s-aircon",
     "name": "三菱 霧ヶ峰 MSZ-ZW5625S-W（18畳用・工事費込み・省エネ上位機）",
     "brand": "三菱電機",
-    "category": "seasonal",
+    "category": "aircon",
     "priceRange": "要確認（時期により変動）",
     "specs": [
       {"label": "対応畳数", "value": "18畳用"},
@@ -708,7 +708,7 @@
     "slug": "panasonic-cs-635dex2-aircon",
     "name": "パナソニック エオリア CS-635DEX2-W（20畳用・工事費込み・省エネ上位機）",
     "brand": "パナソニック",
-    "category": "seasonal",
+    "category": "aircon",
     "priceRange": "要確認（時期により変動）",
     "specs": [
       {"label": "対応畳数", "value": "20畳用"},
