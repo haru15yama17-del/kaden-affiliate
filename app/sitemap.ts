@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { site } from "@/data/site";
 import { getAllProducts } from "@/lib/data";
 import { categories } from "@/data/categories";
-import { compareSlug } from "@/lib/links";
+import { compareSlug, effectiveCompetitors } from "@/lib/links";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = site.url;
@@ -10,7 +10,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPaths = ["", "/search", "/about", "/privacy", "/disclaimer", "/contact"];
 
   const compareSet = new Set<string>();
-  for (const p of products) for (const c of p.competitors) compareSet.add(compareSlug([p.slug, c]));
+  for (const p of products) for (const c of effectiveCompetitors(p, products)) compareSet.add(compareSlug([p.slug, c.slug]));
 
   return [
     ...staticPaths.map((path) => ({ url: `${base}${path}`, lastModified: new Date() })),

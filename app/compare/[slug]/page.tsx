@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getAllProducts } from "@/lib/data";
-import { compareSlug } from "@/lib/links";
+import { compareSlug, effectiveCompetitors } from "@/lib/links";
 import { categoryMap } from "@/data/categories";
 import { buildMetadata } from "@/lib/seo";
 import { itemListJsonLd } from "@/lib/jsonld";
@@ -13,7 +13,7 @@ import type { Product } from "@/data/types";
 export async function generateStaticParams() {
   const all = await getAllProducts();
   const set = new Set<string>();
-  for (const p of all) for (const c of p.competitors) set.add(compareSlug([p.slug, c]));
+  for (const p of all) for (const c of effectiveCompetitors(p, all)) set.add(compareSlug([p.slug, c.slug]));
   return [...set].map((slug) => ({ slug }));
 }
 

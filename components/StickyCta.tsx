@@ -27,6 +27,7 @@ export function StickyCta({
   const ctaLabel = aff.officialUrl
     ? (aff.ctaLabel ?? "公式サイトで確認")
     : "🛒 最安値を確認";
+  const isAffiliateLink = aff.officialUrl ? (aff.isAffiliateLink ?? true) : true;
 
   if (!ctaHref) return null;
 
@@ -45,7 +46,7 @@ export function StickyCta({
           <a
             href={ctaHref}
             target="_blank"
-            rel="nofollow sponsored noopener"
+            rel={isAffiliateLink ? "nofollow sponsored noopener" : "noopener"}
             className="shrink-0 rounded-xl bg-accent px-5 py-2.5 text-sm font-bold text-white shadow-cta transition-all hover:-translate-y-0.5 hover:brightness-110"
           >
             {ctaLabel}

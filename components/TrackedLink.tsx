@@ -10,6 +10,7 @@ export function TrackedLink({
   productName,
   affiliateType,
   store,
+  rel = "nofollow sponsored noopener",
 }: {
   href: string;
   className?: string;
@@ -17,12 +18,13 @@ export function TrackedLink({
   productName?: string;
   affiliateType: "rakuten" | "official";
   store?: string;
+  rel?: string;
 }) {
   return (
     <a
       href={href}
       target="_blank"
-      rel="nofollow sponsored noopener"
+      rel={rel}
       className={className}
       onClick={() => {
         const article = typeof window !== "undefined" ? window.location.pathname : undefined;

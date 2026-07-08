@@ -2,7 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { categories, categoryMap } from "@/data/categories";
 import { articles } from "@/data/articles";
-import { getProductsByCategory } from "@/lib/data";
+import { getAllProducts, getProductsByCategory } from "@/lib/data";
+import { categoryComparePairs } from "@/lib/links";
 import { buildMetadata } from "@/lib/seo";
 import { itemListJsonLd } from "@/lib/jsonld";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -55,6 +56,7 @@ export default async function CategoryPage({ params }: { params: { slug: string 
   const hub = HUB_META[params.slug];
   const topProduct = items[0];
   const relatedArticles = articles.filter((a) => a.category === c.slug);
+  const comparePairs = categoryComparePairs(c.slug, await getAllProducts());
 
   return (
     <div>
@@ -141,6 +143,29 @@ export default async function CategoryPage({ params }: { params: { slug: string 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {relatedArticles.map((a) => (
               <ArticleCard key={a.slug} a={a} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* 2機種比較（自動生成 compare ページ一覧） */}
+      {comparePairs.length > 0 && (
+        <div className="mb-10">
+          <h2 className="mb-4 font-serif text-xl font-bold">{c.name}を2機種で比較する</h2>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {comparePairs.map(({ slug, a, b }) => (
+              <Link
+                key={slug}
+                href={`/compare/${slug}`}
+                className="group flex flex-col rounded-2xl border border-ink/8 bg-white p-4 shadow-card transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/30 hover:shadow-card-hover"
+              >
+                <p className="font-serif text-sm leading-snug text-ink transition-colors group-hover:text-accent">
+                  {a.name} <span className="text-ink/40">vs</span> {b.name}
+                </p>
+                <span className="mt-auto block pt-3 text-right text-sm font-bold text-accent transition-all group-hover:underline">
+                  比較を見る →
+                </span>
+              </Link>
             ))}
           </div>
         </div>

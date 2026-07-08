@@ -25,6 +25,7 @@ export function AffiliateButtons({
 
   if (isServiceType) {
     const label = aff.ctaLabel ?? "公式サイトで確認";
+    const isAffiliateLink = aff.isAffiliateLink ?? true;
     if (aff.officialUrl) {
       return (
         <div className="rounded-2xl border border-accent/25 bg-blush/50 p-4">
@@ -35,6 +36,7 @@ export function AffiliateButtons({
             href={aff.officialUrl}
             productName={productName}
             affiliateType={affiliateType}
+            rel={isAffiliateLink ? "nofollow sponsored noopener" : "noopener"}
             className="flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-5 py-4 text-base font-bold text-white shadow-cta transition-all hover:-translate-y-0.5 hover:brightness-110 sm:text-lg"
           >
             <span>✨</span>
@@ -43,9 +45,11 @@ export function AffiliateButtons({
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </TrackedLink>
-          <p className="mt-3 text-center text-xs text-ink/40">
-            ※アフィリエイト広告を利用しています
-          </p>
+          {isAffiliateLink && (
+            <p className="mt-3 text-center text-xs text-ink/40">
+              ※アフィリエイト広告を利用しています
+            </p>
+          )}
         </div>
       );
     }

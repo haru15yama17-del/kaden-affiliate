@@ -3,7 +3,7 @@ import path from "node:path";
 import { notFound } from "next/navigation";
 import { getProduct, getAllProducts } from "@/lib/data";
 import { categoryMap } from "@/data/categories";
-import { competitorProducts, relatedReviews, compareSlug } from "@/lib/links";
+import { effectiveCompetitors, relatedReviews, compareSlug } from "@/lib/links";
 import { buildMetadata } from "@/lib/seo";
 import { reviewJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { JsonLd } from "@/components/JsonLd";
@@ -54,7 +54,7 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
   if (!p) notFound();
   const cat = categoryMap[p.category];
   const body = loadBody(p.slug);
-  const competitors = competitorProducts(p, all);
+  const competitors = effectiveCompetitors(p, all);
   const related = relatedReviews(p, all);
   const faq =
     body.faq ?? [

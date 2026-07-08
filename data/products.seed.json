@@ -1018,7 +1018,7 @@
     ],
     "rating": 4.4,
     "reviewSummary": "",
-    "affiliate": {"officialUrl": "", "ctaLabel": "1,980円のお試しを見る"},
+    "affiliate": {"officialUrl": "https://www.oisix.com/", "ctaLabel": "公式サイトを見る", "isAffiliateLink": false},
     "competitors": ["yoshikei", "coopdeli"],
     "updatedAt": "2026-06-04"
   },
@@ -1094,7 +1094,7 @@
     ],
     "rating": 4.2,
     "reviewSummary": "",
-    "affiliate": {"officialUrl": "", "ctaLabel": "お試しセットを見る"},
+    "affiliate": {"officialUrl": "https://www.coopdeli.jp/", "ctaLabel": "公式サイトを見る", "isAffiliateLink": false},
     "competitors": ["palsystem", "oisix"],
     "updatedAt": "2026-06-04"
   },
@@ -1132,7 +1132,7 @@
     ],
     "rating": 4.3,
     "reviewSummary": "",
-    "affiliate": {"officialUrl": "", "ctaLabel": "お試しセットを見る"},
+    "affiliate": {"officialUrl": "https://www.pal-system.co.jp/", "ctaLabel": "公式サイトを見る", "isAffiliateLink": false},
     "competitors": ["coopdeli", "oisix"],
     "updatedAt": "2026-06-04"
   },

@@ -27,7 +27,27 @@
       "Bash(New-Item -ItemType Directory -Force \"C:\\\\dev\\\\kaden-affiliate\\\\public\\\\images\\\\reviews\\\\joshitsuki-koukai\")",
       "Bash(Out-Null)",
       "Bash(Write-Output \"OK\")",
-      "Skill(claude-in-chrome)"
+      "Skill(claude-in-chrome)",
+      "Bash(git *)",
+      "Read(//dev/**)",
+      "Bash(find app/reviews/personal-dishwasher-koukai -type f)",
+      "Bash(find app/reviews/drum-washer-koukai -type f)",
+      "Bash(curl -s http://localhost:3000/reviews/senpuki-koukai)",
+      "Bash(curl -s http://localhost:3000/reviews/drum-washer-koukai)",
+      "Bash(curl -s -o /tmp/out.html -w \"%{http_code}\\\\n\" http://localhost:3000/reviews/drum-washer-koukai)",
+      "Bash(curl -s http://localhost:3001/reviews/drum-washer-koukai -o /tmp/dw.html -w \"%{http_code}\\\\n\")",
+      "Bash(curl *)",
+      "WebSearch",
+      "WebFetch(domain:jp.sharp)",
+      "Bash(cd /d/dev/kaden-affiliate)",
+      "Bash(ls public/images/reviews/senpuki-koukai)",
+      "Bash(ls public/images/reviews/)",
+      "PowerShell(Get-CimInstance *)",
+      "Bash(find .next/server/app/reviews -maxdepth 1 -iname \"*balmuda-egf1800*\" -o -iname \"*humming-water*\")",
+      "Bash(cd /dev/kaden-affiliate)",
+      "Bash(find . -path ./node_modules -prune -o -iname \"*humming*\" -print)",
+      "PowerShell(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('C:/dev/kaden-affiliate/data/products.seed.json','utf-8'\\)\\); console.log\\('valid json'\\)\")",
+      "Bash(kill %1)"
     ]
   }
 }
