@@ -47,7 +47,12 @@
       "Bash(cd /dev/kaden-affiliate)",
       "Bash(find . -path ./node_modules -prune -o -iname \"*humming*\" -print)",
       "PowerShell(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('C:/dev/kaden-affiliate/data/products.seed.json','utf-8'\\)\\); console.log\\('valid json'\\)\")",
-      "Bash(kill %1)"
+      "Bash(kill %1)",
+      "Bash(netstat -ano)",
+      "Bash(awk '{print $5}')",
+      "Bash(taskkill //F //PID 19532)",
+      "Bash(taskkill //F //PID 25552)",
+      "Bash(xargs -I{} taskkill //F //PID {})"
     ]
   }
 }

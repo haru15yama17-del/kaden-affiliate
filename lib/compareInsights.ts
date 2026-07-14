@@ -8,7 +8,8 @@ interface SpecRule {
   // 有利な方向（lower→小さい方、higher→大きい方）の値を形容する直接的な比較語。
   // 「省エネ」「軽量」「コンパクト」等の評価・宣伝的な言い回しは避ける。
   adjective: string;
-  // 「6〜9畳」のような範囲表記のとき、上限値を代表値として使うか（省略時は先頭の数値をそのまま使う＝従来どおり）。
+  // 「6〜9畳」のような範囲表記のとき、上限値を比較の代表値として使うか（省略時は先頭の数値をそのまま使う＝従来どおり）。
+  // 比較の勝敗判定には上限値を使うが、文中の表示は「6〜9畳」のように範囲表記のまま残す（商品名の「6畳用」等と数値がズレて見えるのを防ぐため）。
   // 「容量」ラベルはホットクックの「1.6L（2〜4人向け）」等、本来の数値と無関係な範囲を含むため対象外にする
   rangeValue?: "upper";
 }
@@ -48,17 +49,26 @@ function findRule(label: string): SpecRule | undefined {
 // 「1.6L（2〜4人向け）」のような括弧書きの補足情報を単位に含めないよう（/(も除外する
 const UNIT_STOP_CHARS = "[^\\d,\\s／/×〜~（(-]*";
 
+interface ParsedMetric {
+  value: number; // 比較の勝敗・差分の大きさ判定に使う数値（範囲表記は上限値）
+  display: string; // 文中に表示するテキスト。範囲表記は「6〜9畳」のように範囲のまま、単一値は「9畳」のように数値+単位
+}
+
 // 文字列から先頭の数値と、それに続く単位（kg/dB/円 等）を抜き出す。括弧「（」以降の補足情報は単位に含めない。
-// rangeValue==="upper"のときのみ「6〜9畳」のような範囲表記を上限値(9)として扱う。
-// 単一値（例：「18畳用」）はrangeValueの指定に関わらずそのまま数値として扱う。
-function parseMetric(raw: string, rangeValue?: "upper"): { value: number; unit: string } | null {
+// rangeValue==="upper"のときのみ「6〜9畳」のような範囲表記を検出し、比較用の数値には上限値(9)を使う。
+// ただし表示テキストは数値化せず「6〜9畳」という範囲表記のまま残す（商品名の「6畳用」等と数値がズレて矛盾して見えるのを防ぐため）。
+// 単一値（例：「18畳用」）はrangeValueの指定に関わらずそのまま数値+単位として扱う。
+function parseMetric(raw: string, rangeValue?: "upper"): ParsedMetric | null {
   if (rangeValue === "upper") {
     const rangeMatch = raw.match(
-      new RegExp(`[\\d,]+(?:\\.\\d+)?\\s*[〜~]\\s*([\\d,]+(?:\\.\\d+)?)\\s*(${UNIT_STOP_CHARS})`)
+      new RegExp(`([\\d,]+(?:\\.\\d+)?)\\s*[〜~]\\s*([\\d,]+(?:\\.\\d+)?)\\s*(${UNIT_STOP_CHARS})`)
     );
     if (rangeMatch) {
-      const upper = parseFloat(rangeMatch[1].replace(/,/g, ""));
-      if (!Number.isNaN(upper)) return { value: upper, unit: rangeMatch[2] ?? "" };
+      const [, lowerText, upperText, unit] = rangeMatch;
+      const upper = parseFloat(upperText.replace(/,/g, ""));
+      if (!Number.isNaN(upper)) {
+        return { value: upper, display: `${lowerText}〜${upperText}${unit}` };
+      }
     }
   }
 
@@ -66,21 +76,22 @@ function parseMetric(raw: string, rangeValue?: "upper"): { value: number; unit: 
   if (!numMatch) return null;
   const value = parseFloat(numMatch[0].replace(/,/g, ""));
   if (Number.isNaN(value)) return null;
-  const rest = raw.slice((numMatch.index ?? 0) + numMatch[0].length);
+  let rest = raw.slice((numMatch.index ?? 0) + numMatch[0].length);
+  // 「107,820〜109,800円」のように数値の直後に範囲表記が続く場合、単位（円 等）は
+  // 2つ目の数値の後ろに付くため、範囲部分を読み飛ばしてから単位を探す
+  const rangeSkip = rest.match(/^\s*[〜~]\s*[\d,]+(?:\.\d+)?/);
+  if (rangeSkip) rest = rest.slice(rangeSkip[0].length);
   const unitMatch = rest.match(new RegExp(`^${UNIT_STOP_CHARS}`));
-  return { value, unit: unitMatch ? unitMatch[0] : "" };
-}
-
-function formatVal(value: number, unit: string): string {
-  return `${value.toLocaleString("ja-JP")}${unit}`;
+  const unit = unitMatch ? unitMatch[0] : "";
+  return { value, display: `${value.toLocaleString("ja-JP")}${unit}` };
 }
 
 interface DiffEntry {
   label: string;
   aVal: number;
-  aUnit: string;
+  aDisplay: string;
   bVal: number;
-  bUnit: string;
+  bDisplay: string;
   aBetter: boolean;
   magnitude: number; // 差の大きさ（相対値）。段落に使う差分の優先順位付けに使う
   adjective: string;
@@ -113,9 +124,9 @@ function buildDiffEntries(a: Product, b: Product): DiffEntry[] {
     entries.push({
       label: displayLabel,
       aVal: va.value,
-      aUnit: va.unit,
+      aDisplay: va.display,
       bVal: vb.value,
-      bUnit: vb.unit,
+      bDisplay: vb.display,
       aBetter,
       magnitude,
       adjective: rule.adjective
@@ -136,7 +147,7 @@ function buildDiffEntries(a: Product, b: Product): DiffEntry[] {
 function describeDiff(a: Product, b: Product, d: DiffEntry): string {
   const winnerName = d.aBetter ? a.name : b.name;
   return (
-    `${a.name}は${d.label}が${formatVal(d.aVal, d.aUnit)}、${b.name}は${d.label}が${formatVal(d.bVal, d.bUnit)}で、` +
+    `${a.name}は${d.label}が${d.aDisplay}、${b.name}は${d.label}が${d.bDisplay}で、` +
     `${winnerName}の方が${d.adjective}です。`
   );
 }
