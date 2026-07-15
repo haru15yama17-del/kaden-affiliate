@@ -555,9 +555,9 @@
     "notFor": ["設置幅に制約がある住宅", "縦型で十分な人"],
     "rating": 4.5,
     "reviewSummary": "",
-    "affiliate": {"amazonAsin": "", "rakutenUrl": "", "yahooUrl": ""},
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fden-ki-ya2%2Fna-lx129dl-c%2F", "yahooUrl": ""},
     "competitors": [],
-    "updatedAt": "2026-06-04"
+    "updatedAt": "2026-07-15"
   },
   {
     "slug": "aircon-set-6jo-omakase",
@@ -743,26 +743,27 @@
   },
   {
     "slug": "daikin-s223ates-aircon",
-    "name": "ダイキン エアコン Eシリーズ S223ATES（6畳用）",
+    "name": "ダイキン エアコン Eシリーズ S223ATES-W（6畳用・工事費込み）",
     "brand": "ダイキン",
     "category": "aircon",
-    "priceRange": "6万〜9万円（本体）＋工事費",
+    "priceRange": "要確認（時期により変動）",
     "specs": [
       {"label": "冷暖房能力", "value": "冷房2.2kW / 暖房2.5kW"},
       {"label": "対応畳数", "value": "冷房6〜9畳"},
       {"label": "空気清浄", "value": "ストリーマ搭載"},
       {"label": "内部クリーン", "value": "水内部クリーン"},
-      {"label": "自動掃除", "value": "なし（手動）"}
+      {"label": "自動掃除", "value": "なし（手動）"},
+      {"label": "工事", "value": "工事費込み・エリア限定"}
     ],
-    "pros": ["ストリーマで花粉・カビ菌を分解する空気清浄機能", "水内部クリーンで内部のカビを抑制", "信頼のダイキンブランド"],
-    "cons": ["自動掃除機能なし（フィルター手動清掃）", "暖房効率は上位機に劣る", "標準工事費1〜2万円が別途必要"],
+    "pros": ["ストリーマで花粉・カビ菌を分解する空気清浄機能", "水内部クリーンで内部のカビを抑制", "工事費込みでスムーズに導入できる"],
+    "cons": ["自動掃除機能なし（フィルター手動清掃）", "暖房効率は上位機に劣る", "エリア限定・特価品のため対応地域や在庫状況により価格が変動する場合がある"],
     "bestFor": ["6畳の1R・1Kのスタンダードエアコン", "空気清浄も求める人", "ダイキン信頼重視"],
     "notFor": ["12畳以上の広いリビング", "フィルター自動掃除を重視する人"],
     "rating": 4.2,
     "reviewSummary": "",
-    "affiliate": {"amazonAsin": "", "rakutenUrl": "", "yahooUrl": ""},
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fairmatsu%2Fs223atesw-koji-area%2F", "yahooUrl": ""},
     "competitors": [],
-    "updatedAt": "2026-06-04"
+    "updatedAt": "2026-07-15"
   },
   {
     "slug": "sony-bravia-kj65x80l",
