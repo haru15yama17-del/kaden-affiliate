@@ -4,10 +4,14 @@ import { reviewJsonLd, faqJsonLd } from "@/lib/jsonld";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { AffiliateButtons } from "@/components/AffiliateButtons";
+import { CampaignBanner } from "@/components/CampaignBanner";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { Product } from "@/data/types";
+
+// キャンペーン期間の判定をリクエスト時刻ベースにするため、ビルド時に固定されないよう定期再生成する
+export const revalidate = 3600;
 
 function HaruBubble({ label, children }: { label: string; children: ReactNode }) {
   return (
@@ -241,6 +245,7 @@ export default async function WaterserverKoukaiPage() {
       <HaruBubble label="はるの店頭レポート">{haruContents["frecious"]}</HaruBubble>
 
       <AffiliateButtons aff={frecious.affiliate} productName={frecious.name} />
+      <CampaignBanner slug={frecious.slug} />
 
       <h2>③ プレミアムウォーター——長く使うなら一番お得にしたい・デザイン重視の方に</h2>
       <p>

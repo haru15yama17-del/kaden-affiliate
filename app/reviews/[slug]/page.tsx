@@ -10,11 +10,15 @@ import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Rating } from "@/components/Rating";
 import { AffiliateButtons } from "@/components/AffiliateButtons";
+import { CampaignBanner } from "@/components/CampaignBanner";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { RelatedArticles } from "@/components/RelatedArticles";
 import { StickyCta } from "@/components/StickyCta";
 import Link from "next/link";
 import type { Product } from "@/data/types";
+
+// キャンペーン期間の判定をリクエスト時刻ベースにするため、ビルド時に固定されないよう定期再生成する
+export const revalidate = 3600;
 
 interface ArticleBody {
   intro?: string;
@@ -85,6 +89,8 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
           { name: p.name, path: `/reviews/${p.slug}` },
         ]}
       />
+
+      <CampaignBanner slug={p.slug} />
 
       {/* ✅ この記事の結論（本文最上部） */}
       <div className="not-prose my-4 rounded-2xl border-2 border-sub/30 bg-moss/40 p-5">

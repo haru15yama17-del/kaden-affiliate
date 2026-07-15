@@ -10,7 +10,11 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ProductCard } from "@/components/ProductCard";
 import { ArticleCard } from "@/components/ArticleCard";
 import { ComparisonTable } from "@/components/ComparisonTable";
+import { CampaignBanner } from "@/components/CampaignBanner";
 import { JsonLd } from "@/components/JsonLd";
+
+// キャンペーン期間の判定をリクエスト時刻ベースにするため、ビルド時に固定されないよう定期再生成する
+export const revalidate = 3600;
 
 const HUB_META: Partial<Record<string, { title: string; h1: string; description: string }>> = {
   "water-server": {
@@ -77,6 +81,8 @@ export default async function CategoryPage({ params }: { params: { slug: string 
         {hub ? hub.h1 : `${c.name}のおすすめと選び方`}
       </h1>
       <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink/65">{c.intro}</p>
+
+      {c.slug === "water-server" && <CampaignBanner slug="frecious" />}
 
       {/* ✅ 迷ったらコレ（比較ハブのみ） */}
       {hub && topProduct && (

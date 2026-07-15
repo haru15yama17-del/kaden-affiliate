@@ -6,8 +6,12 @@ import { itemListJsonLd } from "@/lib/jsonld";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { AffiliateButtons } from "@/components/AffiliateButtons";
+import { CampaignBanner } from "@/components/CampaignBanner";
 import { Rating } from "@/components/Rating";
 import Link from "next/link";
+
+// キャンペーン期間の判定をリクエスト時刻ベースにするため、ビルド時に固定されないよう定期再生成する
+export const revalidate = 3600;
 
 export function generateStaticParams() {
   return categories.map((c) => ({ slug: c.slug }));
@@ -137,6 +141,7 @@ export default async function RankingPage({ params }: { params: { slug: string }
                   <div className="mt-4">
                     <AffiliateButtons aff={p.affiliate} productName={p.name} />
                   </div>
+                  <CampaignBanner slug={p.slug} />
                 </div>
               </div>
             </li>

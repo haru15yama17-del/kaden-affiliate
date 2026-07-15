@@ -9,7 +9,11 @@ import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { AffiliateButtons } from "@/components/AffiliateButtons";
+import { CampaignBanner } from "@/components/CampaignBanner";
 import type { Product } from "@/data/types";
+
+// キャンペーン期間の判定をリクエスト時刻ベースにするため、ビルド時に固定されないよう定期再生成する
+export const revalidate = 3600;
 
 export async function generateStaticParams() {
   const all = await getAllProducts();
@@ -63,6 +67,7 @@ export default async function ComparePage({ params }: { params: { slug: string }
           <h2>{p.name}が向いている人</h2>
           <ul>{p.bestFor.map((x, i) => <li key={i}>{x}</li>)}</ul>
           <div className="my-3"><AffiliateButtons aff={p.affiliate} productName={p.name} /></div>
+          <CampaignBanner slug={p.slug} />
         </section>
       ))}
 
