@@ -43,6 +43,12 @@ export const articles: Article[] = [
     description: "アイリスオーヤマ カラリエFK-D2とcado FOEHN PROを据置き型・スティック型の違いで比較",
   },
   {
+    slug: "robot-cleaner-koukai",
+    title: "ロボット掃除機は後悔する？DEEBOTとルンバ205の違い",
+    category: "vacuum",
+    description: "エコバックス DEEBOT N20 PRO PLUSとルンバ205 DustCompactor Comboをステーション付き/不要の違いで比較",
+  },
+  {
     slug: "drum-washer-koukai",
     title: "ドラム式洗濯機おすすめ5選を比較",
     category: "washer",

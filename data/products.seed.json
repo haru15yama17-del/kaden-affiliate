@@ -1559,5 +1559,84 @@
     "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fcado-shop%2Ffen-p01%2F"},
     "competitors": ["iris-fk-d2-futondryer"],
     "updatedAt": "2026-07-19"
+  },
+  {
+    "slug": "ecovacs-deebot-n20-proplus-cleaner",
+    "name": "エコバックス DEEBOT N20 PRO PLUS",
+    "brand": "エコバックス",
+    "category": "vacuum",
+    "priceRange": "要確認（時期により変動）",
+    "specs": [
+      {"label": "タイプ", "value": "自動ゴミ収集ステーション付き"},
+      {"label": "吸引力", "value": "8,000Pa"},
+      {"label": "ダストボックス", "value": "400ml"},
+      {"label": "水拭き", "value": "OZMO Pro 2.0（高周波振動モップシステム）、水タンク180ml"},
+      {"label": "バッテリー", "value": "5200mAh"},
+      {"label": "段差", "value": "20mmのしきい値を乗り越え可能"}
+    ],
+    "pros": [
+      "ZeroTangle Anti-Tangleテクノロジーでローラーブラシへの髪の絡まりを防ぐ設計",
+      "自動ゴミ収集ステーション付きで、ダストボックスの手動処理の頻度を減らせる",
+      "4段階ろ過システムとダストバッグ不要のダストコンテナ設計"
+    ],
+    "cons": [
+      "自動ゴミ収集ステーションの設置スペースを確保する必要がある",
+      "段差は20mmのしきい値までのため、それ以上の段差がある間取りでは注意が必要",
+      "吸引力8,000Paはメーカー公表の測定基準に基づく数値で、他社製品との単純比較はできない"
+    ],
+    "bestFor": [
+      "ダストボックスのゴミ捨て頻度を減らしたい人",
+      "ペットの毛など髪・毛の絡まりが気になる人"
+    ],
+    "notFor": [
+      "ステーションを置くスペースを確保しにくい住まいの人",
+      "本体まわりをできるだけコンパクトにまとめたい人"
+    ],
+    "reviewSummary": "",
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fstore-ecovacs-japan%2Fdkx55-12ee%2F"},
+    "competitors": ["irobot-roomba-205-cleaner"],
+    "updatedAt": "2026-07-19"
+  },
+  {
+    "slug": "irobot-roomba-205-cleaner",
+    "name": "iRobot ルンバ 205 DustCompactor Combo（L121260）",
+    "brand": "iRobot",
+    "category": "vacuum",
+    "priceRange": "要確認（時期により変動）",
+    "specs": [
+      {"label": "タイプ", "value": "ゴミ収集ステーション不要（本体内でゴミを圧縮）"},
+      {"label": "ゴミ捨て", "value": "DustCompactorにより最大60日間ゴミ捨て不要（すべての家庭環境において期間を保証するものではありません）"},
+      {"label": "本体サイズ", "value": "奥行35.9×幅35.8×高さ10.1cm"},
+      {"label": "充電ステーションサイズ", "value": "奥行13.4×幅14.6×高さ8.8cm"},
+      {"label": "重量", "value": "本体約3.83kg・充電ステーション約0.31kg"},
+      {"label": "充電時間", "value": "約4時間"},
+      {"label": "吸引力", "value": "最大70倍（国内累計出荷台数トップのRoomba 600シリーズとの比較、2025年2月時点）"},
+      {"label": "マッピング", "value": "ClearView LiDAR"},
+      {"label": "水拭き", "value": "マイクロファイバーモップパッド、スマートスクラブ対応、カーペット自動検知でラグを回避"},
+      {"label": "設定", "value": "4段階の吸引力、3段階の水分量、進入禁止/拭き掃除禁止エリア設定可"},
+      {"label": "ブラシ", "value": "ゴム製シングルアクションブラシ、エッジクリーニングブラシ"}
+    ],
+    "pros": [
+      "DustCompactorが本体内でゴミを圧縮し、条件が揃えば最大60日間ゴミ捨て不要（すべての家庭環境で期間を保証するものではない）",
+      "ClearView LiDARによるマッピングと、進入禁止・拭き掃除禁止エリアの設定が可能",
+      "カーペット自動検知でラグを避けて拭き掃除ができる"
+    ],
+    "cons": [
+      "ゴミ収集ステーションが無いため、本体内のダストコンテナ容量の範囲でゴミが圧縮される仕組み",
+      "吸引力『最大70倍』はメーカー公表の旧機種（Roomba 600シリーズ）との比較値で、他社製品との単純比較はできない",
+      "本体重量約3.83kgで、持ち上げてのお手入れ時にやや重さを感じる場合がある"
+    ],
+    "bestFor": [
+      "ゴミ収集ステーションを置くスペースを確保しにくい住まいの人",
+      "進入禁止・拭き掃除禁止エリアなど細かいエリア設定をしたい人"
+    ],
+    "notFor": [
+      "ダストボックスの手動処理を極力減らしたい人（自動ゴミ収集ステーション付きの方が向く）",
+      "とにかくゴミ捨て頻度を長く空けたい人（環境によって変わるため過度な期待は禁物）"
+    ],
+    "reviewSummary": "",
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Firobotstore%2Fl12%2F"},
+    "competitors": ["ecovacs-deebot-n20-proplus-cleaner"],
+    "updatedAt": "2026-07-19"
   }
 ]
