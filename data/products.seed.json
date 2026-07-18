@@ -1483,5 +1483,81 @@
     "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fa-price%2F4904530128714%2F"},
     "competitors": ["iris-flk842-washer", "nitori-nd60ul1-washer", "panasonic-na-sd10hbl-washer", "sharp-es11k1-washer"],
     "updatedAt": "2026-07-01"
+  },
+  {
+    "slug": "iris-fk-d2-futondryer",
+    "name": "アイリスオーヤマ ふとん乾燥機 カラリエ FK-D2",
+    "brand": "アイリスオーヤマ",
+    "category": "seasonal",
+    "priceRange": "要確認（時期により変動）",
+    "specs": [
+      {"label": "タイプ", "value": "据置きホース式（マットなし）"},
+      {"label": "サイズ", "value": "幅15×奥行27×高さ34.5cm（ホース折りたたみ時）"},
+      {"label": "重量", "value": "約4kg"},
+      {"label": "最大消費電力", "value": "約870W"},
+      {"label": "自動モード", "value": "冬・夏・あたため・ダニの4モード＋手動モード"},
+      {"label": "タイマー", "value": "15/30/60/120/180分"},
+      {"label": "温度", "value": "高温風・低温風・送風の3段階"},
+      {"label": "ホース長", "value": "800mm"}
+    ],
+    "pros": [
+      "ノズルハンガー付属で衣類乾燥・スポット暖房にも使える汎用性の高さ",
+      "冬・夏・あたため・ダニの4つの自動モードを搭載",
+      "安全装置（温度センサー・サーモスタット・温度ヒューズ）を備えた設計"
+    ],
+    "cons": [
+      "ホース式のため使うたびに布団へホースをセットする手間がある",
+      "本体重量約4kgとスティック型に比べるとやや重い",
+      "ホース長800mmのため、布団の位置によっては本体の設置場所を工夫する必要がある"
+    ],
+    "bestFor": [
+      "ノズルハンガーで衣類乾燥やスポット暖房もまとめて済ませたい人",
+      "ダニ対策など自動モードの多さを重視する人"
+    ],
+    "notFor": [
+      "とにかく軽くてコンパクトに収納したい人",
+      "本体をセットする手間をかけず手軽に使いたい人"
+    ],
+    "reviewSummary": "",
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Feleking%2F285526%2F"},
+    "competitors": ["cado-foehn-pro-futondryer"],
+    "updatedAt": "2026-07-19"
+  },
+  {
+    "slug": "cado-foehn-pro-futondryer",
+    "name": "cado ふとん乾燥機 FOEHN PRO",
+    "brand": "cado",
+    "category": "seasonal",
+    "priceRange": "要確認（時期により変動）",
+    "specs": [
+      {"label": "タイプ", "value": "スティック型（マットなし）"},
+      {"label": "サイズ", "value": "直径5.4×高さ34.2cm"},
+      {"label": "重量", "value": "約720g（電源コード除く）"},
+      {"label": "最大消費電力", "value": "620W"},
+      {"label": "コース", "value": "送風120分／乾燥・ダニ対策80分／あたため10分"},
+      {"label": "対応サイズ", "value": "シングル〜キングサイズ"}
+    ],
+    "pros": [
+      "重量約720gと非常に軽く、収納・持ち運びがしやすい",
+      "メーカー公表で従来機FOEHN 001比、風量が約50%向上（急速モード）",
+      "メーカー公表で従来機比、運転音が約36%減（SONE値比較）"
+    ],
+    "cons": [
+      "マットがないため、布団の中で本体が動かないよう配置を工夫する必要がある",
+      "ふとんの耐熱温度が70℃以上であることの確認が必要（機能性寝具は寝具メーカーへの確認を推奨）",
+      "据置きホース式に比べ、ノズルハンガーによる衣類乾燥のような多用途機能はない"
+    ],
+    "bestFor": [
+      "とにかく軽さ・収納のしやすさを重視する人",
+      "運転音の静かさを重視する人"
+    ],
+    "notFor": [
+      "衣類乾燥などノズルハンガーを使った多用途性を重視する人",
+      "布団の耐熱温度を確認する手間をかけたくない人"
+    ],
+    "reviewSummary": "",
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fcado-shop%2Ffen-p01%2F"},
+    "competitors": ["iris-fk-d2-futondryer"],
+    "updatedAt": "2026-07-19"
   }
 ]

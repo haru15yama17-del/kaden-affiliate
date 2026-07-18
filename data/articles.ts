@@ -37,6 +37,12 @@ export const articles: Article[] = [
     description: "バルミューダ2機種とアイリスWOOZOOを主婦目線で比較",
   },
   {
+    slug: "futon-dryer-koukai",
+    title: "布団乾燥機は後悔する？カラリエとcadoの違い",
+    category: "seasonal",
+    description: "アイリスオーヤマ カラリエFK-D2とcado FOEHN PROを据置き型・スティック型の違いで比較",
+  },
+  {
     slug: "drum-washer-koukai",
     title: "ドラム式洗濯機おすすめ5選を比較",
     category: "washer",
