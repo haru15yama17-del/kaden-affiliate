@@ -105,7 +105,7 @@ function productJsonLd(name: string, brand: string) {
 
 const PATH = "/reviews/aircon-2027-koukai";
 const TITLE =
-  "エアコンは2027年問題で値上がり前に？工事費込みで安いうちに選ぶおすすめモデル【2026年】";
+  "CS-635DEX2-Wは後悔する？工事費込みエアコン5機種比較";
 
 /** ざっくり比較表用に「畳数目安・工事費込み/別・最大の強み」だけへ絞ったスペック */
 const compactSpecs: Record<string, { label: string; value: string }[]> = {
@@ -163,7 +163,7 @@ export async function generateMetadata() {
   return buildMetadata({
     title: `${TITLE}｜主婦の家電と暮らし研究室`,
     description:
-      "2027年4月の省エネ基準引き上げ（2027年問題）でエアコン低価格帯の市場縮小・値上がりが予想されています。工事費込みで今選べるモデルを安さ重視・省エネ重視の2グループ、畳数別に比較・紹介します。",
+      "2027年4月の省エネ基準引き上げ（2027年問題）でエアコンの値上がりが予想されています。工事費込みで選べるダイキン・三菱霧ヶ峰・パナソニック エオリアCS-635DEX2-Wなど5機種を安さ重視・省エネ重視で比較。後悔しないためのデメリット5つと店頭で聞いた実機の声も掲載。",
     path: PATH,
     type: "article",
     modifiedTime: "2026-06-29",

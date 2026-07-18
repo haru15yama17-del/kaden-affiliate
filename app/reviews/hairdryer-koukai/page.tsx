@@ -20,7 +20,7 @@ function productJsonLd(name: string, brand: string) {
 
 const PATH = "/reviews/hairdryer-koukai";
 const TITLE =
-  "ヘアドライヤーおすすめ4台を比較【2026年】ナノミスト・自動温度管理・軽さ・定番モデルで選ぶ";
+  "ヘアドライヤーおすすめ4台を比較【2026年】KINUJO KH301とKH302の違いも解説";
 
 const featureTags: Record<string, string[]> = {
   "brighte-shower-dryer": ["ナノミスト", "美容液成分配合", "大風量", "速乾"],
@@ -115,7 +115,7 @@ export async function generateMetadata() {
   return buildMetadata({
     title: `${TITLE}｜主婦の家電と暮らし研究室`,
     description:
-      "ブライト シャワードライヤー、ReFa ビューテック ドライヤー S+、KINUJO 絹女、パナソニック ナノケア EH-NA0Kの4台を風量・重量・価格帯で比較。悩み・優先度別にどれを選ぶべきかを解説します。",
+      "ブライト シャワードライヤー、ReFa ビューテック ドライヤー S+、KINUJO 絹女KH301/KH302、パナソニック ナノケア EH-NA0Kの4台を風量・重量・価格帯で比較。KH301とKH302の違い（カラー違い）や、悩み・優先度別の選び方も解説します。",
     path: PATH,
     type: "article",
     modifiedTime: "2026-07-01",
@@ -288,6 +288,11 @@ export default async function HairdryerKoukaiPage() {
       {/* ── 商品3：KINUJO ── */}
       <h2>KINUJO ヘアドライヤー 絹女 KH301/KH302</h2>
       <ProductCard p={kinujo} />
+
+      <h3>KH301とKH302の違いは？</h3>
+      <p>
+        KH301（ホワイト）とKH302（モカ）は<strong>カラーが異なるだけ</strong>で、風量・重量・モード構成などのスペックは同一です。性能に差はないため、インテリアや好みに合わせてカラーを選んで問題ありません。
+      </p>
 
       {/* ── 商品4：パナソニック ── */}
       <h2>パナソニック ヘアードライヤー ナノケア EH-NA0K</h2>
