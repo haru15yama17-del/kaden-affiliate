@@ -42,9 +42,12 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const p = await getProduct(params.slug);
   if (!p) return {};
+  const body = loadBody(p.slug);
+  const hasReviewSummary = Boolean(body.reviewDetail || p.reviewSummary);
+  const reviewPart = hasReviewSummary ? "、口コミ要約" : "";
   return buildMetadata({
     title: `${p.name}のレビュー・評価｜良い点と気になる点を実機目線で`,
-    description: `${p.name}（${p.priceRange}）を編集部が評価。スペック、メリット・デメリット、口コミ要約、競合比較、向き不向きまで解説します。`,
+    description: `${p.name}（${p.priceRange}）を編集部が評価。スペック、メリット・デメリット${reviewPart}、競合比較、向き不向きまで解説します。`,
     path: `/reviews/${p.slug}`,
     type: "article",
     image: p.image || undefined,
@@ -70,6 +73,10 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
   const showFoodDeliveryLink =
     p.category === "cooking" && !p.slug.includes("dishwasher");
   const showWaterServerLink = p.slug.includes("dishwasher");
+  const HOTCOOK_SLUGS = ["sharp-kn-hw24h-hotkook", "sharp-kn-hw16h-hotkook", "sharp-kn-hw10g-hotkook"];
+  const showHotcookGuideLink = HOTCOOK_SLUGS.includes(p.slug);
+
+  const reviewText = body.reviewDetail ?? (p.reviewSummary || undefined);
 
   // 結論ボックスにCTAを表示するか
   const hasCta =
@@ -185,10 +192,29 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
         ))}
       </div>
 
-      <h2>口コミ・評判の要約</h2>
-      <p>{body.reviewDetail ?? p.reviewSummary}</p>
-      {body.sources && body.sources.length > 0 && (
-        <p className="text-xs text-ink/45">出典：{body.sources.join("、")}</p>
+      {reviewText && (
+        <>
+          <h2>口コミ・評判の要約</h2>
+          <p>{reviewText}</p>
+          {body.sources && body.sources.length > 0 && (
+            <p className="text-xs text-ink/45">出典：{body.sources.join("、")}</p>
+          )}
+        </>
+      )}
+
+      {showHotcookGuideLink && (
+        <div className="not-prose my-6 rounded-xl border-2 border-accent/30 bg-blush/40 p-4">
+          <p className="text-sm font-bold text-ink">📖 型番選びで後悔したくない方へ</p>
+          <p className="mt-1 text-xs text-ink/60">
+            KN-HW24H/16H/10Gの型番の違いや、購入前に知っておきたい後悔しやすいポイントを実店舗での取材も交えて詳しく解説しています。
+          </p>
+          <Link
+            href="/reviews/hotcook-koukai"
+            className="mt-2 inline-block text-sm font-bold text-accent hover:underline"
+          >
+            ホットクックで後悔しないための選び方ガイドを見る →
+          </Link>
+        </div>
       )}
 
       {competitors.length > 0 && (

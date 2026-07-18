@@ -50,7 +50,7 @@ function HaruBubble({ label, children }: { label: string; children: ReactNode })
 }
 
 const PATH = "/reviews/hotcook-koukai";
-const TITLE = "ホットクックで後悔しない？店頭で聞いた5つのデメリットと、それでも共働き家庭に選ばれる理由";
+const TITLE = "ホットクックは後悔する？KN-HW16H/24H/10G型番別の選び方と5つのデメリット";
 
 /** ざっくり比較表用に「容量・かきまぜ機能・最大の強み」だけへ絞ったスペック */
 const compactSpecs: Record<string, { label: string; value: string }[]> = {
@@ -94,7 +94,7 @@ export async function generateMetadata() {
   return buildMetadata({
     title: `${TITLE}｜主婦の家電と暮らし研究室`,
     description:
-      "ホットクックで後悔しやすい5つのポイントと、KN-HW24H/16H/10Gの選び方を主婦目線で解説。店頭で聞いたリアルな声と実機レビューも掲載。",
+      "ホットクックKN-HW16H（1.6L）の後悔しやすい5つのデメリットと、KN-HW24H/10Gとの型番別の選び方を主婦目線で解説。店頭で聞いたリアルな声・実機レビューも掲載。",
     path: PATH,
     type: "article",
     modifiedTime: "2026-06-18",
@@ -290,6 +290,9 @@ export default async function HotcookKoukaiPage() {
 
       <div className="not-prose my-6 space-y-6">
         <div>
+          <h3 className="mb-2 font-serif text-lg font-bold text-ink">
+            KN-HW24H（2.4L）：作り置き・大家族向けの大容量モデル
+          </h3>
           <div className="mb-2 flex items-center gap-3">
             <img
               src={`${IMG_BASE}/model-hw24h.svg`}
@@ -318,6 +321,9 @@ export default async function HotcookKoukaiPage() {
           <AffiliateButtons aff={hw24h.affiliate} productName={hw24h.name} />
         </div>
         <div>
+          <h3 className="mb-2 font-serif text-lg font-bold text-ink">
+            KN-HW16H（1.6L）：価格と容量のバランスが良い、夫婦+子ども1〜2人向けモデル
+          </h3>
           <div className="mb-2 flex items-center gap-3">
             <img
               src={`${IMG_BASE}/model-hw16h.svg`}
@@ -346,6 +352,9 @@ export default async function HotcookKoukaiPage() {
           <AffiliateButtons aff={hw16h.affiliate} productName={hw16h.name} />
         </div>
         <div>
+          <h3 className="mb-2 font-serif text-lg font-bold text-ink">
+            KN-HW10G（1.0L）：もっとも価格が安い小型モデル
+          </h3>
           <div className="mb-2 flex items-center gap-3">
             <img
               src={`${IMG_BASE}/model-hw10g.svg`}
