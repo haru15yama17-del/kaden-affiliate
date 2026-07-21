@@ -6,6 +6,8 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RecommendBox } from "@/components/RecommendBox";
 import { AffiliateButtons } from "@/components/AffiliateButtons";
 import { ComparisonTable } from "@/components/ComparisonTable";
+import { RelatedTier1 } from "@/components/RelatedTier1";
+import { relatedTier1 } from "@/data/tier1-links";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
@@ -102,7 +104,6 @@ export default async function AtsuryokunabeKoukaiPage() {
   const all = await getAllProducts();
   const kpc = all.find((p) => p.slug === "iris-kpc-ma4-pressurecooker")!;
   const hw24h = all.find((p) => p.slug === "sharp-kn-hw24h-hotkook")!;
-  const yoshikei = all.find((p) => p.slug === "yoshikei")!;
 
   const compactItems = [kpc, hw24h].map((p) => ({
     ...p,
@@ -328,9 +329,8 @@ export default async function AtsuryokunabeKoukaiPage() {
         </div>
       </div>
 
-      <h2>あわせて読みたい・暮らしをラクにする組み合わせ</h2>
       <p>
-        電気圧力鍋でもホットクックでも、共通の弱点は「結局、献立を考えて材料を準備する手間は残る」こと。ここを軽くすると、調理家電の満足度はさらに上がりやすくなります。
+        無水調理・自動かきまぜ式のホットクックと迷っている方は、あわせて比較してみてください。
       </p>
       <ul>
         <li>
@@ -338,21 +338,6 @@ export default async function AtsuryokunabeKoukaiPage() {
           <Link href="/reviews/hotcook-koukai" className="font-bold text-accent hover:underline">
             ホットクックで後悔しない？店頭で聞いた5つのデメリットと選び方
           </Link>
-          （無水・自動かきまぜ式と迷っている方はこちら）
-        </li>
-        <li>
-          ▶{" "}
-          <Link href="/reviews/oisix" className="font-bold text-accent hover:underline">
-            はるのオイシックス（Kit Oisix）体験レビュー記事はこちら
-          </Link>
-          （カット済み食材で下ごしらえを軽くしたい方に）
-        </li>
-        <li>
-          ▶{" "}
-          <Link href="/reviews/yoshikei" className="font-bold text-accent hover:underline">
-            はるのヨシケイ体験レビュー記事はこちら
-          </Link>
-          （毎日届くミールキットで買い物を減らしたい方に）
         </li>
       </ul>
 
@@ -374,17 +359,7 @@ export default async function AtsuryokunabeKoukaiPage() {
         ))}
       </div>
 
-      <div className="not-prose my-8 rounded-2xl border-2 border-accent/30 bg-blush p-5">
-        <p className="mb-2 text-xs font-bold uppercase tracking-widest text-accent/70">
-          ▼ 材料を切る手間まで減らしたい方へ
-        </p>
-        <p className="mb-4 text-sm leading-relaxed text-ink/75">
-          電気圧力鍋もホットクックも、加熱そのものはほったらかしにできますが、「材料を切って揃える」下ごしらえの手間は残ります。
-          ここまで軽くしたい方には、カット済み食材が届くヨシケイのミールキットとの組み合わせも一案です。
-          私自身、忙しい平日はミールキットをそのまま入れるだけで済ませる日が増え、下ごしらえの負担が減った実感があります。
-        </p>
-        <AffiliateButtons aff={yoshikei.affiliate} productName={yoshikei.name} />
-      </div>
+      <RelatedTier1 items={relatedTier1["atsuryokunabe-koukai"]} />
     </article>
   );
 }

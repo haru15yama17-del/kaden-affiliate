@@ -5,6 +5,8 @@ import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { AffiliateButtons } from "@/components/AffiliateButtons";
 import { ComparisonTable } from "@/components/ComparisonTable";
+import { RelatedTier1 } from "@/components/RelatedTier1";
+import { relatedTier1 } from "@/data/tier1-links";
 import type { Product } from "@/data/types";
 
 /** 各商品の Product 構造化データ（offersは含めない） */
@@ -266,6 +268,8 @@ export default async function RobotCleanerKoukaiPage() {
       <p>
         吸引力の数値は表記基準が異なるため単純比較はできません。ご自宅の間取り・設置スペース・家具の高さを確認したうえで選ぶと後悔しにくくなります。
       </p>
+
+      <RelatedTier1 items={relatedTier1["robot-cleaner-koukai"]} />
     </article>
   );
 }

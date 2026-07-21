@@ -5,6 +5,8 @@ import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { AffiliateButtons } from "@/components/AffiliateButtons";
 import { ComparisonTable } from "@/components/ComparisonTable";
+import { RelatedTier1 } from "@/components/RelatedTier1";
+import { relatedTier1 } from "@/data/tier1-links";
 import type { Product } from "@/data/types";
 
 /** 各商品の Product 構造化データ（offersは含めない） */
@@ -252,6 +254,8 @@ export default async function FutonDryerKoukaiPage() {
       <p>
         いずれもダニ対策モードは死滅・除去を保証するものではないため、過度な期待をせず、ご自宅の収納スペースやふとんの耐熱表示を確認したうえで選ぶと後悔しにくくなります。
       </p>
+
+      <RelatedTier1 items={relatedTier1["futon-dryer-koukai"]} />
     </article>
   );
 }

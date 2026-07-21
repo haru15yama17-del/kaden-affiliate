@@ -5,6 +5,8 @@ import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { AffiliateButtons } from "@/components/AffiliateButtons";
 import { ComparisonTable } from "@/components/ComparisonTable";
+import { RelatedTier1 } from "@/components/RelatedTier1";
+import { relatedTier1 } from "@/data/tier1-links";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { Product } from "@/data/types";
@@ -553,6 +555,8 @@ export default async function DrumWasherKoukaiPage() {
           （エアコンの除湿運転と除湿機・洗濯乾燥機の使い分けが気になる方に）
         </li>
       </ul>
+
+      <RelatedTier1 items={relatedTier1["drum-washer-koukai"]} />
     </article>
   );
 }

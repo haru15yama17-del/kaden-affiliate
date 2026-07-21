@@ -5,6 +5,8 @@ import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { AffiliateButtons } from "@/components/AffiliateButtons";
 import { ComparisonTable } from "@/components/ComparisonTable";
+import { RelatedTier1 } from "@/components/RelatedTier1";
+import { relatedTier1 } from "@/data/tier1-links";
 import type { ReactNode } from "react";
 import type { Product } from "@/data/types";
 
@@ -322,6 +324,8 @@ export default async function PersonalDishwasherKoukaiPage() {
         収納容量や温風乾燥・価格の手頃さを優先するなら<strong>ラクアmini color</strong>という選び分けになります。
         どちらも工事不要のタンク式なので、賃貸・ワンルームでも導入しやすい点は共通です。
       </p>
+
+      <RelatedTier1 items={relatedTier1["personal-dishwasher-koukai"]} />
     </article>
   );
 }

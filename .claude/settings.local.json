@@ -52,7 +52,16 @@
       "Bash(awk '{print $5}')",
       "Bash(taskkill //F //PID 19532)",
       "Bash(taskkill //F //PID 25552)",
-      "Bash(xargs -I{} taskkill //F //PID {})"
+      "Bash(xargs -I{} taskkill //F //PID {})",
+      "Bash(python3 *)",
+      "Bash(grep -o 'canonical\\\\\\\\?\" *href[^}]*')",
+      "Bash(powershell -NoProfile -Command \"Stop-Process -Id 17004 -Force -ErrorAction SilentlyContinue\")",
+      "WebFetch(domain:item.rakuten.co.jp)",
+      "Bash(grep -n \"^const TITLE\\\\|title: \\\\`\\\\|description:\\\\s*$\\\\|description:\\\\s*\\\\\"\" \"C:/dev/kaden-affiliate/app/reviews/futon-dryer-koukai/page.tsx\")",
+      "Bash(tasklist //FI \"IMAGENAME eq node.exe\")",
+      "Bash(taskkill //F //PID 15556)",
+      "Bash(taskkill //F //PID 22016)",
+      "Bash(taskkill //F //IM node.exe)"
     ]
   }
 }

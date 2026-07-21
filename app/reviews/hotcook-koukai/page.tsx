@@ -6,6 +6,8 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RecommendBox } from "@/components/RecommendBox";
 import { AffiliateButtons } from "@/components/AffiliateButtons";
 import { ComparisonTable } from "@/components/ComparisonTable";
+import { RelatedTier1 } from "@/components/RelatedTier1";
+import { relatedTier1 } from "@/data/tier1-links";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
@@ -106,7 +108,6 @@ export default async function HotcookKoukaiPage() {
   const hw24h = all.find((p) => p.slug === "sharp-kn-hw24h-hotkook")!;
   const hw16h = all.find((p) => p.slug === "sharp-kn-hw16h-hotkook")!;
   const hw10g = all.find((p) => p.slug === "sharp-kn-hw10g-hotkook")!;
-  const yoshikei = all.find((p) => p.slug === "yoshikei")!;
 
   const compactItems = [hw24h, hw16h, hw10g].map((p) => ({
     ...p,
@@ -399,20 +400,12 @@ export default async function HotcookKoukaiPage() {
         caption="カット済み食材を入れるだけにすれば、献立も下ごしらえも手放せる"
       />
 
-      <ul>
-        <li>
-          <strong>オイシックスの「Kit Oisix」</strong>
-          ：必要な食材とレシピが2人前20分でセット。ホットクック対応に置き換えやすく、献立に悩みません。
-          <br />
-          ▶ <Link href="/reviews/oisix" className="font-bold text-accent hover:underline">はるのオイシックス（Kit Oisix）体験レビュー記事はこちら</Link>
-        </li>
-        <li>
-          <strong>ヨシケイのミールキット</strong>
-          ：毎日届くから買い物が不要。共働きの平日にぴったり。
-          <br />
-          ▶ <Link href="/reviews/yoshikei" className="font-bold text-accent hover:underline">はるのヨシケイ体験レビュー記事はこちら</Link>
-        </li>
-      </ul>
+      <p>
+        <strong>ヨシケイのミールキット</strong>
+        なら毎日届くから買い物が不要。共働きの平日にぴったりです。
+        <br />
+        ▶ <Link href="/reviews/yoshikei" className="font-bold text-accent hover:underline">はるのヨシケイ体験レビュー記事はこちら</Link>
+      </p>
       <p>「ホットクックを買ったのに結局使わない」を防ぐ一番の近道は、“材料の準備すら手放す”ことです。</p>
 
       <h2>まとめ：ホットクックは「予約調理を使う人」なら後悔しない</h2>
@@ -442,17 +435,7 @@ export default async function HotcookKoukaiPage() {
         ))}
       </div>
 
-      <div className="not-prose my-8 rounded-2xl border-2 border-accent/30 bg-blush p-5">
-        <p className="mb-2 text-xs font-bold uppercase tracking-widest text-accent/70">
-          ▼ 材料を切る手間まで減らしたい方へ
-        </p>
-        <p className="mb-4 text-sm leading-relaxed text-ink/75">
-          ホットクックは加熱・調理そのものはほったらかしにできますが、「材料を切って揃える」下ごしらえの手間は残ります。
-          ここまで軽くしたい方には、カット済み食材が届くヨシケイのミールキットとの組み合わせも一案です。
-          私自身、忙しい平日はミールキットをそのまま入れるだけで済ませる日が増え、下ごしらえの負担が減った実感があります。
-        </p>
-        <AffiliateButtons aff={yoshikei.affiliate} productName={yoshikei.name} />
-      </div>
+      <RelatedTier1 items={relatedTier1["hotcook-koukai"]} />
     </article>
   );
 }

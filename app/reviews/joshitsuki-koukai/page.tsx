@@ -6,6 +6,8 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RecommendBox } from "@/components/RecommendBox";
 import { AffiliateButtons } from "@/components/AffiliateButtons";
 import { ComparisonTable } from "@/components/ComparisonTable";
+import { RelatedTier1 } from "@/components/RelatedTier1";
+import { relatedTier1 } from "@/data/tier1-links";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { Product } from "@/data/types";
@@ -484,6 +486,8 @@ export default async function JoshitsukiKoukaiPage() {
           （洗濯乾燥まで完結させて部屋干しゼロを目指したい方に）
         </li>
       </ul>
+
+      <RelatedTier1 items={relatedTier1["joshitsuki-koukai"]} />
     </article>
   );
 }

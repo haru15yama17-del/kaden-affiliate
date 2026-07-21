@@ -322,13 +322,6 @@ export default async function WaterserverKoukaiPage() {
         </li>
         <li>
           ▶{" "}
-          <Link href="/reviews/oisix" className="font-bold text-accent hover:underline">
-            はるのオイシックス（Kit Oisix）体験レビュー記事はこちら
-          </Link>
-          （献立・買い物の手間も減らしたい方に）
-        </li>
-        <li>
-          ▶{" "}
           <Link href="/reviews/yoshikei" className="font-bold text-accent hover:underline">
             はるのヨシケイ体験レビュー記事はこちら
           </Link>
