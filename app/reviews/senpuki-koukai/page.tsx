@@ -77,7 +77,7 @@ const faq = [
 
 export async function generateMetadata() {
   return buildMetadata({
-    title: `${TITLE}｜主婦の家電と暮らし研究室`,
+    title: TITLE,
     description:
       "扇風機とサーキュレーターの違いをわかりやすく整理。DCモーター・静音・分解洗いなど選び方のポイントをまとめ、バルミューダ2種とアイリスWOOZOOを主婦目線のレポート付きで紹介します。",
     path: PATH,

@@ -113,7 +113,7 @@ const editorialNotes: Record<string, ReactNode> = {
 
 export async function generateMetadata() {
   return buildMetadata({
-    title: `${TITLE}｜主婦の家電と暮らし研究室`,
+    title: TITLE,
     description:
       "ブライト シャワードライヤー、ReFa ビューテック ドライヤー S+、KINUJO 絹女KH301/KH302、パナソニック ナノケア EH-NA0Kの4台を風量・重量・価格帯で比較。KH301とKH302の違い（カラー違い）や、悩み・優先度別の選び方も解説します。",
     path: PATH,

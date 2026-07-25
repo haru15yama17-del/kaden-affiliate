@@ -61,7 +61,7 @@ const faq = [
 
 export async function generateMetadata() {
   return buildMetadata({
-    title: `${TITLE}｜主婦の家電と暮らし研究室`,
+    title: TITLE,
     description:
       "アイリスオーヤマ カラリエFK-D2（据置きホース式）とcado FOEHN PRO（スティック型）を徹底比較。布団乾燥機で後悔しやすい5つのポイントと、それぞれが向いている人を編集部が解説します。",
     path: PATH,

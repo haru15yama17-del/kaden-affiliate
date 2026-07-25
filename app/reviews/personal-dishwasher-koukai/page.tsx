@@ -92,7 +92,7 @@ const editorialNotes: Record<string, ReactNode> = {
 
 export async function generateMetadata() {
   return buildMetadata({
-    title: `${TITLE}｜主婦の家電と暮らし研究室`,
+    title: TITLE,
     description:
       "工事不要・タンク式のパーソナル食洗機2台、パナソニック SOLOTA NP-TML1とサンコー ラクアmini colorをスペックで比較。安心感・除菌を取るか、収納力・デザインを取るか、選び方のポイントを正直に解説します。",
     path: PATH,

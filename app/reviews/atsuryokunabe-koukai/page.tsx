@@ -91,7 +91,7 @@ const faq = [
 
 export async function generateMetadata() {
   return buildMetadata({
-    title: `${TITLE}｜主婦の家電と暮らし研究室`,
+    title: TITLE,
     description:
       "アイリスオーヤマ 電気圧力鍋 KPC-MA4で後悔しやすいポイントを、加圧式のメリット・デメリットとあわせて中立に解説。ホットクック（KN-HW24H）との調理方式の違いや選び方も比較表で紹介します。",
     path: PATH,

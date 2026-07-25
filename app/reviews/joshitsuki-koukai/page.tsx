@@ -53,7 +53,7 @@ function HaruBubble({ label, children }: { label: string; children: ReactNode })
 }
 
 const PATH = "/reviews/joshitsuki-koukai";
-const TITLE = "除湿機おすすめ比較【2026年】コンプレッサー・デシカント・ハイブリッド式の違いと部屋干し向け4選";
+const TITLE = "除湿機は後悔する？CV-S71の5つのデメリットと方式別の選び方【2026年】";
 
 /** ざっくり比較表用に「除湿方式・除湿能力・最大の強み」だけへ絞ったスペック */
 const compactSpecs: Record<string, { label: string; value: string }[]> = {
@@ -100,9 +100,9 @@ const faq = [
 
 export async function generateMetadata() {
   return buildMetadata({
-    title: `${TITLE}｜主婦の家電と暮らし研究室`,
+    title: TITLE,
     description:
-      "コンプレッサー式・デシカント式・ハイブリッド式の特徴と選び方を比較表で解説。部屋干し・梅雨・結露対策に向くおすすめ4台をスペック・用途別に紹介します。主婦目線のレポートつき。",
+      "シャープ 衣類乾燥除湿機CV-S71の後悔しやすい5つのデメリットと、コンプレッサー・デシカント・ハイブリッド式の選び方を主婦目線で解説。実際に測った乾燥時間・体感電気代、店員に聞いたリアルな声も掲載。部屋干し向けおすすめ4台を紹介します。",
     path: PATH,
     type: "article",
     modifiedTime: "2026-06-30",

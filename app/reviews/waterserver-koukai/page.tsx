@@ -83,7 +83,7 @@ const faq = [
 
 export async function generateMetadata() {
   return buildMetadata({
-    title: `${TITLE}｜主婦の家電と暮らし研究室`,
+    title: TITLE,
     description:
       "共働き・子育て世帯がウォーターサーバーを検討する際の悩み別に、アクアクララ・フレシャス・プレミアムウォーターを水の種類・電気代目安・卓上型の有無で比較します。",
     path: PATH,

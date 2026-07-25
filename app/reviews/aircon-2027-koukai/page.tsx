@@ -161,7 +161,7 @@ const faq = [
 
 export async function generateMetadata() {
   return buildMetadata({
-    title: `${TITLE}｜主婦の家電と暮らし研究室`,
+    title: TITLE,
     description:
       "2027年4月の省エネ基準引き上げ（2027年問題）でエアコンの値上がりが予想されています。工事費込みで選べるダイキン・三菱霧ヶ峰・パナソニック エオリアCS-635DEX2-Wなど5機種を安さ重視・省エネ重視で比較。後悔しないためのデメリット5つと店頭で聞いた実機の声も掲載。",
     path: PATH,

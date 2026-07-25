@@ -94,7 +94,7 @@ const faq = [
 
 export async function generateMetadata() {
   return buildMetadata({
-    title: `${TITLE}｜主婦の家電と暮らし研究室`,
+    title: TITLE,
     description:
       "ホットクックKN-HW16H（1.6L）の後悔しやすい5つのデメリットと、KN-HW24H/10Gとの型番別の選び方を主婦目線で解説。店頭で聞いたリアルな声・実機レビューも掲載。",
     path: PATH,

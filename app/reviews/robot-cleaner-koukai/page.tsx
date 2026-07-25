@@ -65,7 +65,7 @@ const faq = [
 
 export async function generateMetadata() {
   return buildMetadata({
-    title: `${TITLE}｜主婦の家電と暮らし研究室`,
+    title: TITLE,
     description:
       "エコバックス DEEBOT N20 PRO PLUS（自動ゴミ収集ステーション付き）とルンバ205 DustCompactor Combo（ステーション不要）を徹底比較。ロボット掃除機で後悔しやすい5つのポイントと、それぞれが向いている人を編集部が解説します。",
     path: PATH,
