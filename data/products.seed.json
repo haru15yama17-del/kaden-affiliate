@@ -266,6 +266,27 @@
     "updatedAt": "2026-07-01"
   },
   {
+    "slug": "rede-hairdryplus-dr02a",
+    "name": "Re・De Hairdry+（DR02A）",
+    "brand": "Re・De（A-Stage）",
+    "category": "personal-care",
+    "priceRange": "要確認（時期により変動）",
+    "specs": [
+      {"label": "重量", "value": "約280g（本体のみ・旧モデルDR01Aは約255g）"},
+      {"label": "風速", "value": "約53m/秒"},
+      {"label": "モード", "value": "5モードを搭載"},
+      {"label": "スタンド", "value": "専用スタンド付属（ハンズフリー使用可）"}
+    ],
+    "pros": ["約280gと軽量で長時間の使用でも扱いやすい", "最大風速約53m/秒の大風量", "グッドデザイン賞など受賞歴のあるデザイン性の高さ"],
+    "cons": ["風量が強く、風向きによっては髪や周囲のものが乱れやすい場合がある", "モードによっては動作音がやや大きいと感じる声がある"],
+    "bestFor": ["軽さを最優先したい人", "デザイン性の高いドライヤーを求める人", "専用スタンドでハンズフリーに使いたい人"],
+    "notFor": ["穏やかな風でじっくり乾かしたい人", "静音性を最優先したい人"],
+    "reviewSummary": "",
+    "affiliate": {"officialUrl": "https://px.a8.net/svt/ejp?a8mat=4B8ACV+YJ5V6+4KJC+HV7V6", "ctaLabel": "Re・De公式サイトで詳しく見る"},
+    "competitors": [],
+    "updatedAt": "2026-07-27"
+  },
+  {
     "slug": "irobot-roomba-j9plus",
     "name": "iRobot ルンバ j9+ ロボット掃除機",
     "brand": "iRobot",

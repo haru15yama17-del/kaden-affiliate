@@ -61,7 +61,17 @@
       "Bash(tasklist //FI \"IMAGENAME eq node.exe\")",
       "Bash(taskkill //F //PID 15556)",
       "Bash(taskkill //F //PID 22016)",
-      "Bash(taskkill //F //IM node.exe)"
+      "Bash(taskkill //F //IM node.exe)",
+      "Bash(awk '/後悔しやすい5つのポイント/,0' \"app/reviews/futon-dryer-koukai/page.tsx\")",
+      "Bash(grep '\\\\.html$')",
+      "Bash(tee /tmp/build.log)",
+      "WebFetch(domain:kakakumag.com)",
+      "WebFetch(domain:monostack.memoriesto-go.com)",
+      "WebFetch(domain:re-de.jp)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(taskkill //F //IM node.exe //FI \"WINDOWTITLE eq *3001*\")",
+      "Bash(powershell -Command \"Stop-Process -Id 18496 -Force\")",
+      "Bash(powershell -Command \"Stop-Process -Id 15696 -Force\")"
     ]
   }
 }

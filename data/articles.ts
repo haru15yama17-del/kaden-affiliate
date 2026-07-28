@@ -62,9 +62,9 @@ export const articles: Article[] = [
   },
   {
     slug: "hairdryer-koukai",
-    title: "ヘアドライヤーおすすめ4台を比較",
+    title: "ヘアドライヤーおすすめ5台を比較",
     category: "personal-care",
-    description: "ブライト・ReFa・KINUJO・パナソニックEH-NA0Kを風量・重量・価格帯で比較",
+    description: "ブライト・ReFa・KINUJO・パナソニックEH-NA0K・Re・De Hairdry+を風量・重量・価格帯で比較",
   },
   {
     slug: "waterserver-koukai",

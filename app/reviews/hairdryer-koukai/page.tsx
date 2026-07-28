@@ -20,13 +20,14 @@ function productJsonLd(name: string, brand: string) {
 
 const PATH = "/reviews/hairdryer-koukai";
 const TITLE =
-  "ヘアドライヤーおすすめ4台を比較【2026年】KINUJO KH301とKH302の違いも解説";
+  "ヘアドライヤーおすすめ5台を比較【2026年】KINUJO KH301とKH302の違いも解説";
 
 const featureTags: Record<string, string[]> = {
   "brighte-shower-dryer": ["ナノミスト", "美容液成分配合", "大風量", "速乾"],
   "refa-beautech-dryer-splus": ["センシングプログラム", "自動温度調整", "コンパクト", "速乾"],
   "kinujo-kh301-dryer": ["超遠赤外線", "超軽量", "大風量", "折りたたみ可"],
   "panasonic-eh-na0k-dryer": ["高浸透ナノイー", "大風量", "速乾", "小型軽量化"],
+  "rede-hairdryplus-dr02a": ["超軽量280g", "風速53m/秒", "ハンズフリー", "受賞歴あり"],
 };
 
 /** ざっくり比較表用に「風量・重量・最大の強み」だけへ絞ったスペック */
@@ -50,6 +51,11 @@ const compactSpecs: Record<string, { label: string; value: string }[]> = {
     { label: "風量", value: "1.6㎥/分" },
     { label: "重量", value: "約560g" },
     { label: "最大の強み", value: "高浸透ナノイー・実績No.1" },
+  ],
+  "rede-hairdryplus-dr02a": [
+    { label: "風速", value: "約53m/秒" },
+    { label: "重量", value: "約280g" },
+    { label: "最大の強み", value: "軽さ・デザイン性（受賞歴あり）" },
   ],
 };
 
@@ -109,16 +115,30 @@ const editorialNotes: Record<string, ReactNode> = {
       </p>
     </>
   ),
+  "rede-hairdryplus-dr02a": (
+    <>
+      <p>
+        本体約280g（旧モデルDR01Aは約255g）という軽さと、最大風速約53m/秒の風力を両立させたモデルです。
+        専用スタンドが付属し「ハンズフリー」で使えるため、置いたまま乾かしながら他の作業を同時に進められます。
+        5モードを搭載しており、グッドデザイン賞など受賞歴のあるデザイン性の高さも特徴です。
+      </p>
+      <p className="mt-2">
+        <strong>気になる点：</strong>
+        風量が強いぶん、風向きによっては髪や周囲のものが乱れやすい場合があります。
+        またモードによっては動作音がやや大きいと感じる声もあるため、静音性を最優先したい場合は注意してください。
+      </p>
+    </>
+  ),
 };
 
 export async function generateMetadata() {
   return buildMetadata({
     title: TITLE,
     description:
-      "ブライト シャワードライヤー、ReFa ビューテック ドライヤー S+、KINUJO 絹女KH301/KH302、パナソニック ナノケア EH-NA0Kの4台を風量・重量・価格帯で比較。KH301とKH302の違い（カラー違い）や、悩み・優先度別の選び方も解説します。",
+      "ブライト シャワードライヤー、ReFa ビューテック ドライヤー S+、KINUJO 絹女KH301/KH302、パナソニック ナノケア EH-NA0K、Re・De Hairdry+の5台を風量・重量・価格帯で比較。KH301とKH302の違い（カラー違い）や、悩み・優先度別の選び方も解説します。",
     path: PATH,
     type: "article",
-    modifiedTime: "2026-07-01",
+    modifiedTime: "2026-07-27",
   });
 }
 
@@ -128,7 +148,8 @@ export default async function HairdryerKoukaiPage() {
   const refa = all.find((p) => p.slug === "refa-beautech-dryer-splus")!;
   const kinujo = all.find((p) => p.slug === "kinujo-kh301-dryer")!;
   const naZeroK = all.find((p) => p.slug === "panasonic-eh-na0k-dryer")!;
-  const items = [brighte, refa, kinujo, naZeroK];
+  const rede = all.find((p) => p.slug === "rede-hairdryplus-dr02a")!;
+  const items = [brighte, refa, kinujo, naZeroK, rede];
   const cv = brighte;
   const compactItems = items.map((p) => ({
     ...p,
@@ -253,17 +274,22 @@ export default async function HairdryerKoukaiPage() {
             🛡️ <strong>定番の安心感・コスパ重視</strong>　→{" "}
             <span className="text-accent">パナソニック ナノケア EH-NA0K</span>
           </li>
+          <li>
+            🤳 <strong>とにかく軽さ重視＆ハンズフリーで使いたい</strong>　→{" "}
+            <span className="text-accent">Re・De Hairdry+</span>
+          </li>
         </ul>
         <p className="mt-3 text-xs text-ink/55">
-          4台とも1〜2万円台の入門機ではなく、3万円前後の本格派モデルです。違いは下の比較で詳しく解説します。
+          価格は時期・ストアにより変動するため、各商品とも購入前に最新価格をご確認ください。違いは下の比較で詳しく解説します。
         </p>
       </div>
 
-      <h2>4台をざっくり比較</h2>
+      <h2>5台をざっくり比較</h2>
       <ComparisonTable items={compactItems} highlightBest={false} />
       <p className="text-sm text-ink/55">
         ※この記事は「優劣」ではなく「悩み・優先度別にどれを選ぶか」を軸にしているため、おすすめバッジは表示していません。
         風量・重量はメーカー公表値、非公表の項目は「非公表」と記載しています。詳しい仕様は各商品の見出し以降で解説します。
+        なお<strong>Re・De Hairdry+のみ「風速」（m/秒）で公表</strong>されており、他4商品の「風量」（㎥/分）とは測定単位が異なるため、数値だけで単純比較はできません。
       </p>
 
       <p>
@@ -271,7 +297,8 @@ export default async function HairdryerKoukaiPage() {
         この記事では、美容液成分を配合した<strong>ブライト シャワードライヤー</strong>、
         自動温度管理が特徴の<strong>ReFa ビューテック ドライヤー S+</strong>、
         軽さと携帯性に優れた<strong>KINUJO 絹女</strong>、
-        定番の安心感がある<strong>パナソニック ナノケア EH-NA0K</strong>の4台を比較します。
+        定番の安心感がある<strong>パナソニック ナノケア EH-NA0K</strong>、
+        軽さとデザイン性が特徴の<strong>Re・De Hairdry+</strong>の5台を比較します。
       </p>
       <p>
         スペックはメーカー公表値のみを記載しています。価格・在庫は時期によって変動するため、最新情報は各ストアでご確認ください。
@@ -298,26 +325,31 @@ export default async function HairdryerKoukaiPage() {
       <h2>パナソニック ヘアードライヤー ナノケア EH-NA0K</h2>
       <ProductCard p={naZeroK} />
 
+      {/* ── 商品5：Re・De ── */}
+      <h2>Re・De Hairdry+（DR02A）</h2>
+      <ProductCard p={rede} />
+
       {/* ── 比較の軸 ── */}
       <h2>比較の軸：風量・重量・価格帯</h2>
       <p>
-        風量で比較すると、ブライト（2.58㎥/分・ブーストアタッチメント装着時）がもっとも大きく、
-        次いでKINUJO（2.2㎥/分）、パナソニック EH-NA0K（1.6㎥/分）の順です。
-        ReFa S+は風量の具体的な数値を公表していません。
+        風量（㎥/分）で比較すると、ブライト（2.58㎥/分・ブーストアタッチメント装着時）がもっとも大きく、
+        次いでKINUJO（2.2㎥/分）、パナソニック EH-NA0K（1.6㎥/分）の順です。ReFa S+は風量の具体的な数値を公表していません。
+        Re・De Hairdry+は風量ではなく<strong>風速（約53m/秒）</strong>で公表されており、測定単位が異なるため他4商品の風量とは単純比較できない点にご注意ください。
       </p>
       <p>
-        重量比較ではKINUJO（約348g）とブライト（約357g）が軽量級で、
-        特にKINUJOは折りたたみ機構も備えているため携帯性を重視するなら有力候補です。
-        EH-NA0Kは約560gとやや重めで、固定ノズルのため持ち運びには不向きです。
+        重量比較ではRe・De Hairdry+（約280g）が5台中もっとも軽く、
+        KINUJO（約348g）とブライト（約357g）も軽量級です。
+        特にKINUJOは折りたたみ機構、Re・De Hairdry+は専用スタンドによるハンズフリー機能を備えており、
+        携帯性・使い勝手を重視するなら有力候補です。EH-NA0Kは約560gとやや重めで、固定ノズルのため持ち運びには不向きです。
       </p>
       <p>
-        価格帯はEH-NA0K（3万〜4万円）が下限価格でもっとも手頃な水準に位置し、
-        他の3商品（ブライト約3.2万〜3.6万円、KINUJO約3.1万〜3.5万円、ReFa 39,600円）は
-        いずれも3万円台後半に近い価格帯です。
+        価格帯はブライト約3.2万〜3.6万円、KINUJO約3.1万〜3.5万円、ReFa 39,600円、EH-NA0K 3万〜4万円と、
+        4商品はいずれも3万円前後〜3万円台後半の水準です。
+        Re・De Hairdry+は販売時期・ストアにより価格が変動するため、購入前に各ストアで最新価格をご確認ください。
       </p>
 
       <div className="not-prose my-5 overflow-x-auto rounded-xl border border-ink/15 shadow-card">
-        <table className="w-full min-w-[640px] border-collapse text-sm">
+        <table className="w-full min-w-[760px] border-collapse text-sm">
           <thead>
             <tr className="bg-ink/5 text-left text-xs font-semibold text-ink/50">
               <th className="p-3">比較項目</th>
@@ -325,15 +357,17 @@ export default async function HairdryerKoukaiPage() {
               <th className="p-3 text-ink">ReFa S+</th>
               <th className="p-3 text-ink">KINUJO</th>
               <th className="p-3 text-ink">EH-NA0K</th>
+              <th className="p-3 text-ink">Re・De Hairdry+</th>
             </tr>
           </thead>
           <tbody className="text-ink/75">
             <tr className="border-t border-ink/10">
-              <td className="p-3 font-medium text-ink/60">風量</td>
+              <td className="p-3 font-medium text-ink/60">風量／風速</td>
               <td className="p-3">2.58㎥/分（ブースト時）</td>
               <td className="p-3">非公表</td>
               <td className="p-3">2.2㎥/分</td>
               <td className="p-3">1.6㎥/分</td>
+              <td className="p-3">風速 約53m/秒※</td>
             </tr>
             <tr className="border-t border-ink/10">
               <td className="p-3 font-medium text-ink/60">重量</td>
@@ -341,6 +375,7 @@ export default async function HairdryerKoukaiPage() {
               <td className="p-3">非公表</td>
               <td className="p-3">約348g</td>
               <td className="p-3">約560g</td>
+              <td className="p-3">約280g</td>
             </tr>
             <tr className="border-t border-ink/10">
               <td className="p-3 font-medium text-ink/60">価格帯</td>
@@ -348,6 +383,7 @@ export default async function HairdryerKoukaiPage() {
               <td className="p-3">{refa.priceRange}</td>
               <td className="p-3">{kinujo.priceRange}</td>
               <td className="p-3">{naZeroK.priceRange}</td>
+              <td className="p-3">{rede.priceRange}</td>
             </tr>
             <tr className="border-t border-ink/10">
               <td className="p-3 font-medium text-ink/60">最大の強み</td>
@@ -355,19 +391,22 @@ export default async function HairdryerKoukaiPage() {
               <td className="p-3">センシングプログラムによる自動温度管理</td>
               <td className="p-3">軽さ・折りたたみによる携帯性</td>
               <td className="p-3">実績と評判の安心感</td>
+              <td className="p-3">軽さ・デザイン性（受賞歴あり）</td>
             </tr>
           </tbody>
         </table>
         <p className="px-3 pb-3 pt-1 text-xs text-ink/45">
           ※メーカー公表値をもとにした比較表です。詳細な仕様・最新情報は各メーカーの公式ページでご確認ください。
+          Re・De Hairdry+のみ「風速」（m/秒）表記のため、他4商品の「風量」（㎥/分）とは測定単位が異なり数値の直接比較はできません。
         </p>
       </div>
 
       <div className="not-prose my-5 rounded-xl border border-accent/25 bg-blush/40 p-4 text-sm text-ink/75">
-        <p className="font-bold text-accent">4者4様の強み</p>
+        <p className="font-bold text-accent">5者5様の強み</p>
         <p className="mt-1">
-          「美容液ミストのブライト」「自動温度管理のReFa」「軽さのKINUJO」「実績と評判のEH-NA0K」——
-          4台はそれぞれ違う優先順位に応える設計になっています。
+          「美容液ミストのブライト」「自動温度管理のReFa」「軽さのKINUJO」「実績と評判のEH-NA0K」
+          「軽さとデザイン性のRe・De Hairdry+」——
+          5台はそれぞれ違う優先順位に応える設計になっています。
           風量・重量・価格帯だけでなく、自分がどの悩みを一番解消したいかで選ぶのがポイントです。
         </p>
       </div>
@@ -378,7 +417,8 @@ export default async function HairdryerKoukaiPage() {
         乾かしながら髪の保湿・美容ケアもしたいなら<strong>ブライト シャワードライヤー</strong>、
         熱ダメージを抑えたいなら<strong>ReFa ビューテック ドライヤー S+</strong>、
         軽さ・携帯性を最優先するなら<strong>KINUJO 絹女</strong>、
-        定番の安心感とコスパを重視するなら<strong>パナソニック ナノケア EH-NA0K</strong>という選び分けになります。
+        定番の安心感とコスパを重視するなら<strong>パナソニック ナノケア EH-NA0K</strong>、
+        軽さに加えてデザイン性も重視したいなら<strong>Re・De Hairdry+</strong>という選び分けになります。
         価格・在庫は変動するため、購入前に各ストアで最新情報をご確認ください。
       </p>
     </article>
