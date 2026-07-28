@@ -30,6 +30,11 @@ const featureTags: Record<string, string[]> = {
   "rede-hairdryplus-dr02a": ["超軽量280g", "風速53m/秒", "ハンズフリー", "受賞歴あり"],
 };
 
+/** 事実ベースの根拠がある商品のみ、カード上部に強調バッジを表示 */
+const cardHighlights: Record<string, string> = {
+  "rede-hairdryplus-dr02a": "5台中最軽量（約280g）・専用スタンドでハンズフリー使用可",
+};
+
 /** ざっくり比較表用に「風量・重量・最大の強み」だけへ絞ったスペック */
 const compactSpecs: Record<string, { label: string; value: string }[]> = {
   "brighte-shower-dryer": [
@@ -69,7 +74,7 @@ const editorialNotes: Record<string, ReactNode> = {
       </p>
       <p className="mt-2">
         <strong>気になる点：</strong>
-        4商品の中でもっとも価格帯が高く（約3.2万〜3.6万円）、本体重量も約357gとミスト機構を積んでいる分、
+        5商品の中でもっとも価格帯が高く（約3.2万〜3.6万円）、本体重量も約357gとミスト機構を積んでいる分、
         シンプルなドライヤーよりやや重めです。ナノミスト機能を使いこなしたい人向けの1台と言えます。
       </p>
     </>
@@ -83,7 +88,7 @@ const editorialNotes: Record<string, ReactNode> = {
       </p>
       <p className="mt-2">
         <strong>気になる点：</strong>
-        4商品の中で唯一、風量の具体的な数値（㎥/分）が公表されていません。
+        5商品の中で唯一、風量の具体的な数値（㎥/分）が公表されていません。
         また海外対応（マルチボルテージ）ではないため、海外旅行に持って行きたい人は注意が必要です。
       </p>
     </>
@@ -92,8 +97,8 @@ const editorialNotes: Record<string, ReactNode> = {
     <>
       <p>
         「超遠赤外線」を発生させる特殊天然鉱石を採用し、髪の内部から熱を生み出す設計がコンセプトのモデルです。
-        GLOSS/SCULP/SWINGの3モードとマイナスイオンを搭載し、約348gという4商品中もっとも軽い本体重量と
-        折りたたみ機構により、携帯性を重視したい人に向いています。
+        GLOSS/SCULP/SWINGの3モードとマイナスイオンを搭載し、約348gという軽量な本体重量と
+        折りたたみ機構により、携帯性を重視したい人に向いています（5商品中もっとも軽いのはRe・De Hairdry+の約280gです）。
       </p>
       <p className="mt-2">
         <strong>気になる点：</strong>
@@ -107,7 +112,7 @@ const editorialNotes: Record<string, ReactNode> = {
       <p>
         高浸透ナノイーを搭載した、パナソニックの定番ヘアドライヤーです。
         大風量で速乾性が高く、前モデルより小型・軽量化されている点も特長です。
-        4商品の中では発売から一定期間が経ち、実績・口コミの蓄積がある安心感のあるモデルです。
+        5商品の中では発売から一定期間が経ち、実績・口コミの蓄積がある安心感のあるモデルです。
       </p>
       <p className="mt-2">
         <strong>気になる点：</strong>
@@ -135,7 +140,7 @@ export async function generateMetadata() {
   return buildMetadata({
     title: TITLE,
     description:
-      "ブライト シャワードライヤー、ReFa ビューテック ドライヤー S+、KINUJO 絹女KH301/KH302、パナソニック ナノケア EH-NA0K、Re・De Hairdry+の5台を風量・重量・価格帯で比較。KH301とKH302の違い（カラー違い）や、悩み・優先度別の選び方も解説します。",
+      "Re・De Hairdry+、ブライト シャワードライヤー、ReFa ビューテック ドライヤー S+、KINUJO 絹女KH301/KH302、パナソニック ナノケア EH-NA0Kの5台を風量・重量・価格帯で比較。KH301とKH302の違い（カラー違い）や、悩み・優先度別の選び方も解説します。",
     path: PATH,
     type: "article",
     modifiedTime: "2026-07-27",
@@ -149,7 +154,7 @@ export default async function HairdryerKoukaiPage() {
   const kinujo = all.find((p) => p.slug === "kinujo-kh301-dryer")!;
   const naZeroK = all.find((p) => p.slug === "panasonic-eh-na0k-dryer")!;
   const rede = all.find((p) => p.slug === "rede-hairdryplus-dr02a")!;
-  const items = [brighte, refa, kinujo, naZeroK, rede];
+  const items = [rede, brighte, refa, kinujo, naZeroK];
   const cv = brighte;
   const compactItems = items.map((p) => ({
     ...p,
@@ -160,6 +165,11 @@ export default async function HairdryerKoukaiPage() {
   function ProductCard({ p }: { p: Product }) {
     return (
       <div className="rounded-2xl border border-ink/15 bg-white p-5 shadow-card">
+        {cardHighlights[p.slug] && (
+          <p className="mb-2 inline-block rounded-full bg-accent px-3 py-1 text-xs font-bold text-white">
+            {cardHighlights[p.slug]}
+          </p>
+        )}
         <div className="flex flex-wrap gap-1.5">
           {(featureTags[p.slug] ?? []).map((tag) => (
             <span
@@ -259,6 +269,10 @@ export default async function HairdryerKoukaiPage() {
         </p>
         <ul className="space-y-2 text-sm font-medium text-ink">
           <li>
+            🤳 <strong>とにかく軽さ重視＆ハンズフリーで使いたい</strong>　→{" "}
+            <span className="text-accent">Re・De Hairdry+</span>
+          </li>
+          <li>
             💧 <strong>髪のダメージケア・美容液成分も欲しい</strong>　→{" "}
             <span className="text-accent">ブライト シャワードライヤー</span>
           </li>
@@ -273,10 +287,6 @@ export default async function HairdryerKoukaiPage() {
           <li>
             🛡️ <strong>定番の安心感・コスパ重視</strong>　→{" "}
             <span className="text-accent">パナソニック ナノケア EH-NA0K</span>
-          </li>
-          <li>
-            🤳 <strong>とにかく軽さ重視＆ハンズフリーで使いたい</strong>　→{" "}
-            <span className="text-accent">Re・De Hairdry+</span>
           </li>
         </ul>
         <p className="mt-3 text-xs text-ink/55">
@@ -294,25 +304,29 @@ export default async function HairdryerKoukaiPage() {
 
       <p>
         ヘアドライヤーは風量・重量・機能によって毎日の使い心地が大きく変わります。
-        この記事では、美容液成分を配合した<strong>ブライト シャワードライヤー</strong>、
+        この記事では、軽さとデザイン性が特徴の<strong>Re・De Hairdry+</strong>、
+        美容液成分を配合した<strong>ブライト シャワードライヤー</strong>、
         自動温度管理が特徴の<strong>ReFa ビューテック ドライヤー S+</strong>、
         軽さと携帯性に優れた<strong>KINUJO 絹女</strong>、
-        定番の安心感がある<strong>パナソニック ナノケア EH-NA0K</strong>、
-        軽さとデザイン性が特徴の<strong>Re・De Hairdry+</strong>の5台を比較します。
+        定番の安心感がある<strong>パナソニック ナノケア EH-NA0K</strong>の5台を比較します。
       </p>
       <p>
         スペックはメーカー公表値のみを記載しています。価格・在庫は時期によって変動するため、最新情報は各ストアでご確認ください。
       </p>
 
-      {/* ── 商品1：ブライト ── */}
+      {/* ── 商品1：Re・De ── */}
+      <h2>Re・De Hairdry+（DR02A）</h2>
+      <ProductCard p={rede} />
+
+      {/* ── 商品2：ブライト ── */}
       <h2>ブライト シャワードライヤー BRT-SD173</h2>
       <ProductCard p={brighte} />
 
-      {/* ── 商品2：ReFa ── */}
+      {/* ── 商品3：ReFa ── */}
       <h2>ReFa ビューテック ドライヤー S+</h2>
       <ProductCard p={refa} />
 
-      {/* ── 商品3：KINUJO ── */}
+      {/* ── 商品4：KINUJO ── */}
       <h2>KINUJO ヘアドライヤー 絹女 KH301/KH302</h2>
       <ProductCard p={kinujo} />
 
@@ -321,13 +335,9 @@ export default async function HairdryerKoukaiPage() {
         KH301（ホワイト）とKH302（モカ）は<strong>カラーが異なるだけ</strong>で、風量・重量・モード構成などのスペックは同一です。性能に差はないため、インテリアや好みに合わせてカラーを選んで問題ありません。
       </p>
 
-      {/* ── 商品4：パナソニック ── */}
+      {/* ── 商品5：パナソニック ── */}
       <h2>パナソニック ヘアードライヤー ナノケア EH-NA0K</h2>
       <ProductCard p={naZeroK} />
-
-      {/* ── 商品5：Re・De ── */}
-      <h2>Re・De Hairdry+（DR02A）</h2>
-      <ProductCard p={rede} />
 
       {/* ── 比較の軸 ── */}
       <h2>比較の軸：風量・重量・価格帯</h2>
@@ -353,45 +363,45 @@ export default async function HairdryerKoukaiPage() {
           <thead>
             <tr className="bg-ink/5 text-left text-xs font-semibold text-ink/50">
               <th className="p-3">比較項目</th>
+              <th className="p-3 text-ink">Re・De Hairdry+</th>
               <th className="p-3 text-ink">ブライト</th>
               <th className="p-3 text-ink">ReFa S+</th>
               <th className="p-3 text-ink">KINUJO</th>
               <th className="p-3 text-ink">EH-NA0K</th>
-              <th className="p-3 text-ink">Re・De Hairdry+</th>
             </tr>
           </thead>
           <tbody className="text-ink/75">
             <tr className="border-t border-ink/10">
               <td className="p-3 font-medium text-ink/60">風量／風速</td>
+              <td className="p-3">風速 約53m/秒※</td>
               <td className="p-3">2.58㎥/分（ブースト時）</td>
               <td className="p-3">非公表</td>
               <td className="p-3">2.2㎥/分</td>
               <td className="p-3">1.6㎥/分</td>
-              <td className="p-3">風速 約53m/秒※</td>
             </tr>
             <tr className="border-t border-ink/10">
               <td className="p-3 font-medium text-ink/60">重量</td>
+              <td className="p-3">約280g</td>
               <td className="p-3">約357g</td>
               <td className="p-3">非公表</td>
               <td className="p-3">約348g</td>
               <td className="p-3">約560g</td>
-              <td className="p-3">約280g</td>
             </tr>
             <tr className="border-t border-ink/10">
               <td className="p-3 font-medium text-ink/60">価格帯</td>
+              <td className="p-3">{rede.priceRange}</td>
               <td className="p-3">{brighte.priceRange}</td>
               <td className="p-3">{refa.priceRange}</td>
               <td className="p-3">{kinujo.priceRange}</td>
               <td className="p-3">{naZeroK.priceRange}</td>
-              <td className="p-3">{rede.priceRange}</td>
             </tr>
             <tr className="border-t border-ink/10">
               <td className="p-3 font-medium text-ink/60">最大の強み</td>
+              <td className="p-3">軽さ・デザイン性（受賞歴あり）</td>
               <td className="p-3">ナノミストによる美容液ケア</td>
               <td className="p-3">センシングプログラムによる自動温度管理</td>
               <td className="p-3">軽さ・折りたたみによる携帯性</td>
               <td className="p-3">実績と評判の安心感</td>
-              <td className="p-3">軽さ・デザイン性（受賞歴あり）</td>
             </tr>
           </tbody>
         </table>
@@ -404,8 +414,8 @@ export default async function HairdryerKoukaiPage() {
       <div className="not-prose my-5 rounded-xl border border-accent/25 bg-blush/40 p-4 text-sm text-ink/75">
         <p className="font-bold text-accent">5者5様の強み</p>
         <p className="mt-1">
-          「美容液ミストのブライト」「自動温度管理のReFa」「軽さのKINUJO」「実績と評判のEH-NA0K」
-          「軽さとデザイン性のRe・De Hairdry+」——
+          「軽さとデザイン性のRe・De Hairdry+」「美容液ミストのブライト」「自動温度管理のReFa」
+          「軽さのKINUJO」「実績と評判のEH-NA0K」——
           5台はそれぞれ違う優先順位に応える設計になっています。
           風量・重量・価格帯だけでなく、自分がどの悩みを一番解消したいかで選ぶのがポイントです。
         </p>
@@ -414,11 +424,11 @@ export default async function HairdryerKoukaiPage() {
       {/* ── まとめ ── */}
       <h2>まとめ：優先したい悩みから逆算して選ぶ</h2>
       <p>
+        軽さに加えてデザイン性も重視したいなら<strong>Re・De Hairdry+</strong>、
         乾かしながら髪の保湿・美容ケアもしたいなら<strong>ブライト シャワードライヤー</strong>、
         熱ダメージを抑えたいなら<strong>ReFa ビューテック ドライヤー S+</strong>、
         軽さ・携帯性を最優先するなら<strong>KINUJO 絹女</strong>、
-        定番の安心感とコスパを重視するなら<strong>パナソニック ナノケア EH-NA0K</strong>、
-        軽さに加えてデザイン性も重視したいなら<strong>Re・De Hairdry+</strong>という選び分けになります。
+        定番の安心感とコスパを重視するなら<strong>パナソニック ナノケア EH-NA0K</strong>という選び分けになります。
         価格・在庫は変動するため、購入前に各ストアで最新情報をご確認ください。
       </p>
     </article>
