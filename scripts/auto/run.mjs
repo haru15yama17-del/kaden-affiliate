@@ -1,10 +1,10 @@
 // ============================================================
-// 自動ブログ生成ランナー
+// 自動ブログ生成ランナー（方針B：seedの事実だけで記事を作る）
 //   node scripts/auto/run.mjs [--only <slug>] [--dry-run] [--limit N] [--reviews-file <json>]
 //  --dry-run      content/reviews/{slug}.json のみ書く（articles.ts・台帳は更新しない）
-//  --reviews-file レビュー原文(文字列配列JSON)を使い、スクレイピングを行わない。--dry-run 必須
+//  ENABLE_REVIEW_COLLECTION=true のときだけ、楽天レビュー収集→「みんなの評判」を追加する（既定 false）
+//  --reviews-file （収集有効時のみ）レビュー原文JSONを使いスクレイピングしない。--dry-run 必須
 // ============================================================
-import fs from "node:fs";
 import path from "node:path";
 import { ROOT, loadEnvLocal, readJson, todayJst } from "./lib/common.mjs";
 import { checkRobots } from "./lib/robots.mjs";
@@ -13,9 +13,12 @@ import { classifyReviews, writeTrends } from "./lib/gemini.mjs";
 import { themesFor } from "./lib/themes.mjs";
 import { aggregate } from "./lib/aggregate.mjs";
 import { validateGenerated } from "./lib/validate.mjs";
+import { generateSeedArticle } from "./lib/article-gen.mjs";
 import { writeReviewJson, appendArticleIndex, appendRegistry, registryHas } from "./lib/write-article.mjs";
 
 loadEnvLocal();
+
+const COLLECT = process.env.ENABLE_REVIEW_COLLECTION === "true";
 
 const args = process.argv.slice(2);
 const opt = (name) => { const i = args.indexOf(name); return i >= 0 ? args[i + 1] : undefined; };
@@ -24,10 +27,12 @@ const limit = Number(opt("--limit") ?? Infinity);
 const dryRun = args.includes("--dry-run");
 const reviewsFile = opt("--reviews-file");
 if (reviewsFile && !dryRun) { console.error("--reviews-file は --dry-run と併用してください（検証用データを公開しないため）"); process.exit(1); }
+if (reviewsFile && !COLLECT) console.warn("注意: ENABLE_REVIEW_COLLECTION が false のため --reviews-file は無視されます");
 
 const targets = readJson(path.join(ROOT, "data", "auto-targets.json"), []);
 const seed = readJson(path.join(ROOT, "data", "products.seed.json"), []);
 
+// ---- レビュー収集（ENABLE_REVIEW_COLLECTION=true のときだけ使う）----
 async function generateTrends(product, agg, reviews, labels) {
   if (!agg.positive.length && !agg.negative.length) return { goodTrend: "", concernTrend: "" };
   let feedback = "";
@@ -46,12 +51,7 @@ async function generateTrends(product, agg, reviews, labels) {
   throw new Error("傾向文が検証を通過しませんでした。記事を生成しません。");
 }
 
-async function processTarget(t) {
-  const product = seed.find((p) => p.slug === t.slug);
-  if (!product) throw new Error("data/products.seed.json に該当slugがありません（スペックはseedの値のみ使用）");
-  if (!dryRun && registryHas(t.slug)) throw new Error("既に review 記事が登録済みです");
-  if (!product.affiliate?.rakutenUrl) console.warn("  注意: seed の affiliate.rakutenUrl が未設定です（家電は rakutenUrl のみ設定する運用）");
-
+async function collectReviewStats(t, product) {
   let reviews;
   if (reviewsFile) {
     reviews = readJson(path.resolve(reviewsFile), []);
@@ -67,10 +67,8 @@ async function processTarget(t) {
   const themes = themesFor(product.category);
   const classified = await classifyReviews(reviews, themes);
   const agg = aggregate(classified, themes, reviews.length);
-  const labels = themes.map((x) => x.label);
-  const trends = await generateTrends(product, agg, reviews, labels);
-
-  const reviewStats = {
+  const trends = await generateTrends(product, agg, reviews, themes.map((x) => x.label));
+  return {
     total: agg.total,
     fetchedAt: todayJst(),
     sourceUrl: (t.reviewPageUrl ?? "").replace("{page}", "1"),
@@ -79,26 +77,44 @@ async function processTarget(t) {
     goodTrend: trends.goodTrend,
     concernTrend: trends.concernTrend
   };
-  const file = writeReviewJson(t.slug, reviewStats);
+}
+
+// ---- 1商品の処理 ----
+async function processTarget(t) {
+  const product = seed.find((p) => p.slug === t.slug);
+  if (!product) throw new Error("data/products.seed.json に該当slugがありません（事実はseedの値のみ使用）");
+  if (!dryRun && registryHas(t.slug)) throw new Error("既に review 記事が登録済みです");
+  if (!product.affiliate?.rakutenUrl && !product.affiliate?.officialUrl) {
+    console.warn("  注意: seed に購入リンク（家電は rakutenUrl のみ）が未設定です");
+  }
+
+  const article = await generateSeedArticle(product);
+  const reviewStats = COLLECT ? await collectReviewStats(t, product) : undefined;
+
+  const file = writeReviewJson(t.slug, { article, reviewStats });
   if (!dryRun) {
     appendArticleIndex({
       slug: t.slug,
-      title: `${product.name}のレビュー・評判`,
+      title: `${product.name}のレビュー｜特徴・良い点と気になる点`,
       category: product.category,
-      description: `${product.name}の特徴と、楽天レビュー${agg.total}件をもとにした良い評価・気になる評価の傾向を編集部がまとめました。`
+      description: `${product.name}のスペックと、良い点・気になる点、向いている人を編集部がまとめました。`
     });
     appendRegistry(t.slug, product.name);
   }
-  console.log(`  生成: ${path.relative(ROOT, file)}（${agg.total}件／良い${agg.positive.length}テーマ・気になる${agg.negative.length}テーマ）`);
+  console.log(`  生成: ${path.relative(ROOT, file)}（セクション${article.sections.length}・FAQ${article.faq.length}${reviewStats ? `・レビュー${reviewStats.total}件` : ""}）`);
 }
 
-const queue = targets.filter((t) => (only ? t.slug === only : t.status === "enabled")).slice(0, limit);
-if (!queue.length) { console.log("対象がありません（auto-targets.json の status を enabled にするか --only を指定）"); process.exit(0); }
+const queue = only
+  ? [targets.find((t) => t.slug === only) ?? { slug: only }]
+  : targets.filter((t) => t.status === "enabled");
+const limited = queue.slice(0, limit);
+if (!limited.length) { console.log("対象がありません（auto-targets.json の status を enabled にするか --only を指定）"); process.exit(0); }
 
+console.log(`モード: 方針B（seedの事実のみ）／レビュー収集: ${COLLECT ? "有効" : "無効"}`);
 let failed = 0;
-for (const t of queue) {
+for (const t of limited) {
   console.log(`▶ ${t.slug}`);
   try { await processTarget(t); } catch (e) { failed++; console.error(`  ✖ 中止: ${e.message}`); }
 }
-console.log(`完了: 成功${queue.length - failed} / 失敗${failed}${dryRun ? "（dry-run）" : ""}`);
+console.log(`完了: 成功${limited.length - failed} / 失敗${failed}${dryRun ? "（dry-run）" : ""}`);
 process.exit(failed ? 3 : 0);

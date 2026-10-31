@@ -1,24 +1,24 @@
 name: weekly-article
 
+# 方針B：seedの事実だけで記事を生成し、auto/ ブランチへ push して Pull Request を作る。
+# main へは直接公開しない。Vercel のプレビューを人間が確認し、承認(マージ)してから公開する。
+
 on:
   schedule:
     - cron: "0 0 * * 1" # 毎週月曜 09:00 JST
   workflow_dispatch:
     inputs:
       only:
-        description: "対象slug（空なら enabled 全件）"
+        description: "対象slug（空なら auto-targets.json の enabled 全件）"
         required: false
       limit:
         description: "最大処理件数"
         required: false
         default: "3"
-      publish_to_main:
-        description: "main に直接commit（false なら auto/ ブランチ）"
-        type: boolean
-        default: false
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: weekly-article
@@ -28,6 +28,9 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    env:
+      # 楽天レビュー収集は既定で無効。repo variable ENABLE_REVIEW_COLLECTION=true のときだけ有効
+      ENABLE_REVIEW_COLLECTION: ${{ vars.ENABLE_REVIEW_COLLECTION || 'false' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -35,7 +38,9 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - run: npx playwright install --with-deps chromium
+      - name: Install Playwright (収集有効時のみ)
+        if: env.ENABLE_REVIEW_COLLECTION == 'true'
+        run: npx playwright install --with-deps chromium
 
       - name: Generate articles
         id: gen
@@ -49,21 +54,21 @@ jobs:
           if [ -n "$ONLY" ]; then ARGS="$ARGS --only $ONLY"; fi
           node scripts/auto/run.mjs $ARGS
 
-      - name: Commit and push
+      - name: Push to auto/ branch and open Pull Request
         env:
-          # 定期実行は repo variable AUTO_PUBLISH_MAIN=true のときだけ main へ直接公開
-          TO_MAIN: ${{ inputs.publish_to_main || vars.AUTO_PUBLISH_MAIN == 'true' }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           if [ -z "$(git status --porcelain content data)" ]; then echo "変更なし"; exit 0; fi
+          BRANCH="auto/article-$(date -u +%Y%m%d-%H%M)"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
           git add content data
-          git commit -m "chore(auto): 週次レビュー記事を更新 $(date -u +%F)"
-          if [ "$TO_MAIN" = "true" ]; then
-            git push origin HEAD:${{ github.ref_name }}
-          else
-            git push origin HEAD:refs/heads/auto/review-$(date -u +%Y%m%d-%H%M)
-          fi
+          git commit -m "chore(auto): 週次レビュー記事を生成 $(date -u +%F)"
+          git push origin "$BRANCH"
+          gh pr create --base main --head "$BRANCH" \
+            --title "自動生成記事の確認: $(date -u +%F)" \
+            --body "scripts/auto が seed の事実のみから生成した記事です。Vercel のプレビューで本文（数値・表現）を確認し、問題なければマージしてください。マージするまで公開されません。"
 
       - name: Fail if generation had errors
         if: steps.gen.outcome == 'failure'

@@ -12,10 +12,17 @@ export function registryHas(slug, intent = "review") {
 }
 
 // 既存の手書き本文(intro等)は保持し、reviewStats だけ更新する
-export function writeReviewJson(slug, reviewStats) {
+// article: { intro, sections, faq, summary } / reviewStats: 収集有効時のみ
+export function writeReviewJson(slug, { article, reviewStats }) {
   const file = path.join(ROOT, "content", "reviews", `${slug}.json`);
   const prev = readJson(file, {});
-  const body = { ...prev, reviewStats, sources: [reviewStats.sourceUrl] };
+  const body = { ...prev, ...article };
+  if (reviewStats) {
+    body.reviewStats = reviewStats;
+    body.sources = [reviewStats.sourceUrl];
+  } else {
+    delete body.reviewStats; // 収集無効時は古い集計を残さない
+  }
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, JSON.stringify(body, null, 2) + "\n", "utf-8");
   return file;

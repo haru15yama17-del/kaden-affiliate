@@ -2,7 +2,22 @@
 // 件数・数字はここでは扱わない（aggregate.mjs がコードで集計する）。
 const MODEL = () => process.env.GEMINI_MODEL ?? "gemini-2.5-flash";
 
-async function callGemini(prompt, responseSchema) {
+// 一時的なエラー（429/5xx）は間隔を空けて最大3回まで再試行する
+export async function callGemini(prompt, responseSchema) {
+  for (let attempt = 1; ; attempt++) {
+    try {
+      return await callGeminiOnce(prompt, responseSchema);
+    } catch (e) {
+      const transient = /HTTP (429|500|502|503|504)/.test(e.message);
+      if (!transient || attempt >= 5) throw e;
+      const wait = attempt * 8000;
+      console.warn(`  Gemini 一時エラー（${e.message}）。${wait / 1000}秒後に再試行 (${attempt}/5)`);
+      await new Promise((r) => setTimeout(r, wait));
+    }
+  }
+}
+
+async function callGeminiOnce(prompt, responseSchema) {
   const key = process.env.GEMINI_API_KEY;
   if (!key) throw new Error("GEMINI_API_KEY が未設定です（.env.local または GitHub Secrets）");
   const res = await fetch(

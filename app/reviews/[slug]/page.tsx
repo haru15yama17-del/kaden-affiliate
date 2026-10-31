@@ -16,6 +16,7 @@ import { RelatedArticles } from "@/components/RelatedArticles";
 import { StickyCta } from "@/components/StickyCta";
 import Link from "next/link";
 import { ReviewVoices } from "@/components/ReviewVoices";
+import { RichText } from "@/components/RichText";
 import type { Product, ReviewStats } from "@/data/types";
 
 // キャンペーン期間の判定をリクエスト時刻ベースにするため、ビルド時に固定されないよう定期再生成する
@@ -28,7 +29,11 @@ interface ArticleBody {
   faq?: { q: string; a: string }[];
   sources?: string[];
   reviewStats?: ReviewStats;
+  sections?: { heading: string; paragraphs?: string[]; bullets?: string[] }[];
 }
+
+// 楽天レビュー収集は既定で無効（方針B）。true のときだけ「みんなの評判」を表示する
+const SHOW_REVIEW_VOICES = process.env.ENABLE_REVIEW_COLLECTION === "true";
 function loadBody(slug: string): ArticleBody {
   const file = path.join(process.cwd(), "content", "reviews", `${slug}.json`);
   if (fs.existsSync(file)) {
@@ -45,7 +50,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const p = await getProduct(params.slug);
   if (!p) return {};
   const body = loadBody(p.slug);
-  const hasReviewSummary = Boolean(body.reviewStats || body.reviewDetail || p.reviewSummary);
+  const hasReviewSummary = Boolean((SHOW_REVIEW_VOICES && body.reviewStats) ||body.reviewDetail || p.reviewSummary);
   const reviewPart = hasReviewSummary ? "、口コミ要約" : "";
   return buildMetadata({
     title: `${p.name}のレビュー・評価｜良い点と気になる点を実機目線で`,
@@ -90,7 +95,7 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
   return (
     <article className="prose-article max-w-none pb-20">
       <JsonLd data={reviewJsonLd(p, `/reviews/${p.slug}`)} />
-      <JsonLd data={faqJsonLd(faq)} />
+      <JsonLd data={faqJsonLd(faq.map((x) => ({ q: x.q, a: x.a.replace(/\*\*/g, "") })))} />
       <Breadcrumbs
         items={[
           { name: "トップ", path: "/" },
@@ -158,7 +163,20 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
       </div>
 
       <h2>はじめに</h2>
-      <p>{body.intro ?? `${p.name}を、${cat.selectionPoints.slice(0, 3).join("・")}の観点で評価しました。結論から言うと、${p.bestFor[0]}に向いた一台です。`}</p>
+      <p>{body.intro ? <RichText text={body.intro} /> : `${p.name}を、${cat.selectionPoints.slice(0, 3).join("・")}の観点で評価しました。結論から言うと、${p.bestFor[0]}に向いた一台です。`}</p>
+
+      {/* 自動生成記事の追加セクション（空のセクションは出力されない） */}
+      {body.sections?.map((s, i) => (
+        <section key={i}>
+          <h2>{s.heading}</h2>
+          {s.paragraphs?.map((x, j) => (
+            <p key={j}><RichText text={x} /></p>
+          ))}
+          {s.bullets && s.bullets.length > 0 && (
+            <ul>{s.bullets.map((x, j) => <li key={j}><RichText text={x} /></li>)}</ul>
+          )}
+        </section>
+      ))}
 
       <h2>主なスペック</h2>
       <div className="overflow-x-auto rounded-xl border border-ink/15 shadow-card">
@@ -173,6 +191,14 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
           </tbody>
         </table>
       </div>
+
+      {p.source && (
+        <p className="mt-2 text-xs text-ink/50">
+          出典：
+          <a href={p.source.url} target="_blank" rel="noopener noreferrer nofollow">{p.source.label}</a>
+          （{p.source.checkedAt}確認）。価格・仕様は変更される場合があります。
+        </p>
+      )}
 
       <h2>良い点</h2>
       <div className="not-prose space-y-2">
@@ -194,7 +220,7 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
         ))}
       </div>
 
-      {body.reviewStats ? (
+      {SHOW_REVIEW_VOICES && body.reviewStats ? (
         <ReviewVoices stats={body.reviewStats} />
       ) : reviewText && (
         <>
@@ -257,13 +283,13 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
         {faq.map((x, i) => (
           <div key={i} className="rounded-xl border border-ink/15 bg-white p-4 shadow-card">
             <p className="font-bold text-sm text-ink">Q. {x.q}</p>
-            <p className="mt-1.5 text-sm text-ink/75 leading-relaxed">A. {x.a}</p>
+            <p className="mt-1.5 text-sm text-ink/75 leading-relaxed">A. <RichText text={x.a} /></p>
           </div>
         ))}
       </div>
 
       <h2>まとめ</h2>
-      <p>{body.summary ?? `${p.name}は${p.bestFor.join("・")}におすすめできる一台です。一方で${p.notFor[0]}には別の選択肢も検討しましょう。`}</p>
+      <p>{body.summary ? <RichText text={body.summary} /> : `${p.name}は${p.bestFor.join("・")}におすすめできる一台です。一方で${p.notFor[0]}には別の選択肢も検討しましょう。`}</p>
 
       {/* 内部リンク：調理家電 → 食材宅配 */}
       {showFoodDeliveryLink && (

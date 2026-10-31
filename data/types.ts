@@ -64,6 +64,9 @@ export interface Product {
   priceRange: string;       // 例：「8万〜11万円」※断定価格は避ける
   image?: string;           // 公式/EC提供の画像URL（自前撮影 or 許諾済み）
   specs: SpecRow[];
+  // スペックの確認元（メーカー公式サイトなど）。あれば記事に出典を表示し、自動記事で「公式サイトによると」と書ける
+  // verifiedLabels: 出典で確認できた spec の label 一覧（省略時は全 spec を確認済みとみなす）
+  source?: { label: string; url: string; checkedAt: string; verifiedLabels?: string[] };
   // 編集部の一次評価（実機 or 公開情報に基づく自分の言葉。捏造レビュー不可）
   pros: string[];
   cons: string[];
