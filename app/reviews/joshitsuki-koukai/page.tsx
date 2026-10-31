@@ -163,7 +163,7 @@ export default async function JoshitsukiKoukaiPage() {
     "panasonic-f-yex120b-dehumidifier": (
       <>
         <p>メーカーは、この機種の除湿方式を<strong>「エコ・ハイブリッド方式」</strong>（2つの冷却機構で除湿する方式、空冷式熱交換器を搭載）と案内しています（出典：<a href="https://panasonic.jp/joshitsu/products/F-YEX120B.html" target="_blank" rel="noopener noreferrer nofollow">パナソニック公式「F-YEX120B 概要」</a>・<a href="https://panasonic.jp/joshitsu/feature/eco_hybrid.html" target="_blank" rel="noopener noreferrer nofollow">「エコ・ハイブリッド方式」</a>、2026-10-31確認）。メーカーは、ナノイーX（48兆）を搭載し、部屋干し衣類の除菌と部屋干し臭の抑制ができると公表しています（約6畳空間・吹出口から40cmの位置・約7時間後の試験条件で、実使用空間での実証効果ではないとされています。出典：<a href="https://panasonic.jp/joshitsu/products/F-YEX120B.html" target="_blank" rel="noopener noreferrer nofollow">パナソニック公式「F-YEX120B 概要」</a>、2026-10-31確認）。除湿可能面積の目安は、60Hz時で木造16畳／鉄筋32畳（50Hz時は木造13畳／鉄筋27畳）で、家じゅう使いやすい1台。</p>
-        <p className="mt-2">メーカーは「一年中使える」方式と案内しています。本体価格は高めです。</p>
+        <p className="mt-2">メーカーは「一年中使える」方式と案内しています。</p>
         <p className="mt-2">👉 1年中オールマイティに使いたい・初期費用より日々のラクさを取りたい人に。</p>
       </>
     ),
@@ -268,7 +268,9 @@ export default async function JoshitsukiKoukaiPage() {
         </p>
         <p className="mt-2">
           置き場所は、店頭で見るより家に実際に置くと大きく感じました。
-          コンプレッサー式やハイブリッド式は大容量機種では<strong>重め（12〜15kg程度の機種も多い）</strong>で、
+          重さの目安として、パナソニック F-YEX120B の質量は<strong>13.0kg</strong>です（出典：
+          <a href="https://panasonic.jp/joshitsu/products/F-YEX120B/spec.html" target="_blank" rel="noopener noreferrer nofollow">パナソニック公式「F-YEX120B 仕様」</a>
+          、2026-10-31確認）。
           キャスター付きでないと移動がかなり大変に感じました。電源コードも短めで配置場所に少し悩みました。
         </p>
 
@@ -362,28 +364,22 @@ export default async function JoshitsukiKoukaiPage() {
               <td className="p-3">季節で最適方式に切替</td>
             </tr>
             <tr className="border-t border-ink/10">
-              <td className="p-3 font-medium text-ink/60">消費電力の傾向</td>
-              <td className="p-3">比較的少ない傾向</td>
-              <td className="p-3">電熱ヒーター使用で大きい傾向</td>
-              <td className="p-3">中程度（方式による）</td>
+              <td className="p-3 font-medium text-ink/60">電気代・消費電力</td>
+              <td className="p-3">メーカーの紹介では、長く運転しても電気代を抑えやすい方式</td>
+              <td className="p-3">—</td>
+              <td className="p-3">—</td>
             </tr>
             <tr className="border-t border-ink/10">
               <td className="p-3 font-medium text-ink/60">室温への影響</td>
-              <td className="p-3">排熱で室温が上がりやすい</td>
-              <td className="p-3">ヒーター熱で室温が上がりやすい</td>
-              <td className="p-3">方式により異なる</td>
-            </tr>
-            <tr className="border-t border-ink/10">
-              <td className="p-3 font-medium text-ink/60">本体価格の傾向</td>
-              <td className="p-3">比較的手頃な傾向</td>
-              <td className="p-3">比較的手頃な傾向</td>
-              <td className="p-3">高価な傾向</td>
+              <td className="p-3" colSpan={3}>
+                メーカーの注意書きによると、衣類乾燥除湿機は部屋を冷やす機能がなく、運転中は熱が出て室温が上がります
+              </td>
             </tr>
             <tr className="border-t border-ink/10">
               <td className="p-3 font-medium text-ink/60">向いている人</td>
-              <td className="p-3">梅雨〜夏の部屋干し・カビ対策中心の人</td>
-              <td className="p-3">冬の結露対策・年間通じて使いたい人</td>
-              <td className="p-3">季節を問わず使いたい・機能重視の人</td>
+              <td className="p-3">夏場の湿気・カビ対策に使いたい人、電気代も抑えたい人</td>
+              <td className="p-3">冬の結露対策や、冬場の部屋干しに使いたい人</td>
+              <td className="p-3">部屋干し・湿気対策を一年を通してやりたい人、スピーディに乾かしたい人</td>
             </tr>
           </tbody>
         </table>
@@ -403,6 +399,13 @@ export default async function JoshitsukiKoukaiPage() {
             パナソニック公式「F-YEX120B 仕様」（panasonic.jp/joshitsu/products/F-YEX120B/spec.html）
           </a>
           、2026-10-31確認）
+        </p>
+        <p className="px-3 pb-3 text-xs text-ink/55">
+          ※数値の例：パナソニック F-YEX120B の定格消費電力は、60Hz時225W・50Hz時205W、質量は13.0kgです（出典：
+          <a href="https://panasonic.jp/joshitsu/products/F-YEX120B/spec.html" target="_blank" rel="noopener noreferrer nofollow">
+            パナソニック公式「F-YEX120B 仕様」（panasonic.jp/joshitsu/products/F-YEX120B/spec.html）
+          </a>
+          、2026-10-31確認）。表の「—」は、公式ページで確認できなかった項目です。
         </p>
       </div>
 
