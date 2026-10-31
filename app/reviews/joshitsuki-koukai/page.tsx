@@ -156,13 +156,13 @@ export default async function JoshitsukiKoukaiPage() {
     "mitsubishi-mj-p180yx-dehumidifier": (
       <>
         <p>除湿能力は最大18L/日（60Hz時／50Hzは15.5L/日）と家庭用でもトップクラスのコンプレッサー式。広いリビングや大量の洗濯物をスピーディに乾かしたい人向け。</p>
-        <p className="mt-2">コンプレッサー式は冬に弱いのが一般的ですが、この機種は<strong>「冬モード」＋自動霜取り</strong>で室温1℃でも運転できるのが他のコンプレッサー機との違いです。</p>
+        <p className="mt-2">コンプレッサー式は冬に弱いのが一般的ですが、メーカーは、この機種は<strong>「冬モード」と「おまかせ霜取り」</strong>を備え、室温1℃からの除湿が可能と公表しています（1℃・湿度70％時の除湿能力は2.0L/日以下とされています。出典：<a href="https://www.mitsubishielectric.co.jp/home/jyoshitsuki/product/mj-p180yx/feature/" target="_blank" rel="noopener noreferrer nofollow">三菱電機公式「MJ-P180YX 特長」</a>、2026-10-31確認）。</p>
         <p className="mt-2">👉 パワー重視。広いリビングや梅雨の大量部屋干しを一気に乾かしたい人に。</p>
       </>
     ),
     "panasonic-f-yex120b-dehumidifier": (
       <>
-        <p>夏に強いコンプレッサー式と、冬に強いデシカント式を切り替える<strong>ハイブリッド方式</strong>。ナノイーX搭載で部屋干し臭のケアも期待できます。木造16畳／鉄筋32畳までの対応で、家じゅう使いやすい1台。</p>
+        <p>夏に強いコンプレッサー式と、冬に強いデシカント式を切り替える<strong>ハイブリッド方式</strong>。メーカーは、ナノイーX（48兆）を搭載し、部屋干し衣類の除菌と部屋干し臭の抑制ができると公表しています（約6畳空間・吹出口から40cmの位置・約7時間後の試験条件で、実使用空間での実証効果ではないとされています。出典：<a href="https://panasonic.jp/joshitsu/products/F-YEX120B.html" target="_blank" rel="noopener noreferrer nofollow">パナソニック公式「F-YEX120B 概要」</a>、2026-10-31確認）。木造16畳／鉄筋32畳までの対応で、家じゅう使いやすい1台。</p>
         <p className="mt-2">季節による乾きにくさのムラが出にくいのが強みですが、そのぶん本体価格は高めです。</p>
         <p className="mt-2">👉 1年中オールマイティに使いたい・初期費用より日々のラクさを取りたい人に。</p>
       </>
