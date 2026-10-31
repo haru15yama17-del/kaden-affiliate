@@ -323,7 +323,7 @@ export default async function WaterserverKoukaiPage() {
         <li>
           ▶{" "}
           <Link href="/reviews/yoshikei" className="font-bold text-accent hover:underline">
-            はるのヨシケイ体験レビュー記事はこちら
+            ヨシケイのレビュー記事はこちら
           </Link>
           （毎日届くミールキットで買い物を減らしたい方に）
         </li>

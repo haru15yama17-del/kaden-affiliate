@@ -12,11 +12,11 @@ export interface Tier1Destination {
 export const tier1Destinations = {
   "food-delivery": {
     href: "/reviews/yoshikei",
-    title: "はるのヨシケイ体験レビュー",
+    title: "ヨシケイのレビュー",
   },
   "food-delivery-watami": {
     href: "/reviews/watami-takushoku-direct",
-    title: "はるのワタミの宅食ダイレクト体験レビュー",
+    title: "ワタミの宅食ダイレクトのレビュー",
   },
 } as const satisfies Record<string, Tier1Destination>;
 

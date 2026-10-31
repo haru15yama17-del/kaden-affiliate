@@ -404,7 +404,7 @@ export default async function HotcookKoukaiPage() {
         <strong>ヨシケイのミールキット</strong>
         なら毎日届くから買い物が不要。共働きの平日にぴったりです。
         <br />
-        ▶ <Link href="/reviews/yoshikei" className="font-bold text-accent hover:underline">はるのヨシケイ体験レビュー記事はこちら</Link>
+        ▶ <Link href="/reviews/yoshikei" className="font-bold text-accent hover:underline">ヨシケイのレビュー記事はこちら</Link>
       </p>
       <p>「ホットクックを買ったのに結局使わない」を防ぐ一番の近道は、“材料の準備すら手放す”ことです。</p>
 
