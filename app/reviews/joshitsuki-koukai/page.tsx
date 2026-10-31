@@ -252,7 +252,7 @@ export default async function JoshitsukiKoukaiPage() {
 
         <p className="mt-4 mb-0.5 text-xs font-bold text-ink/60">▶ 電気代と運転音</p>
         <p>
-          コンプレッサー式を毎日4時間使った月の電気代は、私の感覚で<strong>月+1,500〜2,000円程度</strong>の体感でした。
+          コンプレッサー式を毎日4時間使った月の電気代は、<strong>月+1,500〜2,000円程度</strong>でした（自宅で測った目安です。運転条件・季節・電気料金で変わります）。
           デシカント式はさらに高くなる傾向があると言われており、使い方・機種・電力料金によって大きく変わります。
         </p>
         <p className="mt-2">
