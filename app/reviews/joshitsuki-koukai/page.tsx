@@ -162,8 +162,8 @@ export default async function JoshitsukiKoukaiPage() {
     ),
     "panasonic-f-yex120b-dehumidifier": (
       <>
-        <p>夏に強いコンプレッサー式と、冬に強いデシカント式を切り替える<strong>ハイブリッド方式</strong>。メーカーは、ナノイーX（48兆）を搭載し、部屋干し衣類の除菌と部屋干し臭の抑制ができると公表しています（約6畳空間・吹出口から40cmの位置・約7時間後の試験条件で、実使用空間での実証効果ではないとされています。出典：<a href="https://panasonic.jp/joshitsu/products/F-YEX120B.html" target="_blank" rel="noopener noreferrer nofollow">パナソニック公式「F-YEX120B 概要」</a>、2026-10-31確認）。木造16畳／鉄筋32畳までの対応で、家じゅう使いやすい1台。</p>
-        <p className="mt-2">季節による乾きにくさのムラが出にくいのが強みですが、そのぶん本体価格は高めです。</p>
+        <p>メーカーは、この機種の除湿方式を<strong>「エコ・ハイブリッド方式」</strong>（2つの冷却機構で除湿する方式、空冷式熱交換器を搭載）と案内しています（出典：<a href="https://panasonic.jp/joshitsu/products/F-YEX120B.html" target="_blank" rel="noopener noreferrer nofollow">パナソニック公式「F-YEX120B 概要」</a>・<a href="https://panasonic.jp/joshitsu/feature/eco_hybrid.html" target="_blank" rel="noopener noreferrer nofollow">「エコ・ハイブリッド方式」</a>、2026-10-31確認）。メーカーは、ナノイーX（48兆）を搭載し、部屋干し衣類の除菌と部屋干し臭の抑制ができると公表しています（約6畳空間・吹出口から40cmの位置・約7時間後の試験条件で、実使用空間での実証効果ではないとされています。出典：<a href="https://panasonic.jp/joshitsu/products/F-YEX120B.html" target="_blank" rel="noopener noreferrer nofollow">パナソニック公式「F-YEX120B 概要」</a>、2026-10-31確認）。除湿可能面積の目安は、60Hz時で木造16畳／鉄筋32畳（50Hz時は木造13畳／鉄筋27畳）で、家じゅう使いやすい1台。</p>
+        <p className="mt-2">メーカーは「一年中使える」方式と案内しています。本体価格は高めです。</p>
         <p className="mt-2">👉 1年中オールマイティに使いたい・初期費用より日々のラクさを取りたい人に。</p>
       </>
     ),
