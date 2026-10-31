@@ -31,6 +31,11 @@ function isCostLabel(label: string): boolean {
   return COST_KEYWORDS.some((k) => label.includes(k));
 }
 
+// 「2万〜3万円」「月額 約3,300〜4,400円」のような範囲表記か（括弧書きの補足内の範囲は対象外）
+function hasRangeNotation(raw: string): boolean {
+  return /\d[^\d（(]*[〜~]\s*\d/.test(raw.split(/[（(]/)[0]);
+}
+
 type CostKind = "included" | "standalone" | "unknown";
 
 // 値の文言から「工事費込み（総額）」か「本体のみ（工事費別）」かを判定する。
@@ -104,6 +109,9 @@ function buildDiffEntries(a: Product, b: Product): DiffEntry[] {
     if (rawA == null || rawB == null) return;
     const rule = findRule(label);
     if (!rule) return;
+    // 価格が範囲表記（「2万〜3万円」「7,980〜11,800円」等）のときは、文中に下限しか表示できず
+    // 誤解を招くため、価格の比較文は出さない（価格は変動するため、表の表記にとどめる）
+    if (isCostLabel(label) && (hasRangeNotation(rawA) || hasRangeNotation(rawB))) return;
     const va = parseMetric(rawA, rule.rangeValue);
     const vb = parseMetric(rawB, rule.rangeValue);
     if (!va || !vb || va.value === vb.value) return;
