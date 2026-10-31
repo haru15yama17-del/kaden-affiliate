@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const hasReviewSummary = Boolean((SHOW_REVIEW_VOICES && body.reviewStats) ||body.reviewDetail || p.reviewSummary);
   const reviewPart = hasReviewSummary ? "、口コミ要約" : "";
   return buildMetadata({
-    title: `${p.name}のレビュー・評価｜良い点と気になる点を実機目線で`,
+    title: `${p.name}のレビュー・評価｜スペックと良い点・気になる点を整理`,
     description: `${p.name}（${p.priceRange}）を編集部が評価。スペック、メリット・デメリット${reviewPart}、競合比較、向き不向きまで解説します。`,
     path: `/reviews/${p.slug}`,
     type: "article",
