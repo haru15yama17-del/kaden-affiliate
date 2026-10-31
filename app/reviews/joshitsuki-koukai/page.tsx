@@ -167,6 +167,8 @@ export default async function JoshitsukiKoukaiPage() {
 
   const compactItems = dehumidifiers.map((p) => ({
     ...p,
+    // この記事の表のみ、価格帯は4商品とも「要確認」に統一（seedの値は変更しない）
+    priceRange: "要確認（時期により変動）",
     rating: undefined,
     specs: compactSpecs[p.slug] ?? [],
   }));
