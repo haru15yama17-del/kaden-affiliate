@@ -1,0 +1,9 @@
+[
+  {
+    "slug": "example-product-slug",
+    "model": "",
+    "reviewPageUrl": "",
+    "status": "disabled",
+    "note": "slug は data/products.seed.json と一致させる。reviewPageUrl は {page} を含めるとページ送りする。status を enabled にすると定期実行の対象。"
+  }
+]

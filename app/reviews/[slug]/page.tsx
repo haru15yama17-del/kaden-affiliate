@@ -15,7 +15,8 @@ import { ComparisonTable } from "@/components/ComparisonTable";
 import { RelatedArticles } from "@/components/RelatedArticles";
 import { StickyCta } from "@/components/StickyCta";
 import Link from "next/link";
-import type { Product } from "@/data/types";
+import { ReviewVoices } from "@/components/ReviewVoices";
+import type { Product, ReviewStats } from "@/data/types";
 
 // キャンペーン期間の判定をリクエスト時刻ベースにするため、ビルド時に固定されないよう定期再生成する
 export const revalidate = 3600;
@@ -26,6 +27,7 @@ interface ArticleBody {
   summary?: string;
   faq?: { q: string; a: string }[];
   sources?: string[];
+  reviewStats?: ReviewStats;
 }
 function loadBody(slug: string): ArticleBody {
   const file = path.join(process.cwd(), "content", "reviews", `${slug}.json`);
@@ -43,7 +45,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const p = await getProduct(params.slug);
   if (!p) return {};
   const body = loadBody(p.slug);
-  const hasReviewSummary = Boolean(body.reviewDetail || p.reviewSummary);
+  const hasReviewSummary = Boolean(body.reviewStats || body.reviewDetail || p.reviewSummary);
   const reviewPart = hasReviewSummary ? "、口コミ要約" : "";
   return buildMetadata({
     title: `${p.name}のレビュー・評価｜良い点と気になる点を実機目線で`,
@@ -192,7 +194,9 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
         ))}
       </div>
 
-      {reviewText && (
+      {body.reviewStats ? (
+        <ReviewVoices stats={body.reviewStats} />
+      ) : reviewText && (
         <>
           <h2>口コミ・評判の要約</h2>
           <p>{reviewText}</p>

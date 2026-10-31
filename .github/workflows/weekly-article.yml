@@ -1,0 +1,70 @@
+name: weekly-article
+
+on:
+  schedule:
+    - cron: "0 0 * * 1" # 毎週月曜 09:00 JST
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "対象slug（空なら enabled 全件）"
+        required: false
+      limit:
+        description: "最大処理件数"
+        required: false
+        default: "3"
+      publish_to_main:
+        description: "main に直接commit（false なら auto/ ブランチ）"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-article
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+
+      - name: Generate articles
+        id: gen
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ONLY: ${{ inputs.only }}
+          LIMIT: ${{ inputs.limit || '3' }}
+        run: |
+          ARGS="--limit $LIMIT"
+          if [ -n "$ONLY" ]; then ARGS="$ARGS --only $ONLY"; fi
+          node scripts/auto/run.mjs $ARGS
+
+      - name: Commit and push
+        env:
+          # 定期実行は repo variable AUTO_PUBLISH_MAIN=true のときだけ main へ直接公開
+          TO_MAIN: ${{ inputs.publish_to_main || vars.AUTO_PUBLISH_MAIN == 'true' }}
+        run: |
+          if [ -z "$(git status --porcelain content data)" ]; then echo "変更なし"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content data
+          git commit -m "chore(auto): 週次レビュー記事を更新 $(date -u +%F)"
+          if [ "$TO_MAIN" = "true" ]; then
+            git push origin HEAD:${{ github.ref_name }}
+          else
+            git push origin HEAD:refs/heads/auto/review-$(date -u +%Y%m%d-%H%M)
+          fi
+
+      - name: Fail if generation had errors
+        if: steps.gen.outcome == 'failure'
+        run: echo "一部の対象が失敗しました（ログ参照）" && exit 1

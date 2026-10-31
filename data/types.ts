@@ -39,6 +39,22 @@ export interface SpecRow {
   value: string;  // 例：455L
 }
 
+// 楽天レビューの集計結果（scripts/auto が生成。件数はコードで集計し、本文は保存しない）
+export interface ReviewStatItem {
+  theme: string;
+  label: string;
+  count: number;
+}
+export interface ReviewStats {
+  total: number;       // 分析したレビュー件数
+  fetchedAt: string;   // 取得日 YYYY-MM-DD
+  sourceUrl: string;   // 出典（楽天レビューページ）
+  positive: ReviewStatItem[];
+  negative: ReviewStatItem[];
+  goodTrend: string;
+  concernTrend: string;
+}
+
 export interface Product {
   slug: string;             // URL用（例：mitsubishi-mr-wz50k）
   name: string;             // 商品名（実在の型番ベース）

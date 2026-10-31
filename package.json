@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "gen:article": "node scripts/generate-article.mjs"
+    "gen:article": "node scripts/generate-article.mjs",
+    "auto:run": "node scripts/auto/run.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.7",
@@ -22,6 +23,7 @@
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "autoprefixer": "10.4.19",
+    "playwright": "^1.48.2",
     "postcss": "8.4.39",
     "tailwindcss": "3.4.6",
     "typescript": "5.5.3"
