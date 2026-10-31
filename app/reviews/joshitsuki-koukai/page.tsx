@@ -79,8 +79,8 @@ const compactSpecs: Record<string, { label: string; value: string }[]> = {
   ],
   "mitsubishi-mj-p180yx-dehumidifier": [
     { label: "除湿方式", value: "コンプレッサー式（冬モード搭載）" },
-    { label: "除湿能力", value: "最大18L/日（60Hz時）" },
-    { label: "最大の強み", value: "家庭用トップクラスの除湿パワー" },
+    { label: "除湿能力", value: "18L/日（60Hz時・室温27℃/相対湿度60％時）" },
+    { label: "最大の強み", value: "除湿能力 18L/日（60Hz時）・15.5L/日（50Hz時）（室温27℃・相対湿度60％時、メーカー公表）" },
   ],
   "panasonic-f-yex120b-dehumidifier": [
     { label: "除湿方式", value: "エコ・ハイブリッド方式" },
@@ -94,22 +94,51 @@ const compactSpecs: Record<string, { label: string; value: string }[]> = {
   ],
 };
 
-const faq = [
+type FaqSource = { label: string; url: string };
+
+// 出典（公式ページ）。確認日は FAQ_CHECKED_AT
+const FAQ_CHECKED_AT = "2026-10-31";
+const SRC_SELECT: FaqSource = {
+  label: "パナソニック公式「除湿機の選び方」（panasonic.jp/joshitsu/select.html）",
+  url: "https://panasonic.jp/joshitsu/select.html",
+};
+const SRC_SHARP: FaqSource = {
+  label: "シャープ公式「CV-S71」（jp.sharp/joshitsu/products/cvs71/）",
+  url: "https://jp.sharp/joshitsu/products/cvs71/",
+};
+const SRC_SHARP_SPEC: FaqSource = {
+  label: "シャープ公式「CV-S71 仕様／寸法」（jp.sharp/joshitsu/products/cvs71/spec/）",
+  url: "https://jp.sharp/joshitsu/products/cvs71/spec/",
+};
+const SRC_MJ_SPEC: FaqSource = {
+  label: "三菱電機公式「MJ-P180YX 製品仕様」（mitsubishielectric.co.jp/home/jyoshitsuki/product/mj-p180yx/spec/）",
+  url: "https://www.mitsubishielectric.co.jp/home/jyoshitsuki/product/mj-p180yx/spec/",
+};
+const SRC_PANA_SPEC: FaqSource = {
+  label: "パナソニック公式「F-YEX120B 仕様」（panasonic.jp/joshitsu/products/F-YEX120B/spec.html）",
+  url: "https://panasonic.jp/joshitsu/products/F-YEX120B/spec.html",
+};
+
+const faq: { q: string; a: string; sources?: FaqSource[] }[] = [
   {
     q: "コンプレッサー式とデシカント式の除湿機の違いは何ですか？",
-    a: "大きな方向性の違いは「得意な季節」と「消費電力」です。コンプレッサー式は夏の高温多湿に強く、消費電力が比較的少ない傾向があります。一方デシカント式は電熱ヒーターを使うため冬など低温時でも除湿できますが、消費電力が大きく室温が上がりやすいという特性があります。どちらが優れているのではなく、使う季節と環境で選ぶのが基本です。",
+    a: "主な違いは、得意な季節と電気代の出方です。パナソニック公式のガイドでは、コンプレッサー式は梅雨〜夏の高温多湿の時期に力を発揮し、長く運転しても電気代を抑えやすい方式として紹介されています。デシカント式は、乾燥剤の素子に水分を吸わせ、ヒーターで放出して回収する仕組みで、気温が低い時期でも除湿性能が安定しやすいとされています。なお、どの除湿機も運転中は熱が出て室温が上がります（メーカーの注意書き）。",
+    sources: [SRC_SELECT, SRC_SHARP_SPEC],
   },
   {
     q: "衣類乾燥除湿機は部屋干しの乾燥に使えますか？",
-    a: "衣類乾燥除湿機は部屋干しの乾燥用途に使う方が多いです。ただし実際の乾燥時間は洗濯物の量・素材・部屋の広さ・気温などの条件によって大きく変わるため、具体的な時間の断言は難しい状況です。メーカー公式が示す目安とご自宅の環境を照らし合わせてご確認ください。",
+    a: "衣類乾燥モードを備えた除湿機で、部屋干しの乾燥に使えます。乾燥時間は洗濯物の量・素材・部屋の条件で変わります。目安として、シャープ CV-S71 は衣類乾燥時間が約167分（2kg、日本電機工業会規格JEM1411に基づく数値）とメーカーが公表しています。",
+    sources: [SRC_SHARP],
   },
   {
     q: "除湿機の電気代はどのくらいかかりますか？",
-    a: "除湿機の電気代は、除湿方式・消費電力・1日あたりの使用時間・ご契約の電力料金によって大きく異なります。コンプレッサー式はデシカント式より消費電力が少ない傾向がありますが、機種や運転モードによって差があります。具体的な金額はメーカー仕様書の消費電力値と電力会社の料金単価を参考に計算されることをおすすめします。",
+    a: "電気代は、消費電力×使用時間×契約の電力料金単価で決まります。目安として、CV-S71 の消費電力は50Hz時205W・60Hz時210W、三菱 MJ-P180YX は50Hz時330W・60Hz時390Wとメーカーが公表しています（衣類乾燥・除湿運転時）。機種や運転モードで差があるため、お使いの機種の仕様書でご確認ください。",
+    sources: [SRC_SHARP_SPEC, SRC_MJ_SPEC],
   },
   {
     q: "除湿機のデメリットや後悔しやすいポイントは何ですか？",
-    a: "主に4点あります。(1)コンプレッサー式は排熱で運転中に部屋の温度が上がりやすい、(2)タンクに溜まった水を定期的に捨てる必要がある（満水で自動停止する）、(3)運転音が気になる場合がある（特に寝室での夜間使用）、(4)本体に存在感・重量があり置き場所と移動経路の事前確認が必要、です。メリットとあわせて理解しておくと後悔しにくくなります。",
+    a: "主に4点あります。(1)除湿機は運転中に熱が出て室温が上がります（メーカーの注意書き）、(2)タンクの水の処理が必要です。満水で自動停止する機種があり（三菱 MJ-P180YX・パナ F-YEX120B で公表）、市販のホースで連続排水できる機種もあります、(3)運転音は機種や運転モードで異なります、(4)置き場所と移動経路は寸法で事前確認が必要です（例：CV-S71 は幅303×奥行203×高さ524mm・約9.6kg）。",
+    sources: [SRC_SHARP_SPEC, SRC_MJ_SPEC, SRC_PANA_SPEC],
   },
 ];
 
@@ -117,7 +146,7 @@ export async function generateMetadata() {
   return buildMetadata({
     title: TITLE,
     description:
-      "シャープ 衣類乾燥除湿機CV-S71の後悔しやすい5つのデメリットと、コンプレッサー・デシカント・ハイブリッド式の選び方を主婦目線で解説。実際に測った乾燥時間・体感電気代、店員に聞いたリアルな声も掲載。部屋干し向けおすすめ4台を紹介します。",
+      "シャープ 衣類乾燥除湿機CV-S71の後悔しやすい5つのデメリットと、コンプレッサー・デシカント・ハイブリッド式の選び方を主婦目線で解説。実際に測った乾燥時間と電力の目安、店員に聞いたリアルな声も掲載。部屋干し向けおすすめ4台を紹介します。",
     path: PATH,
     type: "article",
     modifiedTime: "2026-10-31",
@@ -155,7 +184,7 @@ export default async function JoshitsukiKoukaiPage() {
     ),
     "mitsubishi-mj-p180yx-dehumidifier": (
       <>
-        <p>除湿能力は最大18L/日（60Hz時／50Hzは15.5L/日）と家庭用でもトップクラスのコンプレッサー式。広いリビングや大量の洗濯物をスピーディに乾かしたい人向け。</p>
+        <p>除湿能力は、60Hz時18L/日・50Hz時15.5L/日のコンプレッサー式です（室温27℃・相対湿度60％時、メーカー公表。出典：<a href="https://www.mitsubishielectric.co.jp/home/jyoshitsuki/product/mj-p180yx/spec/" target="_blank" rel="noopener noreferrer nofollow">三菱電機公式「MJ-P180YX 製品仕様」</a>、2026-10-31確認）。洗濯物の量の目安は約6kgまでで、広めの部屋や洗濯物が多い家庭が検討しやすい仕様です。</p>
         <p className="mt-2">コンプレッサー式は冬に弱いのが一般的ですが、メーカーは、この機種は<strong>「冬モード」と「おまかせ霜取り」</strong>を備え、室温1℃からの除湿が可能と公表しています（1℃・湿度70％時の除湿能力は2.0L/日以下とされています。出典：<a href="https://www.mitsubishielectric.co.jp/home/jyoshitsuki/product/mj-p180yx/feature/" target="_blank" rel="noopener noreferrer nofollow">三菱電機公式「MJ-P180YX 特長」</a>、2026-10-31確認）。</p>
         <p className="mt-2">👉 パワー重視。広いリビングや梅雨の大量部屋干しを一気に乾かしたい人に。</p>
       </>
@@ -291,7 +320,11 @@ export default async function JoshitsukiKoukaiPage() {
         <li>排熱で運転中に室温が上がりやすい</li>
         <li>タンクの水捨てが必要（満水で自動停止）</li>
         <li>「強」運転は音が大きめ（寝室近くの夜間使用に注意）</li>
-        <li>本体が大きく・重め（置き場所と移動経路の事前確認が必要）</li>
+        <li>
+          本体の大きさ・重さは機種で異なります。例：CV-S71 は幅303×奥行203×高さ524mm・質量約9.6kg です（出典：
+          <a href="https://jp.sharp/joshitsu/products/cvs71/spec/" target="_blank" rel="noopener noreferrer nofollow">シャープ公式「CV-S71 仕様／寸法」</a>
+          、2026-10-31確認）。置き場所と移動経路は、寸法を見て事前に確認が必要です。
+        </li>
         <li>コンプレッサー式は冬の除湿力が落ちやすい</li>
       </ul>
 
@@ -489,6 +522,18 @@ export default async function JoshitsukiKoukaiPage() {
           <div key={i} className="rounded-xl border border-ink/15 bg-white p-4 shadow-card">
             <p className="font-bold text-sm text-ink">Q. {x.q}</p>
             <p className="mt-1.5 text-sm text-ink/75 leading-relaxed">A. {x.a}</p>
+            {x.sources && x.sources.length > 0 && (
+              <p className="mt-1.5 text-xs text-ink/50">
+                出典：
+                {x.sources.map((src, j) => (
+                  <span key={src.url}>
+                    {j > 0 && "、"}
+                    <a href={src.url} target="_blank" rel="noopener noreferrer nofollow">{src.label}</a>
+                  </span>
+                ))}
+                （{FAQ_CHECKED_AT}確認）
+              </p>
+            )}
           </div>
         ))}
       </div>
