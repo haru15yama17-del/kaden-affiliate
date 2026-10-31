@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getAllProducts } from "@/lib/data";
 import { buildMetadata } from "@/lib/seo";
 import { reviewJsonLd } from "@/lib/jsonld";
@@ -431,6 +432,18 @@ export default async function HairdryerKoukaiPage() {
         定番の安心感とコスパを重視するなら<strong>パナソニック ナノケア EH-NA0K</strong>という選び分けになります。
         価格・在庫は変動するため、購入前に各ストアで最新情報をご確認ください。
       </p>
+
+      {/* ── あわせて読みたい ── */}
+      <h2>あわせて読みたい——毎日のセルフケアをもっとラクに</h2>
+      <ul>
+        <li>
+          ▶{" "}
+          <Link href="/reviews/biganki-koukai" className="font-bold text-accent hover:underline">
+            美顔器は後悔する？トリアFRXとRe・De Suhadaのデメリットと選び方
+          </Link>
+          （ヘアケアに続いて、スキンケア家電も見直したい方に）
+        </li>
+      </ul>
     </article>
   );
 }

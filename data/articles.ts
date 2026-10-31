@@ -67,6 +67,12 @@ export const articles: Article[] = [
     description: "ブライト・ReFa・KINUJO・パナソニックEH-NA0K・Re・De Hairdry+を風量・重量・価格帯で比較",
   },
   {
+    slug: "biganki-koukai",
+    title: "美顔器は後悔する？トリアFRXとRe・De Suhadaのデメリットと選び方",
+    category: "beauty",
+    description: "トリア FRX（フラクショナルレーザー）とRe・De Suhada（EMS・LED・温熱）を方式・価格・使用条件で比較",
+  },
+  {
     slug: "waterserver-koukai",
     title: "ウォーターサーバー3社を比較",
     category: "water-server",
