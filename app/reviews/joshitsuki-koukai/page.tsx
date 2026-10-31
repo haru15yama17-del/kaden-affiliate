@@ -84,7 +84,7 @@ const compactSpecs: Record<string, { label: string; value: string }[]> = {
   ],
   "panasonic-f-yex120b-dehumidifier": [
     { label: "除湿方式", value: "エコ・ハイブリッド方式" },
-    { label: "除湿能力", value: "10.5〜12.5L/日" },
+    { label: "除湿能力", value: "12.5L/日（60Hz時・定格）" },
     { label: "最大の強み", value: "通年安定した除湿力とナノイーXの消臭・除菌" },
   ],
   "iris-circulator-desiccant-dehumidifier": [
@@ -414,6 +414,7 @@ export default async function JoshitsukiKoukaiPage() {
       <p className="text-sm text-ink/55">
         ※「優劣」ではなく「除湿方式・使う季節が何に向いているか」を軸にしているため、おすすめバッジは表示していません。
         除湿方式・除湿能力はメーカー公表値です。詳しい仕様は各商品の見出し以降で解説します。
+        除湿能力は、各社の表記条件（最大／定格・周波数など）が異なるため、数値の大小だけで単純には比べられません。
         パナソニック F-YEX120B の除湿方式・除湿能力は、公式の仕様ページの記載によります（出典：
         <a href="https://panasonic.jp/joshitsu/products/F-YEX120B/spec.html" target="_blank" rel="noopener noreferrer nofollow">
           パナソニック公式「F-YEX120B 仕様」（panasonic.jp/joshitsu/products/F-YEX120B/spec.html）
