@@ -4,8 +4,11 @@ import { Rating } from "./Rating";
 export function ComparisonTable({
   items,
   highlightBest = true,
+  hideMainOnlyRows = false,
 }: {
   items: Product[];
+  /** trueの場合、競合列がすべて「—」の行（メイン商品だけが持つ項目）を表示しない。スペック表が別にあるページで使う */
+  hideMainOnlyRows?: boolean;
   /** falseの場合「おすすめ」バッジと該当列のハイライトを表示しない（優劣ではなく用途別に選ぶ記事向け） */
   highlightBest?: boolean;
 }) {
@@ -14,6 +17,13 @@ export function ComparisonTable({
   );
   const get = (p: Product, label: string) =>
     p.specs.find((s) => s.label === label)?.value ?? "—";
+
+  // hideMainOnlyRows: 先頭（メイン商品）以外の列がすべて「—」の行は、比較にならないので表示しない。
+  // メイン商品だけが持つ項目は、ページ側のスペック表で見せる前提（スペック表のあるページ向け）。
+  const visibleLabels =
+    !hideMainOnlyRows || items.length < 2
+      ? labels
+      : labels.filter((label) => items.slice(1).some((p) => get(p, label) !== "—"));
 
   const bestIdx = highlightBest
     ? items.reduce(
@@ -57,7 +67,7 @@ export function ComparisonTable({
               </td>
             ))}
           </tr>
-          {labels.map((label) => (
+          {visibleLabels.map((label) => (
             <tr key={label} className="border-t border-ink/10">
               <td className="p-3 font-medium text-ink/60">{label}</td>
               {items.map((p, i) => (

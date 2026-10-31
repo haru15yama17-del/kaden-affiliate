@@ -250,7 +250,7 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
       {competitors.length > 0 && (
         <>
           <h2>競合商品との比較</h2>
-          <ComparisonTable items={[p, ...competitors]} />
+          <ComparisonTable items={[p, ...competitors]} hideMainOnlyRows />
           <div className="not-prose mt-4 flex flex-wrap gap-2">
             {competitors.map((comp) => (
               <Link
