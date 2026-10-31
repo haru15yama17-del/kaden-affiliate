@@ -423,20 +423,22 @@
     "category": "seasonal",
     "priceRange": "69,935円",
     "specs": [
-      {"label": "除湿方式", "value": "ハイブリッド式（エコ・ハイブリッド）"},
+      {"label": "除湿方式", "value": "エコ・ハイブリッド方式"},
       {"label": "除湿能力", "value": "50Hz 10.5L/日(消費電力205W)/60Hz 12.5L/日(消費電力225W)"},
       {"label": "適用畳数（木造）", "value": "16畳まで（60Hzの場合）"},
       {"label": "適用畳数（鉄筋）", "value": "32畳まで（60Hzの場合）"},
       {"label": "タンク容量", "value": "約3.2L"},
-      {"label": "特徴タグ", "value": "ハイブリッド式・ナノイーX・1年中・大容量"}
+      {"label": "質量", "value": "13.0kg"},
+      {"label": "特徴タグ", "value": "エコ・ハイブリッド方式・ナノイーX・一年中"}
     ],
+    "source": {"label": "パナソニック公式サイト F-YEX120B 仕様", "url": "https://panasonic.jp/joshitsu/products/F-YEX120B/spec.html", "checkedAt": "2026-10-31", "verifiedLabels": ["除湿方式", "除湿能力", "適用畳数（木造）", "適用畳数（鉄筋）", "タンク容量", "質量"]},
     "pros": [
-      "ハイブリッド式で季節を問わず安定した除湿力を発揮",
-      "ナノイーX搭載で衣類の除菌・消臭効果を期待できる"
+      "メーカーは、2つの冷却の仕組みで除湿する独自のエコ・ハイブリッド方式で、一年中使えると案内しています",
+      "メーカーは、ナノイーX（48兆）による部屋干し衣類の除菌と臭いの抑制を案内しています（試験条件つきで、実使用空間での実証効果ではないとの注記あり）"
     ],
     "cons": [
-      "ハイブリッド式は本体価格がコンプレッサー式・デシカント式より高い傾向がある",
-      "除湿能力・タンク容量はメーカー仕様を要確認"
+      "運転中は機器から熱が出て室温が上がります（メーカーも注意書きで案内）",
+      "タンクは約3.2Lで、満水になると自動停止します（メーカー仕様）"
     ],
     "bestFor": [
       "1年を通じて除湿機を使いたい方",
@@ -450,7 +452,7 @@
     "reviewSummary": "",
     "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Febest%2F4549980784358%2F", "yahooUrl": ""},
     "competitors": [],
-    "updatedAt": "2026-06-30"
+    "updatedAt": "2026-10-31"
   },
   {
     "slug": "iris-circulator-desiccant-dehumidifier",

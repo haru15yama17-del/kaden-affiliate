@@ -83,7 +83,7 @@ const compactSpecs: Record<string, { label: string; value: string }[]> = {
     { label: "最大の強み", value: "家庭用トップクラスの除湿パワー" },
   ],
   "panasonic-f-yex120b-dehumidifier": [
-    { label: "除湿方式", value: "ハイブリッド式" },
+    { label: "除湿方式", value: "エコ・ハイブリッド方式" },
     { label: "除湿能力", value: "10.5〜12.5L/日" },
     { label: "最大の強み", value: "通年安定した除湿力とナノイーXの消臭・除菌" },
   ],
@@ -120,7 +120,7 @@ export async function generateMetadata() {
       "シャープ 衣類乾燥除湿機CV-S71の後悔しやすい5つのデメリットと、コンプレッサー・デシカント・ハイブリッド式の選び方を主婦目線で解説。実際に測った乾燥時間・体感電気代、店員に聞いたリアルな声も掲載。部屋干し向けおすすめ4台を紹介します。",
     path: PATH,
     type: "article",
-    modifiedTime: "2026-06-30",
+    modifiedTime: "2026-10-31",
   });
 }
 
@@ -190,7 +190,7 @@ export default async function JoshitsukiKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
-      <p className="mt-2 text-sm text-ink/55">更新日：2026-06-30</p>
+      <p className="mt-2 text-sm text-ink/55">更新日：2026-10-31</p>
 
       <ArticleImage
         src={`${IMG_BASE}/hero.svg`}
@@ -397,6 +397,11 @@ export default async function JoshitsukiKoukaiPage() {
       <p className="text-sm text-ink/55">
         ※「優劣」ではなく「除湿方式・使う季節が何に向いているか」を軸にしているため、おすすめバッジは表示していません。
         除湿方式・除湿能力はメーカー公表値です。詳しい仕様は各商品の見出し以降で解説します。
+        パナソニック F-YEX120B の除湿方式・除湿能力は、公式の仕様ページの記載によります（出典：
+        <a href="https://panasonic.jp/joshitsu/products/F-YEX120B/spec.html" target="_blank" rel="noopener noreferrer nofollow">
+          パナソニック公式「F-YEX120B 仕様」（panasonic.jp/joshitsu/products/F-YEX120B/spec.html）
+        </a>
+        、2026-10-31確認）。
       </p>
 
       <h2>この記事で取り上げた4台——楽天で詳細・在庫を確認</h2>
@@ -506,6 +511,8 @@ export default async function JoshitsukiKoukaiPage() {
       </ul>
 
       <RelatedTier1 items={relatedTier1["joshitsuki-koukai"]} />
+
+      <p className="mt-8 text-xs text-ink/50">2026-10-31：除湿方式の説明を、公式情報に合わせて訂正しました</p>
     </article>
   );
 }
