@@ -282,7 +282,9 @@ export default async function JoshitsukiKoukaiPage() {
         <p className="mt-4 mb-0.5 text-xs font-bold text-ink/60">▶ 電気代と運転音</p>
         <p>
           コンプレッサー式を毎日4時間使った月の電気代は、<strong>月+1,500〜2,000円程度</strong>でした（自宅で測った目安。測定時の運転条件：毎日4時間の運転。運転モード・季節・電力料金の単価によって変わります）。
-          デシカント式はさらに高くなる傾向があると言われており、使い方・機種・電力料金によって大きく変わります。
+          デシカント式は、ヒーターを使うため消費電力が大きく、電気代（ランニングコスト）が高くなりやすい方式と、トヨトミ公式のよくある質問で説明されています（出典：
+          <a href="https://www.toyotomi.jp/support/other/faq/post_1517" target="_blank" rel="noopener noreferrer nofollow">トヨトミ公式「コンプレッサー方式とデシカント方式の違い？」（toyotomi.jp/support/other/faq/post_1517）</a>
+          、2026-10-31確認）。使い方・機種・電力料金によって大きく変わります。
         </p>
         <p className="mt-2">
           運転音は「強」だとかなり大きく感じて、リビングではテレビの音量を上げたくなりました。
