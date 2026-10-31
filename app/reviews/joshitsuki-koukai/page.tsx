@@ -345,7 +345,7 @@ export default async function JoshitsukiKoukaiPage() {
               <th className="p-3">比較項目</th>
               <th className="p-3 text-ink">コンプレッサー式</th>
               <th className="p-3 text-ink">デシカント式</th>
-              <th className="p-3 text-ink">ハイブリッド式</th>
+              <th className="p-3 text-ink">ハイブリッド式（切替式）</th>
             </tr>
           </thead>
           <tbody className="text-ink/75">
@@ -389,6 +389,20 @@ export default async function JoshitsukiKoukaiPage() {
         </table>
         <p className="px-3 pb-3 pt-1 text-xs text-ink/45">
           ※方式の一般的な傾向を示した比較です。具体的なスペック・価格は各メーカー公式ページでご確認ください。
+        </p>
+        <p className="px-3 pb-3 text-xs text-ink/55">
+          ※パナソニックの公式ガイドは、ハイブリッド方式を、季節や環境に合わせてコンプレッサーとデシカントの運転を切り替える方式と説明しています。
+          これに対し、パナソニック F-YEX120B の「エコ・ハイブリッド方式」は、コンプレッサー方式と空冷式の除湿を組み合わせ、2つの冷却の仕組みで除湿する別の方式です。
+          そのため、この表の「ハイブリッド式（切替式）」の列には当てはまりません。
+          （出典：
+          <a href="https://panasonic.jp/joshitsu/select.html" target="_blank" rel="noopener noreferrer nofollow">
+            パナソニック公式「除湿機の選び方」（panasonic.jp/joshitsu/select.html）
+          </a>
+          、
+          <a href="https://panasonic.jp/joshitsu/products/F-YEX120B/spec.html" target="_blank" rel="noopener noreferrer nofollow">
+            パナソニック公式「F-YEX120B 仕様」（panasonic.jp/joshitsu/products/F-YEX120B/spec.html）
+          </a>
+          、2026-10-31確認）
         </p>
       </div>
 
