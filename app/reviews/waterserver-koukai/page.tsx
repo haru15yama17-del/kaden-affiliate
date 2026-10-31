@@ -13,7 +13,16 @@ import type { Product } from "@/data/types";
 // キャンペーン期間の判定をリクエスト時刻ベースにするため、ビルド時に固定されないよう定期再生成する
 export const revalidate = 3600;
 
-function HaruBubble({ label, children }: { label: string; children: ReactNode }) {
+function HaruBubble({
+  label,
+  children,
+  storeNote,
+}: {
+  label: string;
+  children: ReactNode;
+  /** 任意の「店頭メモ」。未指定（空）のときは何も表示しない */
+  storeNote?: ReactNode;
+}) {
   return (
     <div className="not-prose my-5 flex items-start gap-3">
       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent/15 text-2xl">
@@ -22,6 +31,12 @@ function HaruBubble({ label, children }: { label: string; children: ReactNode })
       <div className="relative flex-1 rounded-2xl rounded-tl-none border border-accent/20 bg-blush/40 p-4">
         <p className="mb-1 text-xs font-bold uppercase tracking-wide text-accent/75">{label}</p>
         <div className="text-sm text-ink/75 leading-relaxed">{children}</div>
+        {storeNote && (
+          <div className="mt-3 border-t border-accent/15 pt-3 text-sm leading-relaxed text-ink/75">
+            <p className="mb-1 text-xs font-bold uppercase tracking-wide text-accent/75">店頭メモ</p>
+            {storeNote}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -106,6 +121,9 @@ export default async function WaterserverKoukaiPage() {
     rating: undefined,
     specs: compactSpecs[p.slug] ?? [],
   }));
+
+  // 実際に店頭で見た内容があるときだけ、商品slugをキーに追記する（空のときは何も表示されない）
+  const storeNotes: Record<string, ReactNode> = {};
 
   const haruContents: Record<string, ReactNode> = {
     "aquaclara": (
@@ -214,7 +232,7 @@ export default async function WaterserverKoukaiPage() {
         </ul>
       </div>
 
-      <HaruBubble label="はるの店頭レポート">{haruContents["aquaclara"]}</HaruBubble>
+      <HaruBubble label="はるの感想" storeNote={storeNotes["aquaclara"]}>{haruContents["aquaclara"]}</HaruBubble>
 
       <AffiliateButtons aff={aquaclara.affiliate} productName={aquaclara.name} />
 
@@ -271,7 +289,7 @@ export default async function WaterserverKoukaiPage() {
         </ul>
       </div>
 
-      <HaruBubble label="はるの店頭レポート">{haruContents["premium-water"]}</HaruBubble>
+      <HaruBubble label="はるの感想" storeNote={storeNotes["premium-water"]}>{haruContents["premium-water"]}</HaruBubble>
 
       <AffiliateButtons aff={premiumWater.affiliate} productName={premiumWater.name} />
 
