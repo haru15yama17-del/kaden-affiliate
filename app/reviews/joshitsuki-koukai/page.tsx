@@ -576,6 +576,7 @@ export default async function JoshitsukiKoukaiPage() {
       <RelatedTier1 items={relatedTier1["joshitsuki-koukai"]} />
 
       <p className="mt-8 text-xs text-ink/50">2026-10-31：除湿方式の説明を、公式情報に合わせて訂正しました</p>
+      <p className="mt-1 text-xs text-ink/50">2026-10-31：除湿機の仕様・出典を追記し、確認できない記述を削除しました</p>
     </article>
   );
 }
