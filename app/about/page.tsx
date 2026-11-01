@@ -1,3 +1,4 @@
+import { SupportBanner } from "@/components/ReadingGuide";
 import Link from "next/link";
 import { buildMetadata } from "@/lib/seo";
 
@@ -11,6 +12,7 @@ export default function AboutPage() {
   return (
     <div className="prose-article max-w-none">
       <h1 className="font-serif text-3xl font-bold">運営者情報</h1>
+      <SupportBanner kind="about"/>
 
       {/* プロフィールカード */}
       <div className="not-prose my-8 rounded-2xl border border-accent/20 bg-blush/50 p-6 sm:p-8">

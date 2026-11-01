@@ -1,3 +1,4 @@
+import { ArticleWelcome, ReadingPause, ProductGlance } from "@/components/ReadingGuide";
 import fs from "node:fs";
 import { EditorialImage } from "@/components/EditorialImage";
 import { categoryImage } from "@/data/editorial";
@@ -108,22 +109,6 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
 
       <CampaignBanner slug={p.slug} />
 
-      {/* ✅ この記事の結論（本文最上部） */}
-      <div className="not-prose my-4 rounded-2xl border-2 border-sub/30 bg-moss/40 p-5">
-        <p className="mb-1.5 text-xs font-bold uppercase tracking-widest text-sub">
-          ✅ この記事の結論
-        </p>
-        <p className="font-bold text-ink">{p.name}</p>
-        <p className="mt-1 text-sm text-ink/65">
-          こんな人におすすめ：{p.bestFor[0]}
-        </p>
-        {hasCta && (
-          <div className="mt-3">
-            <AffiliateButtons aff={p.affiliate} productName={p.name} />
-          </div>
-        )}
-      </div>
-
       {/* Title */}
       <h1 className="font-serif text-3xl font-bold leading-tight">{p.name}のレビュー・評価</h1>
       <div className="mt-2 flex flex-wrap items-center gap-3 text-sm text-ink/55">
@@ -132,39 +117,8 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
         <span>更新日：{p.updatedAt}</span>
       </div>
 
-      {/* ── 総合評価サマリーボックス（CVR最重要） ── */}
-      <div className="my-6 rounded-2xl border-2 border-accent/30 bg-white p-5 shadow-card">
-        <p className="mb-3 text-xs font-bold uppercase tracking-widest text-accent/75">
-          編集部の総合評価
-        </p>
-        <div className="mb-4 flex items-center gap-5">
-          {p.rating != null && <Rating value={p.rating} size="lg" />}
-          <div>
-            <p className="font-bold text-ink">{p.priceRange}</p>
-            <p className="text-xs text-ink/45">最終更新：{p.updatedAt}</p>
-          </div>
-        </div>
-
-        {/* Pros/cons quick list */}
-        <div className="mb-5 grid gap-1.5 sm:grid-cols-2">
-          {p.pros.slice(0, 3).map((pro, i) => (
-            <p key={i} className="flex items-start gap-1.5 text-sm">
-              <span className="mt-0.5 shrink-0 rounded bg-ok/10 px-1 font-bold text-ok">✓</span>
-              <span>{pro.replace(/（※編集部記述）/g, "")}</span>
-            </p>
-          ))}
-          {p.cons.slice(0, 2).map((con, i) => (
-            <p key={i} className="flex items-start gap-1.5 text-sm">
-              <span className="mt-0.5 shrink-0 rounded bg-ng/10 px-1 font-bold text-ng">✗</span>
-              <span className="text-ink/65">{con.replace(/（※編集部記述）/g, "")}</span>
-            </p>
-          ))}
-        </div>
-
-        <AffiliateButtons aff={p.affiliate} productName={p.name} />
-      </div>
-
-      <EditorialImage {...categoryImage(p.category, p.slug)} className="my-8 rounded-xl" />
+      <ArticleWelcome category={p.category} slug={p.slug} />
+      <div className="quick-match not-prose"><span>こんな暮らしに</span><p>{p.bestFor[0] || "使いたい場面と仕様を確認して選びましょう。"}</p></div>
       <h2>はじめに</h2>
       <p>{body.intro ? <RichText text={body.intro} /> : `${p.name}を、${cat.selectionPoints.slice(0, 3).join("・")}の観点で評価しました。結論から言うと、${p.bestFor[0]}に向いた選択肢です。`}</p>
 
@@ -182,6 +136,7 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
       ))}
 
       <h2>主なスペック</h2>
+      <ProductGlance p={p} link={false}/>
       <div className="overflow-x-auto rounded-xl border border-ink/15 shadow-card">
         <table className="w-full border-collapse text-sm">
           <tbody>

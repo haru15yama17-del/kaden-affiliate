@@ -1,3 +1,4 @@
+import { ArticleWelcome, ReadingPause } from "@/components/ReadingGuide";
 import { GuideSchema } from "@/components/GuideSchema";
 import Link from "next/link";
 import { getAllProducts } from "@/lib/data";
@@ -195,8 +196,9 @@ export default async function BigankiKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
+      <ArticleWelcome category="beauty" slug="biganki-koukai" />
       <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
-      <p className="text-xs text-ink/55">修正履歴：2026-11-01 固定の価格表示を最新条件の確認案内へ変更。使用体験・店頭での記録は保持しています。</p>
+      <details className="edit-history"><summary>更新・修正の記録</summary><p>修正履歴：2026-11-01 固定の価格表示を最新条件の確認案内へ変更。使用体験・店頭での記録は保持しています。</p></details>
 
       {/* ── 結論ファースト：優先度別の振り分け案内 ── */}
       <div className="not-prose my-5 rounded-xl border-2 border-accent/40 bg-blush/60 p-4">
@@ -218,7 +220,8 @@ export default async function BigankiKoukaiPage() {
         </p>
       </div>
 
-      <h2>2台をざっくり比較</h2>
+      <section className="reading-section">
+<h2>2台をざっくり比較</h2>
       <ComparisonTable items={compactItems} highlightBest={false} />
       <p className="text-sm text-ink/55">
         ※この記事は優劣ではなく「どちらが自分の優先順位に合うか」を軸にしているため、おすすめバッジは表示していません。
@@ -238,7 +241,9 @@ export default async function BigankiKoukaiPage() {
       </p>
 
       {/* ── 商品1：トリア ── */}
-      <h2>トリア 美顔器 FRX</h2>
+      </section>
+<section className="reading-section">
+<h2>トリア 美顔器 FRX</h2>
       <ProductCard p={tria} />
 
       <h3>トリア FRXの使い方（メーカー案内）</h3>
@@ -251,7 +256,10 @@ export default async function BigankiKoukaiPage() {
       </p>
 
       {/* ── 商品2：Re・De ── */}
-      <h2>Re・De Suhada スティック美顔器（FM01A）</h2>
+      </section>
+<ReadingPause category="beauty" slug="biganki-koukai" />
+<section className="reading-section">
+<h2>Re・De Suhada スティック美顔器（FM01A）</h2>
       <ProductCard p={rede} />
 
       <h3>Re・De Suhadaの使い方（メーカー案内）</h3>
@@ -263,7 +271,9 @@ export default async function BigankiKoukaiPage() {
       </p>
 
       {/* ── 比較の軸 ── */}
-      <h2>選び方の軸：方式・価格・使い続けやすさ</h2>
+      </section>
+<section className="reading-section">
+<h2>選び方の軸：方式・価格・使い続けやすさ</h2>
       <p>
         <strong>方式：</strong>
         FRXはフラクショナルレーザー、SuhadaはEMS・LED・振動・温熱を組み合わせたタイプです。
@@ -339,7 +349,9 @@ export default async function BigankiKoukaiPage() {
       </div>
 
       {/* ── まとめ ── */}
-      <h2>まとめ：予算と続けやすさから逆算して選ぶ</h2>
+      </section>
+<section className="reading-section">
+<h2>まとめ：予算と続けやすさから逆算して選ぶ</h2>
       <p>
         初期費用がかかっても、12週間単位でじっくり続けられるならレーザー方式の<strong>トリア FRX</strong>、
         まずは価格を抑えて軽く始めたいなら<strong>Re・De Suhada</strong>という選び分けになります。
@@ -347,7 +359,9 @@ export default async function BigankiKoukaiPage() {
       </p>
 
       {/* ── あわせて読みたい ── */}
-      <h2>あわせて読みたい——毎日のセルフケアをもっとラクに</h2>
+      </section>
+<section className="reading-section">
+<h2>あわせて読みたい——毎日のセルフケアをもっとラクに</h2>
       <ul>
         <li>
           ▶{" "}
@@ -364,6 +378,7 @@ export default async function BigankiKoukaiPage() {
           （ほかの美容家電もまとめてチェックしたい方に）
         </li>
       </ul>
-    </article>
+    </section>
+</article>
   );
 }

@@ -1,3 +1,4 @@
+import { ArticleWelcome, ReadingPause } from "@/components/ReadingGuide";
 import { GuideSchema } from "@/components/GuideSchema";
 import { getAllProducts } from "@/lib/data";
 import { buildMetadata } from "@/lib/seo";
@@ -159,8 +160,9 @@ export default async function FutonDryerKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
+      <ArticleWelcome category="seasonal" slug="futon-dryer-koukai" />
       <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
-      <p className="text-xs text-ink/55">修正履歴：2026-11-01 比較・利用条件の説明を見直しました。体験談と店頭での会話は当時の記録として掲載しており、個人の感想は性能や現在の契約条件を保証するものではありません。</p>
+      <details className="edit-history"><summary>更新・修正の記録</summary><p>修正履歴：2026-11-01 比較・利用条件の説明を見直しました。体験談と店頭での会話は当時の記録として掲載しており、個人の感想は性能や現在の契約条件を保証するものではありません。</p></details>
 
       <p>
         布団乾燥機は、対応する寝具・設定時間・セット方法・収納場所を購入前に確認したい家電です。この記事では、使いたい場面と仕様が合うかを整理します。
@@ -169,7 +171,8 @@ export default async function FutonDryerKoukaiPage() {
         この記事では、据置きホース式の<strong>アイリスオーヤマ カラリエ FK-D2</strong>と、スティック型の<strong>cado FOEHN PRO</strong>を例に、後悔しやすいポイントと、2つのタイプの根本的な違いを整理します。
       </p>
 
-      <h2>布団乾燥機で後悔しやすい5つのポイント</h2>
+      <section className="reading-section">
+<h2>布団乾燥機で後悔しやすい5つのポイント</h2>
       <p>購入前に知っておくと後悔しにくくなるポイントを5つにまとめました。</p>
 
       <h3>① 収納場所を考えずに買う</h3>
@@ -206,7 +209,9 @@ export default async function FutonDryerKoukaiPage() {
         実際の電気代は運転時間とご契約の電力料金単価によって変わるため、<strong>消費電力の数値をもとにご自身で確認</strong>することをおすすめします。
       </p>
 
-      <h2>カラリエFK-D2とcado FOEHN PROの違い</h2>
+      </section>
+<section className="reading-section">
+<h2>カラリエFK-D2とcado FOEHN PROの違い</h2>
       <p>
         2機種の根本的な違いは<strong>「据置きホース式」か「スティック型」か</strong>という本体の形状です。
       </p>
@@ -229,13 +234,20 @@ export default async function FutonDryerKoukaiPage() {
         スペックはメーカー公表値です。詳しい仕様は各商品の見出し以降で解説します。
       </p>
 
-      <h2>カラリエFK-D2が向いている人</h2>
+      </section>
+<ReadingPause category="seasonal" slug="futon-dryer-koukai" />
+<section className="reading-section">
+<h2>カラリエFK-D2が向いている人</h2>
       <ProductCard p={karari} />
 
-      <h2>cado FOEHN PROが向いている人</h2>
+      </section>
+<section className="reading-section">
+<h2>cado FOEHN PROが向いている人</h2>
       <ProductCard p={cado} />
 
-      <h2>よくある質問</h2>
+      </section>
+<section className="reading-section">
+<h2>よくある質問</h2>
       <div className="not-prose space-y-3">
         {faq.map((x, i) => (
           <div key={i} className="rounded-xl border border-ink/15 bg-white p-4 shadow-card">
@@ -245,7 +257,9 @@ export default async function FutonDryerKoukaiPage() {
         ))}
       </div>
 
-      <h2>まとめ：形状と使い方の違いで選ぶ</h2>
+      </section>
+<section className="reading-section">
+<h2>まとめ：形状と使い方の違いで選ぶ</h2>
       <p>
         カラリエFK-D2とFOEHN PROはどちらも「マットなし式」ですが、
         <strong>据置きホース式かスティック型か</strong>で使い勝手が大きく変わります。
@@ -259,6 +273,7 @@ export default async function FutonDryerKoukaiPage() {
       </p>
 
       <RelatedTier1 items={relatedTier1["futon-dryer-koukai"]} />
-    </article>
+    </section>
+</article>
   );
 }

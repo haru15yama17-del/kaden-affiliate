@@ -1,3 +1,4 @@
+import { ArticleWelcome, ReadingPause } from "@/components/ReadingGuide";
 import { GuideSchema } from "@/components/GuideSchema";
 import { getAllProducts } from "@/lib/data";
 import { buildMetadata } from "@/lib/seo";
@@ -208,8 +209,9 @@ export default async function PersonalDishwasherKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
+      <ArticleWelcome category="cooking" slug="personal-dishwasher-koukai" />
       <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
-      <p className="text-xs text-ink/55">修正履歴：2026-11-01 比較・利用条件の説明を見直しました。体験談と店頭での会話は当時の記録として掲載しており、個人の感想は性能や現在の契約条件を保証するものではありません。</p>
+      <details className="edit-history"><summary>更新・修正の記録</summary><p>修正履歴：2026-11-01 比較・利用条件の説明を見直しました。体験談と店頭での会話は当時の記録として掲載しており、個人の感想は性能や現在の契約条件を保証するものではありません。</p></details>
 
       {/* ── 結論ファースト：振り分け案内 ── */}
       <div className="not-prose my-5 rounded-xl border-2 border-accent/40 bg-blush/60 p-4">
@@ -231,7 +233,8 @@ export default async function PersonalDishwasherKoukaiPage() {
         </p>
       </div>
 
-      <h2>2台をざっくり比較</h2>
+      <section className="reading-section">
+<h2>2台をざっくり比較</h2>
       <ComparisonTable items={compactItems} highlightBest={false} />
       <p className="text-sm text-ink/55">
         ※優劣ではなく用途（1人用か1〜2人用か）で選ぶ記事のため、おすすめバッジは表示していません。
@@ -247,15 +250,22 @@ export default async function PersonalDishwasherKoukaiPage() {
       </p>
 
       {/* ── 商品1：SOLOTA ── */}
-      <h2>パナソニック SOLOTA NP-TML1</h2>
+      </section>
+<section className="reading-section">
+<h2>パナソニック SOLOTA NP-TML1</h2>
       <ProductCard p={solota} />
 
       {/* ── 商品2：ラクアmini color ── */}
-      <h2>サンコー ラクアmini color</h2>
+      </section>
+<ReadingPause category="cooking" slug="personal-dishwasher-koukai" />
+<section className="reading-section">
+<h2>サンコー ラクアmini color</h2>
       <ProductCard p={rakua} />
 
       {/* ── 比較の軸 ── */}
-      <h2>比較の軸：安心感か、収納力とデザインか</h2>
+      </section>
+<section className="reading-section">
+<h2>比較の軸：安心感か、収納力とデザインか</h2>
       <p>
         SOLOTAは大手メーカーならではの安心感と、50℃以上の高圧水流で洗う<strong>ストリーム除菌洗浄</strong>が強みです。
         1人分の食器点数にちょうど良いコンパクトさで、狭いキッチンにも置きやすいのが特長です。
@@ -321,7 +331,9 @@ export default async function PersonalDishwasherKoukaiPage() {
       </div>
 
       {/* ── まとめ ── */}
-      <h2>まとめ：安心感のSOLOTA、収納力とデザインのラクアmini color</h2>
+      </section>
+<section className="reading-section">
+<h2>まとめ：安心感のSOLOTA、収納力とデザインのラクアmini color</h2>
       <p>
         デザイン・省スペース（薄さ）・給水のしやすさを優先するなら<strong>SOLOTA NP-TML1</strong>、
         収納容量や温風乾燥・価格の手頃さを優先するなら<strong>ラクアmini color</strong>という選び分けになります。
@@ -329,6 +341,7 @@ export default async function PersonalDishwasherKoukaiPage() {
       </p>
 
       <RelatedTier1 items={relatedTier1["personal-dishwasher-koukai"]} />
-    </article>
+    </section>
+</article>
   );
 }

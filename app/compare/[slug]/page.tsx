@@ -1,3 +1,4 @@
+import { ReadingSteps, ProductGlance } from "@/components/ReadingGuide";
 import { notFound } from "next/navigation";
 import { getAllProducts } from "@/lib/data";
 import { compareSlug, effectiveCompetitors, parseComparison } from "@/lib/links";
@@ -53,7 +54,9 @@ export default async function ComparePage({ params }: { params: { slug: string }
       />
       <h1 className="font-serif text-3xl font-bold">{items.map((p) => p.name).join(" と ")} を比較</h1>
 
-      <p className="text-sm text-ink/60">2026-11-01 修正：比較対象を用途で見直し、価格の断定と自動おすすめ判定を取りやめました。仕様の測定条件が異なる場合、数値だけで優劣は判断できません。</p>
+      <details className="edit-history"><summary>比較の見方・更新の記録</summary><p>2026-11-01 修正：比較対象を用途で見直し、価格の断定と自動おすすめ判定を取りやめました。仕様の測定条件が異なる場合、数値だけで優劣は判断できません。</p></details>
+      <div className="compare-portraits">{items.map(p=><ProductGlance key={p.slug} p={p}/>)}</div>
+      <ReadingSteps category={items[0].category} slug={items[0].slug}/>
       <h2>スペック比較表</h2>
       <ComparisonTable items={items} />
 

@@ -1,3 +1,4 @@
+import { ArticleWelcome, ProductGlance } from "@/components/ReadingGuide";
 import { notFound } from "next/navigation";
 import { categories, categoryMap } from "@/data/categories";
 import { getRanking } from "@/lib/data";
@@ -55,6 +56,7 @@ export default async function RankingPage({ params }: { params: { slug: string }
         評価軸：{c.selectionPoints.join("・")}。編集部評価の高い順に紹介します。
       </p>
 
+      <ArticleWelcome category={c.slug}/>
       {/* Selection checklist */}
       <div className="my-6 rounded-xl border border-sub/25 bg-sub/5 p-4">
         <p className="mb-2.5 text-sm font-bold text-sub">✅ 選び方のチェックポイント</p>
@@ -121,6 +123,7 @@ export default async function RankingPage({ params }: { params: { slug: string }
                     </Link>
                   </div>
 
+                  <ProductGlance p={p}/>
                   {/* Quick pros */}
                   <div className="mt-3 grid gap-1 sm:grid-cols-2">
                     {p.pros.slice(0, 2).map((pro, pi) => (

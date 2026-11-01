@@ -1,3 +1,4 @@
+import { ArticleWelcome, ReadingPause } from "@/components/ReadingGuide";
 import { GuideSchema } from "@/components/GuideSchema";
 import { getAllProducts } from "@/lib/data";
 import { buildMetadata } from "@/lib/seo";
@@ -214,13 +215,9 @@ export default async function AirconKoukaiPage() {
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
       <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
-      <p className="text-xs text-ink/55">修正履歴：2026-11-01 最安の断定と価格予測を見直しました。店頭の会話・使用感は当時の記録として残しています。</p>
+      <details className="edit-history"><summary>更新・修正の記録</summary><p>修正履歴：2026-11-01 最安の断定と価格予測を見直しました。店頭の会話・使用感は当時の記録として残しています。</p></details>
 
-      <ArticleImage
-        src={`${IMG_BASE}/hero.svg`}
-        alt="壁掛けエアコンのシルエットと、工事費込み・2027省エネ基準・畳数で選ぶ・安さまたは省エネ重視の選び方を示す図解"
-        caption="2027年の省エネ基準引き上げを前に、工事費込みエアコンを「安さ」か「省エネ・メーカー」かで選ぶ方法を整理した図解"
-      />
+      <ArticleWelcome category="aircon" slug="aircon-2027-koukai" />
 
       {/* ── 結論ファースト（3行） ── CV-1 */}
       <div className="not-prose my-5 rounded-xl border-2 border-accent/40 bg-blush/60 p-4">
@@ -280,7 +277,8 @@ export default async function AirconKoukaiPage() {
       {/* ================================================================
           2027年問題 解説
       ================================================================ */}
-      <h2>エアコン2027年問題とは？購入を急ぐ前に確認したいこと</h2>
+      <section className="reading-section">
+<h2>エアコン2027年問題とは？購入を急ぐ前に確認したいこと</h2>
       <p>資源エネルギー庁は、家庭用エアコンの新しい省エネ基準について案内しています。制度の変更と、個別商品の販売価格・在庫状況は分けて考えましょう。</p>
       <p><strong>省エネ基準の変更だけを理由に、今すぐ買い替える必要はありません。</strong>購入する場合は、本体価格に加え、設置工事の範囲・適用畳数・省エネ性能を確認してください。</p>
       <h3>値上がりや品薄を断定しない</h3>
@@ -318,7 +316,9 @@ export default async function AirconKoukaiPage() {
       {/* ================================================================
           グループ1: 安さ重視
       ================================================================ */}
-      <h2 id="group-yasui">工事費込みで安いのはどれ？安さ重視グループ2選</h2>
+      </section>
+<section className="reading-section">
+<h2 id="group-yasui">工事費込みで安いのはどれ？安さ重視グループ2選</h2>
       <p>
         工事費込みで費用を抑えたい場合の2選です。
         メーカーにこだわりがなくスタンダードな性能で十分という方に向いています。
@@ -401,7 +401,10 @@ export default async function AirconKoukaiPage() {
       {/* ================================================================
           グループ2: メーカー・省エネ重視
       ================================================================ */}
-      <h2 id="group-eco">何畳用を選べばいい？メーカー・省エネ重視グループ3選</h2>
+      </section>
+<ReadingPause category="aircon" slug="aircon-2027-koukai" />
+<section className="reading-section">
+<h2 id="group-eco">何畳用を選べばいい？メーカー・省エネ重視グループ3選</h2>
       <p>
         大手メーカーの信頼性や省エネ上位機を重視する方向けの3選です。
         2027年基準引き上げを前提に、今から省エネ性能の高い機種を選びたい方にも向いています。
@@ -509,7 +512,9 @@ export default async function AirconKoukaiPage() {
       {/* ================================================================
           比較表（compactItems）
       ================================================================ */}
-      <h2>5機種をざっくり比較</h2>
+      </section>
+<section className="reading-section">
+<h2>5機種をざっくり比較</h2>
       <ComparisonTable items={compactItems} highlightBest={false} />
       <p className="text-sm text-ink/55">
         ※「優劣」ではなく「安さ重視か、省エネ・メーカー重視か」を軸にしているため、おすすめバッジは表示していません。
@@ -520,7 +525,9 @@ export default async function AirconKoukaiPage() {
       {/* ================================================================
           比較表（購入ボタン付き）
       ================================================================ */}
-      <h2>5モデル一覧比較表——畳数・グループ別に選ぶ</h2>
+      </section>
+<section className="reading-section">
+<h2>5モデル一覧比較表——畳数・グループ別に選ぶ</h2>
       <p>
         グループ / 畳数 / 省エネ傾向 / こんな人向けを横断比較します。
         価格・在庫は時期によって変動するため各ストアで最新情報を確認してください。
@@ -621,7 +628,9 @@ export default async function AirconKoukaiPage() {
       {/* ================================================================
           デメリット・注意点
       ================================================================ */}
-      <h2>工事費込みエアコンで後悔しない注意点・デメリット5つ</h2>
+      </section>
+<section className="reading-section">
+<h2>工事費込みエアコンで後悔しない注意点・デメリット5つ</h2>
       <p>
         工事費込みセットを選ぶ前に知っておくと後悔しにくくなるポイントをまとめます。
       </p>
@@ -705,7 +714,9 @@ export default async function AirconKoukaiPage() {
       {/* ================================================================
           FAQ
       ================================================================ */}
-      <h2>よくある質問（エアコン2027年問題・工事費込みセット）</h2>
+      </section>
+<section className="reading-section">
+<h2>よくある質問（エアコン2027年問題・工事費込みセット）</h2>
       <div className="not-prose space-y-3">
         {faq.map((x, i) => (
           <div key={i} className="rounded-xl border border-ink/15 bg-white p-4 shadow-card">
@@ -718,7 +729,9 @@ export default async function AirconKoukaiPage() {
       {/* ================================================================
           内部リンク
       ================================================================ */}
-      <h2>あわせて読みたい——夏の暮らしをもっとラクにする</h2>
+      </section>
+<section className="reading-section">
+<h2>あわせて読みたい——夏の暮らしをもっとラクにする</h2>
       <p>
         エアコンで夏の快適さを確保しつつ、除湿やお水まわりも一緒に見直すと暮らし全体の満足度が上がりやすくなります。
       </p>
@@ -745,6 +758,7 @@ export default async function AirconKoukaiPage() {
           （エアコンで夏の環境を整えつつ洗濯乾燥まで自動化したい方に）
         </li>
       </ul>
-    </article>
+    </section>
+</article>
   );
 }

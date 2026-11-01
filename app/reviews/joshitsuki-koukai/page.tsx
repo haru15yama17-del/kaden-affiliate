@@ -1,3 +1,4 @@
+import { ArticleWelcome, ReadingPause } from "@/components/ReadingGuide";
 import { GuideSchema } from "@/components/GuideSchema";
 import { getAllProducts } from "@/lib/data";
 import { buildMetadata } from "@/lib/seo";
@@ -225,11 +226,7 @@ export default async function JoshitsukiKoukaiPage() {
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
       <p className="mt-2 text-sm text-ink/55">更新日：2026-10-31</p>
 
-      <ArticleImage
-        src={`${IMG_BASE}/hero.svg`}
-        alt="除湿機のシルエットと、部屋干し乾燥・カビ対策・タンク式・夏梅雨に強いの機能アイコンを示す図解"
-        caption="部屋干し乾燥・カビ対策・タンク式水捨て・梅雨〜夏向け——衣類乾燥除湿機の特徴を示した図解"
-      />
+      <ArticleWelcome category="seasonal" slug="joshitsuki-koukai" />
 
       <RecommendBox
         name="シャープ 衣類乾燥除湿機 CV-S71"
@@ -256,7 +253,8 @@ export default async function JoshitsukiKoukaiPage() {
         </div>
       </div>
 
-      <h2>最初に結論：除湿機は「方式」と「使う季節」で選ぶのがポイントです</h2>
+      <section className="reading-section">
+<h2>最初に結論：除湿機は「方式」と「使う季節」で選ぶのがポイントです</h2>
       <p>
         シャープの衣類乾燥除湿機「CV-S71」は、コンプレッサー式の除湿機です。空気を冷やして水分を結露させる仕組みのため、
         <strong>夏の高温多湿な環境で高い除湿力を発揮しやすい</strong>
@@ -317,7 +315,9 @@ export default async function JoshitsukiKoukaiPage() {
         </p>
       </HaruBubble>
 
-      <h2>除湿機のデメリット・後悔しやすいポイント</h2>
+      </section>
+<section className="reading-section">
+<h2>除湿機のデメリット・後悔しやすいポイント</h2>
       <p>
         「買ってよかった」と感じる一方で、事前に知っておけばよかったと感じやすいポイントもあります。
         CV-S71個体の断定ではなく、コンプレッサー式の衣類乾燥除湿機全般の注意点として中立にお伝えします。
@@ -374,7 +374,10 @@ export default async function JoshitsukiKoukaiPage() {
         caption="コンプレッサー式とデシカント式——方式の特性の方向性を示した一般的な図解"
       />
 
-      <h2>コンプレッサー式・デシカント式・ハイブリッド式の違いを比較</h2>
+      </section>
+<ReadingPause category="seasonal" slug="joshitsuki-koukai" />
+<section className="reading-section">
+<h2>コンプレッサー式・デシカント式・ハイブリッド式の違いを比較</h2>
       <p>
         CV-S71はコンプレッサー式の衣類乾燥除湿機です。3方式を中立に並べると、それぞれの向き・不向きが見えやすくなります。
       </p>
@@ -448,7 +451,9 @@ export default async function JoshitsukiKoukaiPage() {
         </p>
       </div>
 
-      <h2>4台をざっくり比較</h2>
+      </section>
+<section className="reading-section">
+<h2>4台をざっくり比較</h2>
       <ComparisonTable items={compactItems} highlightBest={false} />
       <p className="text-sm text-ink/55">
         ※「優劣」ではなく「除湿方式・使う季節が何に向いているか」を軸にしているため、おすすめバッジは表示していません。
@@ -461,7 +466,9 @@ export default async function JoshitsukiKoukaiPage() {
         、2026-10-31確認）。
       </p>
 
-      <h2>この記事で取り上げた4台——楽天で詳細・在庫を確認</h2>
+      </section>
+<section className="reading-section">
+<h2>この記事で取り上げた4台——楽天で詳細・在庫を確認</h2>
       <p>価格・在庫は時期によって変動します。最新情報は各ストアでご確認ください。</p>
       <div className="not-prose space-y-6">
         {dehumidifiers.map((p) => {
@@ -508,7 +515,9 @@ export default async function JoshitsukiKoukaiPage() {
         })}
       </div>
 
-      <h2>まとめ：除湿機は「方式と使う季節」を確認してから選ぶのがポイント</h2>
+      </section>
+<section className="reading-section">
+<h2>まとめ：除湿機は「方式と使う季節」を確認してから選ぶのがポイント</h2>
       <p>
         CV-S71（コンプレッサー式）で後悔しやすい点は5つ——排熱による室温上昇・タンクの水捨て・運転音・本体サイズ・冬の能力低下です。
         いずれも「コンプレッサー式の特性」として事前に理解しておくことで対策しやすくなります。
@@ -522,7 +531,9 @@ export default async function JoshitsukiKoukaiPage() {
         冬の結露対策・通年使用を重視する場合はデシカント式やハイブリッド式も比較してから選ぶと、後悔しにくくなります。
       </p>
 
-      <h2>よくある質問</h2>
+      </section>
+<section className="reading-section">
+<h2>よくある質問</h2>
       <div className="not-prose space-y-3">
         {faq.map((x, i) => (
           <div key={i} className="rounded-xl border border-ink/15 bg-white p-4 shadow-card">
@@ -544,7 +555,9 @@ export default async function JoshitsukiKoukaiPage() {
         ))}
       </div>
 
-      <h2>あわせて読みたい・暮らしをもっとラクにする組み合わせ</h2>
+      </section>
+<section className="reading-section">
+<h2>あわせて読みたい・暮らしをもっとラクにする組み合わせ</h2>
       <p>
         除湿機で梅雨の部屋干しを快適にしつつ、キッチンや食の手間も一緒に見直すと暮らし全体の満足度が上がりやすくなります。
       </p>
@@ -583,6 +596,7 @@ export default async function JoshitsukiKoukaiPage() {
 
       <p className="mt-8 text-xs text-ink/50">2026-10-31：除湿方式の説明を、公式情報に合わせて訂正しました</p>
       <p className="mt-1 text-xs text-ink/50">2026-10-31：除湿機の仕様・出典を追記し、確認できない記述を削除しました</p>
-    </article>
+    </section>
+</article>
   );
 }

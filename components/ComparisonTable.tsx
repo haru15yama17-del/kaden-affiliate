@@ -36,6 +36,7 @@ export function ComparisonTable({
 
   return (
     <div className="overflow-x-auto rounded-xl border border-ink/15 shadow-card">
+      <p className="comparison-scroll-note">横にスクロールして比較できます。未確認の項目は「—」で表示しています。</p>
       <table className="w-full min-w-[580px] border-collapse text-sm">
         <thead>
           <tr className="bg-ink/5">

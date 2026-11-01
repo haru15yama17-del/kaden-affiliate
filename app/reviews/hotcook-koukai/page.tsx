@@ -1,3 +1,4 @@
+import { ArticleWelcome, ReadingPause } from "@/components/ReadingGuide";
 import { GuideSchema } from "@/components/GuideSchema";
 import { getAllProducts } from "@/lib/data";
 import { buildMetadata } from "@/lib/seo";
@@ -131,13 +132,9 @@ export default async function HotcookKoukaiPage() {
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
       <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
-      <p className="text-xs text-ink/55">修正履歴：2026-11-01 固定の価格表示を最新条件の確認案内へ変更。使用体験・店頭での記録は保持しています。</p>
+      <details className="edit-history"><summary>更新・修正の記録</summary><p>修正履歴：2026-11-01 固定の価格表示を最新条件の確認案内へ変更。使用体験・店頭での記録は保持しています。</p></details>
 
-      <ArticleImage
-        src={`${IMG_BASE}/hero.svg`}
-        alt="ホットクック本体のシルエットと、無水調理・予約調理・自動かきまぜ・保温の機能アイコンを示す図解"
-        caption="無水調理・予約調理・自動かきまぜ・保温——材料を入れてボタンを押すだけの理由"
-      />
+      <ArticleWelcome category="cooking" slug="hotcook-koukai" />
 
       <RecommendBox
         name="ホットクック（ヘルシオ）"
@@ -145,7 +142,8 @@ export default async function HotcookKoukaiPage() {
         aff={hw16h.affiliate}
       />
 
-      <h2>最初に結論：ホットクックは「人を選ぶ」家電です</h2>
+      <section className="reading-section">
+<h2>最初に結論：ホットクックは「人を選ぶ」家電です</h2>
       <p>
         材料を入れてボタンを押すだけで、煮込み・無水調理・低温調理までほったらかしでできるシャープの「ヘルシオ
         ホットクック」。購入前には、調理にかかる時間や置き場所も確認したいところです。
@@ -182,7 +180,9 @@ export default async function HotcookKoukaiPage() {
         </p>
       </div>
 
-      <h2>ホットクックで後悔しやすい5つのデメリット</h2>
+      </section>
+<section className="reading-section">
+<h2>ホットクックで後悔しやすい5つのデメリット</h2>
       <p>ここからは、実際に購入者が「後悔した」と感じやすいポイントを、対策とセットで正直にお伝えします。</p>
 
       <h3>① とにかく大きい・置き場所に困る</h3>
@@ -249,7 +249,10 @@ export default async function HotcookKoukaiPage() {
         ：最初の1〜2週間は公式アプリのレシピ通りに作るのがおすすめ。Wi-Fi対応モデルならメニューを追加ダウンロードしてレパートリーを増やせます。
       </p>
 
-      <h2>後悔しないモデルの選び方（2026年・現行モデル）</h2>
+      </section>
+<ReadingPause category="cooking" slug="hotcook-koukai" />
+<section className="reading-section">
+<h2>後悔しないモデルの選び方（2026年・現行モデル）</h2>
       <p>容量＝家族の人数で選ぶのが基本です。</p>
 
       <div className="not-prose my-5 grid grid-cols-3 gap-3">
@@ -388,7 +391,9 @@ export default async function HotcookKoukaiPage() {
         </div>
       </div>
 
-      <h2>食材宅配を併用する前に、調理方法を確認</h2>
+      </section>
+<section className="reading-section">
+<h2>食材宅配を併用する前に、調理方法を確認</h2>
       <p>
         自動調理でも、献立を決めたり材料を準備したりする工程は残ります。食材宅配を検討するなら、どの工程を減らしたいかを整理しましょう。
       </p>
@@ -411,7 +416,9 @@ export default async function HotcookKoukaiPage() {
       </p>
       <p>宅配の利用条件と、ご家庭で必要な準備の両方を比べて選びましょう。</p>
 
-      <h2>まとめ：予約調理を使う生活に合うか確認しよう</h2>
+      </section>
+<section className="reading-section">
+<h2>まとめ：予約調理を使う生活に合うか確認しよう</h2>
       <p>
         ホットクックの後悔ポイントは、大きさ・スピード・価格・型番・慣れの5つ。でもそのほとんどは「予約調理を前提に使う」「置き場所を先に決める」「容量を正しく選ぶ」で回避できます。
       </p>
@@ -428,7 +435,9 @@ export default async function HotcookKoukaiPage() {
         </p>
       </HaruBubble>
 
-      <h2>よくある質問</h2>
+      </section>
+<section className="reading-section">
+<h2>よくある質問</h2>
       <div className="not-prose space-y-3">
         {faq.map((x, i) => (
           <div key={i} className="rounded-xl border border-ink/15 bg-white p-4 shadow-card">
@@ -439,6 +448,7 @@ export default async function HotcookKoukaiPage() {
       </div>
 
       <RelatedTier1 items={relatedTier1["hotcook-koukai"]} />
-    </article>
+    </section>
+</article>
   );
 }

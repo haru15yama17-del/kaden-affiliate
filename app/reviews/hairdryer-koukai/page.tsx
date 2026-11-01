@@ -1,3 +1,4 @@
+import { ArticleWelcome, ReadingPause } from "@/components/ReadingGuide";
 import { GuideSchema } from "@/components/GuideSchema";
 import Link from "next/link";
 import { getAllProducts } from "@/lib/data";
@@ -263,9 +264,10 @@ export default async function HairdryerKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
+      <ArticleWelcome category="personal-care" slug="hairdryer-koukai" />
       <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
-      <p className="text-xs text-ink/55">修正履歴：2026-11-01 比較・利用条件の説明を見直しました。体験談と店頭での会話は当時の記録として掲載しており、個人の感想は性能や現在の契約条件を保証するものではありません。</p>
-      <p className="text-xs text-ink/55">修正履歴：2026-11-01 固定の価格表示を最新条件の確認案内へ変更。使用体験・店頭での記録は保持しています。</p>
+      <details className="edit-history"><summary>更新・修正の記録</summary><p>修正履歴：2026-11-01 比較・利用条件の説明を見直しました。体験談と店頭での会話は当時の記録として掲載しており、個人の感想は性能や現在の契約条件を保証するものではありません。</p></details>
+      <details className="edit-history"><summary>更新・修正の記録</summary><p>修正履歴：2026-11-01 固定の価格表示を最新条件の確認案内へ変更。使用体験・店頭での記録は保持しています。</p></details>
 
       {/* ── 結論ファースト：悩み・優先度別の振り分け案内 ── */}
       <div className="not-prose my-5 rounded-xl border-2 border-accent/40 bg-blush/60 p-4">
@@ -299,7 +301,8 @@ export default async function HairdryerKoukaiPage() {
         </p>
       </div>
 
-      <h2>5台をざっくり比較</h2>
+      <section className="reading-section">
+<h2>5台をざっくり比較</h2>
       <ComparisonTable items={compactItems} highlightBest={false} />
       <p className="text-sm text-ink/55">
         ※この記事は「優劣」ではなく「悩み・優先度別にどれを選ぶか」を軸にしているため、おすすめバッジは表示していません。
@@ -320,19 +323,28 @@ export default async function HairdryerKoukaiPage() {
       </p>
 
       {/* ── 商品1：Re・De ── */}
-      <h2>Re・De Hairdry+（DR02A）</h2>
+      </section>
+<section className="reading-section">
+<h2>Re・De Hairdry+（DR02A）</h2>
       <ProductCard p={rede} />
 
       {/* ── 商品2：ブライト ── */}
-      <h2>ブライト シャワードライヤー BRT-SD173</h2>
+      </section>
+<ReadingPause category="personal-care" slug="hairdryer-koukai" />
+<section className="reading-section">
+<h2>ブライト シャワードライヤー BRT-SD173</h2>
       <ProductCard p={brighte} />
 
       {/* ── 商品3：ReFa ── */}
-      <h2>ReFa ビューテック ドライヤー S+</h2>
+      </section>
+<section className="reading-section">
+<h2>ReFa ビューテック ドライヤー S+</h2>
       <ProductCard p={refa} />
 
       {/* ── 商品4：KINUJO ── */}
-      <h2>KINUJO ヘアドライヤー 絹女 KH301/KH302</h2>
+      </section>
+<section className="reading-section">
+<h2>KINUJO ヘアドライヤー 絹女 KH301/KH302</h2>
       <ProductCard p={kinujo} />
 
       <h3>KH301とKH302の違いは？</h3>
@@ -341,11 +353,15 @@ export default async function HairdryerKoukaiPage() {
       </p>
 
       {/* ── 商品5：パナソニック ── */}
-      <h2>パナソニック ヘアードライヤー ナノケア EH-NA0K</h2>
+      </section>
+<section className="reading-section">
+<h2>パナソニック ヘアードライヤー ナノケア EH-NA0K</h2>
       <ProductCard p={naZeroK} />
 
       {/* ── 比較の軸 ── */}
-      <h2>比較の軸：風量・重量・価格帯</h2>
+      </section>
+<section className="reading-section">
+<h2>比較の軸：風量・重量・価格帯</h2>
       <p>
         掲載している風量はブライト2.58㎥/分（ブーストアタッチメント装着時）、KINUJO2.2㎥/分、パナソニック EH-NA0K1.6㎥/分です。付属品や測定条件をそろえた比較ではないため、数値の大小だけで乾く速さを順位づけできません。ReFa S+の同条件の風量データは未確認です。
         Re・De Hairdry+は風量ではなく<strong>風速（約53m/秒）</strong>で公表されており、測定単位が異なるため他4商品の風量とは単純比較できない点にご注意ください。
@@ -432,7 +448,9 @@ export default async function HairdryerKoukaiPage() {
       </div>
 
       {/* ── まとめ ── */}
-      <h2>まとめ：優先したい悩みから逆算して選ぶ</h2>
+      </section>
+<section className="reading-section">
+<h2>まとめ：優先したい悩みから逆算して選ぶ</h2>
       <p>
         軽さに加えてデザイン性も重視したいなら<strong>Re・De Hairdry+</strong>、
         乾かしながら髪の保湿・美容ケアもしたいなら<strong>ブライト シャワードライヤー</strong>、
@@ -443,7 +461,9 @@ export default async function HairdryerKoukaiPage() {
       </p>
 
       {/* ── あわせて読みたい ── */}
-      <h2>あわせて読みたい——毎日のセルフケアをもっとラクに</h2>
+      </section>
+<section className="reading-section">
+<h2>あわせて読みたい——毎日のセルフケアをもっとラクに</h2>
       <ul>
         <li>
           ▶{" "}
@@ -453,6 +473,7 @@ export default async function HairdryerKoukaiPage() {
           （ヘアケアに続いて、スキンケア家電も見直したい方に）
         </li>
       </ul>
-    </article>
+    </section>
+</article>
   );
 }

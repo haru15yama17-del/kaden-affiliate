@@ -1,3 +1,4 @@
+import { SupportBanner } from "@/components/ReadingGuide";
 import Link from "next/link";
 import { buildMetadata } from "@/lib/seo";
 
@@ -11,6 +12,7 @@ export default function DisclaimerPage() {
   return (
     <div className="prose-article max-w-none">
       <h1 className="font-serif text-3xl font-bold">免責事項</h1>
+      <SupportBanner kind="disclaimer"/>
       <p className="text-sm text-ink/50">最終更新：2026年6月</p>
 
       <h2>掲載情報の正確性・最新性について</h2>

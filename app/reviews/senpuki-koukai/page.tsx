@@ -1,3 +1,4 @@
+import { ArticleWelcome, ReadingPause } from "@/components/ReadingGuide";
 import { GuideSchema } from "@/components/GuideSchema";
 import { getAllProducts } from "@/lib/data";
 import { buildMetadata } from "@/lib/seo";
@@ -157,8 +158,9 @@ export default async function SenpukiKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
+      <ArticleWelcome category="seasonal" slug="senpuki-koukai" />
       <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
-      <p className="text-xs text-ink/55">修正履歴：2026-11-01 比較・利用条件の説明を見直しました。体験談と店頭での会話は当時の記録として掲載しており、個人の感想は性能や現在の契約条件を保証するものではありません。</p>
+      <details className="edit-history"><summary>更新・修正の記録</summary><p>修正履歴：2026-11-01 比較・利用条件の説明を見直しました。体験談と店頭での会話は当時の記録として掲載しており、個人の感想は性能や現在の契約条件を保証するものではありません。</p></details>
 
       {/* ── 結論ファースト：振り分け案内 ── */}
       <div className="not-prose my-5 rounded-xl border-2 border-accent/40 bg-blush/60 p-4">
@@ -195,7 +197,8 @@ export default async function SenpukiKoukaiPage() {
       </p>
 
       {/* ── 扇風機 vs サーキュレーター 比較表 ── */}
-      <h2>扇風機とサーキュレーターの違い——用途で選ぶのがポイント</h2>
+      <section className="reading-section">
+<h2>扇風機とサーキュレーターの違い——用途で選ぶのがポイント</h2>
       <p>
         見た目は似ていますが、風の性質と目的が異なります。
         <strong>どちらが優れているのではなく、使う場面に合わせて選ぶ</strong>のが基本です。
@@ -243,7 +246,9 @@ export default async function SenpukiKoukaiPage() {
         </p>
       </div>
 
-      <h2>3機種をざっくり比較</h2>
+      </section>
+<section className="reading-section">
+<h2>3機種をざっくり比較</h2>
       <ComparisonTable items={compactItems} highlightBest={false} />
       <p className="text-sm text-ink/55">
         ※「優劣」ではなく「扇風機かサーキュレーターか、兼用モデルか」を軸にしているため、おすすめバッジは表示していません。
@@ -251,7 +256,10 @@ export default async function SenpukiKoukaiPage() {
       </p>
 
       {/* ── 3機種カード ── */}
-      <h2>この記事で取り上げた3台——楽天で詳細・在庫を確認</h2>
+      </section>
+<ReadingPause category="seasonal" slug="senpuki-koukai" />
+<section className="reading-section">
+<h2>この記事で取り上げた3台——楽天で詳細・在庫を確認</h2>
       <p>価格・在庫は時期によって変動します。最新情報は各ストアでご確認ください。</p>
 
       <div className="not-prose space-y-6">
@@ -298,7 +306,9 @@ export default async function SenpukiKoukaiPage() {
       </div>
 
       {/* ── まとめ ── */}
-      <h2>まとめ：用途で選べば迷いにくくなります</h2>
+      </section>
+<section className="reading-section">
+<h2>まとめ：用途で選べば迷いにくくなります</h2>
       <p>
         扇風機とサーキュレーターは「どちらが上」ではなく、<strong>使い方に合わせて選ぶもの</strong>です。
       </p>
@@ -322,7 +332,9 @@ export default async function SenpukiKoukaiPage() {
       </p>
 
       {/* ── FAQ ── */}
-      <h2>よくある質問</h2>
+      </section>
+<section className="reading-section">
+<h2>よくある質問</h2>
       <div className="not-prose space-y-3">
         {faq.map((x, i) => (
           <div key={i} className="rounded-xl border border-ink/15 bg-white p-4 shadow-card">
@@ -333,7 +345,9 @@ export default async function SenpukiKoukaiPage() {
       </div>
 
       {/* ── あわせて読みたい（季節家電3記事の相互回遊） ── */}
-      <h2>あわせて読みたい——季節家電で夏の暮らしをもっとラクに</h2>
+      </section>
+<section className="reading-section">
+<h2>あわせて読みたい——季節家電で夏の暮らしをもっとラクに</h2>
       <p>
         扇風機・サーキュレーターをエアコンや除湿機と組み合わせると、
         夏の快適さと電気代の効率が上がりやすくなります。
@@ -361,6 +375,7 @@ export default async function SenpukiKoukaiPage() {
           （部屋干し乾燥をドラム式洗濯乾燥機でまとめて解決したい方に）
         </li>
       </ul>
-    </article>
+    </section>
+</article>
   );
 }

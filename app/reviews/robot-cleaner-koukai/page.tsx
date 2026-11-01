@@ -1,3 +1,4 @@
+import { ArticleWelcome, ReadingPause } from "@/components/ReadingGuide";
 import { GuideSchema } from "@/components/GuideSchema";
 import { getAllProducts } from "@/lib/data";
 import { buildMetadata } from "@/lib/seo";
@@ -163,6 +164,7 @@ export default async function RobotCleanerKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
+      <ArticleWelcome category="vacuum" slug="robot-cleaner-koukai" />
       <p className="mt-2 text-sm text-ink/55">更新日：2026-07-19</p>
 
       <p>
@@ -172,7 +174,8 @@ export default async function RobotCleanerKoukaiPage() {
         この記事では、自動ゴミ収集ステーション付きの<strong>エコバックス DEEBOT N20 PRO PLUS</strong>と、ステーションを使わず本体内でゴミを圧縮する<strong>ルンバ205 DustCompactor Combo</strong>を例に、後悔しやすいポイントと2機種の設計思想の違いを整理します。
       </p>
 
-      <h2>ロボット掃除機で後悔しやすい5つのポイント</h2>
+      <section className="reading-section">
+<h2>ロボット掃除機で後悔しやすい5つのポイント</h2>
       <p>購入前に知っておくと後悔しにくくなるポイントを5つにまとめました。</p>
 
       <h3>① ゴミ収集ステーションの置き場所</h3>
@@ -211,7 +214,9 @@ export default async function RobotCleanerKoukaiPage() {
         どちらの機種も、ブラシやフィルターなどの消耗パーツは<strong>定期的な確認・お手入れ</strong>が必要です。交換時期の目安はメーカー公式サイトでご確認ください。
       </p>
 
-      <h2>DEEBOT N20 PRO PLUSとルンバ205の違い</h2>
+      </section>
+<section className="reading-section">
+<h2>DEEBOT N20 PRO PLUSとルンバ205の違い</h2>
       <p>
         2機種の根本的な違いは<strong>「自動ゴミ収集ステーション付き」か「ステーション不要」か</strong>という設計思想です。
       </p>
@@ -242,13 +247,20 @@ export default async function RobotCleanerKoukaiPage() {
         スペックはメーカー公表値です。詳しい仕様は各商品の見出し以降で解説します。
       </p>
 
-      <h2>DEEBOT N20 PRO PLUSが向いている人</h2>
+      </section>
+<ReadingPause category="vacuum" slug="robot-cleaner-koukai" />
+<section className="reading-section">
+<h2>DEEBOT N20 PRO PLUSが向いている人</h2>
       <ProductCard p={deebot} />
 
-      <h2>ルンバ205 DustCompactor Comboが向いている人</h2>
+      </section>
+<section className="reading-section">
+<h2>ルンバ205 DustCompactor Comboが向いている人</h2>
       <ProductCard p={roomba} />
 
-      <h2>よくある質問</h2>
+      </section>
+<section className="reading-section">
+<h2>よくある質問</h2>
       <div className="not-prose space-y-3">
         {faq.map((x, i) => (
           <div key={i} className="rounded-xl border border-ink/15 bg-white p-4 shadow-card">
@@ -258,7 +270,9 @@ export default async function RobotCleanerKoukaiPage() {
         ))}
       </div>
 
-      <h2>まとめ：住まいのタイプで選ぶ</h2>
+      </section>
+<section className="reading-section">
+<h2>まとめ：住まいのタイプで選ぶ</h2>
       <p>
         DEEBOT N20 PRO PLUSとルンバ205 DustCompactor Comboは、
         <strong>「ゴミ収集ステーションを置くスペースがあるかどうか」</strong>で選び方が大きく変わります。
@@ -272,6 +286,7 @@ export default async function RobotCleanerKoukaiPage() {
       </p>
 
       <RelatedTier1 items={relatedTier1["robot-cleaner-koukai"]} />
-    </article>
+    </section>
+</article>
   );
 }

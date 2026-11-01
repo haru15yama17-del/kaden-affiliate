@@ -1,3 +1,4 @@
+import { ArticleWelcome, ReadingPause } from "@/components/ReadingGuide";
 import { GuideSchema } from "@/components/GuideSchema";
 import { getAllProducts } from "@/lib/data";
 import { buildMetadata } from "@/lib/seo";
@@ -166,9 +167,10 @@ export default async function WaterserverKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
+      <ArticleWelcome category="water-server" slug="waterserver-koukai" />
       <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
-      <p className="text-xs text-ink/55">修正履歴：2026-11-01 比較・利用条件の説明を見直しました。体験談と店頭での会話は当時の記録として掲載しており、個人の感想は性能や現在の契約条件を保証するものではありません。</p>
-      <p className="text-xs text-ink/55">修正履歴：2026-11-01 固定の価格表示を最新条件の確認案内へ変更。使用体験・店頭での記録は保持しています。</p>
+      <details className="edit-history"><summary>更新・修正の記録</summary><p>修正履歴：2026-11-01 比較・利用条件の説明を見直しました。体験談と店頭での会話は当時の記録として掲載しており、個人の感想は性能や現在の契約条件を保証するものではありません。</p></details>
+      <details className="edit-history"><summary>更新・修正の記録</summary><p>修正履歴：2026-11-01 固定の価格表示を最新条件の確認案内へ変更。使用体験・店頭での記録は保持しています。</p></details>
 
       <p>
         共働き・子育て世帯では、家事の時短だけでなく「赤ちゃんのミルクに使う水」「水道水のまま飲むことへの漠然とした不安」を理由に、
@@ -201,7 +203,8 @@ export default async function WaterserverKoukaiPage() {
         </ul>
       </div>
 
-      <h2>3社をざっくり比較</h2>
+      <section className="reading-section">
+<h2>3社をざっくり比較</h2>
       <ComparisonTable items={compactItems} highlightBest={false} />
       <p className="text-sm text-ink/55">
         ※「優劣」ではなく「どの悩みを解決したいか」を軸にしているため、おすすめバッジは表示していません。
@@ -212,7 +215,9 @@ export default async function WaterserverKoukaiPage() {
       {/* ================================================================
           各社詳細セクション
       ================================================================ */}
-      <h2>① アクアクララ——注文ノルマなしで気軽に始めたい方に</h2>
+      </section>
+<section className="reading-section">
+<h2>① アクアクララ——注文ノルマなしで気軽に始めたい方に</h2>
       <p>
         アクアクララはRO水（純水にミネラルを添加した水）を採用しています。お試しを希望する場合は、実施状況・対象地域・期間・終了後の条件を公式サイトで確認してください。
         <strong>注文ノルマがなく、使うペースに合わせて続けられる</strong>ため、水の消費量が読みにくい家庭でも始めやすい選択肢です。
@@ -239,7 +244,10 @@ export default async function WaterserverKoukaiPage() {
 
       <AffiliateButtons aff={aquaclara.affiliate} productName={aquaclara.name} />
 
-      <h2>② フレシャス——水の交換を軽くラクにしたい・天然水がいい方に</h2>
+      </section>
+<ReadingPause category="water-server" slug="waterserver-koukai" />
+<section className="reading-section">
+<h2>② フレシャス——水の交換を軽くラクにしたい・天然水がいい方に</h2>
       <p>
         フレシャスは富士・朝霧高原などの天然水を、軽量パック（使い捨て）で届けてくれるのが特徴です。
         <strong>ボトルの上げ下ろしが負担になりやすい方</strong>や、天然水の飲みやすさを重視したい方に向いています。
@@ -268,7 +276,9 @@ export default async function WaterserverKoukaiPage() {
       <AffiliateButtons aff={frecious.affiliate} productName={frecious.name} />
       <CampaignBanner slug={frecious.slug} />
 
-      <h2>③ プレミアムウォーター——契約条件とデザインを比較したい方に</h2>
+      </section>
+<section className="reading-section">
+<h2>③ プレミアムウォーター——契約条件とデザインを比較したい方に</h2>
       <p>
         プレミアムウォーターは全国8採水地の天然水を扱い、nendoコラボモデルなどデザイン性の高いシリーズが豊富です。
         <strong>機種・契約プラン・子育て向けの条件の違い</strong>もあり、
@@ -299,7 +309,9 @@ export default async function WaterserverKoukaiPage() {
       {/* ================================================================
           まとめ
       ================================================================ */}
-      <h2>まとめ：悩みの種類で選べば後悔しにくい</h2>
+      </section>
+<section className="reading-section">
+<h2>まとめ：悩みの種類で選べば後悔しにくい</h2>
       <p>
         ウォーターサーバーは「どれが一番良いか」ではなく、<strong>何を一番解決したいか</strong>で選ぶと後悔しにくくなります。
       </p>
@@ -319,7 +331,9 @@ export default async function WaterserverKoukaiPage() {
         価格・キャンペーン内容は変動するため、契約前に各社公式サイトで最新情報をご確認ください。
       </p>
 
-      <h2>よくある質問</h2>
+      </section>
+<section className="reading-section">
+<h2>よくある質問</h2>
       <div className="not-prose space-y-3">
         {faq.map((x, i) => (
           <div key={i} className="rounded-xl border border-ink/15 bg-white p-4 shadow-card">
@@ -329,7 +343,9 @@ export default async function WaterserverKoukaiPage() {
         ))}
       </div>
 
-      <h2>あわせて読みたい——共働き世帯の時短をもっとラクに</h2>
+      </section>
+<section className="reading-section">
+<h2>あわせて読みたい——共働き世帯の時短をもっとラクに</h2>
       <p>
         ウォーターサーバーと合わせて、調理の時短・食材準備の負担も見直すと、暮らし全体がさらにラクになりやすくなります。
       </p>
@@ -349,6 +365,7 @@ export default async function WaterserverKoukaiPage() {
           （毎日届くミールキットで買い物を減らしたい方に）
         </li>
       </ul>
-    </article>
+    </section>
+</article>
   );
 }

@@ -1,3 +1,4 @@
+import { SupportBanner } from "@/components/ReadingGuide";
 import { getAllProducts } from "@/lib/data";
 import { SearchClient } from "@/components/SearchClient";
 import { buildMetadata } from "@/lib/seo";
@@ -12,6 +13,7 @@ export default async function SearchPage() {
   return (
     <div>
       <h1 className="font-serif text-3xl font-bold">サイト内検索</h1>
+      <SupportBanner kind="search"/>
       <SearchClient products={index} />
     </div>
   );

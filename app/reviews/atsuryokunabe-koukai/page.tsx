@@ -1,3 +1,4 @@
+import { ArticleWelcome, ReadingPause } from "@/components/ReadingGuide";
 import { GuideSchema } from "@/components/GuideSchema";
 import { getAllProducts } from "@/lib/data";
 import { buildMetadata } from "@/lib/seo";
@@ -127,13 +128,9 @@ export default async function AtsuryokunabeKoukaiPage() {
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
       <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
-      <p className="text-xs text-ink/55">修正履歴：2026-11-01 比較・利用条件の説明を見直しました。体験談と店頭での会話は当時の記録として掲載しており、個人の感想は性能や現在の契約条件を保証するものではありません。</p>
+      <details className="edit-history"><summary>更新・修正の記録</summary><p>修正履歴：2026-11-01 比較・利用条件の説明を見直しました。体験談と店頭での会話は当時の記録として掲載しており、個人の感想は性能や現在の契約条件を保証するものではありません。</p></details>
 
-      <ArticleImage
-        src={`${IMG_BASE}/hero.svg`}
-        alt="電気圧力鍋本体のシルエットと、加圧調理・予約調理・ほったらかし・煮込みの機能アイコンを示す図解"
-        caption="加圧調理・予約調理・ほったらかし・煮込み——材料を入れてボタンを押すスタイルの調理家電"
-      />
+      <ArticleWelcome category="cooking" slug="atsuryokunabe-koukai" />
 
       <RecommendBox
         name="アイリスオーヤマ 電気圧力鍋 KPC-MA4"
@@ -141,7 +138,8 @@ export default async function AtsuryokunabeKoukaiPage() {
         aff={kpc.affiliate}
       />
 
-      <h2>最初に結論：電気圧力鍋とホットクックは「方式」で選ぶ家電です</h2>
+      <section className="reading-section">
+<h2>最初に結論：電気圧力鍋とホットクックは「方式」で選ぶ家電です</h2>
       <p>
         アイリスオーヤマの電気圧力鍋「KPC-MA4」は、密閉して圧力をかける
         <strong>加圧調理</strong>
@@ -181,7 +179,9 @@ export default async function AtsuryokunabeKoukaiPage() {
         </p>
       </HaruBubble>
 
-      <h2>電気圧力鍋のデメリット・後悔しやすい5つのポイント</h2>
+      </section>
+<section className="reading-section">
+<h2>電気圧力鍋のデメリット・後悔しやすい5つのポイント</h2>
       <p>
         加圧調理の便利さは確かですが、「思っていたのと違った」と後悔しやすいポイントもあります。メリットと並べて、正直にお伝えします。
       </p>
@@ -228,7 +228,10 @@ export default async function AtsuryokunabeKoukaiPage() {
       </p>
 
       <p className="text-xs text-ink/55">出典：<a href="https://www.irisohyama.co.jp/products/manual/pdf/516394.pdf" target="_blank" rel="noopener noreferrer">アイリスオーヤマ KPC-MA4取扱説明書</a>（3・22〜24・42〜43ページ、2026-11-01確認）。</p>
-      <h2>KPC-MA4とホットクック（KN-HW24H）を比較</h2>
+      </section>
+<ReadingPause category="cooking" slug="atsuryokunabe-koukai" />
+<section className="reading-section">
+<h2>KPC-MA4とホットクック（KN-HW24H）を比較</h2>
       <p>
         ここで、電気圧力鍋の代表としてアイリスオーヤマ KPC-MA4、無水・自動かきまぜ式の代表としてシャープのホットクック KN-HW24H をスペックで並べてみます。
       </p>
@@ -284,7 +287,9 @@ export default async function AtsuryokunabeKoukaiPage() {
         </p>
       </div>
 
-      <h2>2台を購入できるストア——比較して選ぶ</h2>
+      </section>
+<section className="reading-section">
+<h2>2台を購入できるストア——比較して選ぶ</h2>
       <p>
         価格は変動するため、最新の価格は各ストアでご確認ください。
       </p>
@@ -343,7 +348,9 @@ export default async function AtsuryokunabeKoukaiPage() {
         </li>
       </ul>
 
-      <h2>まとめ：電気圧力鍋は「加圧調理を活かす人」なら後悔しにくい</h2>
+      </section>
+<section className="reading-section">
+<h2>まとめ：電気圧力鍋は「加圧調理を活かす人」なら後悔しにくい</h2>
       <p>
         KPC-MA4の後悔ポイントは、総調理時間・炒め物の苦手さ・におい・サイズと消費電力・予約対応メニューの5つ。いずれも「加圧式の特性」を理解して使えば、多くは対策できます。
       </p>
@@ -351,7 +358,9 @@ export default async function AtsuryokunabeKoukaiPage() {
         角煮やチャーシューなど、硬い肉をやわらかく仕上げたい家庭で、価格を抑えて加圧調理を始めたいなら、KPC-MA4は有力な選択肢です。逆に、無水カレーや自動かきまぜ中心という人は、ホットクックも比較してから決めると後悔しにくくなります。自分の作りたい料理と使い方に、どちらの方式が合うかを基準に選んでみてください。
       </p>
 
-      <h2>よくある質問</h2>
+      </section>
+<section className="reading-section">
+<h2>よくある質問</h2>
       <div className="not-prose space-y-3">
         {faq.map((x, i) => (
           <div key={i} className="rounded-xl border border-ink/15 bg-white p-4 shadow-card">
@@ -362,6 +371,7 @@ export default async function AtsuryokunabeKoukaiPage() {
       </div>
 
       <RelatedTier1 items={relatedTier1["atsuryokunabe-koukai"]} />
-    </article>
+    </section>
+</article>
   );
 }

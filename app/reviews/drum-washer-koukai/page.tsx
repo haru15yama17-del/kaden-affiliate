@@ -1,3 +1,4 @@
+import { ArticleWelcome, ReadingPause } from "@/components/ReadingGuide";
 import { GuideSchema } from "@/components/GuideSchema";
 import { getAllProducts } from "@/lib/data";
 import { buildMetadata } from "@/lib/seo";
@@ -336,8 +337,9 @@ export default async function DrumWasherKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
+      <ArticleWelcome category="washer" slug="drum-washer-koukai" />
       <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
-      <p className="text-xs text-ink/55">修正履歴：2026-11-01 比較・利用条件の説明を見直しました。体験談と店頭での会話は当時の記録として掲載しており、個人の感想は性能や現在の契約条件を保証するものではありません。</p>
+      <details className="edit-history"><summary>更新・修正の記録</summary><p>修正履歴：2026-11-01 比較・利用条件の説明を見直しました。体験談と店頭での会話は当時の記録として掲載しており、個人の感想は性能や現在の契約条件を保証するものではありません。</p></details>
 
       {/* ── 結論ファースト：2グループ振り分け案内 ── */}
       <div className="not-prose my-5 rounded-xl border-2 border-accent/40 bg-blush/60 p-4">
@@ -380,7 +382,8 @@ export default async function DrumWasherKoukaiPage() {
       </p>
 
       {/* ── 乾燥方式の解説 ── */}
-      <h2>乾燥方式の違いを知れば選択肢が絞れる</h2>
+      <section className="reading-section">
+<h2>乾燥方式の違いを知れば選択肢が絞れる</h2>
       <p>
         購入前に確認したい費用の一つが<strong>乾燥時の電気代</strong>です。
         乾燥方式によって電気代・衣類へのやさしさ・本体価格が変わるため、まず方式を理解してから機種を選ぶのが近道です。
@@ -453,7 +456,9 @@ export default async function DrumWasherKoukaiPage() {
         乾燥方式の比較には含まれませんが、洗濯機能に絞って価格・設置スペースを抑えたい方には検討の価値があります。
       </p>
 
-      <h2>ドラム式洗濯機で後悔しやすい5つのポイント</h2>
+      </section>
+<section className="reading-section">
+<h2>ドラム式洗濯機で後悔しやすい5つのポイント</h2>
       <p>
         「安いから」「人気ブランドだから」で選ぶと、乾燥方式や設置条件の違いで後悔しやすいポイントがあります。事前に確認しておきたい5つを整理しました。
       </p>
@@ -483,7 +488,10 @@ export default async function DrumWasherKoukaiPage() {
         特に大容量モデルの東芝TW-127XM4Lは、防水パン奥行内寸520mm以上・本体奥行722mm（ホース含む）・質量約88kgと大きく重いため、搬入経路（廊下・ドア幅）も含めて事前にメーカー公式の設置寸法と照合しておくことが欠かせません。
       </p>
 
-      <h2>5台をざっくり比較</h2>
+      </section>
+<ReadingPause category="washer" slug="drum-washer-koukai" />
+<section className="reading-section">
+<h2>5台をざっくり比較</h2>
       <ComparisonTable items={compactItems} highlightBest={false} />
       <p className="text-sm text-ink/55">
         ※「優劣」ではなく「アイリス・ニトリのグループかパナソニック・シャープ・東芝のグループか、乾燥方式は何を優先するか」を軸にしているため、おすすめバッジは表示していません。
@@ -491,7 +499,9 @@ export default async function DrumWasherKoukaiPage() {
       </p>
 
       {/* ── アイリス・ニトリのグループ ── */}
-      <h2>アイリス・ニトリのグループ——まずコストを抑えてドラム式を導入したい方に</h2>
+      </section>
+<section className="reading-section">
+<h2>アイリス・ニトリのグループ——まずコストを抑えてドラム式を導入したい方に</h2>
       <p>
         アイリスオーヤマは乾燥機能付き、ニトリは乾燥機能を省いた洗濯専用モデルと方向性は異なりますが、
         どちらも本体価格を抑えつつドラム式の使いやすさを取り入れられる2台です。
@@ -505,7 +515,9 @@ export default async function DrumWasherKoukaiPage() {
       </div>
 
       {/* ── パナソニック・シャープ・東芝のグループ ── */}
-      <h2>パナソニック・シャープ・東芝のグループ——機能・乾燥性能・長期コストにこだわりたい方に</h2>
+      </section>
+<section className="reading-section">
+<h2>パナソニック・シャープ・東芝のグループ——機能・乾燥性能・長期コストにこだわりたい方に</h2>
       <p>
         洗浄力・乾燥方式・省エネ性・自動化機能など、<strong>毎日の洗濯をより快適に・ラクにしたい方</strong>向けの3台です。
         本体価格は高価格帯になりますが、乾燥電気代の差・手入れの手間軽減・衣類へのやさしさなど、
@@ -518,7 +530,9 @@ export default async function DrumWasherKoukaiPage() {
       </div>
 
       {/* ── まとめ ── */}
-      <h2>まとめ：乾燥方式とグループで選択肢を絞るのが近道</h2>
+      </section>
+<section className="reading-section">
+<h2>まとめ：乾燥方式とグループで選択肢を絞るのが近道</h2>
       <p>
         ドラム式洗濯機を選ぶときは、まず「乾燥機能が必要かどうか」「乾燥をどのくらい使うか」「乾燥の電気代を長期的に気にするか」を確認するのがポイントです。
       </p>
@@ -549,7 +563,9 @@ export default async function DrumWasherKoukaiPage() {
       </p>
 
       {/* ── FAQ ── */}
-      <h2>よくある質問</h2>
+      </section>
+<section className="reading-section">
+<h2>よくある質問</h2>
       <div className="not-prose space-y-3">
         {faq.map((x, i) => (
           <div key={i} className="rounded-xl border border-ink/15 bg-white p-4 shadow-card">
@@ -560,7 +576,9 @@ export default async function DrumWasherKoukaiPage() {
       </div>
 
       {/* ── あわせて読みたい ── */}
-      <h2>あわせて読みたい——洗濯まわりの暮らしをもっとラクに</h2>
+      </section>
+<section className="reading-section">
+<h2>あわせて読みたい——洗濯まわりの暮らしをもっとラクに</h2>
       <p>
         ドラム式洗濯機と合わせて、部屋干しをサポートする除湿機や
         エアコンとの組み合わせも検討すると、梅雨・冬の洗濯ストレスをまとめて解消しやすくなります。
@@ -590,6 +608,7 @@ export default async function DrumWasherKoukaiPage() {
       </ul>
 
       <RelatedTier1 items={relatedTier1["drum-washer-koukai"]} />
-    </article>
+    </section>
+</article>
   );
 }

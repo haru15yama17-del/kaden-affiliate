@@ -1,3 +1,4 @@
+import { ReadingSteps } from "@/components/ReadingGuide";
 import Link from "next/link";
 import { EditorialImage } from "@/components/EditorialImage";
 import { categoryImage } from "@/data/editorial";
@@ -81,6 +82,7 @@ export default async function CategoryPage({ params }: { params: { slug: string 
 
       <section className="category-hero"><div><p className="eyebrow">暮らしに合う選択を</p><h1>{hub ? hub.h1 : c.name + "の比較と選び方"}</h1><p>{c.intro}</p><nav className="category-jumps" aria-label="ページ内の案内">{relatedArticles.length > 0 && <a href="#category-guides">比較記事から選ぶ</a>}<a href="#category-products">商品・サービスを見る</a></nav></div><EditorialImage {...categoryImage(c.slug)} priority /></section>
       {c.slug === "water-server" && <CampaignBanner slug="frecious" />}
+      <ReadingSteps category={c.slug}/>
       {/* 選び方チェックポイント */}
       <div className="mb-8 rounded-xl border border-sub/20 bg-sub/5 p-4">
         <p className="mb-3 text-sm font-bold text-sub">✅ 選び方のチェックポイント</p>

@@ -9,6 +9,7 @@ export const editorialImages: Record<string, { src: string; alt: string }> = {
  hero: {src:'/images/editorial/hero.jpg',alt:'自然光が入る木のキッチンとダイニングのイメージ'},
 };
 export function categoryImage(category: string, slug = '') {
+ if(slug.includes('senpuki') || slug.includes('fan') || slug.includes('aircon') || slug.includes('futon')) return editorialImages.hero;
  if(slug.includes('dishwasher')) return editorialImages.dishwasher;
  const key = ({'food-delivery':'meal','water-server':'water',washer:'laundry',seasonal:'laundry',beauty:'beauty','personal-care':'beauty',vacuum:'cleaning',aircon:'hero',tv:'hero',gadget:'hero'} as Record<string,string>)[category] || 'cooking';
  return editorialImages[key];
