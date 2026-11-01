@@ -113,7 +113,7 @@ const compactSpecs: Record<string, { label: string; value: string }[]> = {
   "aircon-set-6jo-omakase": [
     { label: "畳数目安", value: "6畳用（冷暖房2.2kW相当）" },
     { label: "工事費込み/別", value: "工事費込み・全国工事対応（メーカー・型番はおまかせ）" },
-    { label: "最大の強み", value: "工事費込みで最安クラス。ただしメーカー・型番は選べない" },
+    { label: "最大の強み", value: "標準工事付き。ただしメーカー・型番は選べない" },
   ],
   "iris-g-aircon-set": [
     { label: "畳数目安", value: "6〜20畳の展開あり" },
@@ -140,11 +140,11 @@ const compactSpecs: Record<string, { label: string; value: string }[]> = {
 const faq = [
   {
     q: "エアコンの2027年問題とは？",
-    a: "2027年4月から省エネ法のトップランナー制度においてエアコンのAPF（通年エネルギー消費効率）の目標基準値が引き上げられる予定です。制度はメーカーが年度ごとに出荷台数の加重平均で基準達成を求める仕組みで、現行基準を大きく下回る低価格モデルは事実上、製造・出荷継続が難しくなり市場から減ると予想・指摘されています。",
+    a: "家庭用エアコンの省エネ基準が2027年度から変わることを指す呼び方です。基準の変更と、個別商品の価格・販売継続は分けて確認してください。制度の詳細は資源エネルギー庁の案内を参照できます。",
   },
   {
     q: "エアコンは2027年に値上がりする？",
-    a: "2026年〜2027年にかけて低価格帯エアコンの品薄や価格上昇の可能性が指摘されています。ただし「絶対に値上がりする」とは断言できません。価格・在庫状況は各ストアで最新情報をご確認ください。",
+    a: "基準の変更だけから、個別商品の値上がり時期や金額を断定することはできません。購入時点の価格・在庫・工事費を販売店で確認してください。",
   },
   {
     q: "2027年以降、今のエアコンは使えなくなる？",
@@ -152,7 +152,7 @@ const faq = [
   },
   {
     q: "エアコンは安いうちに買うべき？",
-    a: "今のエアコンが10年以上経っている・不調があるなら早めの検討が一案です。一方、現在のエアコンが十分に動いているなら急いで買い替える必要はありません。新居への設置や故障での買い替えが必要な場合は、2026年のうちに余裕をもって工事予約を進めるのが得策とも言えます。",
+    a: "基準の変更だけを理由に急いで買い替える必要はありません。故障や新居への設置など、必要になる時期に合わせて予算・適用畳数・工事日程を確認してください。",
   },
   {
     q: "工事費込みエアコンセットの注意点は？",
@@ -164,10 +164,10 @@ export async function generateMetadata() {
   return buildMetadata({
     title: TITLE,
     description:
-      "2027年4月の省エネ基準引き上げ（2027年問題）でエアコンの値上がりが予想されています。工事費込みで選べるダイキン・三菱霧ヶ峰・パナソニック エオリアCS-635DEX2-Wなど5機種を安さ重視・省エネ重視で比較。後悔しないためのデメリット5つと店頭で聞いた実機の声も掲載。",
+      "エアコンの2027年度省エネ基準と購入前の確認点を整理。工事費込みで選べるダイキン・三菱霧ヶ峰・パナソニック エオリアCS-635DEX2-Wなど5機種を安さ重視・省エネ重視で比較。後悔しないためのデメリット5つと店頭で聞いた実機の声も掲載。",
     path: PATH,
     type: "article",
-    modifiedTime: "2026-06-29",
+    modifiedTime: "2026-11-01",
   });
 }
 
@@ -187,7 +187,7 @@ export default async function AirconKoukaiPage() {
 
   return (
     <article className="prose-article max-w-none pb-20">
-      <GuideSchema title={TITLE} path={PATH} modified="2026-06-29" />
+      <GuideSchema title={TITLE} path={PATH} modified="2026-11-01" />
       {/* ── 構造化データ ── */}
       <JsonLd data={reviewJsonLd(omakase, PATH)} />
       <JsonLd data={faqJsonLd(faq)} />
@@ -213,7 +213,8 @@ export default async function AirconKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
-      <p className="mt-2 text-sm text-ink/55">更新日：2026-06-29</p>
+      <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
+      <p className="text-xs text-ink/55">修正履歴：2026-11-01 最安の断定と価格予測を見直しました。店頭の会話・使用感は当時の記録として残しています。</p>
 
       <ArticleImage
         src={`${IMG_BASE}/hero.svg`}
@@ -229,7 +230,7 @@ export default async function AirconKoukaiPage() {
         <ul className="space-y-2 text-sm font-medium text-ink">
           <li>
             💴 <strong>費用を最優先</strong>したい
-            → 工事費込み最安（6畳おまかせ）またはアイリスオーヤマGシリーズ
+            → 標準工事付き（6畳おまかせ）またはアイリスオーヤマGシリーズ
           </li>
           <li>
             🌿 <strong>メーカー・省エネ重視</strong>
@@ -244,13 +245,12 @@ export default async function AirconKoukaiPage() {
       {/* ── RecommendBox（安さ重視の代表として） ── CV-2 */}
       <RecommendBox
         name="エアコン 6畳 工事費込みセット（メーカーおまかせ）"
-        bestFor={["費用を最大限に抑えて6畳用エアコンを工事費込みで導入したい方"]}
+        bestFor={["6畳用エアコンを標準工事付きで検討したい方"]}
         aff={omakase.affiliate}
       />
 
       <p>
-        2027年4月の省エネ基準引き上げを受け、低価格帯エアコンの市場縮小や価格上昇が予想・指摘されています。
-        「2026年のうちに選んでおくのが一手」という声もありますが、<strong>今のエアコンが問題なく使えているなら急ぐ必要はありません</strong>。
+        省エネ基準の変更だけを理由に買い替えを急ぐ必要はありません。<strong>今のエアコンが問題なく使えているなら急ぐ必要はありません</strong>。
         新居設置・老朽化・故障が理由なら、工事予約が混む前に余裕をもって動くのが得策ともいえます。
       </p>
       <p>
@@ -280,47 +280,12 @@ export default async function AirconKoukaiPage() {
       {/* ================================================================
           2027年問題 解説
       ================================================================ */}
-      <h2>エアコン2027年問題とは？省エネ基準引き上げの仕組みをわかりやすく解説</h2>
-      <p>
-        「2027年問題」と呼ばれる背景には、省エネ法のトップランナー制度における
-        <strong>APF（通年エネルギー消費効率）の目標基準値引き上げ</strong>があります。
-        2027年4月から新しい目標基準値が適用される予定で、たとえば冷房能力2.2kWクラス（6畳用）では
-        APF基準が約5.8→6.6（冷房能力によっては最大34.7%改善が必要）と報じられています
-        （経済産業省審議会資料等に基づく報道による）。
-      </p>
-      <p>
-        注意が必要なのはこの制度の仕組みです。
-        <strong>「法律で安いエアコンの製造販売が禁止される」わけではありません。</strong>
-        メーカーが年度ごとに出荷台数の加重平均で基準達成を求められる制度であり、
-        結果として基準を大きく下回る低価格モデルは事実上、製造・出荷継続が難しくなり
-        <strong>市場から減る見込みと予想・指摘されています</strong>。
-      </p>
-
-      <div className="not-prose my-5 rounded-xl border border-ink/15 bg-white p-4 shadow-card">
-        <p className="mb-3 text-sm font-bold text-ink">▼ 2027年問題のポイントまとめ</p>
-        <ul className="space-y-2 text-sm text-ink/75">
-          <li>✅ 2027年4月〜 省エネ法トップランナー制度でAPF基準値が引き上げ予定</li>
-          <li>✅ 6畳用2.2kWでAPF約5.8→6.6（冷房能力により最大34.7%改善が必要と報道）</li>
-          <li>✅ 基準を下回る低価格モデルが市場から減ると予想・指摘されている</li>
-          <li>✅ 2026年は駆け込み需要で品薄・価格高騰の可能性も指摘されている（断定ではない）</li>
-          <li>⚠️ 現在使用中・設置済みのエアコンは<strong>使えなくなるわけではない</strong>（買い替え義務なし）</li>
-        </ul>
-      </div>
-
-      <h3>2027年に値上がりする？——「可能性の指摘」と「断言できないこと」</h3>
-      <p>
-        「2027年問題で値上がりする」という声は多く聞かれますが、具体的な値上がり幅や時期を断言できる情報はありません。
-        価格動向は需給・為替・各メーカーの戦略にも左右されます。
-        ただし<strong>2026年のうちに工事費込みで動く人が増えている</strong>のは事実として指摘されており、
-        工事予約が混雑する前に計画を立てるメリットはあります。
-      </p>
-
-      <h3>今のエアコンは使えなくなる？——公式Q&A準拠の回答</h3>
-      <p>
-        <strong>現在使用中・すでに設置済みのエアコンが使えなくなるわけではありません。</strong>
-        買い替えの法的義務もありません。「古いエアコンを撤去しなければならない」という情報は正確ではないため注意してください。
-        買い替えが必要になるのは、老朽化・故障・新居設置などの通常のタイミングです。
-      </p>
+      <h2>エアコン2027年問題とは？購入を急ぐ前に確認したいこと</h2>
+      <p>資源エネルギー庁は、家庭用エアコンの新しい省エネ基準について案内しています。制度の変更と、個別商品の販売価格・在庫状況は分けて考えましょう。</p>
+      <p><strong>省エネ基準の変更だけを理由に、今すぐ買い替える必要はありません。</strong>購入する場合は、本体価格に加え、設置工事の範囲・適用畳数・省エネ性能を確認してください。</p>
+      <h3>値上がりや品薄を断定しない</h3>
+      <p>この記事では、今後の価格や在庫を予測して購入を急がせる案内は行いません。必要な時期を決め、販売店の見積もりと工事日程を確認して判断してください。</p>
+      <p className="text-xs text-ink/55">出典：<a href="https://www.enecho.meti.go.jp/about/special/johoteikyo/air_conditioner_2026.html" target="_blank" rel="noopener noreferrer">資源エネルギー庁・エアコンの新たな省エネ基準の案内</a>（2026-11-01確認）。</p>
 
       <ArticleImage
         src={`${IMG_BASE}/comparison.svg`}
@@ -335,7 +300,7 @@ export default async function AirconKoukaiPage() {
         </p>
         <div className="space-y-2">
           <CtaRow
-            label="💴 安さ重視：工事費込み最安セット（6畳おまかせ）"
+            label="💴 安さ重視：標準工事付きセット（6畳おまかせ）"
             sub="全国工事対応・メーカーおまかせ・費用を抑えたい方に"
             aff={omakase.affiliate}
           />
@@ -359,9 +324,9 @@ export default async function AirconKoukaiPage() {
         メーカーにこだわりがなくスタンダードな性能で十分という方に向いています。
       </p>
 
-      <h3>① エアコン 6畳 工事費込みセット（メーカーおまかせ）——最安クラスで工事まで完結</h3>
+      <h3>① エアコン 6畳 工事費込みセット（メーカーおまかせ）——機種指定なし・標準工事付き</h3>
       <p>
-        工事費込みセットの中でも最安クラスに位置するのが「メーカーおまかせ」タイプです。
+        「メーカーおまかせ」タイプは、メーカー・型番を指定せずに注文するセットです。
         <strong>寝室・子供部屋・1人暮らしの1Kなど6畳用エアコンを費用最優先で手配したい場合</strong>の第一選択肢です。
       </p>
 
@@ -369,7 +334,7 @@ export default async function AirconKoukaiPage() {
         <p className="mb-2 text-sm font-bold text-ink">▼ このセットのポイント</p>
         <ul className="space-y-1.5 text-sm text-ink/75">
           <li>✅ 6畳用 / 100V / 工事費込み / 全国工事対応</li>
-          <li>✅ 工事費込み最安クラス・費用を一番抑えたい方向け</li>
+          <li>✅ 標準工事付き・機種を指定せずに選びたい方向け</li>
           <li>⚠️ <strong>届くメーカー・型番は選べません</strong>（メーカーおまかせ）</li>
           <li>⚠️ 省エネ性能は大手上位機より劣る傾向があります</li>
           <li>⚠️ 標準工事範囲外（配管延長等）は追加費用が発生する場合があります</li>
@@ -583,7 +548,7 @@ export default async function AirconKoukaiPage() {
               <td className="p-3">スタンダード</td>
               <td className="p-3">標準</td>
               <td className="p-3">込み</td>
-              <td className="p-3">最安・寝室・1人暮らし</td>
+              <td className="p-3">機種指定なし・6畳向け</td>
               <td className="p-3">
                 {omakase.affiliate.rakutenUrl && (
                   <MiniRakutenBtn href={omakase.affiliate.rakutenUrl} />

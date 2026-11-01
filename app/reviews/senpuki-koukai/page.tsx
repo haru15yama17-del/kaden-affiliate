@@ -41,17 +41,17 @@ const TITLE =
 /** ざっくり比較表用に「静音性・消費電力・最大の強み」だけへ絞ったスペック */
 const compactSpecs: Record<string, { label: string; value: string }[]> = {
   "balmuda-egf1800-fan": [
-    { label: "静音性", value: "最小13dB（風量1・メーカー調べ）と3台で最も静か" },
+    { label: "静音性", value: "最小13dB（風量1・メーカー調べ）。他機種と測定条件が同じとは限らない" },
     { label: "消費電力", value: "1.5W〜20W" },
     { label: "最大の強み", value: "柔らかい風質と静音性" },
   ],
   "balmuda-egf3400-cirq": [
-    { label: "静音性", value: "非公表（大風量到達を優先した設計）" },
+    { label: "静音性", value: "比較できる運転音データは未確認" },
     { label: "消費電力", value: "3W〜20W" },
-    { label: "最大の強み", value: "15m届く大風量とエアコン電気代の削減効果" },
+    { label: "最大の強み", value: "空気循環や部屋干しに利用する送風" },
   ],
   "iris-woozoo-stf-dc15tec": [
-    { label: "静音性", value: "非公表（強風重視のため音はやや大きめ）" },
+    { label: "静音性", value: "比較できる運転音データは未確認" },
     { label: "消費電力", value: "24W（定格）" },
     { label: "最大の強み", value: "分解丸洗いのお手入れ性とコスパ" },
   ],
@@ -64,11 +64,11 @@ const faq = [
   },
   {
     q: "サーキュレーターはエアコンの電気代を下げられますか？",
-    a: "室内の空気を循環させることでエアコンの設定温度のまま体感温度を改善しやすくなり、電気代の節約に役立つ場合があります。バルミューダ GreenFan Cirq（EGF-3400）のメーカー公表値では「エアコン電気代を最大20%削減」と記載がありますが、実際の効果は部屋の広さ・間取り・エアコンの設定・使い方などによって異なります。",
+    a: "電気代の削減は保証できません。部屋の広さ・間取り・エアコンの設定・運転時間に加え、サーキュレーター自体の消費電力も関係します。冷暖房と送風機を合わせた使用条件で検討してください。",
   },
   {
     q: "DCモーターの扇風機・サーキュレーターはACモーターと何が違う？",
-    a: "DCモーターはACモーターに比べて消費電力が少なく、風量の調整幅が広いのが特徴です。この記事で紹介する3機種はいずれもDCモーター搭載です。一般的にACモーターより本体価格は高めになりますが、毎日長時間使う場合は電気代の差が積み上がりやすくなるため、DCモーターを選ぶ理由になります。",
+    a: "消費電力・風量調整・運転音は、モーターの種類だけでは決まりません。使う風量での仕様と操作方法を機種ごとに比較してください。電気代は消費電力と運転時間、電力契約により変わります。",
   },
   {
     q: "扇風機・サーキュレーターは分解して洗える機種がある？",
@@ -83,7 +83,7 @@ export async function generateMetadata() {
       "扇風機とサーキュレーターの違いをわかりやすく整理。DCモーター・静音・分解洗いなど選び方のポイントをまとめ、バルミューダ2種とアイリスWOOZOOを主婦目線のレポート付きで紹介します。",
     path: PATH,
     type: "article",
-    modifiedTime: "2026-06-30",
+    modifiedTime: "2026-11-01",
   });
 }
 
@@ -140,7 +140,7 @@ export default async function SenpukiKoukaiPage() {
 
   return (
     <article className="prose-article max-w-none pb-20">
-      <GuideSchema title={TITLE} path={PATH} modified="2026-06-30" />
+      <GuideSchema title={TITLE} path={PATH} modified="2026-11-01" />
       {/* ── 構造化データ ── */}
       <JsonLd data={reviewJsonLd(cv, PATH, { includeReview: false })} />
       <JsonLd data={faqJsonLd(faq)} />
@@ -157,7 +157,8 @@ export default async function SenpukiKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
-      <p className="mt-2 text-sm text-ink/55">更新日：2026-06-30</p>
+      <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
+      <p className="text-xs text-ink/55">修正履歴：2026-11-01 比較・利用条件の説明を見直しました。体験談と店頭での会話は当時の記録として掲載しており、個人の感想は性能や現在の契約条件を保証するものではありません。</p>
 
       {/* ── 結論ファースト：振り分け案内 ── */}
       <div className="not-prose my-5 rounded-xl border-2 border-accent/40 bg-blush/60 p-4">

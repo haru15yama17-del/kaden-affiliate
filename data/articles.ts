@@ -52,7 +52,7 @@ export const articles: Article[] = [
     slug: "drum-washer-koukai",
     title: "ドラム式洗濯機おすすめ5選を比較",
     category: "washer",
-    description: "低価格グループ2台・人気ブランドグループ3台を乾燥方式で比較",
+    description: "アイリス・ニトリ・パナソニック・シャープ・東芝を乾燥方式と設置条件で比較",
   },
   {
     slug: "aircon-2027-koukai",

@@ -53,14 +53,14 @@ export function ComparisonTable({
           </tr>
         </thead>
         <tbody>
-          <tr className="border-t border-ink/10">
+          {items.some(p => p.rating != null) && <tr className="border-t border-ink/10">
             <td className="p-3 font-medium text-ink/60">編集部評価</td>
             {items.map((p, i) => (
               <td key={p.slug} className={`p-3 ${i === bestIdx ? "bg-accent/5" : ""}`}>
                 {p.rating != null ? <Rating value={p.rating} /> : "—"}
               </td>
             ))}
-          </tr>
+          </tr>}
           <tr className="border-t border-ink/10">
             <td className="p-3 font-medium text-ink/60">価格帯</td>
             {items.map((p, i) => (

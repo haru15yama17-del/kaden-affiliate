@@ -28,7 +28,7 @@ export function reviewJsonLd(
     name: p.name,
     brand: { "@type": "Brand", name: p.brand },
     ...(p.image && { image: p.image }),
-    ...(includeReview && {
+    ...(includeReview && p.rating != null && Number.isFinite(p.rating) && {
       review: {
         "@type": "Review",
         reviewRating: {

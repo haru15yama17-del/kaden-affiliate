@@ -42,7 +42,7 @@
     <path d="M510 166 l-2 -10 l-9 5" fill="none" stroke="#3f6b53" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     <text x="480" y="284" text-anchor="middle" font-size="16" font-weight="700" fill="#2d2420">水を使わず自動でかきまぜ</text>
     <text x="480" y="310" text-anchor="middle" font-size="13" fill="#2d2420" opacity="0.6">無水カレー・煮物・かきまぜ調理が得意</text>
-    <text x="480" y="332" text-anchor="middle" font-size="13" fill="#2d2420" opacity="0.6">予約調理は加熱後に適温キープ</text>
+    <text x="480" y="332" text-anchor="middle" font-size="13" fill="#2d2420" opacity="0.6">予約対応メニュー・手順を確認</text>
   </g>
 
   <text x="320" y="372" text-anchor="middle" font-size="13" fill="#2d2420" opacity="0.5">※方式の特長を示した一般的な図解です。実際の機能・所要時間は機種により異なります。</text>

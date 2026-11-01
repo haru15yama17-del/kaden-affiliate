@@ -67,7 +67,7 @@ export async function generateMetadata() {
       "アイリスオーヤマ カラリエFK-D2（据置きホース式）とcado FOEHN PRO（スティック型）を徹底比較。布団乾燥機で後悔しやすい5つのポイントと、それぞれが向いている人を編集部が解説します。",
     path: PATH,
     type: "article",
-    modifiedTime: "2026-07-19",
+    modifiedTime: "2026-11-01",
   });
 }
 
@@ -144,7 +144,7 @@ export default async function FutonDryerKoukaiPage() {
 
   return (
     <article className="prose-article max-w-none pb-20">
-      <GuideSchema title={TITLE} path={PATH} modified="2026-07-19" />
+      <GuideSchema title={TITLE} path={PATH} modified="2026-11-01" />
       {/* ── 構造化データ ── */}
       <JsonLd data={reviewJsonLd(karari, PATH, { includeReview: false })} />
       <JsonLd data={productJsonLd(cado.name, cado.brand)} />
@@ -159,10 +159,11 @@ export default async function FutonDryerKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
-      <p className="mt-2 text-sm text-ink/55">更新日：2026-07-19</p>
+      <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
+      <p className="text-xs text-ink/55">修正履歴：2026-11-01 比較・利用条件の説明を見直しました。体験談と店頭での会話は当時の記録として掲載しており、個人の感想は性能や現在の契約条件を保証するものではありません。</p>
 
       <p>
-        「思ったほど乾かなかった」「毎回セットするのが面倒」「置き場所に困って結局使わなくなった」——布団乾燥機は買ってよかったという声も多い一方で、こうした後悔の声も見かけます。
+        布団乾燥機は、対応する寝具・設定時間・セット方法・収納場所を購入前に確認したい家電です。この記事では、使いたい場面と仕様が合うかを整理します。
       </p>
       <p>
         この記事では、据置きホース式の<strong>アイリスオーヤマ カラリエ FK-D2</strong>と、スティック型の<strong>cado FOEHN PRO</strong>を例に、後悔しやすいポイントと、2つのタイプの根本的な違いを整理します。

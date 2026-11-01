@@ -100,7 +100,7 @@ const editorialNotes: Record<string, ReactNode> = {
       <p>
         「超遠赤外線」を発生させる特殊天然鉱石を採用し、髪の内部から熱を生み出す設計がコンセプトのモデルです。
         GLOSS/SCULP/SWINGの3モードとマイナスイオンを搭載し、約348gという軽量な本体重量と
-        折りたたみ機構により、携帯性を重視したい人に向いています（5商品中もっとも軽いのはRe・De Hairdry+の約280gです）。
+        折りたたみ機構により、携帯性を重視したい人に向いています（重量はコード・付属品を含むかなど、計量条件も確認してください）。
       </p>
       <p className="mt-2">
         <strong>気になる点：</strong>
@@ -114,11 +114,11 @@ const editorialNotes: Record<string, ReactNode> = {
       <p>
         高浸透ナノイーを搭載した、パナソニックの定番ヘアドライヤーです。
         大風量で速乾性が高く、前モデルより小型・軽量化されている点も特長です。
-        5商品の中では発売から一定期間が経ち、実績・口コミの蓄積がある安心感のあるモデルです。
+        使いたい機能と操作方法が自分に合うかを確認したいモデルです。
       </p>
       <p className="mt-2">
         <strong>気になる点：</strong>
-        固定ノズルで折りたためないため携帯には不向きです。また長期耐久性について一部口コミで指摘があります。
+        固定ノズルで折りたためないため携帯には不向きです。保証期間と修理対応は購入前に確認してください。
       </p>
     </>
   ),
@@ -264,6 +264,7 @@ export default async function HairdryerKoukaiPage() {
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
       <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
+      <p className="text-xs text-ink/55">修正履歴：2026-11-01 比較・利用条件の説明を見直しました。体験談と店頭での会話は当時の記録として掲載しており、個人の感想は性能や現在の契約条件を保証するものではありません。</p>
       <p className="text-xs text-ink/55">修正履歴：2026-11-01 固定の価格表示を最新条件の確認案内へ変更。使用体験・店頭での記録は保持しています。</p>
 
       {/* ── 結論ファースト：悩み・優先度別の振り分け案内 ── */}
@@ -346,13 +347,11 @@ export default async function HairdryerKoukaiPage() {
       {/* ── 比較の軸 ── */}
       <h2>比較の軸：風量・重量・価格帯</h2>
       <p>
-        風量（㎥/分）で比較すると、ブライト（2.58㎥/分・ブーストアタッチメント装着時）がもっとも大きく、
-        次いでKINUJO（2.2㎥/分）、パナソニック EH-NA0K（1.6㎥/分）の順です。ReFa S+は風量の具体的な数値を公表していません。
+        掲載している風量はブライト2.58㎥/分（ブーストアタッチメント装着時）、KINUJO2.2㎥/分、パナソニック EH-NA0K1.6㎥/分です。付属品や測定条件をそろえた比較ではないため、数値の大小だけで乾く速さを順位づけできません。ReFa S+の同条件の風量データは未確認です。
         Re・De Hairdry+は風量ではなく<strong>風速（約53m/秒）</strong>で公表されており、測定単位が異なるため他4商品の風量とは単純比較できない点にご注意ください。
       </p>
       <p>
-        重量比較ではRe・De Hairdry+（約280g）が5台中もっとも軽く、
-        KINUJO（約348g）とブライト（約357g）も軽量級です。
+        掲載重量はRe・De Hairdry+約280g、KINUJO約348g、ブライト約357gです。コードや付属品を含むかなど計量対象が異なるため、同条件の重量順位としては扱っていません。
         特にKINUJOは折りたたみ機構、Re・De Hairdry+は専用スタンドによるハンズフリー機能を備えており、
         携帯性・使い勝手を重視するなら有力候補です。EH-NA0Kは約560gとやや重めで、固定ノズルのため持ち運びには不向きです。
       </p>
@@ -375,18 +374,26 @@ export default async function HairdryerKoukaiPage() {
           </thead>
           <tbody className="text-ink/75">
             <tr className="border-t border-ink/10">
-              <td className="p-3 font-medium text-ink/60">風量／風速</td>
-              <td className="p-3">風速 約53m/秒※</td>
+              <td className="p-3 font-medium text-ink/60">風量（㎥/分）</td>
+              <td className="p-3">同条件の値は未確認</td>
               <td className="p-3">2.58㎥/分（ブースト時）</td>
-              <td className="p-3">非公表</td>
+              <td className="p-3">この記事では未確認</td>
               <td className="p-3">2.2㎥/分</td>
               <td className="p-3">1.6㎥/分</td>
             </tr>
             <tr className="border-t border-ink/10">
-              <td className="p-3 font-medium text-ink/60">重量</td>
+              <td className="p-3 font-medium text-ink/60">風速（m/秒）</td>
+              <td className="p-3">約53m/秒</td>
+              <td className="p-3">未確認</td>
+              <td className="p-3">未確認</td>
+              <td className="p-3">未確認</td>
+              <td className="p-3">未確認</td>
+            </tr>
+            <tr className="border-t border-ink/10">
+              <td className="p-3 font-medium text-ink/60">掲載重量（計量対象は各社で確認）</td>
               <td className="p-3">約280g</td>
               <td className="p-3">約357g</td>
-              <td className="p-3">非公表</td>
+              <td className="p-3">この記事では未確認</td>
               <td className="p-3">約348g</td>
               <td className="p-3">約560g</td>
             </tr>
@@ -404,7 +411,7 @@ export default async function HairdryerKoukaiPage() {
               <td className="p-3">ナノミストによる美容液ケア</td>
               <td className="p-3">センシングプログラムによる自動温度管理</td>
               <td className="p-3">軽さ・折りたたみによる携帯性</td>
-              <td className="p-3">実績と評判の安心感</td>
+              <td className="p-3">搭載機能と使い勝手</td>
             </tr>
           </tbody>
         </table>

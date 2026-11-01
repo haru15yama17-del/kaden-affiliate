@@ -75,7 +75,7 @@ const editorialNotes: Record<string, ReactNode> = {
   "sanko-rakua-mini-color-dishwasher": (
     <>
       <p>
-        サンコーの人気食洗機「ラクア」をコンパクトにした1〜2人用モデルです。
+        サンコーの食洗機「ラクア」をコンパクトにした1〜2人用モデルです。
         colorシリーズはくすみカラー展開でインテリアに合わせやすく、
         SOLOTAよりは奥行きがあるぶん庫内が広く、どんぶりや大きめの皿も洗えます。
         給水は本体上部からピッチャーで注ぐタイプで、操作パネルは上部にあり、
@@ -98,7 +98,7 @@ export async function generateMetadata() {
       "工事不要・タンク式のパーソナル食洗機2台、パナソニック SOLOTA NP-TML1とサンコー ラクアmini colorをスペックで比較。安心感・除菌を取るか、収納力・デザインを取るか、選び方のポイントを正直に解説します。",
     path: PATH,
     type: "article",
-    modifiedTime: "2026-07-01",
+    modifiedTime: "2026-11-01",
   });
 }
 
@@ -192,7 +192,7 @@ export default async function PersonalDishwasherKoukaiPage() {
 
   return (
     <article className="prose-article max-w-none pb-20">
-      <GuideSchema title={TITLE} path={PATH} modified="2026-07-01" />
+      <GuideSchema title={TITLE} path={PATH} modified="2026-11-01" />
       {/* ── 構造化データ ── */}
       <JsonLd data={reviewJsonLd(cv, PATH, { includeReview: false })} />
       {items.map((p) => (
@@ -208,7 +208,8 @@ export default async function PersonalDishwasherKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
-      <p className="mt-2 text-sm text-ink/55">更新日：2026-07-01</p>
+      <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
+      <p className="text-xs text-ink/55">修正履歴：2026-11-01 比較・利用条件の説明を見直しました。体験談と店頭での会話は当時の記録として掲載しており、個人の感想は性能や現在の契約条件を保証するものではありません。</p>
 
       {/* ── 結論ファースト：振り分け案内 ── */}
       <div className="not-prose my-5 rounded-xl border-2 border-accent/40 bg-blush/60 p-4">

@@ -291,7 +291,7 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
         ))}
       </div>
 
-      <p className="text-xs text-ink/55">修正履歴：2026-11-01 価格は販売店・公式サイトで確認する表記に統一し、比較対象を見直しました。</p>
+      <p className="text-xs text-ink/55">修正履歴：2026-11-01 価格・比較対象・比較優位の表現と利用条件の案内を見直しました。</p>
       <h2>まとめ</h2>
       <p>{body.summary ? <RichText text={body.summary} /> : `${p.name}は${p.bestFor.join("・")}におすすめできる選択肢です。一方で${p.notFor[0]}には別の選択肢も検討しましょう。`}</p>
 

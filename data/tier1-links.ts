@@ -62,7 +62,7 @@ export const relatedTier1: Record<string, Tier1Link[]> = {
   "hotcook-koukai": [
     {
       to: "food-delivery",
-      reason: "献立を考える手間まで手放したいなら、毎日届くミールキットとの組み合わせも一案です",
+      reason: "献立の準備も見直したい方は、配達日・食材の下処理・調理手順を確認",
     },
     {
       to: "food-delivery-watami",
@@ -72,7 +72,7 @@ export const relatedTier1: Record<string, Tier1Link[]> = {
   "atsuryokunabe-koukai": [
     {
       to: "food-delivery",
-      reason: "加熱はほったらかしにできても、下ごしらえの手間はミールキットで手放せます",
+      reason: "下ごしらえを減らしたい方は、カット済み食材の範囲と指定の調理手順を確認",
     },
     {
       to: "food-delivery-watami",

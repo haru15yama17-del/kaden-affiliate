@@ -60,11 +60,11 @@ const compactSpecs: Record<string, { label: string; value: string }[]> = {
   "sharp-es11k1-washer": [
     { label: "洗濯容量", value: "11kg" },
     { label: "乾燥容量", value: "6kg" },
-    { label: "最大の強み", value: "無排気乾燥と自動お掃除、業界最高水準の静音・節水" },
+    { label: "最大の強み", value: "無排気乾燥と自動お掃除（運転音・使用水量は条件を確認）" },
   ],
   "toshiba-tw127xm4l-washer": [
     { label: "洗濯容量", value: "12kg" },
-    { label: "乾燥容量", value: "7kg（業界トップクラス）" },
+    { label: "乾燥容量", value: "7kg" },
     { label: "最大の強み", value: "唯一のヒートポンプ乾燥による長期的な電気代の安さ" },
   ],
 };
@@ -96,10 +96,10 @@ export async function generateMetadata() {
   return buildMetadata({
     title: TITLE,
     description:
-      "ドラム式洗濯乾燥機5台の後悔しやすいポイントを、低価格グループ（アイリスFLK842・ニトリND60UL1）と人気ブランドグループ（パナソニック・シャープ・東芝TW-127XM4L）に分けて比較。店頭で聞いた店員コメントや実物を見た印象、設置寸法の注意点も掲載します。",
+      "ドラム式洗濯乾燥機5台の後悔しやすいポイントを、アイリス・ニトリのグループ（アイリスFLK842・ニトリND60UL1）とパナソニック・シャープ・東芝のグループ（パナソニック・シャープ・東芝TW-127XM4L）に分けて比較。店頭で聞いた店員コメントや実物を見た印象、設置寸法の注意点も掲載します。",
     path: PATH,
     type: "article",
-    modifiedTime: "2026-07-05",
+    modifiedTime: "2026-11-01",
   });
 }
 
@@ -319,7 +319,7 @@ export default async function DrumWasherKoukaiPage() {
 
   return (
     <article className="prose-article max-w-none pb-20">
-      <GuideSchema title={TITLE} path={PATH} modified="2026-07-05" />
+      <GuideSchema title={TITLE} path={PATH} modified="2026-11-01" />
       {/* ── 構造化データ ── */}
       <JsonLd data={reviewJsonLd(cv, PATH, { includeReview: false })} />
       <JsonLd data={faqJsonLd(faq)} />
@@ -336,7 +336,8 @@ export default async function DrumWasherKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
-      <p className="mt-2 text-sm text-ink/55">更新日：2026-07-05</p>
+      <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
+      <p className="text-xs text-ink/55">修正履歴：2026-11-01 比較・利用条件の説明を見直しました。体験談と店頭での会話は当時の記録として掲載しており、個人の感想は性能や現在の契約条件を保証するものではありません。</p>
 
       {/* ── 結論ファースト：2グループ振り分け案内 ── */}
       <div className="not-prose my-5 rounded-xl border-2 border-accent/40 bg-blush/60 p-4">
@@ -349,7 +350,7 @@ export default async function DrumWasherKoukaiPage() {
             <strong>まず価格を抑えてドラム式を試したい・コスト重視</strong>
             　→{" "}
             <span className="text-accent">
-              低価格グループ（アイリスオーヤマ FLK842 ／ ニトリ ND60UL1・乾燥機能なし）
+              アイリス・ニトリのグループ（アイリスオーヤマ FLK842 ／ ニトリ ND60UL1・乾燥機能なし）
             </span>
           </li>
           <li>
@@ -359,7 +360,7 @@ export default async function DrumWasherKoukaiPage() {
             </strong>
             　→{" "}
             <span className="text-accent">
-              人気ブランドグループ（パナソニック／シャープ／東芝）
+              パナソニック・シャープ・東芝のグループ（パナソニック／シャープ／東芝）
             </span>
           </li>
         </ul>
@@ -370,7 +371,7 @@ export default async function DrumWasherKoukaiPage() {
 
       <p>
         ドラム式洗濯機はモデルによって価格・乾燥方式・機能が大きく異なります。
-        この記事では<strong>低価格グループ2台</strong>と<strong>人気ブランドグループ3台</strong>に分けて、
+        この記事では<strong>アイリス・ニトリのグループ2台</strong>と<strong>パナソニック・シャープ・東芝のグループ3台</strong>に分けて、
         スペックと選び方のポイントを整理しました。
       </p>
       <p>
@@ -381,7 +382,7 @@ export default async function DrumWasherKoukaiPage() {
       {/* ── 乾燥方式の解説 ── */}
       <h2>乾燥方式の違いを知れば選択肢が絞れる</h2>
       <p>
-        ドラム式洗濯乾燥機の「後悔しやすいポイント」として最もよく挙がるのが<strong>乾燥時の電気代</strong>です。
+        購入前に確認したい費用の一つが<strong>乾燥時の電気代</strong>です。
         乾燥方式によって電気代・衣類へのやさしさ・本体価格が変わるため、まず方式を理解してから機種を選ぶのが近道です。
       </p>
 
@@ -444,11 +445,11 @@ export default async function DrumWasherKoukaiPage() {
       </p>
       <p>
         <strong>ヒートポンプ式（東芝 ZABOON TW-127XM4L）</strong>は、この記事で紹介する5台の中で唯一のヒートポンプ乾燥搭載機です。
-        空気中の熱を使って低温で乾かすため、電気代・衣類へのやさしさの両面で優位性があります。
+        空気中の熱を使って低温で乾かすため、消費電力量と対応する衣類を確認して選べます。方式だけで、すべての使用条件での優位性は判断できません。
         ただし本体価格は高めになる傾向があります。
       </p>
       <p>
-        なお、低価格グループの<strong>ニトリ ND60UL1</strong>は今回唯一乾燥機能を搭載していない「洗濯専用モデル」です。
+        なお、アイリス・ニトリのグループの<strong>ニトリ ND60UL1</strong>は今回唯一乾燥機能を搭載していない「洗濯専用モデル」です。
         乾燥方式の比較には含まれませんが、洗濯機能に絞って価格・設置スペースを抑えたい方には検討の価値があります。
       </p>
 
@@ -485,12 +486,12 @@ export default async function DrumWasherKoukaiPage() {
       <h2>5台をざっくり比較</h2>
       <ComparisonTable items={compactItems} highlightBest={false} />
       <p className="text-sm text-ink/55">
-        ※「優劣」ではなく「低価格グループか人気ブランドグループか、乾燥方式は何を優先するか」を軸にしているため、おすすめバッジは表示していません。
+        ※「優劣」ではなく「アイリス・ニトリのグループかパナソニック・シャープ・東芝のグループか、乾燥方式は何を優先するか」を軸にしているため、おすすめバッジは表示していません。
         洗濯・乾燥容量はメーカー公表値です（ニトリ ND60UL1は乾燥機能非搭載のため「乾燥容量」は「なし」と記載）。詳しい仕様は各商品の見出し以降で解説します。
       </p>
 
-      {/* ── 低価格グループ ── */}
-      <h2>低価格グループ——まずコストを抑えてドラム式を導入したい方に</h2>
+      {/* ── アイリス・ニトリのグループ ── */}
+      <h2>アイリス・ニトリのグループ——まずコストを抑えてドラム式を導入したい方に</h2>
       <p>
         アイリスオーヤマは乾燥機能付き、ニトリは乾燥機能を省いた洗濯専用モデルと方向性は異なりますが、
         どちらも本体価格を抑えつつドラム式の使いやすさを取り入れられる2台です。
@@ -503,8 +504,8 @@ export default async function DrumWasherKoukaiPage() {
         ))}
       </div>
 
-      {/* ── 人気ブランドグループ ── */}
-      <h2>人気ブランドグループ——機能・乾燥性能・長期コストにこだわりたい方に</h2>
+      {/* ── パナソニック・シャープ・東芝のグループ ── */}
+      <h2>パナソニック・シャープ・東芝のグループ——機能・乾燥性能・長期コストにこだわりたい方に</h2>
       <p>
         洗浄力・乾燥方式・省エネ性・自動化機能など、<strong>毎日の洗濯をより快適に・ラクにしたい方</strong>向けの3台です。
         本体価格は高価格帯になりますが、乾燥電気代の差・手入れの手間軽減・衣類へのやさしさなど、
@@ -539,7 +540,7 @@ export default async function DrumWasherKoukaiPage() {
           　→ シャープ ES-11K1（無排気乾燥・超静音26dB）
         </li>
         <li>
-          <strong>乾燥電気代を長期的に抑えたい・大容量・完全自動化</strong>
+          <strong>乾燥時の消費電力・容量・自動投入を確認したい</strong>
           　→ 東芝 ZABOON TW-127XM4L（ヒートポンプ・唯一の選択肢）
         </li>
       </ul>
