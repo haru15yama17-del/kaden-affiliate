@@ -7,7 +7,7 @@
   <circle cx="120" cy="101" r="4" fill="#fef1f4"/>
 
   <text x="120" y="178" text-anchor="middle" font-size="26" font-weight="800" fill="#2d2420">1.0L</text>
-  <text x="120" y="200" text-anchor="middle" font-size="15" font-weight="700" fill="#c4924a">3.8万円前後</text>
+  <text x="120" y="200" text-anchor="middle" font-size="15" font-weight="700" fill="#c4924a">価格は販売店で確認</text>
 
   <!-- people icon: 1~2 -->
   <g fill="#6a9e7f">

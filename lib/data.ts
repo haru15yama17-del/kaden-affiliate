@@ -1,3 +1,4 @@
+import { publishProduct } from "./publication";
 import { products as localProducts } from "@/data/products";
 import { categories, categoryMap } from "@/data/categories";
 import { getSupabase } from "./supabase";
@@ -22,6 +23,7 @@ function mapRow(r: Record<string, unknown>): Product {
     rating: r.rating != null ? Number(r.rating) : undefined,
     affiliate: (r.affiliate as Product["affiliate"]) ?? {},
     competitors: (r.competitors as string[]) ?? [],
+    source: r.source as Product["source"],
     updatedAt: (r.updated_at as string) ?? ""
   };
 }
@@ -42,7 +44,7 @@ export async function getAllProducts(): Promise<Product[]> {
     cache = localProducts;
     return cache;
   }
-  cache = data.map(mapRow);
+  cache = data.map(mapRow).map(publishProduct);
   return cache;
 }
 

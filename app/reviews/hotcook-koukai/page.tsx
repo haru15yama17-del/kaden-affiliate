@@ -70,7 +70,7 @@ const compactSpecs: Record<string, { label: string; value: string }[]> = {
   "sharp-kn-hw10g-hotkook": [
     { label: "容量", value: "1.0L（1〜2人向け）" },
     { label: "かきまぜ機能", value: "あり（まぜ技ユニット搭載・自動かき混ぜ、proシリーズ共通機能）" },
-    { label: "最大の強み", value: "3モデル中もっとも価格が安く小型、持ち手がなく置きやすい" },
+    { label: "最大の強み", value: "小型で持ち手がなく、設置場所を検討しやすい" },
   ],
 };
 
@@ -100,7 +100,7 @@ export async function generateMetadata() {
       "ホットクックKN-HW16H（1.6L）の後悔しやすい5つのデメリットと、KN-HW24H/10Gとの型番別の選び方を主婦目線で解説。店頭で聞いたリアルな声・実機レビューも掲載。",
     path: PATH,
     type: "article",
-    modifiedTime: "2026-06-18",
+    modifiedTime: "2026-11-01",
   });
 }
 
@@ -118,7 +118,7 @@ export default async function HotcookKoukaiPage() {
 
   return (
     <article className="prose-article max-w-none pb-20">
-      <GuideSchema title={TITLE} path={PATH} modified="2026-06-18" />
+      <GuideSchema title={TITLE} path={PATH} modified="2026-11-01" />
       <JsonLd data={reviewJsonLd(hw24h, PATH)} />
       <JsonLd data={faqJsonLd(faq)} />
       <Breadcrumbs
@@ -130,7 +130,8 @@ export default async function HotcookKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
-      <p className="mt-2 text-sm text-ink/55">更新日：2026-06-18</p>
+      <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
+      <p className="text-xs text-ink/55">修正履歴：2026-11-01 固定の価格表示を最新条件の確認案内へ変更。使用体験・店頭での記録は保持しています。</p>
 
       <ArticleImage
         src={`${IMG_BASE}/hero.svg`}
@@ -216,13 +217,13 @@ export default async function HotcookKoukaiPage() {
         ：朝に材料をセットして予約調理にしておけば、帰宅時に出来たてが完成しています。この「予約調理」こそホットクックの本領です。逆に“即・食べたい”人には電気圧力鍋のほうが向きます。
       </p>
 
-      <h3>③ 価格が高い（本体4〜5万円台）</h3>
+      <h3>③ 購入費用と使う頻度を確認したい</h3>
       <p>
-        現行モデルは4〜5万円台が中心で、決して安い買い物ではありません。「高かったのに使わなくなった」が最大の後悔パターンです。
+        購入費用はモデルや販売店により変わります。使いたい料理と使用頻度を考え、予算に合うか確認しましょう。
       </p>
       <p>
         <strong>対策</strong>
-        ：いきなり買わず、月数千円のレンタルで「自分の生活に定着するか」を試すのが堅実です。型落ちモデル（後述）を狙えば1万円前後安く買えることもあります。
+        ：レンタルを検討する場合は、料金・期間・返却条件を確認してください。型落ちモデルも、価格だけでなく保証や付属品まで比べましょう。
       </p>
 
       <h3>④ 型番がわかりにくく、世代で機能差がある</h3>
@@ -303,7 +304,7 @@ export default async function HotcookKoukaiPage() {
               loading="lazy"
               className="h-14 w-14 shrink-0 rounded-lg border border-ink/10 object-cover"
             />
-            <p className="text-sm font-bold text-ink">▶ 楽天市場で KN-HW24H（2.4L）の最安値を見る</p>
+            <p className="text-sm font-bold text-ink">▶ 楽天市場で KN-HW24H（2.4L）の最新価格を見る</p>
           </div>
           <div className="mb-3 rounded-xl border-2 border-ok/30 bg-ok/10 p-3.5">
             <p className="mb-1.5 text-sm font-bold text-ink">🎯 こんな人におすすめ</p>
@@ -334,7 +335,7 @@ export default async function HotcookKoukaiPage() {
               loading="lazy"
               className="h-14 w-14 shrink-0 rounded-lg border border-ink/10 object-cover"
             />
-            <p className="text-sm font-bold text-ink">▶ 楽天市場で KN-HW16H（1.6L）の最安値を見る</p>
+            <p className="text-sm font-bold text-ink">▶ 楽天市場で KN-HW16H（1.6L）の最新価格を見る</p>
           </div>
           <div className="mb-3 rounded-xl border-2 border-ok/30 bg-ok/10 p-3.5">
             <p className="mb-1.5 text-sm font-bold text-ink">🎯 こんな人におすすめ</p>
@@ -356,7 +357,7 @@ export default async function HotcookKoukaiPage() {
         </div>
         <div>
           <h3 className="mb-2 font-serif text-lg font-bold text-ink">
-            KN-HW10G（1.0L）：もっとも価格が安い小型モデル
+            KN-HW10G（1.0L）：少量調理向けの小型モデル
           </h3>
           <div className="mb-2 flex items-center gap-3">
             <img
@@ -365,7 +366,7 @@ export default async function HotcookKoukaiPage() {
               loading="lazy"
               className="h-14 w-14 shrink-0 rounded-lg border border-ink/10 object-cover"
             />
-            <p className="text-sm font-bold text-ink">▶ 楽天市場で KN-HW10G（1.0L）の最安値を見る</p>
+            <p className="text-sm font-bold text-ink">▶ 楽天市場で KN-HW10G（1.0L）の最新価格を見る</p>
           </div>
           <div className="mb-3 rounded-xl border-2 border-ok/30 bg-ok/10 p-3.5">
             <p className="mb-1.5 text-sm font-bold text-ink">🎯 こんな人におすすめ</p>

@@ -33,11 +33,32 @@ export function compareSlug(slugs: string[]): string {
   return [...slugs].sort().join("-vs-");
 }
 
-// competitors未設定の商品は、同カテゴリ・評価上位で代替する
+// 用途を編集確認したグループのみ。カテゴリ内の評価順位から比較相手を作らない。
+const groups = [
+  ['sharp-kn-mn16h-hotkook','sharp-kn-hw24h-hotkook','sharp-kn-hw16h-hotkook','sharp-kn-hw10g-hotkook','iris-kpc-ma4-pressurecooker'],
+  ['panasonic-np-tml1-solota-dishwasher','sanko-rakua-mini-color-dishwasher'],
+  ['iris-dcf-jm151t-fan','balmuda-egf1800-fan','balmuda-egf3400-cirq','iris-woozoo-stf-dc15tec'],
+  ['aircon-set-6jo-omakase','iris-g-aircon-set'],
+  ['daikin-s285ates-aircon','mitsubishi-msz-zw5625s-aircon','panasonic-cs-635dex2-aircon'],
+  ['premium-water','cosmo-water','frecious','aquaclara'],
+  ['oisix','yoshikei','coopdeli','palsystem','seikatsu-club'],
+  ['iris-flk842-washer','nitori-nd60ul1-washer','panasonic-na-sd10hbl-washer','sharp-es11k1-washer','toshiba-tw127xm4l-washer'],
+  ['iris-fk-d2-futondryer','cado-foehn-pro-futondryer'],
+  ['ecovacs-deebot-n20-proplus-cleaner','irobot-roomba-205-cleaner'],
+];
+export function isComparable(a: Product, b: Product): boolean {
+  return a.slug !== b.slug && groups.some(g => g.includes(a.slug) && g.includes(b.slug)) && passesMonetizationGate(a,b);
+}
+export function parseComparison(slug: string, all: Product[]): Product[] {
+  const slugs = slug.split('-vs-');
+  if(slugs.length !== 2 || slug !== compareSlug(slugs)) return [];
+  const a = all.find(p=>p.slug===slugs[0]), b = all.find(p=>p.slug===slugs[1]);
+  return a && b && effectiveCompetitors(a,all).some(p=>p.slug===b.slug) ? [a,b] : [];
+}
 export function effectiveCompetitors(p: Product, all: Product[], limit = 2): Product[] {
-  const explicit = competitorProducts(p, all).filter((c) => passesMonetizationGate(p, c));
-  if (explicit.length > 0) return explicit;
-  return relatedReviews(p, all, limit).filter((c) => passesMonetizationGate(p, c));
+  return all.filter(c => isComparable(p,c) &&
+    (p.competitors.includes(c.slug) || c.competitors.includes(p.slug) ||
+     (p.slug.includes('dishwasher') && c.slug.includes('dishwasher'))));
 }
 
 export function categoryComparePairs(

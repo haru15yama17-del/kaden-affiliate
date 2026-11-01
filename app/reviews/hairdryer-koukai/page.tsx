@@ -57,7 +57,7 @@ const compactSpecs: Record<string, { label: string; value: string }[]> = {
   "panasonic-eh-na0k-dryer": [
     { label: "風量", value: "1.6㎥/分" },
     { label: "重量", value: "約560g" },
-    { label: "最大の強み", value: "高浸透ナノイー・実績No.1" },
+    { label: "最大の強み", value: "高浸透ナノイー・シリーズの機能を確認" },
   ],
   "rede-hairdryplus-dr02a": [
     { label: "風速", value: "約53m/秒" },
@@ -76,7 +76,7 @@ const editorialNotes: Record<string, ReactNode> = {
       </p>
       <p className="mt-2">
         <strong>気になる点：</strong>
-        5商品の中でもっとも価格帯が高く（約3.2万〜3.6万円）、本体重量も約357gとミスト機構を積んでいる分、
+        本体重量は約357gです。ミスト機構の使い方と合わせて、
         シンプルなドライヤーよりやや重めです。ナノミスト機能を使いこなしたい人向けの1台と言えます。
       </p>
     </>
@@ -145,7 +145,7 @@ export async function generateMetadata() {
       "Re・De Hairdry+、ブライト シャワードライヤー、ReFa ビューテック ドライヤー S+、KINUJO 絹女KH301/KH302、パナソニック ナノケア EH-NA0Kの5台を風量・重量・価格帯で比較。KH301とKH302の違い（カラー違い）や、悩み・優先度別の選び方も解説します。",
     path: PATH,
     type: "article",
-    modifiedTime: "2026-07-27",
+    modifiedTime: "2026-11-01",
   });
 }
 
@@ -247,7 +247,7 @@ export default async function HairdryerKoukaiPage() {
 
   return (
     <article className="prose-article max-w-none pb-20">
-      <GuideSchema title={TITLE} path={PATH} modified="2026-07-01" />
+      <GuideSchema title={TITLE} path={PATH} modified="2026-11-01" />
       {/* ── 構造化データ ── */}
       <JsonLd data={reviewJsonLd(cv, PATH, { includeReview: false })} />
       {items.map((p) => (
@@ -263,7 +263,8 @@ export default async function HairdryerKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
-      <p className="mt-2 text-sm text-ink/55">更新日：2026-07-01</p>
+      <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
+      <p className="text-xs text-ink/55">修正履歴：2026-11-01 固定の価格表示を最新条件の確認案内へ変更。使用体験・店頭での記録は保持しています。</p>
 
       {/* ── 結論ファースト：悩み・優先度別の振り分け案内 ── */}
       <div className="not-prose my-5 rounded-xl border-2 border-accent/40 bg-blush/60 p-4">
@@ -356,8 +357,7 @@ export default async function HairdryerKoukaiPage() {
         携帯性・使い勝手を重視するなら有力候補です。EH-NA0Kは約560gとやや重めで、固定ノズルのため持ち運びには不向きです。
       </p>
       <p>
-        価格帯はブライト約3.2万〜3.6万円、KINUJO約3.1万〜3.5万円、ReFa 39,600円、EH-NA0K 3万〜4万円と、
-        4商品はいずれも3万円前後〜3万円台後半の水準です。
+        各商品の価格は要確認（時期により変動）です。
         Re・De Hairdry+は販売時期・ストアにより価格が変動するため、購入前に各ストアで最新価格をご確認ください。
       </p>
 

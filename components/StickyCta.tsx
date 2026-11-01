@@ -26,7 +26,7 @@ export function StickyCta({
   const ctaHref = aff.officialUrl || buttons[0]?.href;
   const ctaLabel = aff.officialUrl
     ? (aff.ctaLabel ?? "公式サイトで確認")
-    : "🛒 最安値を確認";
+    : "🛒 最新価格を確認";
   const isAffiliateLink = aff.officialUrl ? (aff.isAffiliateLink ?? true) : true;
 
   if (!ctaHref) return null;

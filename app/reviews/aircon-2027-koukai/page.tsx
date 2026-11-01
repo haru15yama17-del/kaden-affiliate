@@ -199,7 +199,7 @@ export default async function AirconKoukaiPage() {
 
       {/* ── スティッキーCTA（スクロール500px後に表示） ── */}
       <StickyCta
-        productName="工事費込みエアコン 楽天で最安値を確認"
+        productName="工事費込みエアコン 楽天で最新価格を確認"
         priceRange="2027年問題で需要増加中・在庫状況は要確認"
         aff={omakase.affiliate}
       />
@@ -408,7 +408,7 @@ export default async function AirconKoukaiPage() {
       </p>
 
       <HaruBubble label="はるの店頭レポート">
-        <p>大手のエントリー機より、さらに1〜2万円ほど安い価格設定。そのぶん本体のプラは少し薄く感じ、リモコンは大きな文字で最低限のボタンだけ。</p>
+        <p>店頭で確認した当時は、大手のエントリー機より安い価格設定でした（現在の価格差を示すものではありません）。そのぶん本体のプラは少し薄く感じ、リモコンは大きな文字で最低限のボタンだけ。</p>
         <p className="mt-2">店員さんは正直に「冷やす・暖めるだけの<strong>単機能</strong>。省エネは大手に劣るので、毎日長時間使うと電気代で逆転することも。室外機の音も少し大きめ」と。</p>
         <p className="mt-2">来客用の和室や1日1〜2時間だけ使う部屋、急ぎで安く揃えたいときの間に合わせ向き。メインのLDKには不向きという印象でした。</p>
       </HaruBubble>

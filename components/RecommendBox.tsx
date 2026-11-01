@@ -20,7 +20,7 @@ export function RecommendBox({
         この記事の結論
       </p>
       <p className="mb-4 text-sm font-medium leading-relaxed text-ink">
-        ✅ <strong>{name}</strong>は<strong>{bestFor[0]}</strong>の方に最もおすすめです。
+        ✅ <strong>{name}</strong>は<strong>{bestFor[0]}</strong>の方が検討できる選択肢です。
       </p>
       {buttons.length > 0 && (
         <div className="flex flex-col gap-2 sm:flex-row">

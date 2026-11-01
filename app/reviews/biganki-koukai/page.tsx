@@ -55,7 +55,7 @@ const editorialNotes: Record<string, ReactNode> = {
       </p>
       <p className="mt-2">
         <strong>気になる点：</strong>
-        公式サイトの表示価格は98,000円で、導入時の負担は小さくありません。
+        購入価格は要確認（時期により変動）です。公式サイトで最新の購入条件を確認してください。
         メーカー案内の使い方は「まず12週間・週5回使い、4週間休む」というサイクルのため、続ける前提で検討するのがおすすめです。
         使用時は「温かくピリピリとした感覚がある」とメーカーが案内しており、水ぶくれ・痛み・かさぶたなどの反応が出た場合はすぐに使用を中止するよう案内されています。
       </p>
@@ -86,7 +86,7 @@ export async function generateMetadata() {
       "トリア FRX（フラクショナルレーザー）とRe・De Suhada（EMS・LED・温熱）の2台を、方式・価格・使用条件・デメリットで比較。メーカー公式サイトで確認できた情報のみをもとに、向き不向きと選び方を編集部が解説します。",
     path: PATH,
     type: "article",
-    modifiedTime: "2026-10-31",
+    modifiedTime: "2026-11-01",
   });
 }
 
@@ -179,7 +179,7 @@ export default async function BigankiKoukaiPage() {
 
   return (
     <article className="prose-article max-w-none pb-20">
-      <GuideSchema title={TITLE} path={PATH} modified="2026-10-31" />
+      <GuideSchema title={TITLE} path={PATH} modified="2026-11-01" />
       {/* ── 構造化データ（aggregateRatingは付けない） ── */}
       <JsonLd data={reviewJsonLd(tria, PATH, { includeReview: false })} />
       {items.map((p) => (
@@ -195,7 +195,8 @@ export default async function BigankiKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
-      <p className="mt-2 text-sm text-ink/55">更新日：2026-10-31</p>
+      <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
+      <p className="text-xs text-ink/55">修正履歴：2026-11-01 固定の価格表示を最新条件の確認案内へ変更。使用体験・店頭での記録は保持しています。</p>
 
       {/* ── 結論ファースト：優先度別の振り分け案内 ── */}
       <div className="not-prose my-5 rounded-xl border-2 border-accent/40 bg-blush/60 p-4">
@@ -270,8 +271,8 @@ export default async function BigankiKoukaiPage() {
       </p>
       <p>
         <strong>価格：</strong>
-        公式サイトの表示価格は、FRXが98,000円、Suhadaが19,800円（税込）です。
-        Suhadaは月額1,800円（税込）のサブスクでも購入できると公式サイトに記載されています。
+        両商品の価格は要確認（時期により変動）です。
+        定期契約などを選ぶ場合は、支払総額・契約期間・解約条件も公式サイトで確認してください。
         予算に合わせて選べますが、安さだけでなく使用条件や続けやすさも合わせて検討してください。
       </p>
       <p>
@@ -292,8 +293,8 @@ export default async function BigankiKoukaiPage() {
           <tbody className="text-ink/75">
             <tr className="border-t border-ink/10">
               <td className="p-3 font-medium text-ink/60">公式サイト表示価格</td>
-              <td className="p-3">98,000円※</td>
-              <td className="p-3">19,800円（税込）／サブスク月額1,800円（税込）</td>
+              <td className="p-3">要確認（時期により変動）</td>
+              <td className="p-3">要確認（時期により変動）</td>
             </tr>
             <tr className="border-t border-ink/10">
               <td className="p-3 font-medium text-ink/60">方式</td>

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getAllProducts } from "@/lib/data";
-import { compareSlug, effectiveCompetitors } from "@/lib/links";
+import { compareSlug, effectiveCompetitors, parseComparison } from "@/lib/links";
 import { buildSpecDiffParagraphs } from "@/lib/compareInsights";
 import { categoryMap } from "@/data/categories";
 import { buildMetadata } from "@/lib/seo";
@@ -22,26 +22,20 @@ export async function generateStaticParams() {
   return [...set].map((slug) => ({ slug }));
 }
 
-function parse(slug: string, all: Product[]): Product[] {
-  return slug
-    .split("-vs-")
-    .map((s) => all.find((p) => p.slug === s))
-    .filter((x): x is Product => Boolean(x));
-}
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const items = parse(params.slug, await getAllProducts());
-  if (items.length < 2) return {};
+  const items = parseComparison(params.slug, await getAllProducts());
+  if (items.length !== 2) notFound();
   const names = items.map((p) => p.name).join(" と ");
   return buildMetadata({
-    title: `${names}を比較｜どっちがおすすめ？違いを徹底比較`,
-    description: `${names}のスペック・価格・使い勝手を比較。それぞれの向き不向きを編集部が解説します。`,
+    title: `${names}を比較｜どっちがおすすめ？用途・仕様の違い`,
+    description: `${names}の仕様・購入条件・向き不向きを比較。それぞれの向き不向きを編集部が解説します。`,
     path: `/compare/${params.slug}`
   });
 }
 
 export default async function ComparePage({ params }: { params: { slug: string } }) {
-  const items = parse(params.slug, await getAllProducts());
+  const items = parseComparison(params.slug, await getAllProducts());
   if (items.length < 2) notFound();
   const cat = categoryMap[items[0].category];
   const specDiffParagraphs = buildSpecDiffParagraphs(items);
@@ -59,6 +53,7 @@ export default async function ComparePage({ params }: { params: { slug: string }
       />
       <h1 className="font-serif text-3xl font-bold">{items.map((p) => p.name).join(" と ")} を比較</h1>
 
+      <p className="text-sm text-ink/60">2026-11-01 修正：比較対象を用途で見直し、価格の断定と自動おすすめ判定を取りやめました。仕様の測定条件が異なる場合、数値だけで優劣は判断できません。</p>
       <h2>スペック比較表</h2>
       <ComparisonTable items={items} />
 
@@ -112,7 +107,7 @@ export default async function ComparePage({ params }: { params: { slug: string }
 
       <h2>結論</h2>
       <p>
-        重視する軸（{cat.selectionPoints.slice(0, 3).join("・")}）によって最適解は変わります。
+        使いたい機能・設置条件・お手入れの負担を、ご家庭の使い方に合わせて比較してください。
         各商品の詳細は個別レビューもあわせてご確認ください。
       </p>
     </div>

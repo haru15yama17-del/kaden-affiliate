@@ -1,9 +1,10 @@
+import { PRICE_NOTICE, publishProduct } from "@/lib/publication";
 import type { Product } from "@/data/types";
 import { Rating } from "./Rating";
 
 export function ComparisonTable({
   items,
-  highlightBest = true,
+  highlightBest = false,
   hideMainOnlyRows = false,
 }: {
   items: Product[];
@@ -12,6 +13,7 @@ export function ComparisonTable({
   /** falseの場合「おすすめ」バッジと該当列のハイライトを表示しない（優劣ではなく用途別に選ぶ記事向け） */
   highlightBest?: boolean;
 }) {
+  items = items.map(publishProduct);
   const labels = Array.from(
     new Set(items.flatMap((p) => p.specs.map((s) => s.label)))
   );
@@ -63,7 +65,7 @@ export function ComparisonTable({
             <td className="p-3 font-medium text-ink/60">価格帯</td>
             {items.map((p, i) => (
               <td key={p.slug} className={`p-3 font-bold ${i === bestIdx ? "bg-accent/5 text-accent" : ""}`}>
-                {p.priceRange}
+                {PRICE_NOTICE}
               </td>
             ))}
           </tr>

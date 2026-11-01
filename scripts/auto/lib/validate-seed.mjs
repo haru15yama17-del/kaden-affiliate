@@ -104,6 +104,7 @@ function comparisonIssues(article, product) {
   const evidence = seedStrings(product).filter((x) => COMPARE_TERMS.test(x)).map(norm);
   // 質問文は主張ではないので対象外（回答側の文で検査する）
   for (const text of paragraphsOf(article)) {
+    if (/[0-9０-９][0-9０-９,.，．〜～万千百\s+-]*円|最安値/.test(text)) issues.push("固定金額または最安値の記載");
     for (const sentence of sentencesOf(text)) {
       const m = sentence.match(COMPARE_TERMS);
       if (!m) continue;

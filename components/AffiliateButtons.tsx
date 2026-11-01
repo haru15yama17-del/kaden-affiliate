@@ -85,7 +85,7 @@ export function AffiliateButtons({
   return (
     <div className="rounded-2xl border border-accent/25 bg-blush/50 p-4">
       <p className="mb-3 text-xs font-bold uppercase tracking-widest text-accent/75">
-        ▼ 最安値をストアで確認
+        ▼ 最新価格をストアで確認
       </p>
 
       {primary.map((b) => {

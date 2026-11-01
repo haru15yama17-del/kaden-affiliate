@@ -74,7 +74,7 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
   const related = relatedReviews(p, all);
   const faq =
     body.faq ?? [
-      { q: `${p.name}の価格帯は？`, a: `${p.priceRange}が目安です（時期により変動）。` },
+      { q: `${p.name}の価格帯は？`, a: `価格は時期・販売店・契約条件により変動します。リンク先で最新の価格と送料をご確認ください。` },
       { q: `${p.name}はどんな人向け？`, a: p.bestFor.join("／") },
     ];
 
@@ -166,7 +166,7 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
 
       <EditorialImage {...categoryImage(p.category, p.slug)} className="my-8 rounded-xl" />
       <h2>はじめに</h2>
-      <p>{body.intro ? <RichText text={body.intro} /> : `${p.name}を、${cat.selectionPoints.slice(0, 3).join("・")}の観点で評価しました。結論から言うと、${p.bestFor[0]}に向いた一台です。`}</p>
+      <p>{body.intro ? <RichText text={body.intro} /> : `${p.name}を、${cat.selectionPoints.slice(0, 3).join("・")}の観点で評価しました。結論から言うと、${p.bestFor[0]}に向いた選択肢です。`}</p>
 
       {/* 自動生成記事の追加セクション（空のセクションは出力されない） */}
       {body.sections?.map((s, i) => (
@@ -291,8 +291,9 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
         ))}
       </div>
 
+      <p className="text-xs text-ink/55">修正履歴：2026-11-01 価格は販売店・公式サイトで確認する表記に統一し、比較対象を見直しました。</p>
       <h2>まとめ</h2>
-      <p>{body.summary ? <RichText text={body.summary} /> : `${p.name}は${p.bestFor.join("・")}におすすめできる一台です。一方で${p.notFor[0]}には別の選択肢も検討しましょう。`}</p>
+      <p>{body.summary ? <RichText text={body.summary} /> : `${p.name}は${p.bestFor.join("・")}におすすめできる選択肢です。一方で${p.notFor[0]}には別の選択肢も検討しましょう。`}</p>
 
       {/* 内部リンク：調理家電 → 食材宅配 */}
       {showFoodDeliveryLink && (

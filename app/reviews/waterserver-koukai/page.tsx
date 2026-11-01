@@ -60,19 +60,19 @@ const TITLE = "ウォーターサーバーは共働き世帯に必要？アク�
 const compactSpecs: Record<string, { label: string; value: string }[]> = {
   "aquaclara": [
     { label: "水の種類", value: "RO水（純水にミネラル添加）" },
-    { label: "電気代目安", value: "月475〜1,000円（機種による）" },
+    { label: "電気代目安", value: "使用条件・電力契約により異なります" },
     { label: "卓上型の有無", value: "あり（AQUA SLIM S）" },
     { label: "最大の強み", value: "注文ノルマなしで気軽に始められること" },
   ],
   "frecious": [
     { label: "水の種類", value: "天然水（軽量パック式）" },
-    { label: "電気代目安", value: "月330〜600円" },
+    { label: "電気代目安", value: "使用条件・電力契約により異なります" },
     { label: "卓上型の有無", value: "あり（dewo mini）" },
     { label: "最大の強み", value: "軽量パックで交換がラク・エコ機能が豊富" },
   ],
   "premium-water": [
     { label: "水の種類", value: "天然水（全国8採水地）" },
-    { label: "電気代目安", value: "月500〜630円" },
+    { label: "電気代目安", value: "使用条件・電力契約により異なります" },
     { label: "卓上型の有無", value: "あり（スリムサーバー）" },
     { label: "最大の強み", value: "シリーズが豊富で長期契約ほどお得になること" },
   ],
@@ -81,7 +81,7 @@ const compactSpecs: Record<string, { label: string; value: string }[]> = {
 const faq = [
   {
     q: "ウォーターサーバーの月額料金に含まれるものは何ですか？",
-    a: "一般的にサーバーのレンタル料金と水代が中心で、電気代は別途かかることが多いです。電気代の目安は機種によって幅があり、アクアクララ月475〜1,000円、フレシャス月330〜600円、プレミアムウォーター月500〜630円ほどとされています（いずれも機種・使い方により変動）。契約前に対象機種の電気代目安を各社公式サイトで確認してください。",
+    a: "一般的にサーバーのレンタル料金と水代が中心で、電気代は別途かかることが多いです。電気代は機種・運転時間・電力契約により異なります。契約前に対象機種の消費電力や運転条件を各社公式サイトで確認してください。",
   },
   {
     q: "解約金はかかりますか？",
@@ -104,7 +104,7 @@ export async function generateMetadata() {
       "共働き・子育て世帯がウォーターサーバーを検討する際の悩み別に、アクアクララ・フレシャス・プレミアムウォーターを水の種類・電気代目安・卓上型の有無で比較します。",
     path: PATH,
     type: "article",
-    modifiedTime: "2026-07-05",
+    modifiedTime: "2026-11-01",
   });
 }
 
@@ -149,7 +149,7 @@ export default async function WaterserverKoukaiPage() {
 
   return (
     <article className="prose-article max-w-none pb-20">
-      <GuideSchema title={TITLE} path={PATH} modified="2026-07-05" />
+      <GuideSchema title={TITLE} path={PATH} modified="2026-11-01" />
       {/* ── 構造化データ ── */}
       <JsonLd data={reviewJsonLd(cv, PATH, { includeReview: false })} />
       <JsonLd data={faqJsonLd(faq)} />
@@ -166,7 +166,8 @@ export default async function WaterserverKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
-      <p className="mt-2 text-sm text-ink/55">更新日：2026-07-05</p>
+      <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
+      <p className="text-xs text-ink/55">修正履歴：2026-11-01 固定の価格表示を最新条件の確認案内へ変更。使用体験・店頭での記録は保持しています。</p>
 
       <p>
         共働き・子育て世帯では、家事の時短だけでなく「赤ちゃんのミルクに使う水」「水道水のまま飲むことへの漠然とした不安」を理由に、
@@ -194,7 +195,7 @@ export default async function WaterserverKoukaiPage() {
             　→ <span className="text-accent">フレシャス</span>
           </li>
           <li>
-            💰 <strong>長く使うなら一番お得にしたい・デザイン重視</strong>
+            💰 <strong>契約条件とデザインを比較したい</strong>
             　→ <span className="text-accent">プレミアムウォーター</span>
           </li>
         </ul>
@@ -267,7 +268,7 @@ export default async function WaterserverKoukaiPage() {
       <AffiliateButtons aff={frecious.affiliate} productName={frecious.name} />
       <CampaignBanner slug={frecious.slug} />
 
-      <h2>③ プレミアムウォーター——長く使うなら一番お得にしたい・デザイン重視の方に</h2>
+      <h2>③ プレミアムウォーター——契約条件とデザインを比較したいの方に</h2>
       <p>
         プレミアムウォーターは全国8採水地の天然水を扱い、nendoコラボモデルなどデザイン性の高いシリーズが豊富です。
         <strong>長期契約になるほど料金がお得になるプランや子育てプラン</strong>もあり、
@@ -310,7 +311,7 @@ export default async function WaterserverKoukaiPage() {
           <strong>水の交換を軽くラクにしたい・天然水がいい</strong> → フレシャス
         </li>
         <li>
-          <strong>長く使うなら一番お得にしたい・デザイン重視</strong> → プレミアムウォーター
+          <strong>契約条件とデザインを比較したい</strong> → プレミアムウォーター
         </li>
       </ul>
       <p>
