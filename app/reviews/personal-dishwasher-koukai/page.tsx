@@ -1,3 +1,4 @@
+import { GuideSchema } from "@/components/GuideSchema";
 import { getAllProducts } from "@/lib/data";
 import { buildMetadata } from "@/lib/seo";
 import { reviewJsonLd } from "@/lib/jsonld";
@@ -191,6 +192,7 @@ export default async function PersonalDishwasherKoukaiPage() {
 
   return (
     <article className="prose-article max-w-none pb-20">
+      <GuideSchema title={TITLE} path={PATH} modified="2026-07-01" />
       {/* ── 構造化データ ── */}
       <JsonLd data={reviewJsonLd(cv, PATH, { includeReview: false })} />
       {items.map((p) => (

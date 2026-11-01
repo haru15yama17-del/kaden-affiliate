@@ -1,0 +1,45 @@
+{
+  "generator": "built-in image_gen",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Wide landscape editorial photograph for Japanese home lifestyle magazine. A warm sunlit compact Japanese apartment kitchen and dining area, light oak cabinetry, cream linen curtains, leafy branch, ceramic teacup and breakfast bowl on round wooden dining table in foreground, subtle generic unbranded white countertop cooking appliance in background. Peaceful lived-in elegance, natural imperfect materials, soft sage green and butter yellow palette, warm film texture. No people, no text, no logo, no watermark. Full composition, landscape 3:2. This is a conceptual lifestyle illustration, not an actual product review.",
+      "path": "C:\\Users\\tsuka\\.codex\\generated_images\\01a196f8-1445-7812-8720-2d3849ea29c1\\exec-ff76cc05-9e07-4ae5-88b2-456246ed8d86.png"
+    },
+    {
+      "key": "cooking",
+      "prompt": "Landscape editorial lifestyle photograph for Japanese home magazine. Close still life on light oak kitchen worktop: generic unbranded cream electric multicooker, fresh carrots and broccoli in a ceramic bowl, folded linen towel and wooden spoon. Gentle late afternoon sunlight, warm cream and sage colors, authentic modest Japanese home, beautiful natural shadows and tactile surfaces. No people, no text, no brands, no watermark. Entire appliance visible. 3:2.",
+      "path": "C:\\Users\\tsuka\\.codex\\generated_images\\01a196f8-1445-7812-8720-2d3849ea29c1\\exec-bd46bf07-d366-405a-b5c9-ca3bbf7f9d99.png"
+    },
+    {
+      "key": "laundry",
+      "prompt": "Landscape editorial photograph of a serene compact Japanese laundry room, generic unbranded white front-load washing machine, woven basket of cream towels, pale blue linen hanging, plant by daylight window. Natural warm light, off white and muted sage palette, tactile wood and cotton textures, appealing practical home magazine photography, uncluttered but lived in. No people, text, logos or watermark. 3:2.",
+      "path": "C:\\Users\\tsuka\\.codex\\generated_images\\01a196f8-1445-7812-8720-2d3849ea29c1\\exec-f9f27c00-a3ec-46b0-91cc-e1905588d38a.png"
+    },
+    {
+      "key": "meal",
+      "prompt": "Landscape top down Japanese food magazine photograph. Beautiful everyday dinner on light oak table: ceramic plate of grilled fish and colorful vegetables, rice bowl, miso soup, small side dishes, chopsticks and folded pale peach linen. Natural light, warm appetizing realistic food, accessible family meal, not a luxury restaurant, no packaged products, no labels, no people, no text or logos. Editorial concept only, not any brand's actual meal. 3:2.",
+      "path": "C:\\Users\\tsuka\\.codex\\generated_images\\01a196f8-1445-7812-8720-2d3849ea29c1\\exec-e7ef6123-d9f6-4edc-9ab1-3eeaeaa7b8b8.png"
+    },
+    {
+      "key": "beauty",
+      "prompt": "Landscape editorial still life for Japanese home lifestyle magazine. Simple bright dressing table with generic unbranded cream hairdryer on folded white towel, small round mirror, ceramic vase with a branch, amber glass bottle without label. Soft morning daylight, muted blush pink and cream palette, elegant but accessible everyday self-care scene, natural material textures. No text, no person, no branding or watermark. 3:2.",
+      "path": "C:\\Users\\tsuka\\.codex\\generated_images\\01a196f8-1445-7812-8720-2d3849ea29c1\\exec-3e54ff27-1ae1-4823-a7f0-c698cfb6cc2e.png"
+    },
+    {
+      "key": "water",
+      "prompt": "Landscape editorial lifestyle photograph of a clear glass water pitcher and two tumblers on a light oak Japanese kitchen table, tiny condensation droplets, pale linen napkin and green branch, soft sunlit white curtain behind. Beautiful fresh natural light, cream and sage colors, understated Japanese home magazine aesthetic. No water dispenser brand, no text, no person, no logo. 3:2.",
+      "path": "C:\\Users\\tsuka\\.codex\\generated_images\\01a196f8-1445-7812-8720-2d3849ea29c1\\exec-5c9f6d1e-8983-403d-baef-aec46be881ce.png"
+    },
+    {
+      "key": "cleaning",
+      "prompt": "Landscape editorial photograph for a Japanese home magazine. Sunlight across pale oak floor of modest cozy living room, generic unbranded small round white robot vacuum entirely visible near a linen sofa, slippers neatly placed by wall, green plant. Warm off white and sage colors, natural realistic shadows, quiet home atmosphere, no text, no logos, no people, no watermark. This is a conceptual lifestyle image, not an actual product review. 3:2.",
+      "path": "C:\\Users\\tsuka\\.codex\\generated_images\\01a196f8-1445-7812-8720-2d3849ea29c1\\exec-0de1751a-26b8-4d60-bb83-b02b9e5edc82.png"
+    },
+    {
+      "key": "dishwasher",
+      "prompt": "Landscape editorial photograph for Japanese lifestyle magazine. Compact Japanese kitchen counter with generic unbranded small white countertop dishwasher, door closed and subtle transparent window showing clean white plates, ceramic cups beside it, fresh linen towel. Natural warm daylight, pale oak, cream and muted sage colors, modest realistic apartment scale, full appliance visible, no logos, no text, no people, no watermark. Conceptual image, no specific model. 3:2.",
+      "path": "C:\\Users\\tsuka\\.codex\\generated_images\\01a196f8-1445-7812-8720-2d3849ea29c1\\exec-cd474e88-8c73-4780-b6e1-2620d26ec26b.png"
+    }
+  ]
+}

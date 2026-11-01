@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { EditorialImage } from "@/components/EditorialImage";
+import { categoryImage } from "@/data/editorial";
 import { notFound } from "next/navigation";
 import { categories, categoryMap } from "@/data/categories";
 import { articles } from "@/data/articles";
@@ -77,48 +79,8 @@ export default async function CategoryPage({ params }: { params: { slug: string 
         items={[{ name: "トップ", path: "/" }, { name: c.name, path: `/category/${c.slug}` }]}
       />
 
-      <h1 className="font-serif text-3xl font-bold">
-        {hub ? hub.h1 : `${c.name}のおすすめと選び方`}
-      </h1>
-      <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink/65">{c.intro}</p>
-
+      <section className="category-hero"><div><p className="eyebrow">暮らしに合う選択を</p><h1>{hub ? hub.h1 : c.name + "の比較と選び方"}</h1><p>{c.intro}</p><nav className="category-jumps" aria-label="ページ内の案内">{relatedArticles.length > 0 && <a href="#category-guides">比較記事から選ぶ</a>}<a href="#category-products">商品・サービスを見る</a></nav></div><EditorialImage {...categoryImage(c.slug)} priority /></section>
       {c.slug === "water-server" && <CampaignBanner slug="frecious" />}
-
-      {/* ✅ 迷ったらコレ（比較ハブのみ） */}
-      {hub && topProduct && (
-        <div className="my-6 rounded-2xl border-2 border-gold/40 bg-gold/5 p-5">
-          <p className="mb-2 text-xs font-bold uppercase tracking-widest text-gold">
-            ✅ 迷ったらコレ — 編集部おすすめ No.1
-          </p>
-          <p className="text-lg font-bold text-ink">{topProduct.name}</p>
-          <p className="mt-1 text-sm text-ink/65">{topProduct.bestFor[0]}</p>
-          <Link
-            href={`/reviews/${topProduct.slug}`}
-            className="mt-3 inline-flex items-center gap-1.5 rounded-xl bg-accent px-5 py-2.5 text-sm font-bold text-white shadow-cta transition-all hover:brightness-110"
-          >
-            詳しいレビューを見る →
-          </Link>
-        </div>
-      )}
-
-      {/* Ranking CTA */}
-      <div className="my-6 flex flex-col gap-3 rounded-2xl border-2 border-accent/30 bg-blush/60 p-5 sm:flex-row sm:items-center">
-        <div className="flex-1">
-          <p className="font-bold text-ink">{c.name}ランキングを見る</p>
-          <p className="mt-0.5 text-xs text-ink/55">編集部評価の高い順に厳選・比較</p>
-        </div>
-        <Link
-          href={`/ranking/${c.slug}`}
-          className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3 font-bold text-white shadow-cta transition-all hover:-translate-y-0.5 hover:brightness-110 sm:shrink-0"
-        >
-          <span>🏆</span>
-          {c.name}ランキングを見る
-          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
-        </Link>
-      </div>
-
       {/* 選び方チェックポイント */}
       <div className="mb-8 rounded-xl border border-sub/20 bg-sub/5 p-4">
         <p className="mb-3 text-sm font-bold text-sub">✅ 選び方のチェックポイント</p>
@@ -144,7 +106,7 @@ export default async function CategoryPage({ params }: { params: { slug: string 
 
       {/* 比較記事（該当カテゴリの記事が無ければ非表示） */}
       {relatedArticles.length > 0 && (
-        <div className="mb-10">
+        <div className="mb-10" id="category-guides">
           <h2 className="mb-4 font-serif text-xl font-bold">{c.name}の比較記事</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {relatedArticles.map((a) => (
@@ -178,7 +140,7 @@ export default async function CategoryPage({ params }: { params: { slug: string 
       )}
 
       {/* レビュー一覧 */}
-      <h2 className="mb-4 font-serif text-xl font-bold">
+      <h2 id="category-products" className="mb-4 font-serif text-xl font-bold">
         {hub ? `${c.name}の詳細レビュー一覧` : `${c.name}のレビュー一覧`}
       </h2>
       {items.length === 0 ? (

@@ -1,3 +1,4 @@
+import { GuideSchema } from "@/components/GuideSchema";
 import Link from "next/link";
 import { getAllProducts } from "@/lib/data";
 import { buildMetadata } from "@/lib/seo";
@@ -178,6 +179,7 @@ export default async function BigankiKoukaiPage() {
 
   return (
     <article className="prose-article max-w-none pb-20">
+      <GuideSchema title={TITLE} path={PATH} modified="2026-10-31" />
       {/* ── 構造化データ（aggregateRatingは付けない） ── */}
       <JsonLd data={reviewJsonLd(tria, PATH, { includeReview: false })} />
       {items.map((p) => (

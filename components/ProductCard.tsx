@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { categoryImage } from "@/data/editorial";
+import { EditorialImage } from "./EditorialImage";
 import type { Product } from "@/data/types";
 import { Rating } from "./Rating";
 
@@ -21,9 +23,9 @@ export function ProductCard({ p }: { p: Product }) {
       {/* Image / placeholder */}
       <div className="relative flex h-36 items-center justify-center overflow-hidden rounded-t-2xl bg-gradient-to-br from-blush to-moss/40">
         {p.image ? (
-          <img src={p.image} alt={p.name} className="h-full w-full object-contain p-4" />
+          <img src={p.image} alt={p.name} loading="lazy" decoding="async" width={480} height={320} className="h-full w-full object-contain p-4" />
         ) : (
-          <span className="select-none text-5xl opacity-30">{catEmoji[p.category] ?? "📦"}</span>
+          <EditorialImage {...categoryImage(p.category, p.slug)} className="h-full w-full" />
         )}
         <span className="absolute left-2 top-2 rounded-full bg-accent/85 px-2 py-0.5 text-xs font-medium text-white">
           {p.brand}

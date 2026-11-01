@@ -2,9 +2,9 @@ import { getAllProducts } from "@/lib/data";
 import { SearchClient } from "@/components/SearchClient";
 import { buildMetadata } from "@/lib/seo";
 
-export const metadata = buildMetadata({
+export const metadata = { ...buildMetadata({
   title: "サイト内検索", description: "商品名・ブランド・カテゴリで検索できます。", path: "/search"
-});
+}), robots: { index: false, follow: true } };
 
 export default async function SearchPage() {
   const all = await getAllProducts();

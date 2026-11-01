@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ArticleNavigation } from "@/components/ArticleNavigation";
+import { NavigationTracking } from "@/components/NavigationTracking";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { site } from "@/data/site";
@@ -18,8 +20,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja">
       <body>
+        <a href="#main-content" className="sr-only focus:not-sr-only">本文へ移動</a>
         <SiteHeader />
-        <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
+        <main id="main-content" className="site-main">{children}</main>
+        <ArticleNavigation />
+        <NavigationTracking />
         <SiteFooter />
       </body>
       <GoogleAnalytics gaId="G-WLDBPK4BGB" />

@@ -1,3 +1,4 @@
+import { GuideSchema } from "@/components/GuideSchema";
 import { getAllProducts } from "@/lib/data";
 import { buildMetadata } from "@/lib/seo";
 import { reviewJsonLd, faqJsonLd } from "@/lib/jsonld";
@@ -139,6 +140,7 @@ export default async function SenpukiKoukaiPage() {
 
   return (
     <article className="prose-article max-w-none pb-20">
+      <GuideSchema title={TITLE} path={PATH} modified="2026-06-30" />
       {/* ── 構造化データ ── */}
       <JsonLd data={reviewJsonLd(cv, PATH, { includeReview: false })} />
       <JsonLd data={faqJsonLd(faq)} />

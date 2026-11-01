@@ -1,4 +1,6 @@
 import fs from "node:fs";
+import { EditorialImage } from "@/components/EditorialImage";
+import { categoryImage } from "@/data/editorial";
 import path from "node:path";
 import { notFound } from "next/navigation";
 import { getProduct, getAllProducts } from "@/lib/data";
@@ -162,6 +164,7 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
         <AffiliateButtons aff={p.affiliate} productName={p.name} />
       </div>
 
+      <EditorialImage {...categoryImage(p.category, p.slug)} className="my-8 rounded-xl" />
       <h2>はじめに</h2>
       <p>{body.intro ? <RichText text={body.intro} /> : `${p.name}を、${cat.selectionPoints.slice(0, 3).join("・")}の観点で評価しました。結論から言うと、${p.bestFor[0]}に向いた一台です。`}</p>
 
