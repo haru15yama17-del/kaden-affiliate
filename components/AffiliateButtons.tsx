@@ -30,7 +30,7 @@ export function AffiliateButtons({
       return (
         <div className="rounded-2xl border border-accent/25 bg-blush/50 p-4">
           <p className="mb-3 text-xs font-bold uppercase tracking-widest text-accent/75">
-            ▼ 公式サイトで詳細を確認
+            ▼ リンク先で詳細を確認
           </p>
           <TrackedLink
             href={aff.officialUrl}
@@ -45,6 +45,7 @@ export function AffiliateButtons({
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </TrackedLink>
+          {aff.selectionNote && <p className="mt-3 text-sm leading-relaxed text-ink/75">{aff.selectionNote}</p>}
           {isAffiliateLink && (
             <p className="mt-3 text-center text-xs text-ink/40">
               ※アフィリエイト広告を利用しています
@@ -129,6 +130,7 @@ export function AffiliateButtons({
         </div>
       )}
 
+      {aff.selectionNote && <p className="mt-3 text-sm leading-relaxed text-ink/75">{aff.selectionNote}</p>}
       <p className="mt-3 text-center text-xs text-ink/40">
         ※価格は頻繁に変動します。各ストアで最新価格をご確認ください。
       </p>

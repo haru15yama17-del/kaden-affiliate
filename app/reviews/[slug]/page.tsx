@@ -285,9 +285,9 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
 
       {/* Final buy CTA */}
       <div className="not-prose my-8 rounded-2xl border-2 border-accent/30 bg-blush/50 p-5">
-        <p className="mb-1 text-sm font-bold text-ink">{p.name} の購入・申し込みはこちら</p>
+        <p className="mb-1 text-sm font-bold text-ink">{p.name} {p.affiliate.informationOnly ? "の公式製品情報" : "の購入・申し込みはこちら"}</p>
         <p className="mb-4 text-xs text-ink/55">
-          価格は変動します。下記の各ストアで最新価格・特典をご確認ください。
+          {p.affiliate.informationOnly ? "一致する新品の購入先は確認できていません。公式の仕様・サポート情報をご案内します。" : "価格は変動します。リンク先で最新価格・購入条件をご確認ください。"}
         </p>
         <AffiliateButtons aff={p.affiliate} productName={p.name} />
       </div>

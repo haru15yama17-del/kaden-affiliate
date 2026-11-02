@@ -107,7 +107,7 @@ function productJsonLd(name: string, brand: string) {
 
 const PATH = "/reviews/aircon-2027-koukai";
 const TITLE =
-  "CS-635DEX2-Wは後悔する？工事費込みエアコン5機種比較";
+  "CS-635DEX2-Wは後悔する？エアコン5機種と工事条件を比較";
 
 /** ざっくり比較表用に「畳数目安・工事費込み/別・最大の強み」だけへ絞ったスペック */
 const compactSpecs: Record<string, { label: string; value: string }[]> = {
@@ -123,7 +123,7 @@ const compactSpecs: Record<string, { label: string; value: string }[]> = {
   ],
   "daikin-s285ates-aircon": [
     { label: "畳数目安", value: "10畳用" },
-    { label: "工事費込み/別", value: "工事費込み・全国工事対応" },
+    { label: "工事費込み/別", value: "標準工事付き（対応地域は販売店で確認）" },
     { label: "最大の強み", value: "工事費込みでダイキンブランドの信頼性を選べること" },
   ],
   "mitsubishi-msz-zw5625s-aircon": [
@@ -133,8 +133,8 @@ const compactSpecs: Record<string, { label: string; value: string }[]> = {
   ],
   "panasonic-cs-635dex2-aircon": [
     { label: "畳数目安", value: "20畳用" },
-    { label: "工事費込み/別", value: "工事費込み" },
-    { label: "最大の強み", value: "工事費込みでエオリアの省エネ上位機・ナノイーXを選べること" },
+    { label: "工事費込み/別", value: "本体販売・工事別" },
+    { label: "最大の強み", value: "ナノイーX搭載。施工は別途手配が必要" },
   ],
 };
 
@@ -165,7 +165,7 @@ export async function generateMetadata() {
   return buildMetadata({
     title: TITLE,
     description:
-      "エアコンの2027年度省エネ基準と購入前の確認点を整理。工事費込みで選べるダイキン・三菱霧ヶ峰・パナソニック エオリアCS-635DEX2-Wなど5機種を安さ重視・省エネ重視で比較。後悔しないためのデメリット5つと店頭で聞いた実機の声も掲載。",
+      "エアコンの2027年度省エネ基準と購入前の確認点を整理。工事費込み・別の条件を整理し、ダイキン・三菱霧ヶ峰・パナソニック エオリアCS-635DEX2-Wなど5機種を安さ重視・省エネ重視で比較。後悔しないためのデメリット5つと店頭で聞いた実機の声も掲載。",
     path: PATH,
     type: "article",
     modifiedTime: "2026-11-01",
@@ -303,8 +303,8 @@ export default async function AirconKoukaiPage() {
             aff={omakase.affiliate}
           />
           <CtaRow
-            label="🌿 省エネ重視：ダイキン・三菱・パナソニックをまとめて確認"
-            sub="10〜20畳・大手メーカー・省エネ上位機・工事費込み"
+            label="🌿 ダイキン S285ATES-Wの購入条件を確認"
+            sub="10畳用・標準工事付き。対応地域と追加費用を確認"
             aff={daikin.affiliate}
           />
         </div>
@@ -476,7 +476,7 @@ export default async function AirconKoukaiPage() {
       {/* CV-7 */}
       <AffiliateButtons aff={mitsu.affiliate} productName={mitsu.name} />
 
-      <h3>⑤ パナソニック エオリア CS-635DEX2-W（20畳用・工事費込み・省エネ上位機）——広いLDKに省エネ最重視</h3>
+      <h3>⑤ パナソニック エオリア CS-635DEX2-W（20畳用・工事別・省エネ上位機）——広いLDKに省エネ最重視</h3>
       <p>
         パナソニックのエオリアEXシリーズは省エネ上位機として位置づけられるシリーズです。
         20畳用・単相200Vで<strong>大きなLDKに省エネ性能を最重視して導入したい方</strong>向け。
@@ -701,7 +701,7 @@ export default async function AirconKoukaiPage() {
             aff={mitsu.affiliate}
           />
           <CtaRow
-            label="パナソニック エオリア CS-635DEX2-W（20畳・工事費込み）"
+            label="パナソニック エオリア CS-635DEX2-W（20畳・工事別）"
             sub="省エネ重視 / 20畳 / エオリアEX 省エネ上位機"
             aff={panasonic.affiliate}
           />

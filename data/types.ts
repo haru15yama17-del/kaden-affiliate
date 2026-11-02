@@ -24,6 +24,8 @@ export interface Category {
 }
 
 export interface AffiliateLinks {
+  selectionNote?: string; // 型番・セット・工事など購入先で確認する条件
+  informationOnly?: boolean; // 購入先を確認できず、製品情報のみ案内する場合
   amazonAsin?: string;   // ASINからリンク生成（捏造しない・実物のみ）
   rakutenUrl?: string;
   yahooUrl?: string;

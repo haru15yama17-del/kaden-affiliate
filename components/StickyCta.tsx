@@ -47,7 +47,7 @@ export function StickyCta({
             href={ctaHref}
             target="_blank"
             rel={isAffiliateLink ? "nofollow sponsored noopener" : "noopener"}
-            className="shrink-0 rounded-xl bg-accent px-5 py-2.5 text-sm font-bold text-white shadow-cta transition-all hover:-translate-y-0.5 hover:brightness-110"
+            className="max-w-[55%] shrink-0 rounded-xl bg-accent px-4 py-2.5 text-center text-sm font-bold text-white shadow-cta transition-all hover:-translate-y-0.5 hover:brightness-110"
           >
             {ctaLabel}
           </a>

@@ -1,4 +1,5 @@
 import modelCorrections from "@/data/verified-model-corrections.json";
+import purchaseCorrections from "@/data/purchase-link-corrections.json";
 import { productPhoto } from "@/lib/productPhotos";
 import correctedSlugs from "@/data/editorial-correction-products.json";
 import corrections from "@/data/editorial-corrections.json";
@@ -11,6 +12,16 @@ const money = /[0-9０-９][0-9０-９,.，．〜～万千百\s+-]*円/;
 export function publishProduct(p: Product): Product {
   const modelCorrection = (modelCorrections as Record<string, Partial<Product>>)[p.slug];
   if (modelCorrection) p = {...p, ...modelCorrection, rating: undefined};
+  const purchaseCorrection = (purchaseCorrections as Record<string, Partial<Product["affiliate"]>>)[p.slug];
+  if (purchaseCorrection) p = {...p, affiliate: {...p.affiliate, ...purchaseCorrection}};
+  if (p.slug === "daikin-s285ates-aircon") p = {...p, specs: p.specs.map(s => s.label === "工事" ? {...s, value: "標準工事付き（対応地域・追加費用は販売店で確認）"} : s)};
+  if (p.slug === "panasonic-cs-635dex2-aircon") p = {
+    ...p,
+    name: p.name.replace("工事費込み", "工事別"),
+    specs: p.specs.map(s => s.label === "工事" ? {...s, value: "本体販売・工事別（施工費と手配を別途確認）"} : s),
+    pros: p.pros.filter(s => !s.includes("工事費込み")),
+    cons: p.cons.map(s => s === "本体・工事込みで高価格帯" ? "本体代とは別に施工費の確認・手配が必要" : s),
+  };
   const correct = (text: string) => (corrections as Record<string, string>)[text] ?? text;
   // 完全一致の編集修正のみを適用し、URL・型番・体験談本文は書き換えない。
   p = {
