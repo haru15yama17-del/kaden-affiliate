@@ -6,51 +6,18 @@
     "category": "cooking",
     "priceRange": "3.9万円前後（市場想定価格）",
     "specs": [
-      {
-        "label": "容量",
-        "value": "1.6L（2〜4人向け）"
-      },
-      {
-        "label": "センサー",
-        "value": "温度・蒸気のダブルセンサーで無水調理を自動制御"
-      },
-      {
-        "label": "かきまぜ機能",
-        "value": "自動かきまぜ機能なし。「まぜナビ」機能が調理中のかきまぜタイミング・コツを音声・液晶表示で案内"
-      },
-      {
-        "label": "Wi-Fi連携",
-        "value": "非搭載（proシリーズのHW24H/HW16Hとの違い）"
-      }
+      {"label": "容量", "value": "1.6L（2〜4人向け）"},
+      {"label": "センサー", "value": "温度・蒸気のダブルセンサーで無水調理を自動制御"},
+      {"label": "かきまぜ機能", "value": "自動かきまぜ機能なし。「まぜナビ」機能が調理中のかきまぜタイミング・コツを音声・液晶表示で案内"},
+      {"label": "Wi-Fi連携", "value": "非搭載（proシリーズのHW24H/HW16Hとの違い）"}
     ],
-    "pros": [
-      "HW24H/HW16H（proシリーズ）より価格を抑えた入門モデル",
-      "無水調理・ダブルセンサーによる自動制御はproシリーズと共通",
-      "「まぜナビ」機能で初めてでもかきまぜのタイミングが分かりやすい"
-    ],
-    "cons": [
-      "自動かきまぜ機能がなく、メニューによっては手動でかき混ぜるひと手間が必要",
-      "Wi-Fi非搭載でスマホからのメニュー追加はできない",
-      "上位モデルに比べて対応調理方式がシンプル"
-    ],
-    "bestFor": [
-      "価格を抑えてホットクックを試したい人",
-      "手動でかき混ぜるひと手間があっても気にならない人",
-      "2〜4人分の無水調理をしたい家庭"
-    ],
-    "notFor": [
-      "完全放置の自動かきまぜを重視する人",
-      "Wi-Fi連携でメニューを追加したい人"
-    ],
+    "pros": ["HW24H/HW16H（proシリーズ）より価格を抑えた入門モデル", "無水調理・ダブルセンサーによる自動制御はproシリーズと共通", "「まぜナビ」機能で初めてでもかきまぜのタイミングが分かりやすい"],
+    "cons": ["自動かきまぜ機能がなく、メニューによっては手動でかき混ぜるひと手間が必要", "Wi-Fi非搭載でスマホからのメニュー追加はできない", "上位モデルに比べて対応調理方式がシンプル"],
+    "bestFor": ["価格を抑えてホットクックを試したい人", "手動でかき混ぜるひと手間があっても気にならない人", "2〜4人分の無水調理をしたい家庭"],
+    "notFor": ["完全放置の自動かきまぜを重視する人", "Wi-Fi連携でメニューを追加したい人"],
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fwinkstore%2F263860%2F",
-      "yahooUrl": ""
-    },
-    "competitors": [
-      "iris-kpc-ma4-pressurecooker"
-    ],
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fwinkstore%2F263860%2F", "yahooUrl": ""},
+    "competitors": ["iris-kpc-ma4-pressurecooker"],
     "updatedAt": "2026-07-01"
   },
   {
@@ -61,70 +28,23 @@
     "priceRange": "5.2万円前後",
     "image": "/images/reviews/hotcook-koukai/model-hw24h.svg",
     "specs": [
-      {
-        "label": "容量",
-        "value": "2.4L（2〜6人向け）"
-      },
-      {
-        "label": "調理方式",
-        "value": "水なし自動調理・蒸し・低温調理・強火調理（加圧なし）"
-      },
-      {
-        "label": "Wi-Fi連携",
-        "value": "あり（メニュー追加可能）"
-      },
-      {
-        "label": "自動メニュー数",
-        "value": "100以上"
-      },
-      {
-        "label": "予約調理の方式",
-        "value": "予約対応メニュー・材料・設定は機種の取扱説明書で確認"
-      },
-      {
-        "label": "かきまぜ機能",
-        "value": "あり（まぜ技ユニット搭載・自動かき混ぜ）"
-      },
-      {
-        "label": "得意料理",
-        "value": "無水カレー・炒め煮・蒸し料理・低温調理"
-      },
-      {
-        "label": "手入れ",
-        "value": "内鍋・まぜ技ユニットを洗う（圧力ピン類なし）"
-      }
+      {"label": "容量", "value": "2.4L（2〜6人向け）"},
+      {"label": "調理方式", "value": "水なし自動調理・蒸し・低温調理・強火調理（加圧なし）"},
+      {"label": "Wi-Fi連携", "value": "あり（メニュー追加可能）"},
+      {"label": "自動メニュー数", "value": "100以上"},
+      {"label": "予約調理の方式", "value": "予約対応メニュー・材料・設定は機種の取扱説明書で確認"},
+      {"label": "かきまぜ機能", "value": "あり（まぜ技ユニット搭載・自動かき混ぜ）"},
+      {"label": "得意料理", "value": "無水カレー・炒め煮・蒸し料理・低温調理"},
+      {"label": "手入れ", "value": "内鍋・まぜ技ユニットを洗う（圧力ピン類なし）"}
     ],
-    "pros": [
-      "子ども含む大家族でも作り置きしやすい大容量",
-      "強火調理に対応し焼き目・炒め系メニューの幅が広がった",
-      "予約調理で帰宅後すぐ温かい料理が食べられる"
-    ],
-    "cons": [
-      "横幅約35cmと設置スペースを取る",
-      "加熱に30〜60分かかり即食には不向き",
-      "購入価格と設置条件を販売店で確認する必要がある"
-    ],
-    "bestFor": [
-      "子どもがいて作り置きもしたいファミリー",
-      "最新の強火調理機能を使いたい人",
-      "2〜6人分をまとめて調理したい家庭"
-    ],
-    "notFor": [
-      "置き場所に余裕がない家庭",
-      "すぐ食べたい時短調理がメインの人"
-    ],
+    "pros": ["子ども含む大家族でも作り置きしやすい大容量", "強火調理に対応し焼き目・炒め系メニューの幅が広がった", "予約調理で帰宅後すぐ温かい料理が食べられる"],
+    "cons": ["横幅約35cmと設置スペースを取る", "加熱に30〜60分かかり即食には不向き", "購入価格と設置条件を販売店で確認する必要がある"],
+    "bestFor": ["子どもがいて作り置きもしたいファミリー", "最新の強火調理機能を使いたい人", "2〜6人分をまとめて調理したい家庭"],
+    "notFor": ["置き場所に余裕がない家庭", "すぐ食べたい時短調理がメインの人"],
     "rating": 4.4,
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=616&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fwinkstore%2F263866%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fwinkstore%2Fi%2F10038469%2F",
-      "yahooUrl": ""
-    },
-    "competitors": [
-      "sharp-kn-hw16h-hotkook",
-      "sharp-kn-hw10g-hotkook",
-      "iris-kpc-ma4-pressurecooker"
-    ],
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=616&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fwinkstore%2F263866%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fwinkstore%2Fi%2F10038469%2F", "yahooUrl": ""},
+    "competitors": ["sharp-kn-hw16h-hotkook", "sharp-kn-hw10g-hotkook", "iris-kpc-ma4-pressurecooker"],
     "updatedAt": "2026-06-18"
   },
   {
@@ -135,70 +55,23 @@
     "priceRange": "4.2万円前後",
     "image": "/images/reviews/hotcook-koukai/model-hw16h.svg",
     "specs": [
-      {
-        "label": "容量",
-        "value": "1.6L（2〜4人向け）"
-      },
-      {
-        "label": "調理方式",
-        "value": "水なし自動調理・蒸し・低温調理・強火調理（加圧なし）"
-      },
-      {
-        "label": "Wi-Fi連携",
-        "value": "あり（メニュー追加可能）"
-      },
-      {
-        "label": "自動メニュー数",
-        "value": "100以上"
-      },
-      {
-        "label": "予約調理の方式",
-        "value": "予約対応メニュー・材料・設定は機種の取扱説明書で確認"
-      },
-      {
-        "label": "かきまぜ機能",
-        "value": "あり（まぜ技ユニット搭載・自動かき混ぜ）"
-      },
-      {
-        "label": "得意料理",
-        "value": "無水カレー・炒め煮・蒸し料理・低温調理"
-      },
-      {
-        "label": "手入れ",
-        "value": "内鍋・まぜ技ユニットを洗う（圧力ピン類なし）"
-      }
+      {"label": "容量", "value": "1.6L（2〜4人向け）"},
+      {"label": "調理方式", "value": "水なし自動調理・蒸し・低温調理・強火調理（加圧なし）"},
+      {"label": "Wi-Fi連携", "value": "あり（メニュー追加可能）"},
+      {"label": "自動メニュー数", "value": "100以上"},
+      {"label": "予約調理の方式", "value": "予約対応メニュー・材料・設定は機種の取扱説明書で確認"},
+      {"label": "かきまぜ機能", "value": "あり（まぜ技ユニット搭載・自動かき混ぜ）"},
+      {"label": "得意料理", "value": "無水カレー・炒め煮・蒸し料理・低温調理"},
+      {"label": "手入れ", "value": "内鍋・まぜ技ユニットを洗う（圧力ピン類なし）"}
     ],
-    "pros": [
-      "24Hより約1万円安く価格と容量のバランスが良い",
-      "夫婦+子ども1〜2人にちょうど良いサイズ",
-      "強火調理対応で料理の幅が広い"
-    ],
-    "cons": [
-      "大家族や作り置き多めだと容量不足になりやすい",
-      "加熱に30〜60分かかり即食には不向き",
-      "本体サイズはコンロ脇に置くとやや大きい"
-    ],
-    "bestFor": [
-      "夫婦と子ども1〜2人の家庭",
-      "価格と容量のバランスを重視する人",
-      "置きやすさも価格も妥協したくない人"
-    ],
-    "notFor": [
-      "4人以上で作り置きも多い家庭",
-      "とにかく安いモデルを探している人"
-    ],
+    "pros": ["24Hより約1万円安く価格と容量のバランスが良い", "夫婦+子ども1〜2人にちょうど良いサイズ", "強火調理対応で料理の幅が広い"],
+    "cons": ["大家族や作り置き多めだと容量不足になりやすい", "加熱に30〜60分かかり即食には不向き", "本体サイズはコンロ脇に置くとやや大きい"],
+    "bestFor": ["夫婦と子ども1〜2人の家庭", "価格と容量のバランスを重視する人", "置きやすさも価格も妥協したくない人"],
+    "notFor": ["4人以上で作り置きも多い家庭", "とにかく安いモデルを探している人"],
     "rating": 4.4,
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=616&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fd-shop1one%2F4550556130202%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fd-shop1one%2Fi%2F10240488%2F",
-      "yahooUrl": ""
-    },
-    "competitors": [
-      "sharp-kn-hw24h-hotkook",
-      "sharp-kn-hw10g-hotkook",
-      "iris-kpc-ma4-pressurecooker"
-    ],
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=616&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fd-shop1one%2F4550556130202%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fd-shop1one%2Fi%2F10240488%2F", "yahooUrl": ""},
+    "competitors": ["sharp-kn-hw24h-hotkook", "sharp-kn-hw10g-hotkook", "iris-kpc-ma4-pressurecooker"],
     "updatedAt": "2026-06-18"
   },
   {
@@ -209,66 +82,22 @@
     "priceRange": "3.8万円前後",
     "image": "/images/reviews/hotcook-koukai/model-hw10g.svg",
     "specs": [
-      {
-        "label": "容量",
-        "value": "1.0L（1〜2人向け）"
-      },
-      {
-        "label": "調理方式",
-        "value": "水なし自動調理・蒸し・低温調理（加圧なし）"
-      },
-      {
-        "label": "Wi-Fi連携",
-        "value": "あり（メニュー追加可能）"
-      },
-      {
-        "label": "自動メニュー数",
-        "value": "100以上"
-      },
-      {
-        "label": "予約調理の方式",
-        "value": "予約対応メニュー・材料・設定は機種の取扱説明書で確認"
-      },
-      {
-        "label": "かきまぜ機能",
-        "value": "あり（まぜ技ユニット搭載・自動かき混ぜ、proシリーズ共通機能）"
-      },
-      {
-        "label": "得意料理",
-        "value": "無水スープ・煮物・蒸し料理・低温調理（1〜2人分）"
-      }
+      {"label": "容量", "value": "1.0L（1〜2人向け）"},
+      {"label": "調理方式", "value": "水なし自動調理・蒸し・低温調理（加圧なし）"},
+      {"label": "Wi-Fi連携", "value": "あり（メニュー追加可能）"},
+      {"label": "自動メニュー数", "value": "100以上"},
+      {"label": "予約調理の方式", "value": "予約対応メニュー・材料・設定は機種の取扱説明書で確認"},
+      {"label": "かきまぜ機能", "value": "あり（まぜ技ユニット搭載・自動かき混ぜ、proシリーズ共通機能）"},
+      {"label": "得意料理", "value": "無水スープ・煮物・蒸し料理・低温調理（1〜2人分）"}
     ],
-    "pros": [
-      "1.0Lの少量調理向けモデル",
-      "持ち手がなくキッチンに置きやすい",
-      "一人暮らし・夫婦のみの量にちょうど良い"
-    ],
-    "cons": [
-      "子どもが増えると容量不足になりやすい",
-      "強火調理など上位モデル限定機能は非対応",
-      "作り置きを多めに作りたい場合は不向き"
-    ],
-    "bestFor": [
-      "夫婦のみ・一人暮らしの家庭",
-      "置き場所をできるだけコンパクトにしたい人",
-      "初めてホットクックを試したい人"
-    ],
-    "notFor": [
-      "3人以上の家族で作り置きしたい人",
-      "強火調理など最新機能を使いたい人"
-    ],
+    "pros": ["1.0Lの少量調理向けモデル", "持ち手がなくキッチンに置きやすい", "一人暮らし・夫婦のみの量にちょうど良い"],
+    "cons": ["子どもが増えると容量不足になりやすい", "強火調理など上位モデル限定機能は非対応", "作り置きを多めに作りたい場合は不向き"],
+    "bestFor": ["夫婦のみ・一人暮らしの家庭", "置き場所をできるだけコンパクトにしたい人", "初めてホットクックを試したい人"],
+    "notFor": ["3人以上の家族で作り置きしたい人", "強火調理など最新機能を使いたい人"],
     "rating": 4.2,
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=616&url=https%3A%2F%2Fitem.rakuten.co.jp%2Ftno%2Fkn-hw10g%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ftno%2Fi%2F10002642%2F",
-      "yahooUrl": ""
-    },
-    "competitors": [
-      "sharp-kn-hw24h-hotkook",
-      "sharp-kn-hw16h-hotkook",
-      "iris-kpc-ma4-pressurecooker"
-    ],
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=616&url=https%3A%2F%2Fitem.rakuten.co.jp%2Ftno%2Fkn-hw10g%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ftno%2Fi%2F10002642%2F", "yahooUrl": ""},
+    "competitors": ["sharp-kn-hw24h-hotkook", "sharp-kn-hw16h-hotkook", "iris-kpc-ma4-pressurecooker"],
     "updatedAt": "2026-06-18"
   },
   {
@@ -278,64 +107,22 @@
     "category": "cooking",
     "priceRange": "1.5万〜2万円",
     "specs": [
-      {
-        "label": "容量",
-        "value": "4.0L（最大4人分）"
-      },
-      {
-        "label": "調理方式",
-        "value": "加圧・無水・蒸し・低温・発酵・炊飯"
-      },
-      {
-        "label": "自動メニュー数",
-        "value": "80種類"
-      },
-      {
-        "label": "予約調理の方式",
-        "value": "一部の自動メニューに対応。炊飯以外の対応する圧力・温度調理は先に調理し、予約時刻前に再加熱（KPC-MA4取扱説明書22〜24ページ）"
-      },
-      {
-        "label": "かきまぜ機能",
-        "value": "なし（手動でかき混ぜが必要）"
-      },
-      {
-        "label": "得意料理",
-        "value": "角煮・チャーシュー・カレー・豆類・煮込み料理"
-      },
-      {
-        "label": "手入れ",
-        "value": "圧力ピン・バルブ・パッキンを個別に洗う（パーツ多め）"
-      }
+      {"label": "容量", "value": "4.0L（最大4人分）"},
+      {"label": "調理方式", "value": "加圧・無水・蒸し・低温・発酵・炊飯"},
+      {"label": "自動メニュー数", "value": "80種類"},
+      {"label": "予約調理の方式", "value": "一部の自動メニューに対応。炊飯以外の対応する圧力・温度調理は先に調理し、予約時刻前に再加熱（KPC-MA4取扱説明書22〜24ページ）"},
+      {"label": "かきまぜ機能", "value": "なし（手動でかき混ぜが必要）"},
+      {"label": "得意料理", "value": "角煮・チャーシュー・カレー・豆類・煮込み料理"},
+      {"label": "手入れ", "value": "圧力ピン・バルブ・パッキンを個別に洗う（パーツ多め）"}
     ],
-    "pros": [
-      "直火を使わない電気調理（使用上の注意に従って使用）",
-      "自動メニュー80種類で献立に困らない",
-      "2万円以下とホットクックより手が届きやすい価格"
-    ],
-    "cons": [
-      "ふたやパッキンは取扱説明書に沿ったお手入れが必要",
-      "フタを閉めた状態の本体がやや大きい",
-      "圧力調理は予熱・減圧に時間がかかる"
-    ],
-    "bestFor": [
-      "時短調理を低予算で始めたい主婦",
-      "カレー・角煮・煮物をよく作る家庭",
-      "火のそばを離れたい子育て中の家庭"
-    ],
-    "notFor": [
-      "少人数で大容量が不要な人",
-      "炒め調理を重視する人"
-    ],
+    "pros": ["直火を使わない電気調理（使用上の注意に従って使用）", "自動メニュー80種類で献立に困らない", "2万円以下とホットクックより手が届きやすい価格"],
+    "cons": ["ふたやパッキンは取扱説明書に沿ったお手入れが必要", "フタを閉めた状態の本体がやや大きい", "圧力調理は予熱・減圧に時間がかかる"],
+    "bestFor": ["時短調理を低予算で始めたい主婦", "カレー・角煮・煮物をよく作る家庭", "火のそばを離れたい子育て中の家庭"],
+    "notFor": ["少人数で大容量が不要な人", "炒め調理を重視する人"],
     "rating": 4.1,
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fyamada-denki%2F3449743019%2F",
-      "yahooUrl": ""
-    },
-    "competitors": [
-      "sharp-kn-mn16h-hotkook"
-    ],
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fyamada-denki%2F3449743019%2F", "yahooUrl": ""},
+    "competitors": ["sharp-kn-mn16h-hotkook"],
     "updatedAt": "2026-06-04"
   },
   {
@@ -345,53 +132,19 @@
     "category": "cooking",
     "priceRange": "3万〜3.5万円",
     "specs": [
-      {
-        "label": "給水方式",
-        "value": "タンク式（分岐水栓・工事不要）"
-      },
-      {
-        "label": "食器容量",
-        "value": "食器点数6点（1人分）"
-      },
-      {
-        "label": "節水",
-        "value": "使用水量約2.5L（手洗い約20Lに対し）"
-      },
-      {
-        "label": "除菌",
-        "value": "ストリーム除菌洗浄（50℃以上の高圧水流）"
-      },
-      {
-        "label": "設置",
-        "value": "カラーボックス上にも置けるコンパクト"
-      }
+      {"label": "給水方式", "value": "タンク式（分岐水栓・工事不要）"},
+      {"label": "食器容量", "value": "食器点数6点（1人分）"},
+      {"label": "節水", "value": "使用水量約2.5L（手洗い約20Lに対し）"},
+      {"label": "除菌", "value": "ストリーム除菌洗浄（50℃以上の高圧水流）"},
+      {"label": "設置", "value": "カラーボックス上にも置けるコンパクト"}
     ],
-    "pros": [
-      "分岐水栓工事が不要で買ったその日から使える",
-      "手洗いより大幅節水、手荒れ対策にも◎",
-      "狭い賃貸キッチンにも置けるサイズ"
-    ],
-    "cons": [
-      "1人分6点と容量が小さく家族向けではない",
-      "食器の角度によって洗い残しが出ることも",
-      "使用前にタンクへの給水が必要"
-    ],
-    "bestFor": [
-      "手洗いの手荒れに悩む人",
-      "狭いキッチンで工事できない賃貸住まい",
-      "子どもの一人暮らし・新生活準備（仕送り家電）"
-    ],
-    "notFor": [
-      "3人以上の家族の食器をまとめて洗いたい人",
-      "鍋・フライパンも入れたい人"
-    ],
-    "rating": 4,
+    "pros": ["分岐水栓工事が不要で買ったその日から使える", "手洗いより大幅節水、手荒れ対策にも◎", "狭い賃貸キッチンにも置けるサイズ"],
+    "cons": ["1人分6点と容量が小さく家族向けではない", "食器の角度によって洗い残しが出ることも", "使用前にタンクへの給水が必要"],
+    "bestFor": ["手洗いの手荒れに悩む人", "狭いキッチンで工事できない賃貸住まい", "子どもの一人暮らし・新生活準備（仕送り家電）"],
+    "notFor": ["3人以上の家族の食器をまとめて洗いたい人", "鍋・フライパンも入れたい人"],
+    "rating": 4.0,
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fpanasonic-store%2Fnp-tml1-w%2F",
-      "yahooUrl": ""
-    },
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fpanasonic-store%2Fnp-tml1-w%2F", "yahooUrl": ""},
     "competitors": [],
     "updatedAt": "2026-07-01"
   },
@@ -402,64 +155,21 @@
     "category": "cooking",
     "priceRange": "3.6万円前後（税込・メーカー直販価格）",
     "specs": [
-      {
-        "label": "対象人数",
-        "value": "1〜2人用"
-      },
-      {
-        "label": "標準収納容量",
-        "value": "11〜12点（大皿2点・中皿またはコップ2点・小皿2〜3点・小鉢3点・茶わん2点・小物類）"
-      },
-      {
-        "label": "洗浄方式",
-        "value": "ダブルノズル噴射式（上下から高温洗浄）"
-      },
-      {
-        "label": "使用水量",
-        "value": "約3.2L（給水カップで注水するタンク式）"
-      },
-      {
-        "label": "本体寸法",
-        "value": "幅308×奥行315×高さ415mm（開扉時奥行594mm）"
-      },
-      {
-        "label": "重量",
-        "value": "約8kg"
-      },
-      {
-        "label": "運転時間目安",
-        "value": "通常洗浄約70分+乾燥約75分（合計約145分）、スピードコースは洗浄約30分+乾燥約75分"
-      },
-      {
-        "label": "設置",
-        "value": "工事不要・分岐水栓不要。賃貸・ワンルームでも設置可能"
-      }
+      {"label": "対象人数", "value": "1〜2人用"},
+      {"label": "標準収納容量", "value": "11〜12点（大皿2点・中皿またはコップ2点・小皿2〜3点・小鉢3点・茶わん2点・小物類）"},
+      {"label": "洗浄方式", "value": "ダブルノズル噴射式（上下から高温洗浄）"},
+      {"label": "使用水量", "value": "約3.2L（給水カップで注水するタンク式）"},
+      {"label": "本体寸法", "value": "幅308×奥行315×高さ415mm（開扉時奥行594mm）"},
+      {"label": "重量", "value": "約8kg"},
+      {"label": "運転時間目安", "value": "通常洗浄約70分+乾燥約75分（合計約145分）、スピードコースは洗浄約30分+乾燥約75分"},
+      {"label": "設置", "value": "工事不要・分岐水栓不要。賃貸・ワンルームでも設置可能"}
     ],
-    "pros": [
-      "工事不要・分岐水栓不要で賃貸やワンルームでも置ける",
-      "ダブルノズル噴射式で上下から高温洗浄できる",
-      "くすみカラー展開で生活感を抑えたデザイン"
-    ],
-    "cons": [
-      "洗浄+乾燥で合計約145分と時間がかかる",
-      "使用水量約3.2Lをタンクに給水カップで注水する必要がある",
-      "1〜2人用サイズのため大皿・鍋類には向かない"
-    ],
-    "bestFor": [
-      "工事なしで食洗機を導入したい1〜2人世帯",
-      "賃貸・ワンルームでコンパクトな食洗機を探している人",
-      "インテリアになじむカラーの食洗機を選びたい人"
-    ],
-    "notFor": [
-      "3人以上の家族で食器量が多い家庭",
-      "短時間でとにかく早く洗い終えたい人"
-    ],
+    "pros": ["工事不要・分岐水栓不要で賃貸やワンルームでも置ける", "ダブルノズル噴射式で上下から高温洗浄できる", "くすみカラー展開で生活感を抑えたデザイン"],
+    "cons": ["洗浄+乾燥で合計約145分と時間がかかる", "使用水量約3.2Lをタンクに給水カップで注水する必要がある", "1〜2人用サイズのため大皿・鍋類には向かない"],
+    "bestFor": ["工事なしで食洗機を導入したい1〜2人世帯", "賃貸・ワンルームでコンパクトな食洗機を探している人", "インテリアになじむカラーの食洗機を選びたい人"],
+    "notFor": ["3人以上の家族で食器量が多い家庭", "短時間でとにかく早く洗い終えたい人"],
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fmatsucame%2Foda1245%2F",
-      "yahooUrl": ""
-    },
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fmatsucame%2Foda1245%2F", "yahooUrl": ""},
     "competitors": [],
     "updatedAt": "2026-07-01"
   },
@@ -470,57 +180,20 @@
     "category": "personal-care",
     "priceRange": "3万〜4万円",
     "specs": [
-      {
-        "label": "風量",
-        "value": "1.6㎥/分"
-      },
-      {
-        "label": "重量",
-        "value": "約560g"
-      },
-      {
-        "label": "消費電力",
-        "value": "1200W"
-      },
-      {
-        "label": "ナノイー",
-        "value": "搭載（高浸透ナノイー）"
-      },
-      {
-        "label": "折りたたみ",
-        "value": "なし（固定ノズル）"
-      },
-      {
-        "label": "特徴タグ",
-        "value": "高浸透ナノイー・大風量・速乾・小型軽量化"
-      }
+      {"label": "風量", "value": "1.6㎥/分"},
+      {"label": "重量", "value": "約560g"},
+      {"label": "消費電力", "value": "1200W"},
+      {"label": "ナノイー", "value": "搭載（高浸透ナノイー）"},
+      {"label": "折りたたみ", "value": "なし（固定ノズル）"},
+      {"label": "特徴タグ", "value": "高浸透ナノイー・大風量・速乾・小型軽量化"}
     ],
-    "pros": [
-      "高浸透ナノイーで乾燥後も髪にうるおいが続く",
-      "大風量で速乾、忙しい朝の時短に",
-      "前モデルより小型・軽量化"
-    ],
-    "cons": [
-      "3万円台と価格が高め",
-      "折りたためず携帯には不向き",
-      "購入前に保証期間と修理対応を確認したい"
-    ],
-    "bestFor": [
-      "毎日のヘアケアを重視する人",
-      "髪のダメージ・乾燥が気になる人",
-      "自分へのご褒美家電を探す主婦"
-    ],
-    "notFor": [
-      "旅行用にコンパクトなものが欲しい人",
-      "コストを抑えたい人"
-    ],
+    "pros": ["高浸透ナノイーで乾燥後も髪にうるおいが続く", "大風量で速乾、忙しい朝の時短に", "前モデルより小型・軽量化"],
+    "cons": ["3万円台と価格が高め", "折りたためず携帯には不向き", "購入前に保証期間と修理対応を確認したい"],
+    "bestFor": ["毎日のヘアケアを重視する人", "髪のダメージ・乾燥が気になる人", "自分へのご褒美家電を探す主婦"],
+    "notFor": ["旅行用にコンパクトなものが欲しい人", "コストを抑えたい人"],
     "rating": 4.4,
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fpanasonic-store%2Feh-na0j-a%2F",
-      "yahooUrl": ""
-    },
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fpanasonic-store%2Feh-na0j-a%2F", "yahooUrl": ""},
     "competitors": [],
     "updatedAt": "2026-07-01"
   },
@@ -531,52 +204,19 @@
     "category": "personal-care",
     "priceRange": "約3.2万〜3.6万円",
     "specs": [
-      {
-        "label": "風量",
-        "value": "2.58㎥/分（自社測定・ブーストアタッチメント装着・強時）"
-      },
-      {
-        "label": "重量",
-        "value": "約357g（本体のみ）"
-      },
-      {
-        "label": "マイナスイオン",
-        "value": "あり"
-      },
-      {
-        "label": "冷風機能",
-        "value": "あり"
-      },
-      {
-        "label": "特徴",
-        "value": "ナノミスト（1μm以下の微粒子化した美容液成分）を噴射しながら乾かす「次世代型ドライヤー」。グラフェンによる遠赤外線効果も搭載"
-      },
-      {
-        "label": "特徴タグ",
-        "value": "ナノミスト・美容液成分配合・大風量・速乾"
-      }
+      {"label": "風量", "value": "2.58㎥/分（自社測定・ブーストアタッチメント装着・強時）"},
+      {"label": "重量", "value": "約357g（本体のみ）"},
+      {"label": "マイナスイオン", "value": "あり"},
+      {"label": "冷風機能", "value": "あり"},
+      {"label": "特徴", "value": "ナノミスト（1μm以下の微粒子化した美容液成分）を噴射しながら乾かす「次世代型ドライヤー」。グラフェンによる遠赤外線効果も搭載"},
+      {"label": "特徴タグ", "value": "ナノミスト・美容液成分配合・大風量・速乾"}
     ],
-    "pros": [
-      "ナノミストが美容液成分を髪に浸透させながら乾かせる",
-      "2.58㎥/分の大風量で速乾性が高い"
-    ],
-    "cons": [
-      "4商品の中で価格帯が最も高い（3.2万〜3.6万円）",
-      "ミスト機能ゆえ本体重量はやや重め（約357g）"
-    ],
-    "bestFor": [
-      "乾かしながら髪の保湿・美容ケアも同時にしたい人",
-      "とにかく風量重視で時短したい人"
-    ],
-    "notFor": [
-      "価格を抑えてシンプルに乾かしたいだけの人"
-    ],
+    "pros": ["ナノミストが美容液成分を髪に浸透させながら乾かせる", "2.58㎥/分の大風量で速乾性が高い"],
+    "cons": ["4商品の中で価格帯が最も高い（3.2万〜3.6万円）", "ミスト機能ゆえ本体重量はやや重め（約357g）"],
+    "bestFor": ["乾かしながら髪の保湿・美容ケアも同時にしたい人", "とにかく風量重視で時短したい人"],
+    "notFor": ["価格を抑えてシンプルに乾かしたいだけの人"],
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fbrighte-onlineshop%2Fbrt-sd173%2F",
-      "yahooUrl": ""
-    },
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fbrighte-onlineshop%2Fbrt-sd173%2F", "yahooUrl": ""},
     "competitors": [],
     "updatedAt": "2026-07-01"
   },
@@ -587,48 +227,18 @@
     "category": "personal-care",
     "priceRange": "39,600円（税込）",
     "specs": [
-      {
-        "label": "カラー",
-        "value": "ホワイト・ブラック・ピンク"
-      },
-      {
-        "label": "発売日",
-        "value": "2024年10月16日"
-      },
-      {
-        "label": "特徴",
-        "value": "「センシングプログラム」により頭皮アンダー50℃・毛先アンダー60℃を目指して温風と冷風を自動切り替え。ハイドロイオン発生量は従来品から30%アップ。クールボタン搭載"
-      },
-      {
-        "label": "注意点",
-        "value": "海外対応（マルチボルテージ）ではない"
-      },
-      {
-        "label": "特徴タグ",
-        "value": "センシングプログラム・自動温度調整・コンパクト・速乾"
-      }
+      {"label": "カラー", "value": "ホワイト・ブラック・ピンク"},
+      {"label": "発売日", "value": "2024年10月16日"},
+      {"label": "特徴", "value": "「センシングプログラム」により頭皮アンダー50℃・毛先アンダー60℃を目指して温風と冷風を自動切り替え。ハイドロイオン発生量は従来品から30%アップ。クールボタン搭載"},
+      {"label": "注意点", "value": "海外対応（マルチボルテージ）ではない"},
+      {"label": "特徴タグ", "value": "センシングプログラム・自動温度調整・コンパクト・速乾"}
     ],
-    "pros": [
-      "センシングプログラムで頭皮・毛先の温度を自動管理し熱ダメージを抑えられる",
-      "クールボタンで温風・冷風をワンタッチ切替できる"
-    ],
-    "cons": [
-      "海外対応（マルチボルテージ）ではない",
-      "4商品の中で唯一、風量の具体的な数値が公表されていない"
-    ],
-    "bestFor": [
-      "熱ダメージが気になる人",
-      "サロン帰りのようなツヤ・まとまりを求める人"
-    ],
-    "notFor": [
-      "海外旅行にも持って行きたい人"
-    ],
+    "pros": ["センシングプログラムで頭皮・毛先の温度を自動管理し熱ダメージを抑えられる", "クールボタンで温風・冷風をワンタッチ切替できる"],
+    "cons": ["海外対応（マルチボルテージ）ではない", "4商品の中で唯一、風量の具体的な数値が公表されていない"],
+    "bestFor": ["熱ダメージが気になる人", "サロン帰りのようなツヤ・まとまりを求める人"],
+    "notFor": ["海外旅行にも持って行きたい人"],
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fmtgec-beauty%2F1850320101%2F",
-      "yahooUrl": ""
-    },
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fmtgec-beauty%2F1850320101%2F", "yahooUrl": ""},
     "competitors": [],
     "updatedAt": "2026-07-01"
   },
@@ -639,51 +249,19 @@
     "category": "personal-care",
     "priceRange": "約3.1万〜3.5万円",
     "specs": [
-      {
-        "label": "風量",
-        "value": "2.2㎥/分"
-      },
-      {
-        "label": "重量",
-        "value": "約348g（本体のみ）"
-      },
-      {
-        "label": "消費電力",
-        "value": "1250W"
-      },
-      {
-        "label": "カラー",
-        "value": "ホワイト（KH301）・モカ（KH302）"
-      },
-      {
-        "label": "特徴",
-        "value": "「超遠赤外線」を発生させる特殊天然鉱石で髪内部から熱を生み出す設計。GLOSS/SCULP/SWINGの3モード、マイナスイオン搭載"
-      },
-      {
-        "label": "特徴タグ",
-        "value": "超遠赤外線・超軽量・大風量・折りたたみ可"
-      }
+      {"label": "風量", "value": "2.2㎥/分"},
+      {"label": "重量", "value": "約348g（本体のみ）"},
+      {"label": "消費電力", "value": "1250W"},
+      {"label": "カラー", "value": "ホワイト（KH301）・モカ（KH302）"},
+      {"label": "特徴", "value": "「超遠赤外線」を発生させる特殊天然鉱石で髪内部から熱を生み出す設計。GLOSS/SCULP/SWINGの3モード、マイナスイオン搭載"},
+      {"label": "特徴タグ", "value": "超遠赤外線・超軽量・大風量・折りたたみ可"}
     ],
-    "pros": [
-      "重量約348g（計量対象の条件はメーカー仕様を確認）",
-      "折りたたみ可能でコンパクトに収納・持ち運びできる"
-    ],
-    "cons": [
-      "ナイトケアや美容液ミストのような特殊機能は無く、乾燥・速乾に特化したシンプル設計"
-    ],
-    "bestFor": [
-      "軽さ・携帯性を最優先したい人",
-      "旅行や出張にも持って行きたい人"
-    ],
-    "notFor": [
-      "多機能なケア機能を求める人"
-    ],
+    "pros": ["重量約348g（計量対象の条件はメーカー仕様を確認）", "折りたたみ可能でコンパクトに収納・持ち運びできる"],
+    "cons": ["ナイトケアや美容液ミストのような特殊機能は無く、乾燥・速乾に特化したシンプル設計"],
+    "bestFor": ["軽さ・携帯性を最優先したい人", "旅行や出張にも持って行きたい人"],
+    "notFor": ["多機能なケア機能を求める人"],
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fkinujo%2Fdry%2F",
-      "yahooUrl": ""
-    },
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fkinujo%2Fdry%2F", "yahooUrl": ""},
     "competitors": [],
     "updatedAt": "2026-07-01"
   },
@@ -694,46 +272,17 @@
     "category": "personal-care",
     "priceRange": "要確認（時期により変動）",
     "specs": [
-      {
-        "label": "重量",
-        "value": "約280g（本体のみ・旧モデルDR01Aは約255g）"
-      },
-      {
-        "label": "風速",
-        "value": "約53m/秒"
-      },
-      {
-        "label": "モード",
-        "value": "5モードを搭載"
-      },
-      {
-        "label": "スタンド",
-        "value": "専用スタンド付属（ハンズフリー使用可）"
-      }
+      {"label": "重量", "value": "約280g（本体のみ・旧モデルDR01Aは約255g）"},
+      {"label": "風速", "value": "約53m/秒"},
+      {"label": "モード", "value": "5モードを搭載"},
+      {"label": "スタンド", "value": "専用スタンド付属（ハンズフリー使用可）"}
     ],
-    "pros": [
-      "約280gと軽量で長時間の使用でも扱いやすい",
-      "最大風速約53m/秒の大風量",
-      "グッドデザイン賞など受賞歴のあるデザイン性の高さ"
-    ],
-    "cons": [
-      "風量が強く、風向きによっては髪や周囲のものが乱れやすい場合がある",
-      "モードによっては動作音がやや大きいと感じる声がある"
-    ],
-    "bestFor": [
-      "軽さを最優先したい人",
-      "デザイン性の高いドライヤーを求める人",
-      "専用スタンドでハンズフリーに使いたい人"
-    ],
-    "notFor": [
-      "穏やかな風でじっくり乾かしたい人",
-      "静音性を最優先したい人"
-    ],
+    "pros": ["約280gと軽量で長時間の使用でも扱いやすい", "最大風速約53m/秒の大風量", "グッドデザイン賞など受賞歴のあるデザイン性の高さ"],
+    "cons": ["風量が強く、風向きによっては髪や周囲のものが乱れやすい場合がある", "モードによっては動作音がやや大きいと感じる声がある"],
+    "bestFor": ["軽さを最優先したい人", "デザイン性の高いドライヤーを求める人", "専用スタンドでハンズフリーに使いたい人"],
+    "notFor": ["穏やかな風でじっくり乾かしたい人", "静音性を最優先したい人"],
     "reviewSummary": "",
-    "affiliate": {
-      "officialUrl": "https://px.a8.net/svt/ejp?a8mat=4B8ACV+YJ5V6+4KJC+HXSGH",
-      "ctaLabel": "Re・De公式サイトで詳しく見る"
-    },
+    "affiliate": {"officialUrl": "https://px.a8.net/svt/ejp?a8mat=4B8ACV+YJ5V6+4KJC+HXSGH", "ctaLabel": "Re・De公式サイトで詳しく見る"},
     "competitors": [],
     "updatedAt": "2026-07-27"
   },
@@ -744,52 +293,19 @@
     "category": "vacuum",
     "priceRange": "10万〜13万円",
     "specs": [
-      {
-        "label": "自動ゴミ収集",
-        "value": "あり（クリーンベース付属）"
-      },
-      {
-        "label": "障害物回避",
-        "value": "AIカメラによる高精度回避"
-      },
-      {
-        "label": "マッピング",
-        "value": "スマートマップ対応"
-      },
-      {
-        "label": "水拭き機能",
-        "value": "なし（吸引専用）"
-      }
+      {"label": "自動ゴミ収集", "value": "あり（クリーンベース付属）"},
+      {"label": "障害物回避", "value": "AIカメラによる高精度回避"},
+      {"label": "マッピング", "value": "スマートマップ対応"},
+      {"label": "水拭き機能", "value": "なし（吸引専用）"}
     ],
-    "pros": [
-      "AIカメラで靴下・ケーブルを認識して回避",
-      "自動ゴミ収集で約60日間ゴミ捨て不要",
-      "Dirt Detectiveで汚れる場所を優先掃除"
-    ],
-    "cons": [
-      "10万円超と高価格帯",
-      "クリーンベースが大きく設置場所が必要",
-      "j9単体では水拭き機能なし"
-    ],
-    "bestFor": [
-      "ペットを飼っている家庭",
-      "共働きで毎日の掃除が難しい人",
-      "床掃除の手間をゼロにしたい人"
-    ],
-    "notFor": [
-      "コスパ重視の人",
-      "設置スペースが狭い部屋"
-    ],
+    "pros": ["AIカメラで靴下・ケーブルを認識して回避", "自動ゴミ収集で約60日間ゴミ捨て不要", "Dirt Detectiveで汚れる場所を優先掃除"],
+    "cons": ["10万円超と高価格帯", "クリーンベースが大きく設置場所が必要", "j9単体では水拭き機能なし"],
+    "bestFor": ["ペットを飼っている家庭", "共働きで毎日の掃除が難しい人", "床掃除の手間をゼロにしたい人"],
+    "notFor": ["コスパ重視の人", "設置スペースが狭い部屋"],
     "rating": 4.3,
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "",
-      "yahooUrl": ""
-    },
-    "competitors": [
-      "makita-cl108fdshw-cleaner"
-    ],
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "", "yahooUrl": ""},
+    "competitors": ["makita-cl108fdshw-cleaner"],
     "updatedAt": "2026-06-04"
   },
   {
@@ -799,56 +315,20 @@
     "category": "vacuum",
     "priceRange": "1.3万〜1.6万円",
     "specs": [
-      {
-        "label": "重量",
-        "value": "約1.0kg（バッテリ含む）"
-      },
-      {
-        "label": "集じん方式",
-        "value": "カプセル式（紙パック不要）"
-      },
-      {
-        "label": "稼働時間",
-        "value": "標準約25分 / 充電約22分"
-      },
-      {
-        "label": "電圧",
-        "value": "10.8V"
-      },
-      {
-        "label": "付属",
-        "value": "バッテリ・充電器付き"
-      }
+      {"label": "重量", "value": "約1.0kg（バッテリ含む）"},
+      {"label": "集じん方式", "value": "カプセル式（紙パック不要）"},
+      {"label": "稼働時間", "value": "標準約25分 / 充電約22分"},
+      {"label": "電圧", "value": "10.8V"},
+      {"label": "付属", "value": "バッテリ・充電器付き"}
     ],
-    "pros": [
-      "約1.0kgで軽く、サッと取り出して使える",
-      "カプセル式で紙パック不要（フィルターなどの消耗品費は別途確認）",
-      "1.5万円前後とコードレス入門に最適な価格"
-    ],
-    "cons": [
-      "ヘッドが回転しないシンプル形状でカーペットはやや苦手",
-      "ゴミが溜まると吸引力が落ちる（別売サイクロン推奨）",
-      "稼働25分のため広い家では充電が必要"
-    ],
-    "bestFor": [
-      "ちょい掛けで毎日サッと掃除したい主婦",
-      "軽さ重視の人",
-      "コードレス掃除機が初めての人"
-    ],
-    "notFor": [
-      "広いカーペットを強力に掃除したい人",
-      "1台で家中を一気に掃除したい大豪邸"
-    ],
+    "pros": ["約1.0kgで軽く、サッと取り出して使える", "カプセル式で紙パック不要（フィルターなどの消耗品費は別途確認）", "1.5万円前後とコードレス入門に最適な価格"],
+    "cons": ["ヘッドが回転しないシンプル形状でカーペットはやや苦手", "ゴミが溜まると吸引力が落ちる（別売サイクロン推奨）", "稼働25分のため広い家では充電が必要"],
+    "bestFor": ["ちょい掛けで毎日サッと掃除したい主婦", "軽さ重視の人", "コードレス掃除機が初めての人"],
+    "notFor": ["広いカーペットを強力に掃除したい人", "1台で家中を一気に掃除したい大豪邸"],
     "rating": 4.4,
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "",
-      "yahooUrl": ""
-    },
-    "competitors": [
-      "irobot-roomba-j9plus"
-    ],
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "", "yahooUrl": ""},
+    "competitors": ["irobot-roomba-j9plus"],
     "updatedAt": "2026-06-04"
   },
   {
@@ -858,53 +338,19 @@
     "category": "seasonal",
     "priceRange": "要確認（時期により変動）",
     "specs": [
-      {
-        "label": "除湿方式",
-        "value": "コンプレッサー式"
-      },
-      {
-        "label": "除湿能力",
-        "value": "最大7.1L/日"
-      },
-      {
-        "label": "対応畳数（木造）",
-        "value": "9畳まで"
-      },
-      {
-        "label": "対応畳数（鉄筋）",
-        "value": "18畳まで"
-      },
-      {
-        "label": "プラズマクラスター",
-        "value": "7000搭載"
-      }
+      {"label": "除湿方式", "value": "コンプレッサー式"},
+      {"label": "除湿能力", "value": "最大7.1L/日"},
+      {"label": "対応畳数（木造）", "value": "9畳まで"},
+      {"label": "対応畳数（鉄筋）", "value": "18畳まで"},
+      {"label": "プラズマクラスター", "value": "7000搭載"}
     ],
-    "pros": [
-      "プラズマクラスター7000搭載・コンパクトで設置しやすい",
-      "コンプレッサー式で梅雨〜夏の高温多湿に強い",
-      "省エネ機能付きで毎日の衣類乾燥に使いやすい"
-    ],
-    "cons": [
-      "コンプレッサー式は動作音が大きめ",
-      "冬場（低温）は除湿能力が低下",
-      "本体がやや大きい"
-    ],
-    "bestFor": [
-      "梅雨〜夏の部屋干し乾燥",
-      "クローゼットのカビ対策",
-      "湿気の多い北向き・1階の部屋"
-    ],
-    "notFor": [
-      "冬の結露対策（デシカント式向き）",
-      "寝室の夜間静音運転重視"
-    ],
+    "pros": ["プラズマクラスター7000搭載・コンパクトで設置しやすい", "コンプレッサー式で梅雨〜夏の高温多湿に強い", "省エネ機能付きで毎日の衣類乾燥に使いやすい"],
+    "cons": ["コンプレッサー式は動作音が大きめ", "冬場（低温）は除湿能力が低下", "本体がやや大きい"],
+    "bestFor": ["梅雨〜夏の部屋干し乾燥", "クローゼットのカビ対策", "湿気の多い北向き・1階の部屋"],
+    "notFor": ["冬の結露対策（デシカント式向き）", "寝室の夜間静音運転重視"],
     "rating": 4.1,
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fa-price%2F2980000208638%2F",
-      "yahooUrl": ""
-    },
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fa-price%2F2980000208638%2F", "yahooUrl": ""},
     "competitors": [],
     "updatedAt": "2026-06-29"
   },
@@ -915,34 +361,13 @@
     "category": "seasonal",
     "priceRange": "47,700円",
     "specs": [
-      {
-        "label": "除湿方式",
-        "value": "コンプレッサー式"
-      },
-      {
-        "label": "除湿能力",
-        "value": "最大18L/日（60Hz時）・15.5L/日（50Hz時）"
-      },
-      {
-        "label": "適用畳数（木造）",
-        "value": "〜19畳（50Hz基準）"
-      },
-      {
-        "label": "適用畳数（プレハブ洋室）",
-        "value": "〜29畳（50Hz基準）"
-      },
-      {
-        "label": "適用畳数（コンクリート洋室）",
-        "value": "〜39畳（50Hz基準）"
-      },
-      {
-        "label": "タンク容量",
-        "value": "約4.7L"
-      },
-      {
-        "label": "特徴タグ",
-        "value": "大容量・コンプレッサー式・冬モード・パワー重視"
-      }
+      {"label": "除湿方式", "value": "コンプレッサー式"},
+      {"label": "除湿能力", "value": "最大18L/日（60Hz時）・15.5L/日（50Hz時）"},
+      {"label": "適用畳数（木造）", "value": "〜19畳（50Hz基準）"},
+      {"label": "適用畳数（プレハブ洋室）", "value": "〜29畳（50Hz基準）"},
+      {"label": "適用畳数（コンクリート洋室）", "value": "〜39畳（50Hz基準）"},
+      {"label": "タンク容量", "value": "約4.7L"},
+      {"label": "特徴タグ", "value": "大容量・コンプレッサー式・冬モード・パワー重視"}
     ],
     "pros": [
       "最大18L/日の大容量除湿でパワーを重視したい用途に",
@@ -962,13 +387,9 @@
       "冬の結露対策中心でデシカント式を求める方",
       "コンパクトさ・静音性重視の方"
     ],
-    "rating": 4,
+    "rating": 4.0,
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fjyousui%2Fmj-p180yx-001%2F",
-      "yahooUrl": ""
-    },
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fjyousui%2Fmj-p180yx-001%2F", "yahooUrl": ""},
     "competitors": [],
     "updatedAt": "2026-06-30"
   },
@@ -979,48 +400,15 @@
     "category": "seasonal",
     "priceRange": "69,935円",
     "specs": [
-      {
-        "label": "除湿方式",
-        "value": "エコ・ハイブリッド方式"
-      },
-      {
-        "label": "除湿能力",
-        "value": "50Hz 10.5L/日(消費電力205W)/60Hz 12.5L/日(消費電力225W)"
-      },
-      {
-        "label": "適用畳数（木造）",
-        "value": "16畳まで（60Hzの場合）"
-      },
-      {
-        "label": "適用畳数（鉄筋）",
-        "value": "32畳まで（60Hzの場合）"
-      },
-      {
-        "label": "タンク容量",
-        "value": "約3.2L"
-      },
-      {
-        "label": "質量",
-        "value": "13.0kg"
-      },
-      {
-        "label": "特徴タグ",
-        "value": "エコ・ハイブリッド方式・ナノイーX・一年中"
-      }
+      {"label": "除湿方式", "value": "エコ・ハイブリッド方式"},
+      {"label": "除湿能力", "value": "50Hz 10.5L/日(消費電力205W)/60Hz 12.5L/日(消費電力225W)"},
+      {"label": "適用畳数（木造）", "value": "16畳まで（60Hzの場合）"},
+      {"label": "適用畳数（鉄筋）", "value": "32畳まで（60Hzの場合）"},
+      {"label": "タンク容量", "value": "約3.2L"},
+      {"label": "質量", "value": "13.0kg"},
+      {"label": "特徴タグ", "value": "エコ・ハイブリッド方式・ナノイーX・一年中"}
     ],
-    "source": {
-      "label": "パナソニック公式サイト F-YEX120B 仕様",
-      "url": "https://panasonic.jp/joshitsu/products/F-YEX120B/spec.html",
-      "checkedAt": "2026-10-31",
-      "verifiedLabels": [
-        "除湿方式",
-        "除湿能力",
-        "適用畳数（木造）",
-        "適用畳数（鉄筋）",
-        "タンク容量",
-        "質量"
-      ]
-    },
+    "source": {"label": "パナソニック公式サイト F-YEX120B 仕様", "url": "https://panasonic.jp/joshitsu/products/F-YEX120B/spec.html", "checkedAt": "2026-10-31", "verifiedLabels": ["除湿方式", "除湿能力", "適用畳数（木造）", "適用畳数（鉄筋）", "タンク容量", "質量"]},
     "pros": [
       "メーカーは、2つの冷却の仕組みで除湿する独自のエコ・ハイブリッド方式で、一年中使えると案内しています",
       "メーカーは、ナノイーX（48兆）による部屋干し衣類の除菌と臭いの抑制を案内しています（試験条件つきで、実使用空間での実証効果ではないとの注記あり）"
@@ -1037,13 +425,9 @@
       "コストを最優先したい方",
       "夏の除湿力だけを重視する方"
     ],
-    "rating": 4,
+    "rating": 4.0,
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Febest%2F4549980784358%2F",
-      "yahooUrl": ""
-    },
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Febest%2F4549980784358%2F", "yahooUrl": ""},
     "competitors": [],
     "updatedAt": "2026-10-31"
   },
@@ -1054,26 +438,11 @@
     "category": "seasonal",
     "priceRange": "16,800〜26,980円",
     "specs": [
-      {
-        "label": "除湿方式",
-        "value": "デシカント式"
-      },
-      {
-        "label": "除湿能力",
-        "value": "5.0L/日"
-      },
-      {
-        "label": "適用畳数めやす",
-        "value": "木造10㎡(6畳)/プレハブ16㎡(10畳)/鉄筋コンクリート21㎡(13畳)"
-      },
-      {
-        "label": "タンク容量",
-        "value": "約2.5L"
-      },
-      {
-        "label": "特徴タグ",
-        "value": "デシカント式・サーキュレーター付・部屋干し特化・冬に強い"
-      }
+      {"label": "除湿方式", "value": "デシカント式"},
+      {"label": "除湿能力", "value": "5.0L/日"},
+      {"label": "適用畳数めやす", "value": "木造10㎡(6畳)/プレハブ16㎡(10畳)/鉄筋コンクリート21㎡(13畳)"},
+      {"label": "タンク容量", "value": "約2.5L"},
+      {"label": "特徴タグ", "value": "デシカント式・サーキュレーター付・部屋干し特化・冬に強い"}
     ],
     "pros": [
       "デシカント式で冬の低温環境でも安定した除湿力を発揮",
@@ -1092,13 +461,9 @@
       "夏の除湿・省エネを最優先する方",
       "室温上昇を避けたい方（夏はエアコンと相殺しやすい）"
     ],
-    "rating": 4,
+    "rating": 4.0,
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fu-denki%2F274018%2F",
-      "yahooUrl": ""
-    },
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fu-denki%2F274018%2F", "yahooUrl": ""},
     "competitors": [],
     "updatedAt": "2026-06-30"
   },
@@ -1109,49 +474,18 @@
     "category": "seasonal",
     "priceRange": "1万〜1.5万円",
     "specs": [
-      {
-        "label": "マット",
-        "value": "不要（ノズル差し込み式）"
-      },
-      {
-        "label": "ノズル",
-        "value": "ツインノズル（2枚同時乾燥）"
-      },
-      {
-        "label": "モード",
-        "value": "あたため・ダニ・乾燥・くつ乾燥"
-      },
-      {
-        "label": "タイマー",
-        "value": "あり"
-      }
+      {"label": "マット", "value": "不要（ノズル差し込み式）"},
+      {"label": "ノズル", "value": "ツインノズル（2枚同時乾燥）"},
+      {"label": "モード", "value": "あたため・ダニ・乾燥・くつ乾燥"},
+      {"label": "タイマー", "value": "あり"}
     ],
-    "pros": [
-      "マット不要でノズルを差すだけ、準備がラク",
-      "ツインノズルで2枚の布団を同時に乾燥",
-      "ダニ対策・くつ乾燥まで1台で年中使える"
-    ],
-    "cons": [
-      "運転音がやや大きめ",
-      "大判の布団は位置の調整が必要",
-      "ホースが短めで設置場所を選ぶ"
-    ],
-    "bestFor": [
-      "天日干しが難しい共働き・花粉症の家庭",
-      "梅雨や冬の布団のジメジメ対策",
-      "子どもの布団を清潔に保ちたい家庭"
-    ],
-    "notFor": [
-      "布団を毎日外干しできる環境の人",
-      "静音を最優先する人"
-    ],
+    "pros": ["マット不要でノズルを差すだけ、準備がラク", "ツインノズルで2枚の布団を同時に乾燥", "ダニ対策・くつ乾燥まで1台で年中使える"],
+    "cons": ["運転音がやや大きめ", "大判の布団は位置の調整が必要", "ホースが短めで設置場所を選ぶ"],
+    "bestFor": ["天日干しが難しい共働き・花粉症の家庭", "梅雨や冬の布団のジメジメ対策", "子どもの布団を清潔に保ちたい家庭"],
+    "notFor": ["布団を毎日外干しできる環境の人", "静音を最優先する人"],
     "rating": 4.2,
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "",
-      "yahooUrl": ""
-    },
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "", "yahooUrl": ""},
     "competitors": [],
     "updatedAt": "2026-06-04"
   },
@@ -1162,53 +496,19 @@
     "category": "microwave",
     "priceRange": "1.8万〜2.5万円",
     "specs": [
-      {
-        "label": "タイプ",
-        "value": "単機能電子レンジ"
-      },
-      {
-        "label": "庫内容量",
-        "value": "22L"
-      },
-      {
-        "label": "庫内構造",
-        "value": "フラット（ターンテーブルなし）"
-      },
-      {
-        "label": "最大出力",
-        "value": "1000W（インバーター）"
-      },
-      {
-        "label": "ヘルツ対応",
-        "value": "50/60Hz共用"
-      }
+      {"label": "タイプ", "value": "単機能電子レンジ"},
+      {"label": "庫内容量", "value": "22L"},
+      {"label": "庫内構造", "value": "フラット（ターンテーブルなし）"},
+      {"label": "最大出力", "value": "1000W（インバーター）"},
+      {"label": "ヘルツ対応", "value": "50/60Hz共用"}
     ],
-    "pros": [
-      "1000Wインバーターで温めムラが少ない",
-      "庫内フラットで掃除が楽",
-      "ヘルツフリーで全国どこでも使える"
-    ],
-    "cons": [
-      "グリル・オーブン機能なし（単機能）",
-      "蒸気センサーのみで冷凍食品の仕上がりに差",
-      "操作ボタンの押しやすさは、可能なら店頭で確認したい"
-    ],
-    "bestFor": [
-      "温め・解凍をシンプルに使いたい人",
-      "オーブンは別に持っている人",
-      "引越しが多い人"
-    ],
-    "notFor": [
-      "オーブン調理をしたい人",
-      "冷凍食品を多用する人"
-    ],
+    "pros": ["1000Wインバーターで温めムラが少ない", "庫内フラットで掃除が楽", "ヘルツフリーで全国どこでも使える"],
+    "cons": ["グリル・オーブン機能なし（単機能）", "蒸気センサーのみで冷凍食品の仕上がりに差", "操作ボタンの押しやすさは、可能なら店頭で確認したい"],
+    "bestFor": ["温め・解凍をシンプルに使いたい人", "オーブンは別に持っている人", "引越しが多い人"],
+    "notFor": ["オーブン調理をしたい人", "冷凍食品を多用する人"],
     "rating": 4.1,
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "",
-      "yahooUrl": ""
-    },
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "", "yahooUrl": ""},
     "competitors": [],
     "updatedAt": "2026-06-04"
   },
@@ -1219,53 +519,19 @@
     "category": "rice-cooker",
     "priceRange": "1万〜1.5万円",
     "specs": [
-      {
-        "label": "炊飯方式",
-        "value": "IH"
-      },
-      {
-        "label": "容量",
-        "value": "5合"
-      },
-      {
-        "label": "内釜",
-        "value": "3層構造ダイヤモンドコート"
-      },
-      {
-        "label": "タイマー",
-        "value": "2セット予約"
-      },
-      {
-        "label": "保温",
-        "value": "12時間"
-      }
+      {"label": "炊飯方式", "value": "IH"},
+      {"label": "容量", "value": "5合"},
+      {"label": "内釜", "value": "3層構造ダイヤモンドコート"},
+      {"label": "タイマー", "value": "2セット予約"},
+      {"label": "保温", "value": "12時間"}
     ],
-    "pros": [
-      "1〜1.5万円でIH炊飯できるコスパ",
-      "5合で1〜3人家族にちょうどいい",
-      "操作がシンプルで使いやすい"
-    ],
-    "cons": [
-      "高機能な炊き分けは少ない",
-      "内釜の扱い方と保証条件を確認したい",
-      "玄米・雑穀を炊く場合は対応メニューを確認したい"
-    ],
-    "bestFor": [
-      "買い替えでコストを抑えたい家庭",
-      "毎日炊く1〜3人家族",
-      "シンプル操作重視の人"
-    ],
-    "notFor": [
-      "銘柄炊き分けにこだわる人",
-      "圧力IHの食感を求める人"
-    ],
+    "pros": ["1〜1.5万円でIH炊飯できるコスパ", "5合で1〜3人家族にちょうどいい", "操作がシンプルで使いやすい"],
+    "cons": ["高機能な炊き分けは少ない", "内釜の扱い方と保証条件を確認したい", "玄米・雑穀を炊く場合は対応メニューを確認したい"],
+    "bestFor": ["買い替えでコストを抑えたい家庭", "毎日炊く1〜3人家族", "シンプル操作重視の人"],
+    "notFor": ["銘柄炊き分けにこだわる人", "圧力IHの食感を求める人"],
     "rating": 3.9,
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "",
-      "yahooUrl": ""
-    },
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "", "yahooUrl": ""},
     "competitors": [],
     "updatedAt": "2026-06-04"
   },
@@ -1276,120 +542,31 @@
     "category": "washer",
     "priceRange": "25万〜35万円",
     "specs": [
-      {
-        "label": "洗濯容量",
-        "value": "12kg"
-      },
-      {
-        "label": "乾燥容量",
-        "value": "6kg"
-      },
-      {
-        "label": "乾燥方式",
-        "value": "ヒートポンプ式"
-      },
-      {
-        "label": "自動投入",
-        "value": "トリプル自動投入"
-      },
-      {
-        "label": "設置幅",
-        "value": "639mm（給・排水ホース含む）"
-      },
-      {
-        "label": "本体寸法（幅×高さ×奥行）",
-        "value": "604×1011×722mm"
-      },
-      {
-        "label": "本体寸法（給・排水ホース含む）",
-        "value": "639×1060×722mm"
-      },
-      {
-        "label": "本体質量",
-        "value": "約81kg"
-      },
-      {
-        "label": "運転音",
-        "value": "洗濯時 約32dB／脱水時 約41dB／乾燥時 約46dB"
-      },
-      {
-        "label": "乾燥時の消費電力量（定格洗濯乾燥）",
-        "value": "標準乾燥モード 約890Wh／省エネ乾燥モード 約620Wh"
-      },
-      {
-        "label": "運転時間の目安（定格洗濯乾燥）",
-        "value": "標準乾燥モード 約98分／省エネ乾燥モード 約165分"
-      },
-      {
-        "label": "自動投入タンク容量",
-        "value": "液体合成洗剤 約1010mL／柔軟剤 約890mL／おしゃれ着洗剤・酸素系液体漂白剤 約730mL"
-      },
-      {
-        "label": "操作",
-        "value": "カラータッチパネル／アプリ（IoT機能）対応"
-      },
-      {
-        "label": "対応防水フロアー",
-        "value": "奥行（内寸）540mm以上"
-      },
-      {
-        "label": "排水ホースの取り出し方向",
-        "value": "左・右・後方・真下（伸縮式）"
-      },
-      {
-        "label": "ナノイーX",
-        "value": "搭載（48兆）"
-      }
+      {"label": "洗濯容量", "value": "12kg"},
+      {"label": "乾燥容量", "value": "6kg"},
+      {"label": "乾燥方式", "value": "ヒートポンプ式"},
+      {"label": "自動投入", "value": "トリプル自動投入"},
+      {"label": "設置幅", "value": "639mm（給・排水ホース含む）"},
+      {"label": "本体寸法（幅×高さ×奥行）", "value": "604×1011×722mm"},
+      {"label": "本体寸法（給・排水ホース含む）", "value": "639×1060×722mm"},
+      {"label": "本体質量", "value": "約81kg"},
+      {"label": "運転音", "value": "洗濯時 約32dB／脱水時 約41dB／乾燥時 約46dB"},
+      {"label": "乾燥時の消費電力量（定格洗濯乾燥）", "value": "標準乾燥モード 約890Wh／省エネ乾燥モード 約620Wh"},
+      {"label": "運転時間の目安（定格洗濯乾燥）", "value": "標準乾燥モード 約98分／省エネ乾燥モード 約165分"},
+      {"label": "自動投入タンク容量", "value": "液体合成洗剤 約1010mL／柔軟剤 約890mL／おしゃれ着洗剤・酸素系液体漂白剤 約730mL"},
+      {"label": "操作", "value": "カラータッチパネル／アプリ（IoT機能）対応"},
+      {"label": "対応防水フロアー", "value": "奥行（内寸）540mm以上"},
+      {"label": "排水ホースの取り出し方向", "value": "左・右・後方・真下（伸縮式）"},
+      {"label": "ナノイーX", "value": "搭載（48兆）"}
     ],
-    "source": {
-      "label": "パナソニック公式サイト 仕様（NA-LX129DL/R）",
-      "url": "https://panasonic.jp/wash/products/NA-LX129DL/spec.html",
-      "checkedAt": "2026-10-31",
-      "verifiedLabels": [
-        "洗濯容量",
-        "乾燥容量",
-        "乾燥方式",
-        "自動投入",
-        "設置幅",
-        "本体寸法（幅×高さ×奥行）",
-        "本体寸法（給・排水ホース含む）",
-        "本体質量",
-        "運転音",
-        "乾燥時の消費電力量（定格洗濯乾燥）",
-        "運転時間の目安（定格洗濯乾燥）",
-        "自動投入タンク容量",
-        "操作",
-        "対応防水フロアー",
-        "排水ホースの取り出し方向",
-        "ナノイーX"
-      ]
-    },
-    "pros": [
-      "ヒートポンプ式乾燥。乾燥時の消費電力量は標準乾燥モード約890Wh／省エネ乾燥モード約620Wh（電気代は消費電力量をもとにご確認ください）",
-      "汚れはがしコースで蓄積皮脂汚れもすっきり",
-      "トリプル自動投入で洗剤計量の手間ゼロ"
-    ],
-    "cons": [
-      "本体30万円前後と高額（工事費別）",
-      "乾燥6kgで大家族は2回に分ける場合も",
-      "ホース含む設置幅が約64cmあり、搬入経路の事前確認が必須"
-    ],
-    "bestFor": [
-      "洗濯から乾燥までの移し替えを減らしたい家庭",
-      "3〜5人家族",
-      "部屋干し臭が気になる人"
-    ],
-    "notFor": [
-      "設置幅に制約がある住宅",
-      "縦型で十分な人"
-    ],
+    "source": {"label": "パナソニック公式サイト 仕様（NA-LX129DL/R）", "url": "https://panasonic.jp/wash/products/NA-LX129DL/spec.html", "checkedAt": "2026-10-31", "verifiedLabels": ["洗濯容量", "乾燥容量", "乾燥方式", "自動投入", "設置幅", "本体寸法（幅×高さ×奥行）", "本体寸法（給・排水ホース含む）", "本体質量", "運転音", "乾燥時の消費電力量（定格洗濯乾燥）", "運転時間の目安（定格洗濯乾燥）", "自動投入タンク容量", "操作", "対応防水フロアー", "排水ホースの取り出し方向", "ナノイーX"]},
+    "pros": ["ヒートポンプ式乾燥。乾燥時の消費電力量は標準乾燥モード約890Wh／省エネ乾燥モード約620Wh（電気代は消費電力量をもとにご確認ください）", "汚れはがしコースで蓄積皮脂汚れもすっきり", "トリプル自動投入で洗剤計量の手間ゼロ"],
+    "cons": ["本体30万円前後と高額（工事費別）", "乾燥6kgで大家族は2回に分ける場合も", "ホース含む設置幅が約64cmあり、搬入経路の事前確認が必須"],
+    "bestFor": ["洗濯から乾燥までの移し替えを減らしたい家庭", "3〜5人家族", "部屋干し臭が気になる人"],
+    "notFor": ["設置幅に制約がある住宅", "縦型で十分な人"],
     "rating": 4.5,
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fden-ki-ya2%2Fna-lx129dl-c%2F",
-      "yahooUrl": ""
-    },
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fden-ki-ya2%2Fna-lx129dl-c%2F", "yahooUrl": ""},
     "competitors": [],
     "updatedAt": "2026-10-31"
   },
@@ -1400,22 +577,10 @@
     "category": "seasonal",
     "priceRange": "要確認（時期により変動）",
     "specs": [
-      {
-        "label": "対応畳数",
-        "value": "6畳用（冷暖房2.2kW相当）"
-      },
-      {
-        "label": "電源",
-        "value": "100V"
-      },
-      {
-        "label": "工事",
-        "value": "工事費込み・全国工事対応"
-      },
-      {
-        "label": "メーカー",
-        "value": "おまかせ（機種・メーカーは選択不可）"
-      }
+      {"label": "対応畳数", "value": "6畳用（冷暖房2.2kW相当）"},
+      {"label": "電源", "value": "100V"},
+      {"label": "工事", "value": "工事費込み・全国工事対応"},
+      {"label": "メーカー", "value": "おまかせ（機種・メーカーは選択不可）"}
     ],
     "pros": [
       "標準工事付きの6畳用セット（追加工事の条件は要確認）",
@@ -1437,12 +602,8 @@
     ],
     "rating": 3.8,
     "reviewSummary": "",
-    "affiliate": {
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fa-price%2F2980000071386%2F"
-    },
-    "competitors": [
-      "iris-g-aircon-set"
-    ],
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fa-price%2F2980000071386%2F"},
+    "competitors": ["iris-g-aircon-set"],
     "updatedAt": "2026-06-29"
   },
   {
@@ -1452,22 +613,10 @@
     "category": "seasonal",
     "priceRange": "要確認（畳数・時期により変動）",
     "specs": [
-      {
-        "label": "対応畳数",
-        "value": "6〜20畳の展開あり"
-      },
-      {
-        "label": "工事",
-        "value": "施工あり（工事費込み）"
-      },
-      {
-        "label": "シリーズ",
-        "value": "スタンダードモデル"
-      },
-      {
-        "label": "内部清浄",
-        "value": "あり"
-      }
+      {"label": "対応畳数", "value": "6〜20畳の展開あり"},
+      {"label": "工事", "value": "施工あり（工事費込み）"},
+      {"label": "シリーズ", "value": "スタンダードモデル"},
+      {"label": "内部清浄", "value": "あり"}
     ],
     "pros": [
       "メーカー指定でアイリスオーヤマが届く安心感",
@@ -1489,12 +638,8 @@
     ],
     "rating": 3.9,
     "reviewSummary": "",
-    "affiliate": {
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fe-akari%2F518007%2F"
-    },
-    "competitors": [
-      "aircon-set-6jo-omakase"
-    ],
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fe-akari%2F518007%2F"},
+    "competitors": ["aircon-set-6jo-omakase"],
     "updatedAt": "2026-06-29"
   },
   {
@@ -1504,22 +649,10 @@
     "category": "aircon",
     "priceRange": "要確認（時期により変動）",
     "specs": [
-      {
-        "label": "対応畳数",
-        "value": "10畳用"
-      },
-      {
-        "label": "冷暖房",
-        "value": "冷暖房"
-      },
-      {
-        "label": "工事",
-        "value": "工事費込み・全国工事対応"
-      },
-      {
-        "label": "シリーズ",
-        "value": "Eシリーズ（スタンダード）"
-      }
+      {"label": "対応畳数", "value": "10畳用"},
+      {"label": "冷暖房", "value": "冷暖房"},
+      {"label": "工事", "value": "工事費込み・全国工事対応"},
+      {"label": "シリーズ", "value": "Eシリーズ（スタンダード）"}
     ],
     "pros": [
       "ダイキンのスタンダードモデルで信頼性・ブランド力",
@@ -1541,13 +674,8 @@
     ],
     "rating": 4.1,
     "reviewSummary": "",
-    "affiliate": {
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fsumai-rt%2Fs285ates-w-kj%2F"
-    },
-    "competitors": [
-      "mitsubishi-msz-zw5625s-aircon",
-      "panasonic-cs-635dex2-aircon"
-    ],
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fsumai-rt%2Fs285ates-w-kj%2F"},
+    "competitors": ["mitsubishi-msz-zw5625s-aircon", "panasonic-cs-635dex2-aircon"],
     "updatedAt": "2026-06-29"
   },
   {
@@ -1557,26 +685,11 @@
     "category": "aircon",
     "priceRange": "要確認（時期により変動）",
     "specs": [
-      {
-        "label": "対応畳数",
-        "value": "18畳用"
-      },
-      {
-        "label": "電源",
-        "value": "単相200V"
-      },
-      {
-        "label": "シリーズ",
-        "value": "霧ヶ峰Zシリーズ（省エネ上位機）"
-      },
-      {
-        "label": "冷暖房",
-        "value": "冷暖房"
-      },
-      {
-        "label": "工事",
-        "value": "工事費込み"
-      }
+      {"label": "対応畳数", "value": "18畳用"},
+      {"label": "電源", "value": "単相200V"},
+      {"label": "シリーズ", "value": "霧ヶ峰Zシリーズ（省エネ上位機）"},
+      {"label": "冷暖房", "value": "冷暖房"},
+      {"label": "工事", "value": "工事費込み"}
     ],
     "pros": [
       "三菱 霧ヶ峰Zシリーズの省エネ上位機",
@@ -1598,13 +711,8 @@
     ],
     "rating": 4.3,
     "reviewSummary": "",
-    "affiliate": {
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fa-price%2F2980000528422%2F"
-    },
-    "competitors": [
-      "daikin-s285ates-aircon",
-      "panasonic-cs-635dex2-aircon"
-    ],
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fa-price%2F2980000528422%2F"},
+    "competitors": ["daikin-s285ates-aircon", "panasonic-cs-635dex2-aircon"],
     "updatedAt": "2026-06-29"
   },
   {
@@ -1614,26 +722,11 @@
     "category": "aircon",
     "priceRange": "要確認（時期により変動）",
     "specs": [
-      {
-        "label": "対応畳数",
-        "value": "20畳用"
-      },
-      {
-        "label": "電源",
-        "value": "単相200V"
-      },
-      {
-        "label": "シリーズ",
-        "value": "エオリアEXシリーズ（省エネ上位機）"
-      },
-      {
-        "label": "冷暖房",
-        "value": "冷暖房"
-      },
-      {
-        "label": "工事",
-        "value": "工事費込み"
-      }
+      {"label": "対応畳数", "value": "20畳用"},
+      {"label": "電源", "value": "単相200V"},
+      {"label": "シリーズ", "value": "エオリアEXシリーズ（省エネ上位機）"},
+      {"label": "冷暖房", "value": "冷暖房"},
+      {"label": "工事", "value": "工事費込み"}
     ],
     "pros": [
       "パナソニック エオリアEXシリーズの省エネ上位機",
@@ -1655,13 +748,8 @@
     ],
     "rating": 4.3,
     "reviewSummary": "",
-    "affiliate": {
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fa-price%2F2980000549663%2F"
-    },
-    "competitors": [
-      "daikin-s285ates-aircon",
-      "mitsubishi-msz-zw5625s-aircon"
-    ],
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fa-price%2F2980000549663%2F"},
+    "competitors": ["daikin-s285ates-aircon", "mitsubishi-msz-zw5625s-aircon"],
     "updatedAt": "2026-06-29"
   },
   {
@@ -1671,57 +759,20 @@
     "category": "aircon",
     "priceRange": "要確認（時期により変動）",
     "specs": [
-      {
-        "label": "冷暖房能力",
-        "value": "冷房2.2kW / 暖房2.5kW"
-      },
-      {
-        "label": "対応畳数",
-        "value": "冷房6〜9畳"
-      },
-      {
-        "label": "空気清浄",
-        "value": "ストリーマ搭載"
-      },
-      {
-        "label": "内部クリーン",
-        "value": "水内部クリーン"
-      },
-      {
-        "label": "自動掃除",
-        "value": "なし（手動）"
-      },
-      {
-        "label": "工事",
-        "value": "工事費込み・エリア限定"
-      }
+      {"label": "冷暖房能力", "value": "冷房2.2kW / 暖房2.5kW"},
+      {"label": "対応畳数", "value": "冷房6〜9畳"},
+      {"label": "空気清浄", "value": "ストリーマ搭載"},
+      {"label": "内部クリーン", "value": "水内部クリーン"},
+      {"label": "自動掃除", "value": "なし（手動）"},
+      {"label": "工事", "value": "工事費込み・エリア限定"}
     ],
-    "pros": [
-      "ストリーマで花粉・カビ菌を分解する空気清浄機能",
-      "水内部クリーンで内部のカビを抑制",
-      "工事費込みでスムーズに導入できる"
-    ],
-    "cons": [
-      "自動掃除機能なし（フィルター手動清掃）",
-      "暖房時の適用畳数と使用環境を確認したい",
-      "エリア限定・特価品のため対応地域や在庫状況により価格が変動する場合がある"
-    ],
-    "bestFor": [
-      "6畳の1R・1Kのスタンダードエアコン",
-      "空気清浄も求める人",
-      "ダイキン信頼重視"
-    ],
-    "notFor": [
-      "12畳以上の広いリビング",
-      "フィルター自動掃除を重視する人"
-    ],
+    "pros": ["ストリーマで花粉・カビ菌を分解する空気清浄機能", "水内部クリーンで内部のカビを抑制", "工事費込みでスムーズに導入できる"],
+    "cons": ["自動掃除機能なし（フィルター手動清掃）", "暖房時の適用畳数と使用環境を確認したい", "エリア限定・特価品のため対応地域や在庫状況により価格が変動する場合がある"],
+    "bestFor": ["6畳の1R・1Kのスタンダードエアコン", "空気清浄も求める人", "ダイキン信頼重視"],
+    "notFor": ["12畳以上の広いリビング", "フィルター自動掃除を重視する人"],
     "rating": 4.2,
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fairmatsu%2Fs223atesw-koji-area%2F",
-      "yahooUrl": ""
-    },
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fairmatsu%2Fs223atesw-koji-area%2F", "yahooUrl": ""},
     "competitors": [],
     "updatedAt": "2026-07-15"
   },
@@ -1732,53 +783,19 @@
     "category": "tv",
     "priceRange": "16万〜20万円",
     "specs": [
-      {
-        "label": "画面サイズ",
-        "value": "65インチ"
-      },
-      {
-        "label": "解像度",
-        "value": "4K"
-      },
-      {
-        "label": "OS",
-        "value": "Google TV"
-      },
-      {
-        "label": "チューナー",
-        "value": "地上/BS/CS・BS4K・CS4K（3チューナー）"
-      },
-      {
-        "label": "プロセッサー",
-        "value": "HDR X1"
-      }
+      {"label": "画面サイズ", "value": "65インチ"},
+      {"label": "解像度", "value": "4K"},
+      {"label": "OS", "value": "Google TV"},
+      {"label": "チューナー", "value": "地上/BS/CS・BS4K・CS4K（3チューナー）"},
+      {"label": "プロセッサー", "value": "HDR X1"}
     ],
-    "pros": [
-      "Google TV対応でNetflix・YouTube・TVerをリモコン操作",
-      "65インチで映画・スポーツが迫力満点",
-      "トリルミナスプロで自然な発色"
-    ],
-    "cons": [
-      "16〜20万円と高価格帯",
-      "ゲーム用途では入力遅延や対応信号を確認したい",
-      "65インチは12畳以上推奨"
-    ],
-    "bestFor": [
-      "リビングで映画・ドラマをよく見る家庭",
-      "配信サービスをよく使う人",
-      "家族みんなで見る用途"
-    ],
-    "notFor": [
-      "FPS等で低遅延を重視するゲーマー",
-      "8畳以下の狭い部屋"
-    ],
+    "pros": ["Google TV対応でNetflix・YouTube・TVerをリモコン操作", "65インチで映画・スポーツが迫力満点", "トリルミナスプロで自然な発色"],
+    "cons": ["16〜20万円と高価格帯", "ゲーム用途では入力遅延や対応信号を確認したい", "65インチは12畳以上推奨"],
+    "bestFor": ["リビングで映画・ドラマをよく見る家庭", "配信サービスをよく使う人", "家族みんなで見る用途"],
+    "notFor": ["FPS等で低遅延を重視するゲーマー", "8畳以下の狭い部屋"],
     "rating": 4.2,
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "",
-      "yahooUrl": ""
-    },
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "", "yahooUrl": ""},
     "competitors": [],
     "updatedAt": "2026-06-04"
   },
@@ -1789,53 +806,19 @@
     "category": "refrigerator",
     "priceRange": "3万〜5万円",
     "specs": [
-      {
-        "label": "定格容量",
-        "value": "138L（冷蔵103L・冷凍35L）"
-      },
-      {
-        "label": "ドア数",
-        "value": "2ドア"
-      },
-      {
-        "label": "冷却方式",
-        "value": "直冷式"
-      },
-      {
-        "label": "幅",
-        "value": "480mm"
-      },
-      {
-        "label": "ドア開き",
-        "value": "右開き"
-      }
+      {"label": "定格容量", "value": "138L（冷蔵103L・冷凍35L）"},
+      {"label": "ドア数", "value": "2ドア"},
+      {"label": "冷却方式", "value": "直冷式"},
+      {"label": "幅", "value": "480mm"},
+      {"label": "ドア開き", "value": "右開き"}
     ],
-    "pros": [
-      "幅480mmのスリム設計でワンルームに置きやすい",
-      "138Lで一人暮らしに必要十分",
-      "パナソニックで修理・部品対応が安定"
-    ],
-    "cons": [
-      "直冷式のため冷凍室に霜取りが必要",
-      "冷凍室35Lは小さめ",
-      "ドア右開き固定"
-    ],
-    "bestFor": [
-      "子どもの一人暮らし・大学進学の新生活準備",
-      "1K・1Rに置く2台目・サブ冷蔵庫",
-      "単身赴任の家族向け"
-    ],
-    "notFor": [
-      "冷凍食品を買いだめする人",
-      "野菜を大量保存したい自炊派"
-    ],
-    "rating": 4,
+    "pros": ["幅480mmのスリム設計でワンルームに置きやすい", "138Lで一人暮らしに必要十分", "パナソニックで修理・部品対応が安定"],
+    "cons": ["直冷式のため冷凍室に霜取りが必要", "冷凍室35Lは小さめ", "ドア右開き固定"],
+    "bestFor": ["子どもの一人暮らし・大学進学の新生活準備", "1K・1Rに置く2台目・サブ冷蔵庫", "単身赴任の家族向け"],
+    "notFor": ["冷凍食品を買いだめする人", "野菜を大量保存したい自炊派"],
+    "rating": 4.0,
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "",
-      "yahooUrl": ""
-    },
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "", "yahooUrl": ""},
     "competitors": [],
     "updatedAt": "2026-06-04"
   },
@@ -1846,53 +829,19 @@
     "category": "gadget",
     "priceRange": "7万〜10万円",
     "specs": [
-      {
-        "label": "CPU",
-        "value": "Intel Core i5-1334U"
-      },
-      {
-        "label": "メモリ",
-        "value": "16GB"
-      },
-      {
-        "label": "ストレージ",
-        "value": "512GB SSD"
-      },
-      {
-        "label": "ディスプレイ",
-        "value": "15.6インチ FHD IPS"
-      },
-      {
-        "label": "重量",
-        "value": "約1.64kg"
-      }
+      {"label": "CPU", "value": "Intel Core i5-1334U"},
+      {"label": "メモリ", "value": "16GB"},
+      {"label": "ストレージ", "value": "512GB SSD"},
+      {"label": "ディスプレイ", "value": "15.6インチ FHD IPS"},
+      {"label": "重量", "value": "約1.64kg"}
     ],
-    "pros": [
-      "16GB RAMでOffice・Web・動画視聴に余裕",
-      "見やすい15.6インチ フルHD液晶",
-      "10万円以下のコスパ"
-    ],
-    "cons": [
-      "内蔵GPUで重いゲーム・動画編集は不向き",
-      "バッテリー8〜10時間と平均的",
-      "カメラ720p"
-    ],
-    "bestFor": [
-      "子どもの大学進学・学習用PC（新生活準備）",
-      "テレワーク・在宅学習の家庭用",
-      "Office・Webメインの初PC"
-    ],
-    "notFor": [
-      "3Dゲーム・本格動画編集の高負荷用途",
-      "Macを使いたい人"
-    ],
+    "pros": ["16GB RAMでOffice・Web・動画視聴に余裕", "見やすい15.6インチ フルHD液晶", "10万円以下のコスパ"],
+    "cons": ["内蔵GPUで重いゲーム・動画編集は不向き", "バッテリー8〜10時間と平均的", "カメラ720p"],
+    "bestFor": ["子どもの大学進学・学習用PC（新生活準備）", "テレワーク・在宅学習の家庭用", "Office・Webメインの初PC"],
+    "notFor": ["3Dゲーム・本格動画編集の高負荷用途", "Macを使いたい人"],
     "rating": 4.1,
     "reviewSummary": "",
-    "affiliate": {
-      "amazonAsin": "",
-      "rakutenUrl": "",
-      "yahooUrl": ""
-    },
+    "affiliate": {"amazonAsin": "", "rakutenUrl": "", "yahooUrl": ""},
     "competitors": [],
     "updatedAt": "2026-06-04"
   },
@@ -1903,26 +852,11 @@
     "category": "water-server",
     "priceRange": "月額 約3,300〜4,400円",
     "specs": [
-      {
-        "label": "水の種類",
-        "value": "天然水（全国8採水地）"
-      },
-      {
-        "label": "処理方法",
-        "value": "非加熱処理"
-      },
-      {
-        "label": "子育てプラン",
-        "value": "対象年齢・機種・契約期間・適用条件を公式サイトで確認"
-      },
-      {
-        "label": "デザイン",
-        "value": "nendoコラボモデルあり（取扱状況は公式サイトで確認）"
-      },
-      {
-        "label": "ボトル",
-        "value": "使い切りペットボトル方式"
-      }
+      {"label": "水の種類", "value": "天然水（全国8採水地）"},
+      {"label": "処理方法", "value": "非加熱処理"},
+      {"label": "子育てプラン", "value": "対象年齢・機種・契約期間・適用条件を公式サイトで確認"},
+      {"label": "デザイン", "value": "nendoコラボモデルあり（取扱状況は公式サイトで確認）"},
+      {"label": "ボトル", "value": "使い切りペットボトル方式"}
     ],
     "pros": [
       "非加熱の天然水で口当たりがまろやか",
@@ -1945,13 +879,8 @@
     ],
     "rating": 4.2,
     "reviewSummary": "",
-    "affiliate": {
-      "officialUrl": "https://px.a8.net/svt/ejp?a8mat=4B5RS9+D2CGOI+2NB4+5ZEMQ",
-      "ctaLabel": "公式サイトで料金を見る"
-    },
-    "competitors": [
-      "cosmo-water"
-    ],
+    "affiliate": {"officialUrl": "https://px.a8.net/svt/ejp?a8mat=4B5RS9+D2CGOI+2NB4+5ZEMQ", "ctaLabel": "公式サイトで料金を見る"},
+    "competitors": ["cosmo-water"],
     "updatedAt": "2026-06-04"
   },
   {
@@ -1961,26 +890,11 @@
     "category": "water-server",
     "priceRange": "月額 約4,100円〜（天然水24L目安）",
     "specs": [
-      {
-        "label": "水の種類",
-        "value": "天然水"
-      },
-      {
-        "label": "ボトル交換",
-        "value": "足元ラクラク交換"
-      },
-      {
-        "label": "鮮度",
-        "value": "使うごとに凹むボトルで空気接触を防止"
-      },
-      {
-        "label": "エコモード",
-        "value": "あり（電気代節約）"
-      },
-      {
-        "label": "チャイルドロック",
-        "value": "あり"
-      }
+      {"label": "水の種類", "value": "天然水"},
+      {"label": "ボトル交換", "value": "足元ラクラク交換"},
+      {"label": "鮮度", "value": "使うごとに凹むボトルで空気接触を防止"},
+      {"label": "エコモード", "value": "あり（電気代節約）"},
+      {"label": "チャイルドロック", "value": "あり"}
     ],
     "pros": [
       "ボトルが足元交換で重い水を持ち上げなくて済む（女性に高評価）",
@@ -2003,13 +917,8 @@
     ],
     "rating": 4.3,
     "reviewSummary": "",
-    "affiliate": {
-      "officialUrl": "https://px.a8.net/svt/ejp?a8mat=4B7USV+EAZZ1U+4K9C+NUMHT",
-      "ctaLabel": "詳細・料金を見る"
-    },
-    "competitors": [
-      "premium-water"
-    ],
+    "affiliate": {"officialUrl": "https://px.a8.net/svt/ejp?a8mat=4B7USV+EAZZ1U+4K9C+NUMHT", "ctaLabel": "詳細・料金を見る"},
+    "competitors": ["premium-water"],
     "updatedAt": "2026-06-04"
   },
   {
@@ -2019,22 +928,10 @@
     "category": "water-server",
     "priceRange": "月額 約3,300〜4,700円",
     "specs": [
-      {
-        "label": "水の種類",
-        "value": "天然水（富士・朝霧高原など）"
-      },
-      {
-        "label": "ボトル",
-        "value": "軽量パック（使い捨て）"
-      },
-      {
-        "label": "デザイン",
-        "value": "グッドデザイン賞受賞モデルあり"
-      },
-      {
-        "label": "静音設計",
-        "value": "あり"
-      }
+      {"label": "水の種類", "value": "天然水（富士・朝霧高原など）"},
+      {"label": "ボトル", "value": "軽量パック（使い捨て）"},
+      {"label": "デザイン", "value": "グッドデザイン賞受賞モデルあり"},
+      {"label": "静音設計", "value": "あり"}
     ],
     "pros": [
       "軽量パックで交換がラク",
@@ -2057,13 +954,8 @@
     ],
     "rating": 4.1,
     "reviewSummary": "",
-    "affiliate": {
-      "officialUrl": "https://px.a8.net/svt/ejp?a8mat=4B5RS9+CAD38Y+2B8Y+5YJRM",
-      "ctaLabel": "公式サイトで料金を見る"
-    },
-    "competitors": [
-      "premium-water"
-    ],
+    "affiliate": {"officialUrl": "https://px.a8.net/svt/ejp?a8mat=4B5RS9+CAD38Y+2B8Y+5YJRM", "ctaLabel": "公式サイトで料金を見る"},
+    "competitors": ["premium-water"],
     "updatedAt": "2026-06-04"
   },
   {
@@ -2073,26 +965,11 @@
     "category": "water-server",
     "priceRange": "月額 約3,000円台〜（RO水）",
     "specs": [
-      {
-        "label": "水の種類",
-        "value": "RO水（純水にミネラル添加）"
-      },
-      {
-        "label": "お試し",
-        "value": "お試しの実施状況・期間・対象地域・終了後の条件を公式で確認"
-      },
-      {
-        "label": "ボトル",
-        "value": "リターナブル方式（回収・再利用）"
-      },
-      {
-        "label": "子育て応援プラン",
-        "value": "あり"
-      },
-      {
-        "label": "サポート",
-        "value": "あんしんサポート（別途料金）"
-      }
+      {"label": "水の種類", "value": "RO水（純水にミネラル添加）"},
+      {"label": "お試し", "value": "お試しの実施状況・期間・対象地域・終了後の条件を公式で確認"},
+      {"label": "ボトル", "value": "リターナブル方式（回収・再利用）"},
+      {"label": "子育て応援プラン", "value": "あり"},
+      {"label": "サポート", "value": "あんしんサポート（別途料金）"}
     ],
     "pros": [
       "お試しを検討する場合は、利用条件を確認してから申し込む",
@@ -2113,12 +990,9 @@
       "天然水にこだわる人",
       "ボトル回収の手間を避けたい人"
     ],
-    "rating": 4,
+    "rating": 4.0,
     "reviewSummary": "",
-    "affiliate": {
-      "officialUrl": "https://px.a8.net/svt/ejp?a8mat=4B5RS9+DBVECY+YK6+5YZ76",
-      "ctaLabel": "無料お試しを見る"
-    },
+    "affiliate": {"officialUrl": "https://px.a8.net/svt/ejp?a8mat=4B5RS9+DBVECY+YK6+5YZ76", "ctaLabel": "無料お試しを見る"},
     "competitors": [],
     "updatedAt": "2026-06-04"
   },
@@ -2129,26 +1003,11 @@
     "category": "food-delivery",
     "priceRange": "お試しセット1,980円（通常の約75%OFF）",
     "specs": [
-      {
-        "label": "特徴",
-        "value": "有機・特別栽培野菜とミールキット"
-      },
-      {
-        "label": "お試しセット",
-        "value": "1,980円"
-      },
-      {
-        "label": "ミールキット",
-        "value": "Kit Oisix（主菜＋副菜が約20分）"
-      },
-      {
-        "label": "配送エリア",
-        "value": "全国"
-      },
-      {
-        "label": "勝手に定期化",
-        "value": "なし（お試し後の自動加入なし）"
-      }
+      {"label": "特徴", "value": "有機・特別栽培野菜とミールキット"},
+      {"label": "お試しセット", "value": "1,980円"},
+      {"label": "ミールキット", "value": "Kit Oisix（主菜＋副菜が約20分）"},
+      {"label": "配送エリア", "value": "全国"},
+      {"label": "勝手に定期化", "value": "なし（お試し後の自動加入なし）"}
     ],
     "pros": [
       "ミールキットの献立・味の満足度が高い",
@@ -2171,15 +1030,8 @@
     ],
     "rating": 4.4,
     "reviewSummary": "",
-    "affiliate": {
-      "officialUrl": "https://www.oisix.com/",
-      "ctaLabel": "公式サイトを見る",
-      "isAffiliateLink": false
-    },
-    "competitors": [
-      "yoshikei",
-      "coopdeli"
-    ],
+    "affiliate": {"officialUrl": "https://www.oisix.com/", "ctaLabel": "公式サイトを見る", "isAffiliateLink": false},
+    "competitors": ["yoshikei", "coopdeli"],
     "updatedAt": "2026-06-04"
   },
   {
@@ -2189,26 +1041,11 @@
     "category": "food-delivery",
     "priceRange": "お試し5days（初回特別価格・公式要確認）",
     "specs": [
-      {
-        "label": "特徴",
-        "value": "毎日配達・献立付きミールキット"
-      },
-      {
-        "label": "送料",
-        "value": "送料・対象地域・注文条件を公式サイトで確認"
-      },
-      {
-        "label": "離乳食対応",
-        "value": "プチママコースで取り分け可"
-      },
-      {
-        "label": "お試し",
-        "value": "5daysセット"
-      },
-      {
-        "label": "配送",
-        "value": "毎日（平日）"
-      }
+      {"label": "特徴", "value": "毎日配達・献立付きミールキット"},
+      {"label": "送料", "value": "送料・対象地域・注文条件を公式サイトで確認"},
+      {"label": "離乳食対応", "value": "プチママコースで取り分け可"},
+      {"label": "お試し", "value": "5daysセット"},
+      {"label": "配送", "value": "毎日（平日）"}
     ],
     "pros": [
       "食費を比べる際は、送料と必要な追加食材も確認したい",
@@ -2231,14 +1068,8 @@
     ],
     "rating": 4.2,
     "reviewSummary": "",
-    "affiliate": {
-      "officialUrl": "https://px.a8.net/svt/ejp?a8mat=4B5RS9+DML78Y+1QM6+HZAGY",
-      "ctaLabel": "お試し5daysを見る"
-    },
-    "competitors": [
-      "oisix",
-      "coopdeli"
-    ],
+    "affiliate": {"officialUrl": "https://px.a8.net/svt/ejp?a8mat=4B5RS9+DML78Y+1QM6+HZAGY", "ctaLabel": "お試し5daysを見る"},
+    "competitors": ["oisix", "coopdeli"],
     "updatedAt": "2026-06-04"
   },
   {
@@ -2248,22 +1079,10 @@
     "category": "food-delivery",
     "priceRange": "1食667円〜（税込・送料別）",
     "specs": [
-      {
-        "label": "通常価格",
-        "value": "1食667円〜（税込・送料別）"
-      },
-      {
-        "label": "お試し価格",
-        "value": "いつでも三菜4食セット 送料無料2,224円／いつでも五菜4食セット 送料無料2,668円（初回限定）"
-      },
-      {
-        "label": "送料",
-        "value": "本州・四国・九州800円／北海道1,100円／沖縄2,200円（クール便）"
-      },
-      {
-        "label": "定期購入",
-        "value": "定期購入の価格・適用条件は公式サイトで確認"
-      }
+      {"label": "通常価格", "value": "1食667円〜（税込・送料別）"},
+      {"label": "お試し価格", "value": "いつでも三菜4食セット 送料無料2,224円／いつでも五菜4食セット 送料無料2,668円（初回限定）"},
+      {"label": "送料", "value": "本州・四国・九州800円／北海道1,100円／沖縄2,200円（クール便）"},
+      {"label": "定期購入", "value": "定期購入の価格・適用条件は公式サイトで確認"}
     ],
     "pros": [
       "初回お試しが送料無料で始めやすい（三菜4食2,224円／五菜4食2,668円）",
@@ -2284,10 +1103,7 @@
       "都度の送料負担を避けたい人"
     ],
     "reviewSummary": "",
-    "affiliate": {
-      "officialUrl": "https://px.a8.net/svt/ejp?a8mat=4B7XX6+50ZTGA+3YYE+15RK35",
-      "ctaLabel": "ワタミの宅食ダイレクトを見る"
-    },
+    "affiliate": {"officialUrl": "https://px.a8.net/svt/ejp?a8mat=4B7XX6+50ZTGA+3YYE+15RK35", "ctaLabel": "ワタミの宅食ダイレクトを見る"},
     "competitors": [],
     "updatedAt": "2026-07-28"
   },
@@ -2298,26 +1114,11 @@
     "category": "food-delivery",
     "priceRange": "ミールキット1人約400〜500円＋手数料250〜300円前後",
     "specs": [
-      {
-        "label": "特徴",
-        "value": "生協の食材宅配"
-      },
-      {
-        "label": "品揃え",
-        "value": "6,000品目以上"
-      },
-      {
-        "label": "注文",
-        "value": "LINE・アプリ対応"
-      },
-      {
-        "label": "子育て割引",
-        "value": "対象年齢・地域・注文条件・適用期間を公式サイトで確認"
-      },
-      {
-        "label": "配送",
-        "value": "週1回・曜日固定"
-      }
+      {"label": "特徴", "value": "生協の食材宅配"},
+      {"label": "品揃え", "value": "6,000品目以上"},
+      {"label": "注文", "value": "LINE・アプリ対応"},
+      {"label": "子育て割引", "value": "対象年齢・地域・注文条件・適用期間を公式サイトで確認"},
+      {"label": "配送", "value": "週1回・曜日固定"}
     ],
     "pros": [
       "商品の価格と配達手数料を合わせて検討できる",
@@ -2340,15 +1141,8 @@
     ],
     "rating": 4.2,
     "reviewSummary": "",
-    "affiliate": {
-      "officialUrl": "https://www.coopdeli.jp/",
-      "ctaLabel": "公式サイトを見る",
-      "isAffiliateLink": false
-    },
-    "competitors": [
-      "palsystem",
-      "oisix"
-    ],
+    "affiliate": {"officialUrl": "https://www.coopdeli.jp/", "ctaLabel": "公式サイトを見る", "isAffiliateLink": false},
+    "competitors": ["palsystem", "oisix"],
     "updatedAt": "2026-06-04"
   },
   {
@@ -2358,26 +1152,11 @@
     "category": "food-delivery",
     "priceRange": "お試しセット（ワンコイン級）＋手数料250〜300円前後",
     "specs": [
-      {
-        "label": "特徴",
-        "value": "無添加・国産・産直志向の生協"
-      },
-      {
-        "label": "安全基準",
-        "value": "独自基準の内容と対象商品を公式サイトで確認"
-      },
-      {
-        "label": "支払い",
-        "value": "クレジットカード可"
-      },
-      {
-        "label": "離乳食",
-        "value": "裏ごし野菜などワンコインお試しあり"
-      },
-      {
-        "label": "配送",
-        "value": "週1回"
-      }
+      {"label": "特徴", "value": "無添加・国産・産直志向の生協"},
+      {"label": "安全基準", "value": "独自基準の内容と対象商品を公式サイトで確認"},
+      {"label": "支払い", "value": "クレジットカード可"},
+      {"label": "離乳食", "value": "裏ごし野菜などワンコインお試しあり"},
+      {"label": "配送", "value": "週1回"}
     ],
     "pros": [
       "原材料・産地・添加物の表示を商品ごとに確認して選べる",
@@ -2400,15 +1179,8 @@
     ],
     "rating": 4.3,
     "reviewSummary": "",
-    "affiliate": {
-      "officialUrl": "https://www.pal-system.co.jp/",
-      "ctaLabel": "公式サイトを見る",
-      "isAffiliateLink": false
-    },
-    "competitors": [
-      "coopdeli",
-      "oisix"
-    ],
+    "affiliate": {"officialUrl": "https://www.pal-system.co.jp/", "ctaLabel": "公式サイトを見る", "isAffiliateLink": false},
+    "competitors": ["coopdeli", "oisix"],
     "updatedAt": "2026-06-04"
   },
   {
@@ -2418,26 +1190,11 @@
     "category": "seasonal",
     "priceRange": "39,600円",
     "specs": [
-      {
-        "label": "特徴タグ",
-        "value": "DCモーター・超静音・コードレス対応・プレミアム"
-      },
-      {
-        "label": "最小運転音",
-        "value": "13dB（風量1・メーカー調べ）"
-      },
-      {
-        "label": "消費電力",
-        "value": "1.5W〜20W"
-      },
-      {
-        "label": "電気代目安",
-        "value": "風量1・1日8時間使用で約12.4円/月（1kWh31円換算）"
-      },
-      {
-        "label": "高さ調整",
-        "value": "中間ポール着脱で2段階（卓上サイズにも変更可）"
-      }
+      {"label": "特徴タグ", "value": "DCモーター・超静音・コードレス対応・プレミアム"},
+      {"label": "最小運転音", "value": "13dB（風量1・メーカー調べ）"},
+      {"label": "消費電力", "value": "1.5W〜20W"},
+      {"label": "電気代目安", "value": "風量1・1日8時間使用で約12.4円/月（1kWh31円換算）"},
+      {"label": "高さ調整", "value": "中間ポール着脱で2段階（卓上サイズにも変更可）"}
     ],
     "pros": [
       "最小13dBの超静音で就寝中でも気にならない",
@@ -2459,13 +1216,8 @@
     ],
     "reviewSummary": "",
     "rating": 4.4,
-    "affiliate": {
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Froomy%2F0001gft%2F"
-    },
-    "competitors": [
-      "balmuda-egf3400-cirq",
-      "iris-woozoo-stf-dc15tec"
-    ],
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Froomy%2F0001gft%2F"},
+    "competitors": ["balmuda-egf3400-cirq", "iris-woozoo-stf-dc15tec"],
     "updatedAt": "2026-06-30"
   },
   {
@@ -2475,30 +1227,12 @@
     "category": "seasonal",
     "priceRange": "27,500円",
     "specs": [
-      {
-        "label": "特徴タグ",
-        "value": "DCモーター・大風量・エアコン併用向け・部屋干し"
-      },
-      {
-        "label": "消費電力",
-        "value": "3W〜20W"
-      },
-      {
-        "label": "電気代目安",
-        "value": "動作時最小0.65円/日（1日8時間・1kWh27円換算）"
-      },
-      {
-        "label": "風の届く距離",
-        "value": "15m"
-      },
-      {
-        "label": "重量",
-        "value": "約2.3kg"
-      },
-      {
-        "label": "備考",
-        "value": "空気循環・部屋干しへの利用を検討。効果は設置・運転条件により異なる"
-      }
+      {"label": "特徴タグ", "value": "DCモーター・大風量・エアコン併用向け・部屋干し"},
+      {"label": "消費電力", "value": "3W〜20W"},
+      {"label": "電気代目安", "value": "動作時最小0.65円/日（1日8時間・1kWh27円換算）"},
+      {"label": "風の届く距離", "value": "15m"},
+      {"label": "重量", "value": "約2.3kg"},
+      {"label": "備考", "value": "空気循環・部屋干しへの利用を検討。効果は設置・運転条件により異なる"}
     ],
     "pros": [
       "風が15m届く大風量でエアコンと組み合わせて室内の空気循環を最大化",
@@ -2519,13 +1253,8 @@
       "扇風機として直接涼をとることをメインにしたい方"
     ],
     "reviewSummary": "",
-    "affiliate": {
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fplywood%2F08437018%2F"
-    },
-    "competitors": [
-      "balmuda-egf1800-fan",
-      "iris-woozoo-stf-dc15tec"
-    ],
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fplywood%2F08437018%2F"},
+    "competitors": ["balmuda-egf1800-fan", "iris-woozoo-stf-dc15tec"],
     "updatedAt": "2026-06-30"
   },
   {
@@ -2535,30 +1264,12 @@
     "category": "seasonal",
     "priceRange": "7,980〜11,800円",
     "specs": [
-      {
-        "label": "特徴タグ",
-        "value": "DCモーター・分解丸洗い・コスパ・1台5役"
-      },
-      {
-        "label": "消費電力",
-        "value": "24W（定格）"
-      },
-      {
-        "label": "電気代目安",
-        "value": "最大風量で1時間約0.7円（1kWh31円換算）"
-      },
-      {
-        "label": "重量",
-        "value": "約1.9kg"
-      },
-      {
-        "label": "適用畳数",
-        "value": "約20畳"
-      },
-      {
-        "label": "お手入れ",
-        "value": "ガード・羽根を工具不要で分解し水洗い可能"
-      }
+      {"label": "特徴タグ", "value": "DCモーター・分解丸洗い・コスパ・1台5役"},
+      {"label": "消費電力", "value": "24W（定格）"},
+      {"label": "電気代目安", "value": "最大風量で1時間約0.7円（1kWh31円換算）"},
+      {"label": "重量", "value": "約1.9kg"},
+      {"label": "適用畳数", "value": "約20畳"},
+      {"label": "お手入れ", "value": "ガード・羽根を工具不要で分解し水洗い可能"}
     ],
     "pros": [
       "ガード・羽根を工具不要で分解できるため衛生管理がしやすい",
@@ -2579,13 +1290,8 @@
       "低消費電力を最優先する方"
     ],
     "reviewSummary": "",
-    "affiliate": {
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fenetroom%2F274420%2F"
-    },
-    "competitors": [
-      "balmuda-egf1800-fan",
-      "balmuda-egf3400-cirq"
-    ],
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fenetroom%2F274420%2F"},
+    "competitors": ["balmuda-egf1800-fan", "balmuda-egf3400-cirq"],
     "updatedAt": "2026-06-30"
   },
   {
@@ -2595,22 +1301,10 @@
     "category": "food-delivery",
     "priceRange": "注文ごと＋手数料（地域による）",
     "specs": [
-      {
-        "label": "特徴",
-        "value": "国産中心・添加物削減・減農薬の生協"
-      },
-      {
-        "label": "受賞",
-        "value": "オリコン顧客満足度調査 首都圏1位（食材宅配・ミールキット）"
-      },
-      {
-        "label": "こだわり",
-        "value": "生産者と共同開発した食材"
-      },
-      {
-        "label": "配送",
-        "value": "週1回"
-      }
+      {"label": "特徴", "value": "国産中心・添加物削減・減農薬の生協"},
+      {"label": "受賞", "value": "オリコン顧客満足度調査 首都圏1位（食材宅配・ミールキット）"},
+      {"label": "こだわり", "value": "生産者と共同開発した食材"},
+      {"label": "配送", "value": "週1回"}
     ],
     "pros": [
       "添加物削減・減農薬で品質基準が高い",
@@ -2633,13 +1327,8 @@
     ],
     "rating": 4.2,
     "reviewSummary": "",
-    "affiliate": {
-      "officialUrl": "",
-      "ctaLabel": "公式サイトを見る"
-    },
-    "competitors": [
-      "palsystem"
-    ],
+    "affiliate": {"officialUrl": "", "ctaLabel": "公式サイトを見る"},
+    "competitors": ["palsystem"],
     "updatedAt": "2026-06-04"
   },
   {
@@ -2649,42 +1338,15 @@
     "category": "washer",
     "priceRange": "107,820〜109,800円",
     "specs": [
-      {
-        "label": "特徴タグ",
-        "value": "低価格・温水洗浄・Ag+抗菌・コンパクト"
-      },
-      {
-        "label": "洗濯/乾燥容量",
-        "value": "洗濯8kg / 乾燥4kg"
-      },
-      {
-        "label": "乾燥方式",
-        "value": "ヒーター乾燥（外気取入れ＋センサー制御の温風）"
-      },
-      {
-        "label": "運転音",
-        "value": "洗濯約40dB / 脱水約46dB / 乾燥約44dB"
-      },
-      {
-        "label": "消費電力",
-        "value": "電動機200W / 温水用800W / 温風用800W（定格入力1000W）"
-      },
-      {
-        "label": "本体寸法",
-        "value": "幅595×奥行652×高さ1065mm（ホース含む）"
-      },
-      {
-        "label": "質量",
-        "value": "約80kg"
-      },
-      {
-        "label": "設置目安",
-        "value": "防水パン奥行内寸54cm以上"
-      },
-      {
-        "label": "おもな機能",
-        "value": "温水洗浄(40/60℃)、Ag+(銀イオン)、ふんわりシワ取りコース、チャイルドロック"
-      }
+      {"label": "特徴タグ", "value": "低価格・温水洗浄・Ag+抗菌・コンパクト"},
+      {"label": "洗濯/乾燥容量", "value": "洗濯8kg / 乾燥4kg"},
+      {"label": "乾燥方式", "value": "ヒーター乾燥（外気取入れ＋センサー制御の温風）"},
+      {"label": "運転音", "value": "洗濯約40dB / 脱水約46dB / 乾燥約44dB"},
+      {"label": "消費電力", "value": "電動機200W / 温水用800W / 温風用800W（定格入力1000W）"},
+      {"label": "本体寸法", "value": "幅595×奥行652×高さ1065mm（ホース含む）"},
+      {"label": "質量", "value": "約80kg"},
+      {"label": "設置目安", "value": "防水パン奥行内寸54cm以上"},
+      {"label": "おもな機能", "value": "温水洗浄(40/60℃)、Ag+(銀イオン)、ふんわりシワ取りコース、チャイルドロック"}
     ],
     "pros": [
       "低価格でドラム式に手が届く",
@@ -2705,15 +1367,8 @@
       "乾燥容量を多く必要とする大家族"
     ],
     "reviewSummary": "",
-    "affiliate": {
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fenetroom%2F516583%2F"
-    },
-    "competitors": [
-      "nitori-nd60ul1-washer",
-      "panasonic-na-sd10hbl-washer",
-      "sharp-es11k1-washer",
-      "toshiba-tw127xm4l-washer"
-    ],
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fenetroom%2F516583%2F"},
+    "competitors": ["nitori-nd60ul1-washer", "panasonic-na-sd10hbl-washer", "sharp-es11k1-washer", "toshiba-tw127xm4l-washer"],
     "updatedAt": "2026-07-01"
   },
   {
@@ -2723,22 +1378,10 @@
     "category": "washer",
     "priceRange": "54,390円（送料別6,600円）",
     "specs": [
-      {
-        "label": "特徴タグ",
-        "value": "乾燥機能なし・6kg・スリム設計・ワンルーム/一人暮らし向け"
-      },
-      {
-        "label": "洗濯容量",
-        "value": "6kg"
-      },
-      {
-        "label": "乾燥機能",
-        "value": "なし（洗濯・脱水のみのシンプル設計）"
-      },
-      {
-        "label": "想定用途",
-        "value": "ワンルーム・一人暮らし向けの省スペースモデル"
-      }
+      {"label": "特徴タグ", "value": "乾燥機能なし・6kg・スリム設計・ワンルーム/一人暮らし向け"},
+      {"label": "洗濯容量", "value": "6kg"},
+      {"label": "乾燥機能", "value": "なし（洗濯・脱水のみのシンプル設計）"},
+      {"label": "想定用途", "value": "ワンルーム・一人暮らし向けの省スペースモデル"}
     ],
     "pros": [
       "乾燥機能を省いた分、洗濯専用としてシンプルに使える",
@@ -2759,15 +1402,8 @@
       "ファミリーで大容量の洗濯・乾燥をこなしたい方"
     ],
     "reviewSummary": "",
-    "affiliate": {
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fnitori%2F2113400001572s%2F"
-    },
-    "competitors": [
-      "iris-flk842-washer",
-      "panasonic-na-sd10hbl-washer",
-      "sharp-es11k1-washer",
-      "toshiba-tw127xm4l-washer"
-    ],
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fnitori%2F2113400001572s%2F"},
+    "competitors": ["iris-flk842-washer", "panasonic-na-sd10hbl-washer", "sharp-es11k1-washer", "toshiba-tw127xm4l-washer"],
     "updatedAt": "2026-07-05"
   },
   {
@@ -2777,42 +1413,15 @@
     "category": "washer",
     "priceRange": "198,817円",
     "specs": [
-      {
-        "label": "特徴タグ",
-        "value": "温水泡洗浄・液体洗剤自動投入・コンパクト・ダウンジャケットコース"
-      },
-      {
-        "label": "洗濯/乾燥容量",
-        "value": "洗濯10kg / 乾燥5kg"
-      },
-      {
-        "label": "乾燥方式",
-        "value": "低温の大風量ヒーター乾燥（排気式）"
-      },
-      {
-        "label": "運転音",
-        "value": "洗濯37dB / 脱水41dB / 乾燥46dB"
-      },
-      {
-        "label": "消費電力量",
-        "value": "洗濯〜乾燥時 約1980Wh"
-      },
-      {
-        "label": "本体寸法",
-        "value": "幅639×奥行650×高さ1010mm（ホース含む・ボディ幅600mm）"
-      },
-      {
-        "label": "質量",
-        "value": "約65kg"
-      },
-      {
-        "label": "設置目安",
-        "value": "防水パン奥行内寸540mm"
-      },
-      {
-        "label": "おもな機能",
-        "value": "温水スゴ落ち泡洗浄、液体洗剤自動投入（柔軟剤は手動）、ダウンジャケットコース。設置寸法は公式仕様で確認"
-      }
+      {"label": "特徴タグ", "value": "温水泡洗浄・液体洗剤自動投入・コンパクト・ダウンジャケットコース"},
+      {"label": "洗濯/乾燥容量", "value": "洗濯10kg / 乾燥5kg"},
+      {"label": "乾燥方式", "value": "低温の大風量ヒーター乾燥（排気式）"},
+      {"label": "運転音", "value": "洗濯37dB / 脱水41dB / 乾燥46dB"},
+      {"label": "消費電力量", "value": "洗濯〜乾燥時 約1980Wh"},
+      {"label": "本体寸法", "value": "幅639×奥行650×高さ1010mm（ホース含む・ボディ幅600mm）"},
+      {"label": "質量", "value": "約65kg"},
+      {"label": "設置目安", "value": "防水パン奥行内寸540mm"},
+      {"label": "おもな機能", "value": "温水スゴ落ち泡洗浄、液体洗剤自動投入（柔軟剤は手動）、ダウンジャケットコース。設置寸法は公式仕様で確認"}
     ],
     "pros": [
       "温水スゴ落ち泡洗浄で頑固な皮脂汚れをしっかり落とす",
@@ -2834,15 +1443,8 @@
       "柔軟剤も自動投入したい方"
     ],
     "reviewSummary": "",
-    "affiliate": {
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fbiccamera%2F4550719001738%2F"
-    },
-    "competitors": [
-      "iris-flk842-washer",
-      "nitori-nd60ul1-washer",
-      "sharp-es11k1-washer",
-      "toshiba-tw127xm4l-washer"
-    ],
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fbiccamera%2F4550719001738%2F"},
+    "competitors": ["iris-flk842-washer", "nitori-nd60ul1-washer", "sharp-es11k1-washer", "toshiba-tw127xm4l-washer"],
     "updatedAt": "2026-07-01"
   },
   {
@@ -2852,42 +1454,15 @@
     "category": "washer",
     "priceRange": "151,200円",
     "specs": [
-      {
-        "label": "特徴タグ",
-        "value": "無排気乾燥・マイクロ高圧洗浄・プラズマクラスター・自動お掃除"
-      },
-      {
-        "label": "洗濯/乾燥容量",
-        "value": "洗濯11kg / 乾燥6kg"
-      },
-      {
-        "label": "乾燥方式",
-        "value": "ヒーターセンサー乾燥＋無排気乾燥方式（湿気を室内に出さない）"
-      },
-      {
-        "label": "運転音",
-        "value": "洗濯26dB / 脱水39dB / 乾燥41dB"
-      },
-      {
-        "label": "消費電力量",
-        "value": "洗濯80Wh / 洗濯〜乾燥1880Wh"
-      },
-      {
-        "label": "標準使用水量",
-        "value": "洗濯75L / 洗濯〜乾燥96L"
-      },
-      {
-        "label": "本体寸法",
-        "value": "幅645×奥行732×高さ1100mm（ホース含む）"
-      },
-      {
-        "label": "質量",
-        "value": "約71kg"
-      },
-      {
-        "label": "おもな機能",
-        "value": "マイクロ高圧洗浄、プラズマクラスター、乾燥ダクト・洗濯槽・ドアパッキンの自動お掃除（対象・条件はメーカー仕様を確認）"
-      }
+      {"label": "特徴タグ", "value": "無排気乾燥・マイクロ高圧洗浄・プラズマクラスター・自動お掃除"},
+      {"label": "洗濯/乾燥容量", "value": "洗濯11kg / 乾燥6kg"},
+      {"label": "乾燥方式", "value": "ヒーターセンサー乾燥＋無排気乾燥方式（湿気を室内に出さない）"},
+      {"label": "運転音", "value": "洗濯26dB / 脱水39dB / 乾燥41dB"},
+      {"label": "消費電力量", "value": "洗濯80Wh / 洗濯〜乾燥1880Wh"},
+      {"label": "標準使用水量", "value": "洗濯75L / 洗濯〜乾燥96L"},
+      {"label": "本体寸法", "value": "幅645×奥行732×高さ1100mm（ホース含む）"},
+      {"label": "質量", "value": "約71kg"},
+      {"label": "おもな機能", "value": "マイクロ高圧洗浄、プラズマクラスター、乾燥ダクト・洗濯槽・ドアパッキンの自動お掃除（対象・条件はメーカー仕様を確認）"}
     ],
     "pros": [
       "無排気乾燥方式。設置・換気条件は取扱説明書で確認",
@@ -2909,15 +1484,8 @@
       "乾燥電気代を最優先する方"
     ],
     "reviewSummary": "",
-    "affiliate": {
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Febest%2Fiset000005191%2F"
-    },
-    "competitors": [
-      "iris-flk842-washer",
-      "nitori-nd60ul1-washer",
-      "panasonic-na-sd10hbl-washer",
-      "toshiba-tw127xm4l-washer"
-    ],
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Febest%2Fiset000005191%2F"},
+    "competitors": ["iris-flk842-washer", "nitori-nd60ul1-washer", "panasonic-na-sd10hbl-washer", "toshiba-tw127xm4l-washer"],
     "updatedAt": "2026-07-01"
   },
   {
@@ -2927,46 +1495,16 @@
     "category": "washer",
     "priceRange": "169,800〜186,400円",
     "specs": [
-      {
-        "label": "特徴タグ",
-        "value": "ヒートポンプ乾燥・大容量・ウルトラファインバブル・自動投入"
-      },
-      {
-        "label": "洗濯/乾燥容量",
-        "value": "洗濯12kg / 乾燥7kg"
-      },
-      {
-        "label": "乾燥方式",
-        "value": "ふんわリッチ速乾（ヒートポンプ除湿乾燥）　低温で衣類にやさしく省エネ"
-      },
-      {
-        "label": "運転音",
-        "value": "洗い約32dB / 脱水約37dB / 乾燥約48dB（乾燥節電 約42dB）"
-      },
-      {
-        "label": "消費電力",
-        "value": "洗濯時135W / 乾燥時1190W"
-      },
-      {
-        "label": "消費電力量",
-        "value": "洗濯約70Wh / 洗濯〜乾燥約1330Wh（乾燥節電 約720Wh）"
-      },
-      {
-        "label": "本体寸法",
-        "value": "幅645×奥行722×高さ1060mm（ホース含む・ボディ幅600mm）"
-      },
-      {
-        "label": "質量",
-        "value": "約88kg"
-      },
-      {
-        "label": "設置目安",
-        "value": "防水パン奥行内寸520mm以上"
-      },
-      {
-        "label": "おもな機能",
-        "value": "抗菌ウルトラファインバブル洗浄W＋Ag+抗菌水、液体洗剤・柔軟剤自動投入、自動おそうじ(乾燥ダクト・熱交換器・ドアパッキン)、排水3方向"
-      }
+      {"label": "特徴タグ", "value": "ヒートポンプ乾燥・大容量・ウルトラファインバブル・自動投入"},
+      {"label": "洗濯/乾燥容量", "value": "洗濯12kg / 乾燥7kg"},
+      {"label": "乾燥方式", "value": "ふんわリッチ速乾（ヒートポンプ除湿乾燥）　低温で衣類にやさしく省エネ"},
+      {"label": "運転音", "value": "洗い約32dB / 脱水約37dB / 乾燥約48dB（乾燥節電 約42dB）"},
+      {"label": "消費電力", "value": "洗濯時135W / 乾燥時1190W"},
+      {"label": "消費電力量", "value": "洗濯約70Wh / 洗濯〜乾燥約1330Wh（乾燥節電 約720Wh）"},
+      {"label": "本体寸法", "value": "幅645×奥行722×高さ1060mm（ホース含む・ボディ幅600mm）"},
+      {"label": "質量", "value": "約88kg"},
+      {"label": "設置目安", "value": "防水パン奥行内寸520mm以上"},
+      {"label": "おもな機能", "value": "抗菌ウルトラファインバブル洗浄W＋Ag+抗菌水、液体洗剤・柔軟剤自動投入、自動おそうじ(乾燥ダクト・熱交換器・ドアパッキン)、排水3方向"}
     ],
     "pros": [
       "5機種で唯一のヒートポンプ乾燥で長期的な電気代を大幅に節約",
@@ -2988,15 +1526,8 @@
       "コンパクトなドラム式を探している方"
     ],
     "reviewSummary": "",
-    "affiliate": {
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fa-price%2F4904530128714%2F"
-    },
-    "competitors": [
-      "iris-flk842-washer",
-      "nitori-nd60ul1-washer",
-      "panasonic-na-sd10hbl-washer",
-      "sharp-es11k1-washer"
-    ],
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fa-price%2F4904530128714%2F"},
+    "competitors": ["iris-flk842-washer", "nitori-nd60ul1-washer", "panasonic-na-sd10hbl-washer", "sharp-es11k1-washer"],
     "updatedAt": "2026-07-01"
   },
   {
@@ -3006,38 +1537,14 @@
     "category": "seasonal",
     "priceRange": "要確認（時期により変動）",
     "specs": [
-      {
-        "label": "タイプ",
-        "value": "据置きホース式（マットなし）"
-      },
-      {
-        "label": "サイズ",
-        "value": "幅15×奥行27×高さ34.5cm（ホース折りたたみ時）"
-      },
-      {
-        "label": "重量",
-        "value": "約4kg"
-      },
-      {
-        "label": "最大消費電力",
-        "value": "約870W"
-      },
-      {
-        "label": "自動モード",
-        "value": "冬・夏・あたため・ダニの4モード＋手動モード"
-      },
-      {
-        "label": "タイマー",
-        "value": "15/30/60/120/180分"
-      },
-      {
-        "label": "温度",
-        "value": "高温風・低温風・送風の3段階"
-      },
-      {
-        "label": "ホース長",
-        "value": "800mm"
-      }
+      {"label": "タイプ", "value": "据置きホース式（マットなし）"},
+      {"label": "サイズ", "value": "幅15×奥行27×高さ34.5cm（ホース折りたたみ時）"},
+      {"label": "重量", "value": "約4kg"},
+      {"label": "最大消費電力", "value": "約870W"},
+      {"label": "自動モード", "value": "冬・夏・あたため・ダニの4モード＋手動モード"},
+      {"label": "タイマー", "value": "15/30/60/120/180分"},
+      {"label": "温度", "value": "高温風・低温風・送風の3段階"},
+      {"label": "ホース長", "value": "800mm"}
     ],
     "pros": [
       "ノズルハンガー付属で衣類乾燥・スポット暖房にも使える汎用性の高さ",
@@ -3058,12 +1565,8 @@
       "本体をセットする手間をかけず手軽に使いたい人"
     ],
     "reviewSummary": "",
-    "affiliate": {
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Feleking%2F285526%2F"
-    },
-    "competitors": [
-      "cado-foehn-pro-futondryer"
-    ],
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Feleking%2F285526%2F"},
+    "competitors": ["cado-foehn-pro-futondryer"],
     "updatedAt": "2026-07-19"
   },
   {
@@ -3073,30 +1576,12 @@
     "category": "seasonal",
     "priceRange": "要確認（時期により変動）",
     "specs": [
-      {
-        "label": "タイプ",
-        "value": "スティック型（マットなし）"
-      },
-      {
-        "label": "サイズ",
-        "value": "直径5.4×高さ34.2cm"
-      },
-      {
-        "label": "重量",
-        "value": "約720g（電源コード除く）"
-      },
-      {
-        "label": "最大消費電力",
-        "value": "620W"
-      },
-      {
-        "label": "コース",
-        "value": "送風120分／乾燥・ダニ対策80分／あたため10分"
-      },
-      {
-        "label": "対応サイズ",
-        "value": "シングル〜キングサイズ"
-      }
+      {"label": "タイプ", "value": "スティック型（マットなし）"},
+      {"label": "サイズ", "value": "直径5.4×高さ34.2cm"},
+      {"label": "重量", "value": "約720g（電源コード除く）"},
+      {"label": "最大消費電力", "value": "620W"},
+      {"label": "コース", "value": "送風120分／乾燥・ダニ対策80分／あたため10分"},
+      {"label": "対応サイズ", "value": "シングル〜キングサイズ"}
     ],
     "pros": [
       "重量約720gと非常に軽く、収納・持ち運びがしやすい",
@@ -3117,12 +1602,8 @@
       "布団の耐熱温度を確認する手間をかけたくない人"
     ],
     "reviewSummary": "",
-    "affiliate": {
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fcado-shop%2Ffen-p01%2F"
-    },
-    "competitors": [
-      "iris-fk-d2-futondryer"
-    ],
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fcado-shop%2Ffen-p01%2F"},
+    "competitors": ["iris-fk-d2-futondryer"],
     "updatedAt": "2026-07-19"
   },
   {
@@ -3132,30 +1613,12 @@
     "category": "vacuum",
     "priceRange": "要確認（時期により変動）",
     "specs": [
-      {
-        "label": "タイプ",
-        "value": "自動ゴミ収集ステーション付き"
-      },
-      {
-        "label": "吸引力",
-        "value": "8,000Pa"
-      },
-      {
-        "label": "ダストボックス",
-        "value": "400ml"
-      },
-      {
-        "label": "水拭き",
-        "value": "OZMO Pro 2.0（高周波振動モップシステム）、水タンク180ml"
-      },
-      {
-        "label": "バッテリー",
-        "value": "5200mAh"
-      },
-      {
-        "label": "段差",
-        "value": "20mmのしきい値を乗り越え可能"
-      }
+      {"label": "タイプ", "value": "自動ゴミ収集ステーション付き"},
+      {"label": "吸引力", "value": "8,000Pa"},
+      {"label": "ダストボックス", "value": "400ml"},
+      {"label": "水拭き", "value": "OZMO Pro 2.0（高周波振動モップシステム）、水タンク180ml"},
+      {"label": "バッテリー", "value": "5200mAh"},
+      {"label": "段差", "value": "20mmのしきい値を乗り越え可能"}
     ],
     "pros": [
       "ZeroTangle Anti-Tangleテクノロジーでローラーブラシへの髪の絡まりを防ぐ設計",
@@ -3176,12 +1639,8 @@
       "本体まわりをできるだけコンパクトにまとめたい人"
     ],
     "reviewSummary": "",
-    "affiliate": {
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fstore-ecovacs-japan%2Fdkx55-12ee%2F"
-    },
-    "competitors": [
-      "irobot-roomba-205-cleaner"
-    ],
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fstore-ecovacs-japan%2Fdkx55-12ee%2F"},
+    "competitors": ["irobot-roomba-205-cleaner"],
     "updatedAt": "2026-07-19"
   },
   {
@@ -3191,50 +1650,17 @@
     "category": "vacuum",
     "priceRange": "要確認（時期により変動）",
     "specs": [
-      {
-        "label": "タイプ",
-        "value": "ゴミ収集ステーション不要（本体内でゴミを圧縮）"
-      },
-      {
-        "label": "ゴミ捨て",
-        "value": "DustCompactorにより最大60日間ゴミ捨て不要（すべての家庭環境において期間を保証するものではありません）"
-      },
-      {
-        "label": "本体サイズ",
-        "value": "奥行35.9×幅35.8×高さ10.1cm"
-      },
-      {
-        "label": "充電ステーションサイズ",
-        "value": "奥行13.4×幅14.6×高さ8.8cm"
-      },
-      {
-        "label": "重量",
-        "value": "本体約3.83kg・充電ステーション約0.31kg"
-      },
-      {
-        "label": "充電時間",
-        "value": "約4時間"
-      },
-      {
-        "label": "吸引力",
-        "value": "最大70倍（国内累計出荷台数トップのRoomba 600シリーズとの比較、2025年2月時点）"
-      },
-      {
-        "label": "マッピング",
-        "value": "ClearView LiDAR"
-      },
-      {
-        "label": "水拭き",
-        "value": "マイクロファイバーモップパッド、スマートスクラブ対応、カーペット自動検知でラグを回避"
-      },
-      {
-        "label": "設定",
-        "value": "4段階の吸引力、3段階の水分量、進入禁止/拭き掃除禁止エリア設定可"
-      },
-      {
-        "label": "ブラシ",
-        "value": "ゴム製シングルアクションブラシ、エッジクリーニングブラシ"
-      }
+      {"label": "タイプ", "value": "ゴミ収集ステーション不要（本体内でゴミを圧縮）"},
+      {"label": "ゴミ捨て", "value": "DustCompactorにより最大60日間ゴミ捨て不要（すべての家庭環境において期間を保証するものではありません）"},
+      {"label": "本体サイズ", "value": "奥行35.9×幅35.8×高さ10.1cm"},
+      {"label": "充電ステーションサイズ", "value": "奥行13.4×幅14.6×高さ8.8cm"},
+      {"label": "重量", "value": "本体約3.83kg・充電ステーション約0.31kg"},
+      {"label": "充電時間", "value": "約4時間"},
+      {"label": "吸引力", "value": "最大70倍（国内累計出荷台数トップのRoomba 600シリーズとの比較、2025年2月時点）"},
+      {"label": "マッピング", "value": "ClearView LiDAR"},
+      {"label": "水拭き", "value": "マイクロファイバーモップパッド、スマートスクラブ対応、カーペット自動検知でラグを回避"},
+      {"label": "設定", "value": "4段階の吸引力、3段階の水分量、進入禁止/拭き掃除禁止エリア設定可"},
+      {"label": "ブラシ", "value": "ゴム製シングルアクションブラシ、エッジクリーニングブラシ"}
     ],
     "pros": [
       "DustCompactorが本体内でゴミを圧縮し、条件が揃えば最大60日間ゴミ捨て不要（すべての家庭環境で期間を保証するものではない）",
@@ -3255,12 +1681,8 @@
       "とにかくゴミ捨て頻度を長く空けたい人（環境によって変わるため過度な期待は禁物）"
     ],
     "reviewSummary": "",
-    "affiliate": {
-      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Firobotstore%2Fl12%2F"
-    },
-    "competitors": [
-      "ecovacs-deebot-n20-proplus-cleaner"
-    ],
+    "affiliate": {"rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Firobotstore%2Fl12%2F"},
+    "competitors": ["ecovacs-deebot-n20-proplus-cleaner"],
     "updatedAt": "2026-07-19"
   },
   {
