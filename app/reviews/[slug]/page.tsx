@@ -1,4 +1,4 @@
-import { ArticleWelcome, ReadingPause, ProductGlance } from "@/components/ReadingGuide";
+import { ArticleWelcome, ReadingPause, ReadingSteps, ProductGlance } from "@/components/ReadingGuide";
 import fs from "node:fs";
 import { EditorialImage } from "@/components/EditorialImage";
 import { categoryImage } from "@/data/editorial";
@@ -117,7 +117,7 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
         <span>更新日：{p.updatedAt}</span>
       </div>
 
-      <ArticleWelcome category={p.category} slug={p.slug} />
+      {p.image ? <><ProductGlance p={p} link={false}/><ReadingSteps category={p.category} slug={p.slug}/></> : <ArticleWelcome category={p.category} slug={p.slug} />}
       <div className="quick-match not-prose"><span>こんな暮らしに</span><p>{p.bestFor[0] || "使いたい場面と仕様を確認して選びましょう。"}</p></div>
       <h2>はじめに</h2>
       <p>{body.intro ? <RichText text={body.intro} /> : `${p.name}を、${cat.selectionPoints.slice(0, 3).join("・")}の観点で評価しました。結論から言うと、${p.bestFor[0]}に向いた選択肢です。`}</p>
@@ -136,7 +136,6 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
       ))}
 
       <h2>主なスペック</h2>
-      <ProductGlance p={p} link={false}/>
       <div className="overflow-x-auto rounded-xl border border-ink/15 shadow-card">
         <table className="w-full border-collapse text-sm">
           <tbody>

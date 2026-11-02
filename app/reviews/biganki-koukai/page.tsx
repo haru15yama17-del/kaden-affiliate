@@ -196,7 +196,7 @@ export default async function BigankiKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
-      <ArticleWelcome category="beauty" slug="biganki-koukai" />
+      <ArticleWelcome category="beauty" slug="biganki-koukai" products={compactItems} />
       <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
       <details className="edit-history"><summary>更新・修正の記録</summary><p>修正履歴：2026-11-01 固定の価格表示を最新条件の確認案内へ変更。使用体験・店頭での記録は保持しています。</p></details>
 

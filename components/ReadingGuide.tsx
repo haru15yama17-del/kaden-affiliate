@@ -32,7 +32,8 @@ export function ReadingSteps({category="cooking", slug=""}: {category?:string; s
   </div>;
 }
 
-export function ArticleWelcome({category,slug=""}: {category:string;slug?:string}) {
+export function ArticleWelcome({category,slug="",products}: {category:string;slug?:string;products?:Product[]}) {
+  if (products?.length) return <aside className="article-product-gallery not-prose" aria-label="比較する商品の写真"><p className="eyebrow">写真で見比べる</p><p className="gallery-title">この記事で比べる商品</p><p className="gallery-description">外観を見たら、使い方・容量・置き場所を比べてみましょう。写真の縮尺は商品ごとに異なります。</p><div className="gallery-products">{products.map(p=><div className="gallery-product" key={p.slug}><ProductPhoto slug={p.slug} name={p.name}/><a href={'/reviews/'+p.slug}>{p.name} <ArrowRight size={14} aria-hidden="true"/></a></div>)}</div><ReadingSteps category={category} slug={slug}/></aside>;
   return <aside className="article-welcome not-prose" aria-label="読む前の確認ポイント">
     <EditorialImage {...categoryImage(category,slug)} priority />
     <div className="article-welcome-copy"><p className="eyebrow">わが家に合う選び方</p><p className="welcome-title">欲しいのは、<br/>暮らしにちょうどいい選択。</p><p className="welcome-description">サービスも家電も、使う場面から考えると選びやすくなります。まずはこの3つを確認。</p><ReadingSteps category={category} slug={slug}/></div>

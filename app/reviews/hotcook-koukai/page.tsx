@@ -134,7 +134,7 @@ export default async function HotcookKoukaiPage() {
       <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
       <details className="edit-history"><summary>更新・修正の記録</summary><p>修正履歴：2026-11-01 固定の価格表示を最新条件の確認案内へ変更。使用体験・店頭での記録は保持しています。</p></details>
 
-      <ArticleWelcome category="cooking" slug="hotcook-koukai" />
+      <ArticleWelcome category="cooking" slug="hotcook-koukai" products={compactItems} />
 
       <RecommendBox
         name="ホットクック（ヘルシオ）"

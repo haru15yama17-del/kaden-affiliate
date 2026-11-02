@@ -73,8 +73,8 @@ export function AffiliateButtons({
   if (buttons.length === 0) {
     return (
       <div className="rounded-xl border-2 border-dashed border-ink/15 p-5 text-center">
-        <p className="text-sm text-ink/45">アフィリエイトリンクを設定すると購入ボタンが表示されます</p>
-        <p className="mt-1 text-xs text-ink/30">data/products.ts の affiliate フィールドに ASIN 等を入力してください</p>
+        <p className="text-sm text-ink/45">この商品の購入先リンクは現在掲載していません</p>
+        <p className="mt-1 text-xs text-ink/30">型番・在庫・購入条件は販売店でご確認ください</p>
       </div>
     );
   }

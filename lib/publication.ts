@@ -23,6 +23,7 @@ export function publishProduct(p: Product): Product {
       ...(p.affiliate.ctaLabel === "無料お試しを見る" ? { ctaLabel: "お試しの条件を見る" } : {}),
     },
   };
+  if (p.slug === "iris-rc-ik50-ricecooker") p = {...p, name: p.name.replace("（5合）", "（5.5合）"), specs:p.specs.map(s=>s.label==="容量" ? {...s,value:"5.5合（白米）"}:s), pros:p.pros.map(s=>s.replace(/^5合で/, "5.5合で"))};
   return {
     ...p,
     updatedAt: correctedSlugs.includes(p.slug) && p.updatedAt.slice(0,10) < "2026-11-01" ? "2026-11-01" : p.updatedAt,

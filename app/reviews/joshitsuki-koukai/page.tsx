@@ -226,7 +226,7 @@ export default async function JoshitsukiKoukaiPage() {
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
       <p className="mt-2 text-sm text-ink/55">更新日：2026-10-31</p>
 
-      <ArticleWelcome category="seasonal" slug="joshitsuki-koukai" />
+      <ArticleWelcome category="seasonal" slug="joshitsuki-koukai" products={compactItems} />
 
       <RecommendBox
         name="シャープ 衣類乾燥除湿機 CV-S71"

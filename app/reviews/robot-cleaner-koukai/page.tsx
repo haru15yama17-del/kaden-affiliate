@@ -164,7 +164,7 @@ export default async function RobotCleanerKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
-      <ArticleWelcome category="vacuum" slug="robot-cleaner-koukai" />
+      <ArticleWelcome category="vacuum" slug="robot-cleaner-koukai" products={compactItems} />
       <p className="mt-2 text-sm text-ink/55">更新日：2026-07-19</p>
 
       <p>

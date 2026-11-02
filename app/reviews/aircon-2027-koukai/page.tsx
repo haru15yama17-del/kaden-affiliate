@@ -217,7 +217,7 @@ export default async function AirconKoukaiPage() {
       <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
       <details className="edit-history"><summary>更新・修正の記録</summary><p>修正履歴：2026-11-01 最安の断定と価格予測を見直しました。店頭の会話・使用感は当時の記録として残しています。</p></details>
 
-      <ArticleWelcome category="aircon" slug="aircon-2027-koukai" />
+      <ArticleWelcome category="aircon" slug="aircon-2027-koukai" products={compactItems} />
 
       {/* ── 結論ファースト（3行） ── CV-1 */}
       <div className="not-prose my-5 rounded-xl border-2 border-accent/40 bg-blush/60 p-4">

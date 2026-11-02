@@ -167,7 +167,7 @@ export default async function WaterserverKoukaiPage() {
       />
 
       <h1 className="font-serif text-3xl font-bold leading-tight">{TITLE}</h1>
-      <ArticleWelcome category="water-server" slug="waterserver-koukai" />
+      <ArticleWelcome category="water-server" slug="waterserver-koukai" products={compactItems} />
       <p className="mt-2 text-sm text-ink/55">更新日：2026-11-01</p>
       <details className="edit-history"><summary>更新・修正の記録</summary><p>修正履歴：2026-11-01 比較・利用条件の説明を見直しました。体験談と店頭での会話は当時の記録として掲載しており、個人の感想は性能や現在の契約条件を保証するものではありません。</p></details>
       <details className="edit-history"><summary>更新・修正の記録</summary><p>修正履歴：2026-11-01 固定の価格表示を最新条件の確認案内へ変更。使用体験・店頭での記録は保持しています。</p></details>

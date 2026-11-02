@@ -187,5 +187,213 @@
     "sourceLabel": "メーカー公式",
     "caption": "STF-DC15TEC-DA（色の一例）",
     "checkedAt": "2026-11-02"
+  },
+  "rede-hairdryplus-dr02a": {
+    "src": "https://a-stage-inc.jp/product/household/img/dr02a/dr02a_thumb1.jpg",
+    "sourceUrl": "https://a-stage-inc.jp/product/household/",
+    "sourceLabel": "公式サイト",
+    "caption": "Re・De Hairdry+ DR02A",
+    "checkedAt": "2026-11-02",
+    "kind": "product"
+  },
+  "rede-suhada-fm01a": {
+    "src": "https://a-stage-inc.jp/product/household/img/fm01a/fm01a_thumb1.jpg",
+    "sourceUrl": "https://a-stage-inc.jp/product/household/",
+    "sourceLabel": "公式サイト",
+    "caption": "Re・De Suhada FM01A",
+    "checkedAt": "2026-11-02",
+    "kind": "product"
+  },
+  "tria-frx-beautydevice": {
+    "src": "https://www.trialaser.co.jp/cdn/shop/files/TriaFRX-PDP-MainPics1.png?v=1770394957",
+    "sourceUrl": "https://www.trialaser.co.jp/products/frx-fractional-skin-rejuvenating-laser",
+    "sourceLabel": "公式サイト",
+    "caption": "TRIA FRX 本体",
+    "checkedAt": "2026-11-02",
+    "kind": "product"
+  },
+  "irobot-roomba-j9plus": {
+    "src": "https://www.irobot-jp.com/product/j9/img/kv-product-j9.png",
+    "sourceUrl": "https://www.irobot-jp.com/product/j9/",
+    "sourceLabel": "公式サイト",
+    "caption": "ルンバ j9+ 本体・クリーンベース",
+    "checkedAt": "2026-11-02",
+    "kind": "product"
+  },
+  "makita-cl108fdshw-cleaner": {
+    "src": "https://shop.r10s.jp/tool4u/cabinet/shohin02/syouhin04/imgrc0116733268.jpg",
+    "sourceUrl": "https://item.rakuten.co.jp/tool4u/cl108fdshw/",
+    "sourceLabel": "楽天市場 TOOL FOR U",
+    "caption": "CL108FDSHW 本体写真",
+    "checkedAt": "2026-11-02",
+    "kind": "product"
+  },
+  "iris-kararie-fk-wh1-futondryer": {
+    "src": "https://www.irisohyama.co.jp/kararie/futon/kfk-401-product/images/pic01-fk-wh1.png",
+    "sourceUrl": "https://www.irisohyama.co.jp/kararie/futon/kfk-401-product/",
+    "sourceLabel": "公式サイト",
+    "caption": "カラリエ FK-WH1",
+    "checkedAt": "2026-11-02",
+    "kind": "product"
+  },
+  "iris-rc-ik50-ricecooker": {
+    "src": "https://www.irisohyama.co.jp/products/web-catalog/img/items/516602/item_001.jpg",
+    "sourceUrl": "https://www.irisohyama.co.jp/products/electrical-appliances/cooking-appliances/rice-cooking-appliances/rice-cooker/ih-rice-cookers-5/",
+    "sourceLabel": "公式サイト",
+    "caption": "RC-IK50-B ブラック（5.5合）",
+    "checkedAt": "2026-11-02",
+    "kind": "product"
+  },
+  "panasonic-ne-fl222-microwave": {
+    "src": "https://panasonicjp.scene7.com/is/image/panasonicjp/NE-FL222-K_%E6%AD%A3%E9%9D%A2?fmt=png-alpha&wid=800",
+    "sourceUrl": "https://panasonic.jp/range/products/NE-FL222.html",
+    "sourceLabel": "公式サイト",
+    "caption": "NE-FL222 メタルブラック",
+    "checkedAt": "2026-11-02",
+    "kind": "product"
+  },
+  "panasonic-nr-b14fw-fridge": {
+    "src": "https://panasonicjp.scene7.com/is/image/panasonicjp/B14FW_W_shomen_close?wid=1200&hei=630",
+    "sourceUrl": "https://panasonic.jp/reizo/products/NR-B14FW.html",
+    "sourceLabel": "公式サイト",
+    "caption": "NR-B14FW ホワイト",
+    "checkedAt": "2026-11-02",
+    "kind": "product"
+  },
+  "sony-bravia-kj65x80l": {
+    "src": "https://www.sony.jp/imag/product/KJ-65X80L?$ImageL$",
+    "sourceUrl": "https://pur.store.sony.jp/bravia/products/X80L/KJ-65X80L_purchase/",
+    "sourceLabel": "公式サイト",
+    "caption": "BRAVIA KJ-65X80L",
+    "checkedAt": "2026-11-02",
+    "kind": "product"
+  },
+  "daikin-s285ates-aircon": {
+    "src": "https://www.seikatsu-do.com/upload/save_image/s285ates-w.jpg",
+    "sourceUrl": "https://www.seikatsu-do.com/aircon/daikin/S285ATES-W/",
+    "sourceLabel": "生活堂 商品ページ",
+    "caption": "S285ATES-W 室内機・室外機",
+    "checkedAt": "2026-11-02",
+    "kind": "product"
+  },
+  "mitsubishi-msz-zw5625s-aircon": {
+    "src": "https://www.mitsubishielectric.co.jp/home/kirigamine/product/2025_z/img/index/img_lineup_03_02.jpg",
+    "sourceUrl": "https://www.mitsubishielectric.co.jp/home/kirigamine/product/2025_z/",
+    "sourceLabel": "公式サイト",
+    "caption": "MSZ-ZW5625S-W 室内機・室外機",
+    "checkedAt": "2026-11-02",
+    "kind": "product"
+  },
+  "premium-water": {
+    "src": "https://premium-water.net/page/wp-content/themes/premium-water/assets/img/page/home/server/ranking_famfit2.png",
+    "sourceUrl": "https://premium-water.net/",
+    "sourceLabel": "公式サイト",
+    "caption": "機種例：famfit2。選ぶ機種・プランで外観や条件が異なります。",
+    "checkedAt": "2026-11-02",
+    "kind": "model-example"
+  },
+  "cosmo-water": {
+    "src": "https://www.cosmowater.com/assets/common/images/img_compare_product_smartplus01.png",
+    "sourceUrl": "https://www.cosmowater.com/",
+    "sourceLabel": "公式サイト",
+    "caption": "機種例：smartプラス。選ぶ機種で外観や条件が異なります。",
+    "checkedAt": "2026-11-02",
+    "kind": "model-example"
+  },
+  "frecious": {
+    "src": "https://www.frecious.jp/assets/images/pc/common/pulldown-server/slat.png",
+    "sourceUrl": "https://www.frecious.jp/",
+    "sourceLabel": "公式サイト",
+    "caption": "機種例：Slat。選ぶ機種・プランで外観や条件が異なります。",
+    "checkedAt": "2026-11-02",
+    "kind": "model-example"
+  },
+  "aquaclara": {
+    "src": "https://www.aquaclara.co.jp/general/img/product/server/pic_alone02.webp",
+    "sourceUrl": "https://www.aquaclara.co.jp/",
+    "sourceLabel": "公式サイト",
+    "caption": "機種例：アクアファブ。選ぶ機種で外観や条件が異なります。",
+    "checkedAt": "2026-11-02",
+    "kind": "model-example"
+  },
+  "oisix": {
+    "src": "https://static.oisix.com/g6/kit/image/tmb_kit_s11-6946.jpg?date=20260924094501",
+    "sourceUrl": "https://www.oisix.com/ShouhinShousai.s11-6946.o.htm",
+    "sourceLabel": "公式サイト",
+    "caption": "Kit Oisixの調理例：ジューシーそぼろと野菜のビビンバ。献立・量はセットや時期で異なります。",
+    "checkedAt": "2026-11-02",
+    "kind": "food-example"
+  },
+  "yoshikei": {
+    "src": "https://yoshikei-dvlp.co.jp/assets_c/2025/09/topics03_2-thumb-235xauto-76872.jpg",
+    "sourceUrl": "https://yoshikei-dvlp.co.jp/",
+    "sourceLabel": "公式サイト",
+    "caption": "公式サイトのメニュー例。献立・食材はコースや週で異なります。",
+    "checkedAt": "2026-11-02",
+    "kind": "food-example"
+  },
+  "watami-takushoku-direct": {
+    "src": "https://d2w53g1q050m78.cloudfront.net/wwwwatamitakusho/uploads/themes/watami_direct_theme_20261019170525/ec_force/assets/images/nav-card-dishes-3-sp.webp",
+    "sourceUrl": "https://www.watami-takushoku-direct.jp/",
+    "sourceLabel": "公式サイト",
+    "caption": "いつでも三菜の掲載例。メニューは注文内容・時期で異なります。",
+    "checkedAt": "2026-11-02",
+    "kind": "food-example"
+  },
+  "coopdeli": {
+    "src": "https://efriends.coopdeli.jp/look/assets/img/mk-menu-1.webp",
+    "sourceUrl": "https://efriends.coopdeli.jp/look/lineup/mealkit/",
+    "sourceLabel": "公式サイト",
+    "caption": "ミールキットの調理例：野菜と食べる！葱まみれ油淋鶏。献立・量は週や地域で異なります。",
+    "checkedAt": "2026-11-02",
+    "kind": "food-example"
+  },
+  "palsystem": {
+    "src": "https://www.pal-system.co.jp/_assets_top/pic/thumb_item_pc01.jpg",
+    "sourceUrl": "https://www.pal-system.co.jp/",
+    "sourceLabel": "公式サイト",
+    "caption": "公式サイトの食品掲載例。取扱商品は地域・週で異なります。",
+    "checkedAt": "2026-11-02",
+    "kind": "food-example"
+  },
+  "seikatsu-club": {
+    "src": "https://seikatsuclub.coop/excludes/rengou/img/item/processed/276316/276316_m_01.jpg",
+    "sourceUrl": "https://seikatsuclub.coop/",
+    "sourceLabel": "公式サイト",
+    "caption": "消費材の掲載例：チキンナゲット。取扱内容は地域・時期で異なります。",
+    "checkedAt": "2026-11-02",
+    "kind": "food-example"
+  },
+  "panasonic-cs-635dex2-aircon": {
+    "src": "https://makeshop-multi-images.akamaized.net/rakudenmart1/shopimages/35/95/1_000000099535.jpg?1789764604",
+    "sourceUrl": "https://www.rakudenmart.co.jp/view/item/000000099535",
+    "sourceLabel": "洛電マート 商品ページ",
+    "caption": "CS-635DEX2-W 室内機・室外機",
+    "checkedAt": "2026-11-02",
+    "kind": "product"
+  },
+  "iris-circulator-desiccant-dehumidifier": {
+    "src": "https://www.irisohyama.co.jp/products/web-catalog/img/items/283424/item_001.jpg",
+    "sourceUrl": "https://www.irisohyama.co.jp/products/support/4967576473323",
+    "sourceLabel": "公式サイト",
+    "caption": "機種例：IJD-I50-WH。購入先では複数型番から選べるため仕様・付属品を確認。",
+    "checkedAt": "2026-11-02",
+    "kind": "model-example"
+  },
+  "daikin-s223ates-aircon": {
+    "src": "https://shop.r10s.jp/airmatsu/cabinet/06331490/22-36e_2021_d.jpg",
+    "sourceUrl": "https://item.rakuten.co.jp/airmatsu/s223atesw-koji-area/",
+    "sourceLabel": "楽天市場 エアコンのマツ",
+    "caption": "S223ATES-W 販売ページの本体掲載写真",
+    "checkedAt": "2026-11-02",
+    "kind": "product"
+  },
+  "iris-g-aircon-set": {
+    "src": "https://www.irisohyama.co.jp/aircon/standard/g-series/images/g-model.png",
+    "sourceUrl": "https://www.irisohyama.co.jp/aircon/standard/g-series/",
+    "sourceLabel": "メーカー公式",
+    "caption": "Gシリーズの機種例。畳数・年式・型番は購入先の選択内容で異なります。",
+    "checkedAt": "2026-11-02",
+    "kind": "model-example"
   }
 }
