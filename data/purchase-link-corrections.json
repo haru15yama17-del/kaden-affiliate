@@ -66,22 +66,6 @@
     "isAffiliateLink": false,
     "selectionNote": "利用できるサービス・申込方法は地域によって異なります。"
   },
-  "panasonic-nr-b14fw-fridge": {
-    "rakutenUrl": "",
-    "officialUrl": "https://panasonic.jp/reizo/products/NR-B14FW.html",
-    "ctaLabel": "公式の製品情報を見る",
-    "isAffiliateLink": false,
-    "selectionNote": "NR-B14FWの公式製品情報です。一致する新品の購入先は確認できていません。販売状況はメーカー・販売店へご確認ください。",
-    "informationOnly": true
-  },
-  "lenovo-ideapad-slim5i-gen9": {
-    "rakutenUrl": "",
-    "officialUrl": "https://www.lenovo.com/jp/ja/p/laptops/ideapad/ideapad-slim-5-series/lenovo-ideapad-slim-5i-gen-9-15-inch-intel/len101i0090",
-    "ctaLabel": "公式の製品情報を見る",
-    "isAffiliateLink": false,
-    "selectionNote": "15.3型・15IRU9の公式情報です。一致する新品の購入先は確認できていません。販売状況と構成をご確認ください。",
-    "informationOnly": true
-  },
   "mitsubishi-mj-p180yx-dehumidifier": {
     "rakutenUrl": "",
     "officialUrl": "https://item.rakuten.co.jp/value-shopping/4573637000430/",

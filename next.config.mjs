@@ -25,7 +25,11 @@ const nextConfig = {
     for (const partner of ["balmuda-egf1800-fan","balmuda-egf3400-cirq",replacement]) {
       for (const pair of [[retiredFan,partner],[partner,retiredFan]]) fanRedirects.push({source:`/compare/${pair.join("-vs-")}`,destination:partner===replacement?`/reviews/${replacement}`:`/compare/${[partner,replacement].sort().join("-vs-")}`,permanent:true});
     }
-    return [...fanRedirects, ...retiredFoodDeliveryCompareSlugs.map((slug) => ({
+    const productRedirects = [
+      {source: "/reviews/panasonic-nr-b14fw-fridge", destination: "/reviews/panasonic-nr-b16c3-fridge", permanent: true},
+      {source: "/reviews/lenovo-ideapad-slim5i-gen9", destination: "/reviews/lenovo-ideapad-slim3-83ka006vjp", permanent: true},
+    ];
+    return [...productRedirects, ...fanRedirects, ...retiredFoodDeliveryCompareSlugs.map((slug) => ({
       source: `/compare/${slug}`,
       destination: "/category/food-delivery",
       permanent: true,

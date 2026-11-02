@@ -1,4 +1,5 @@
 import { publishProduct } from "./publication";
+import { applyCatalogReplacements } from "./catalogReplacements";
 import { products as localProducts } from "@/data/products";
 import { categories, categoryMap } from "@/data/categories";
 import { getSupabase } from "./supabase";
@@ -44,7 +45,7 @@ export async function getAllProducts(): Promise<Product[]> {
     cache = localProducts;
     return cache;
   }
-  cache = data.filter(r => r.slug !== "iris-dcf-jm151t-fan").map(mapRow).map(publishProduct);
+  cache = applyCatalogReplacements(data.filter(r => r.slug !== "iris-dcf-jm151t-fan").map(mapRow)).map(publishProduct);
   return cache;
 }
 

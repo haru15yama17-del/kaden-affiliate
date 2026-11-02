@@ -800,50 +800,180 @@
     "updatedAt": "2026-06-04"
   },
   {
-    "slug": "panasonic-nr-b14fw-fridge",
-    "name": "パナソニック 冷蔵庫 NR-B14FW（138L・2ドア）",
+    "slug": "panasonic-nr-b16c3-fridge",
+    "name": "パナソニック 冷蔵庫 NR-B16C3-W（156L・右開き）",
     "brand": "パナソニック",
     "category": "refrigerator",
-    "priceRange": "3万〜5万円",
+    "priceRange": "要確認（時期により変動）",
     "specs": [
-      {"label": "定格容量", "value": "138L（冷蔵103L・冷凍35L）"},
-      {"label": "ドア数", "value": "2ドア"},
-      {"label": "冷却方式", "value": "直冷式"},
-      {"label": "幅", "value": "480mm"},
-      {"label": "ドア開き", "value": "右開き"}
+      {
+        "label": "定格容量",
+        "value": "156L（冷蔵96L・冷凍60L）"
+      },
+      {
+        "label": "食品収納スペースの目安",
+        "value": "冷蔵79L・冷凍41L"
+      },
+      {
+        "label": "ドア数",
+        "value": "2ドア・右開き"
+      },
+      {
+        "label": "冷却方式",
+        "value": "ファン式・自動霜取り"
+      },
+      {
+        "label": "本体寸法（幅×奥行×高さ）",
+        "value": "497×595×1220mm"
+      },
+      {
+        "label": "据付必要奥行",
+        "value": "645mm（放熱・搬入スペースも要確認）"
+      },
+      {
+        "label": "本体質量",
+        "value": "37kg"
+      },
+      {
+        "label": "年間消費電力量",
+        "value": "271kWh/年（50/60Hz・JIS C 9801-3:2015）"
+      },
+      {
+        "label": "運転音",
+        "value": "19dB(A)（周囲温度20℃・安定運転時・JIS C 9607）"
+      },
+      {
+        "label": "本体色",
+        "value": "マットオフホワイト（-W）"
+      }
     ],
-    "pros": ["幅480mmのスリム設計でワンルームに置きやすい", "138Lで一人暮らしに必要十分", "パナソニックで修理・部品対応が安定"],
-    "cons": ["直冷式のため冷凍室に霜取りが必要", "冷凍室35Lは小さめ", "ドア右開き固定"],
-    "bestFor": ["子どもの一人暮らし・大学進学の新生活準備", "1K・1Rに置く2台目・サブ冷蔵庫", "単身赴任の家族向け"],
-    "notFor": ["冷凍食品を買いだめする人", "野菜を大量保存したい自炊派"],
-    "rating": 4.0,
+    "pros": [
+      "冷凍室60L。冷凍食品や作り置きの保存を重視して選べる",
+      "ファン式で自動霜取り。定期的な霜取り作業を減らせる",
+      "幅49.7cmの2ドア。設置スペースと必要容量を合わせて検討できる"
+    ],
+    "cons": [
+      "定格156Lのため、家族全員の食材をまとめ買いする主冷蔵庫には容量の確認が必要",
+      "右開き固定。壁との位置関係とドアの開閉スペースを確認",
+      "本体寸法だけでなく放熱・搬入スペースが必要"
+    ],
+    "bestFor": [
+      "一人暮らしの家族用に、冷凍室の容量も確保したい方",
+      "サブ冷蔵庫でも自動霜取りを重視する方"
+    ],
+    "notFor": [
+      "家族分の食材を大量に保存したい方",
+      "左開きのドアが必要な設置場所"
+    ],
     "reviewSummary": "",
-    "affiliate": {"amazonAsin": "", "rakutenUrl": "", "yahooUrl": ""},
+    "affiliate": {
+      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Fa-price%2F4550719035153%2F",
+      "selectionNote": "NR-B16C3-W（マットオフホワイト・右開き）の販売ページです。配送地域、設置・リサイクル回収の申込と費用、搬入経路をご確認ください。"
+    },
     "competitors": [],
-    "updatedAt": "2026-06-04"
+    "updatedAt": "2026-11-02",
+    "source": {
+      "label": "パナソニック公式 NR-B16C3 仕様・詳細情報",
+      "url": "https://panasonic.jp/reizo/products/NR-B16C3/spec.html",
+      "checkedAt": "2026-11-02",
+      "verifiedLabels": [
+        "定格容量",
+        "食品収納スペースの目安",
+        "本体寸法（幅×奥行×高さ）",
+        "据付必要奥行",
+        "本体質量",
+        "年間消費電力量",
+        "運転音"
+      ]
+    }
   },
   {
-    "slug": "lenovo-ideapad-slim5i-gen9",
-    "name": "Lenovo IdeaPad Slim 5i Gen 9（15.6インチ）",
+    "slug": "lenovo-ideapad-slim3-83ka006vjp",
+    "name": "Lenovo IdeaPad Slim 3 Gen 10（83KA006VJP・15.3型）",
     "brand": "Lenovo",
     "category": "gadget",
-    "priceRange": "7万〜10万円",
+    "releaseYear": 2026,
+    "priceRange": "要確認（時期により変動）",
     "specs": [
-      {"label": "CPU", "value": "Intel Core i5-1334U"},
-      {"label": "メモリ", "value": "16GB"},
-      {"label": "ストレージ", "value": "512GB SSD"},
-      {"label": "ディスプレイ", "value": "15.6インチ FHD IPS"},
-      {"label": "重量", "value": "約1.64kg"}
+      {
+        "label": "製品番号",
+        "value": "83KA006VJP（IdeaPad Slim 3 15AHP10）"
+      },
+      {
+        "label": "CPU",
+        "value": "AMD Ryzen 7 8840HS"
+      },
+      {
+        "label": "メモリ",
+        "value": "16GB（16GB×1・DDR5-5600）"
+      },
+      {
+        "label": "ストレージ",
+        "value": "512GB SSD（PCIe NVMe/M.2）"
+      },
+      {
+        "label": "ディスプレイ",
+        "value": "15.3型 WUXGA IPS（1920×1200・16:10・光沢なし）"
+      },
+      {
+        "label": "OS",
+        "value": "Windows 11 Home 64bit 日本語版"
+      },
+      {
+        "label": "Office",
+        "value": "Microsoft 365 試用版（永続版Officeは付属しません）"
+      },
+      {
+        "label": "本体質量",
+        "value": "約1.59kg（バッテリー含む）"
+      },
+      {
+        "label": "カメラ",
+        "value": "FHD 1080p・IRカメラ・プライバシーシャッター"
+      },
+      {
+        "label": "キーボード",
+        "value": "日本語JIS配列・テンキー付き"
+      },
+      {
+        "label": "グラフィックス",
+        "value": "AMD Radeon 780M（メインメモリ共有）"
+      },
+      {
+        "label": "保証",
+        "value": "基本保証は1年間・国内引き取り修理"
+      }
     ],
-    "pros": ["16GB RAMでOffice・Web・動画視聴に余裕", "見やすい15.6インチ フルHD液晶", "10万円以下のコスパ"],
-    "cons": ["内蔵GPUで重いゲーム・動画編集は不向き", "バッテリー8〜10時間と平均的", "カメラ720p"],
-    "bestFor": ["子どもの大学進学・学習用PC（新生活準備）", "テレワーク・在宅学習の家庭用", "Office・Webメインの初PC"],
-    "notFor": ["3Dゲーム・本格動画編集の高負荷用途", "Macを使いたい人"],
-    "rating": 4.1,
+    "pros": [
+      "15.3型・16:10の画面で文書や表を見ながら作業する用途を検討しやすい",
+      "16GBメモリ・512GB SSDを搭載。使うソフトの推奨環境と照合できる",
+      "テンキーとFHDカメラを備え、家計簿入力やオンラインのやり取りにも使える構成"
+    ],
+    "cons": [
+      "永続版Officeは付属せず、Word・Excelが必要ならライセンスを別途確認",
+      "本体約1.59kgにACアダプターの重さも加わるため、毎日の持ち運びは重さを確認",
+      "専用GPU必須のゲーム・制作ソフトは推奨環境を満たすか要確認"
+    ],
+    "bestFor": [
+      "家で書類作成・家計簿・調べものに使うWindowsパソコンを探す方",
+      "大学や仕事で必要なソフトの要件を確認して選べる方"
+    ],
+    "notFor": [
+      "Office永続版が最初から必要な方",
+      "軽さを最優先して毎日持ち歩きたい方"
+    ],
     "reviewSummary": "",
-    "affiliate": {"amazonAsin": "", "rakutenUrl": "", "yahooUrl": ""},
+    "affiliate": {
+      "rakutenUrl": "https://af.moshimo.com/af/c/click?a_id=5640197&p_id=54&pc_id=54&pl_id=27059&url=https%3A%2F%2Fitem.rakuten.co.jp%2Flenovopc%2F82xm00fdjp%2F",
+      "selectionNote": "レノボ公式楽天店の販売ページです。掲載対象は83KA006VJP・基本保証1年・Microsoft 365試用版の構成です。保証の選択で製品番号・価格が変わるため、注文画面をご確認ください。"
+    },
     "competitors": [],
-    "updatedAt": "2026-06-04"
+    "updatedAt": "2026-11-02",
+    "source": {
+      "label": "Lenovo日本公式仕様書（83KA006VJP・2026年2月27日）",
+      "url": "https://ap-img.static.pub/b/Japan/spec%20sheet/20260227-lips3-web1.pdf",
+      "checkedAt": "2026-11-02"
+    }
   },
   {
     "slug": "premium-water",

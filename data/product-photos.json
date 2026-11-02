@@ -252,14 +252,6 @@
     "checkedAt": "2026-11-02",
     "kind": "product"
   },
-  "panasonic-nr-b14fw-fridge": {
-    "src": "https://panasonicjp.scene7.com/is/image/panasonicjp/B14FW_W_shomen_close?wid=1200&hei=630",
-    "sourceUrl": "https://panasonic.jp/reizo/products/NR-B14FW.html",
-    "sourceLabel": "公式サイト",
-    "caption": "NR-B14FW ホワイト",
-    "checkedAt": "2026-11-02",
-    "kind": "product"
-  },
   "sony-bravia-kj65x80l": {
     "src": "https://www.sony.jp/imag/product/KJ-65X80L?$ImageL$",
     "sourceUrl": "https://pur.store.sony.jp/bravia/products/X80L/KJ-65X80L_purchase/",
@@ -396,12 +388,20 @@
     "checkedAt": "2026-11-02",
     "kind": "model-example"
   },
-  "lenovo-ideapad-slim5i-gen9": {
-    "src": "https://p4-ofp.static.pub//fes/cms/2024/09/13/syj9vjc4b7l04myn64ebdfes9ad3bk812161.png?height=584&width=584",
-    "caption": "IdeaPad Slim 5i Gen 9 15.3型（15IRU9）の公式掲載画像。キーボード・OS・構成は販売モデルにより異なります。",
-    "sourceUrl": "https://www.lenovo.com/jp/ja/p/laptops/ideapad/ideapad-slim-5-series/lenovo-ideapad-slim-5i-gen-9-15-inch-intel/len101i0090",
-    "sourceLabel": "Lenovo日本公式",
+  "panasonic-nr-b16c3-fridge": {
+    "src": "https://panasonicjp.scene7.com/is/image/panasonicjp/B16C3-W_shomen_close?fmt=png-alpha&wid=480",
+    "sourceUrl": "https://panasonic.jp/reizo/products/NR-B16C3.html",
+    "sourceLabel": "パナソニック公式",
+    "caption": "NR-B16C3-W マットオフホワイト（右開き）",
     "checkedAt": "2026-11-02",
-    "kind": "model-example"
+    "kind": "product"
+  },
+  "lenovo-ideapad-slim3-83ka006vjp": {
+    "src": "https://ap-img.static.pub/b/Japan/product-img/product/AIPC-pc/lenovo-ideapad-slim-3-gen-10-15-inch-amd-584x584-260717-test-260721.png",
+    "sourceUrl": "https://www.lenovo.com/jp/ja/p/laptops/ideapad/ideapad-3/lenovo-ideapad-slim-3-gen-10-15-inch-amd/83ka006vjp",
+    "sourceLabel": "Lenovo日本公式・83KA006VJP",
+    "caption": "83KA006VJPの公式掲載画像。画面表示はイメージです。販売仕様は日本語JIS配列です。",
+    "checkedAt": "2026-11-02",
+    "kind": "product"
   }
 }

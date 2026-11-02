@@ -1,3 +1,4 @@
+import verifiedGuides from "@/data/verified-buying-guides.json";
 import { ArticleWelcome, ReadingPause, ReadingSteps, ProductGlance } from "@/components/ReadingGuide";
 import fs from "node:fs";
 import { EditorialImage } from "@/components/EditorialImage";
@@ -27,6 +28,7 @@ export const revalidate = 3600;
 
 interface ArticleBody {
   intro?: string;
+  buyingComparison?: { need: string; feature: string; check: string }[];
   reviewDetail?: string;
   summary?: string;
   faq?: { q: string; a: string }[];
@@ -38,6 +40,8 @@ interface ArticleBody {
 // 楽天レビュー収集は既定で無効（方針B）。true のときだけ「みんなの評判」を表示する
 const SHOW_REVIEW_VOICES = process.env.ENABLE_REVIEW_COLLECTION === "true";
 function loadBody(slug: string): ArticleBody {
+  const guide = (verifiedGuides as Record<string, ArticleBody>)[slug];
+  if (guide) return guide;
   const file = path.join(process.cwd(), "content", "reviews", `${slug}.json`);
   if (fs.existsSync(file)) {
     try { return JSON.parse(fs.readFileSync(file, "utf-8")); } catch { /* noop */ }
@@ -56,8 +60,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const hasReviewSummary = Boolean((SHOW_REVIEW_VOICES && body.reviewStats) ||body.reviewDetail || p.reviewSummary);
   const reviewPart = hasReviewSummary ? "、口コミ要約" : "";
   return buildMetadata({
-    title: `${p.name}のレビュー・評価｜スペックと良い点・気になる点を整理`,
-    description: `${p.name}（${p.priceRange}）を編集部が評価。スペック、メリット・デメリット${reviewPart}、競合比較、向き不向きまで解説します。`,
+    title: body.buyingComparison ? `${p.name}の仕様と選び方｜購入前の確認ポイント` : `${p.name}のレビュー・評価｜スペックと良い点・気になる点を整理`,
+    description: body.buyingComparison ? `${p.name}を公式仕様から紹介。容量・構成とご家庭の使い方を照合し、購入条件を確認できます。` : `${p.name}（${p.priceRange}）を編集部が評価。スペック、メリット・デメリット${reviewPart}、競合比較、向き不向きまで解説します。`,
     path: `/reviews/${p.slug}`,
     type: "article",
     image: p.image || undefined,
@@ -110,7 +114,7 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
       <CampaignBanner slug={p.slug} />
 
       {/* Title */}
-      <h1 className="font-serif text-3xl font-bold leading-tight">{p.name}のレビュー・評価</h1>
+      <h1 className="font-serif text-3xl font-bold leading-tight">{p.name}{body.buyingComparison ? "の仕様と選び方" : "のレビュー・評価"}</h1>
       <div className="mt-2 flex flex-wrap items-center gap-3 text-sm text-ink/55">
         {p.rating != null && <Rating value={p.rating} />}
         <span>価格帯：<strong className="text-accent">{p.priceRange}</strong></span>
@@ -118,11 +122,24 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
       </div>
 
       {p.image ? <><ProductGlance p={p} link={false}/><ReadingSteps category={p.category} slug={p.slug}/></> : <ArticleWelcome category={p.category} slug={p.slug} />}
-      {p.slug === "lenovo-ideapad-slim5i-gen9" && <aside className="rounded-xl border border-ink/15 bg-white p-4 text-sm not-prose"><strong>掲載仕様を訂正しました（2026年11月2日）</strong><p>以前の15.6型・Core i5-1334Uの表記を訂正し、メーカー公式の15.3型・15IRU9シリーズの情報を掲載しています。特定の製品番号を示すページではありません。メモリやSSD、Officeの有無は購入先の製品番号でご確認ください。</p></aside>}
       {p.slug === "iris-woozoo-stf-dc15tec" && <aside className="rounded-xl border border-ink/15 bg-white p-4 text-sm not-prose"><strong>購入時は「ベーシックモデル STF-DC15TEC」を確認</strong><p>販売先には上位モデルSTF-SDC15TECもあります。このページの写真・仕様はSTF-DC15TECです。確認できなかった旧掲載商品DCF-JM151Tの紹介は終了し、公式情報と販売先を確認できる本商品へ案内を統合しました。旧商品の評価・体験を引き継いだものではありません。</p></aside>}
+      {body.buyingComparison && <aside className="not-prose my-5 rounded-xl border border-accent/25 bg-blush/50 p-4 text-sm leading-relaxed"><strong>メーカー公開情報に基づく商品紹介です</strong><p className="mt-2">実機の使用レビューではありません。旧掲載商品の体験談・評価点は引き継いでいません。写真・仕様・購入先はこの製品の情報です。</p></aside>}
       <div className="quick-match not-prose"><span>こんな暮らしに</span><p>{p.bestFor[0] || "使いたい場面と仕様を確認して選びましょう。"}</p></div>
       <h2>はじめに</h2>
-      <p>{body.intro ? <RichText text={body.intro} /> : p.slug === "lenovo-ideapad-slim5i-gen9" ? "15.3型の画面を備えた15IRU9シリーズについて、メーカー公開情報から仕様と選ぶ際の確認点を整理しました。CPU・メモリ・SSDは構成で異なります。使うアプリの要件、持ち運ぶ頻度、Officeの有無を確認して選びましょう。" : `${p.name}を、${cat.selectionPoints.slice(0, 3).join("・")}の観点で評価しました。結論から言うと、${p.bestFor[0]}に向いた選択肢です。`}</p>
+      <p>{body.intro ? <RichText text={body.intro} /> : `${p.name}を、${cat.selectionPoints.slice(0, 3).join("・")}の観点で評価しました。結論から言うと、${p.bestFor[0]}に向いた選択肢です。`}</p>
+
+      {body.buyingComparison && <section className="not-prose my-8">
+        <h2 className="font-serif text-xl font-bold text-ink">わが家の使い方に合う？購入前に見比べるポイント</h2>
+        <div className="mt-4 grid gap-4 md:grid-cols-3">
+          {body.buyingComparison.map((row, i) => <div key={row.need} className="rounded-2xl border border-accent/20 bg-white p-5">
+            <span className="text-sm font-bold text-accent">CHECK 0{i + 1}</span>
+            <h3 className="mt-2 text-base font-bold text-ink">{row.need}</h3>
+            <p className="mt-3 rounded-lg bg-sub/10 p-3 text-sm font-semibold leading-relaxed">{row.feature}</p>
+            <p className="mt-3 text-sm leading-relaxed text-ink/75">{row.check}</p>
+          </div>)}
+        </div>
+        <div className="mt-4"><AffiliateButtons aff={p.affiliate} productName={p.name} /></div>
+      </section>}
 
       {/* 自動生成記事の追加セクション（空のセクションは出力されない） */}
       {body.sections?.map((s, i) => (
@@ -247,7 +264,7 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
         ))}
       </div>
 
-      <p className="text-xs text-ink/55">修正履歴：2026-11-01 価格・比較対象・比較優位の表現と利用条件の案内を見直しました。</p>
+      <p className="text-xs text-ink/55">{body.buyingComparison ? "2026-11-02：公式仕様・写真・販売先を確認し、独立した商品紹介として掲載しました。" : "修正履歴：2026-11-01 価格・比較対象・比較優位の表現と利用条件の案内を見直しました。"}</p>
       <h2>まとめ</h2>
       <p>{body.summary ? <RichText text={body.summary} /> : `${p.name}は${p.bestFor.join("・")}におすすめできる選択肢です。一方で${p.notFor[0]}には別の選択肢も検討しましょう。`}</p>
 
