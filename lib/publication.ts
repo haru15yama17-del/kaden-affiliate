@@ -1,3 +1,4 @@
+import { productPhoto } from "@/lib/productPhotos";
 import correctedSlugs from "@/data/editorial-correction-products.json";
 import corrections from "@/data/editorial-corrections.json";
 import type { Product } from "@/data/types";
@@ -26,6 +27,7 @@ export function publishProduct(p: Product): Product {
     ...p,
     updatedAt: correctedSlugs.includes(p.slug) && p.updatedAt.slice(0,10) < "2026-11-01" ? "2026-11-01" : p.updatedAt,
     priceRange: PRICE_NOTICE,
+    image: productPhoto(p.slug)?.src ?? p.image,
     specs: p.specs.map(s => money.test(s.value) ? { ...s, value: /電気代/.test(s.label) ? "使用条件・電力契約により異なります" : PRICE_NOTICE } : s),
     pros: p.pros.filter(s => !money.test(s)),
     cons: p.cons.filter(s => !money.test(s)),

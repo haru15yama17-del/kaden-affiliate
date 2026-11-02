@@ -1,3 +1,5 @@
+import { productPhoto } from "@/lib/productPhotos";
+import { ProductPhoto } from "./ProductPhoto";
 import { Ruler, Clock3, ListChecks, ArrowRight, Home, ShieldCheck, Mail, Search } from "lucide-react";
 import { EditorialImage } from "./EditorialImage";
 import { categoryImage, editorialImages } from "@/data/editorial";
@@ -43,7 +45,7 @@ export function ReadingPause({category,slug=""}: {category:string;slug?:string})
 
 export function ProductGlance({p, link=true}: {p:Product; link?:boolean}) {
   return <div className="product-glance not-prose">
-    {p.image ? <div className="product-glance-image"><img src={p.image} alt={p.name} width={480} height={320} loading="lazy"/></div> : <EditorialImage {...categoryImage(p.category,p.slug)}/>}
+    {productPhoto(p.slug)?<ProductPhoto slug={p.slug} name={p.name}/>:<EditorialImage {...categoryImage(p.category,p.slug)}/>}
     <div><p className="eyebrow">{p.brand}</p><p className="glance-name">{p.name}</p><dl>{p.specs.slice(0,3).map(s=><div key={s.label}><dt>{s.label}</dt><dd>{s.value}</dd></div>)}</dl>{link && <a className="text-link" href={'/reviews/'+p.slug}>詳しいレビューへ <ArrowRight size={16} aria-hidden="true"/></a>}</div>
   </div>;
 }

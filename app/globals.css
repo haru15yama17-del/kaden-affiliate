@@ -266,3 +266,29 @@ body {
 .quick-match{display:flex;align-items:flex-start;gap:18px;padding:22px;background:#eff3e5;border-radius:14px;margin:25px 0}.quick-match>span{flex-shrink:0;background:#557448;color:white;padding:5px 10px;border-radius:5px;font-size:12px}.prose-article .quick-match p{margin:0;font-size:15px;line-height:1.85}
 @media(max-width:640px){.quick-match{display:block}.prose-article .quick-match p{margin-top:12px}}
 .support-banner>.editorial-image{width:100%;aspect-ratio:auto}
+.real-product-photo{margin:0;width:100%;background:#fff;border-radius:16px;overflow:hidden;color:#5f6762;text-align:center}
+.real-product-photo>img{display:block;width:100%;height:250px;object-fit:contain;padding:18px}
+.real-product-photo figcaption{padding:0 12px 12px;font-size:11px;line-height:1.65;font-weight:400}
+.real-product-photo figcaption a{text-decoration:underline;text-underline-offset:3px}
+.real-product-photo.is-compact>img{height:172px;padding:12px}
+.product-photo-empty{min-height:172px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px;color:#65776e;background:#f4f6f2;font-size:12px;font-weight:400}
+.product-glance>.real-product-photo{border-bottom:1px solid #e5e9e2}
+.photo-comparison{margin:24px 0;border:1px solid #dce4dd;border-radius:18px;overflow:hidden;background:white}
+.comparison-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 20px;background:#eef3ea}
+.comparison-toolbar strong{font-size:17px;color:#355846}
+.comparison-toolbar button{border:1px solid #65836c;border-radius:24px;background:white;padding:9px 14px;font-size:12px;font-weight:600;color:#355846;cursor:pointer}
+.comparison-toolbar button[aria-pressed=true]{background:#355846;color:white}
+.comparison-scroll{overflow-x:auto;max-width:100%}
+.comparison-scroll table{table-layout:fixed;min-width:640px}
+.comparison-scroll th,.comparison-scroll td{vertical-align:top;line-height:1.8}
+.comparison-scroll thead th{min-width:210px;background:#fff}
+.comparison-scroll thead th:first-child{width:120px;min-width:120px}
+.comparison-scroll tbody th{padding:16px 12px;width:120px;font-size:12px;text-align:left;color:#355846}
+.comparison-scroll tbody td{padding:16px 14px;border-left:1px solid #e5e9e2}
+.comparison-scroll tbody tr:nth-child(even){background:#fafbf8}
+.comparison-scroll tbody .comparison-fit{background:#edf5eb}
+.comparison-scroll tbody .comparison-caution{background:#fff6ee}
+.comparison-product-link{display:block;margin-top:12px;font-size:14px;line-height:1.7;text-decoration:underline;text-underline-offset:3px}
+.comparison-footnote{padding:14px 20px;margin:0;font-size:12px;line-height:1.85;color:#69716b;border-top:1px solid #e5e9e2}
+@media(max-width:640px){.comparison-toolbar{padding:14px 12px}.comparison-toolbar strong{font-size:14px}.comparison-toolbar button{padding:8px 10px;font-size:11px}.real-product-photo>img{height:210px}.compare-portraits .product-glance>.real-product-photo img{height:180px}.compare-portraits .product-glance{display:block}.comparison-scroll table{min-width:620px}}
+@media(max-width:640px){.compare-portraits{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.compare-portraits .product-glance{padding:10px;min-width:0}.compare-portraits .product-glance>.real-product-photo img{height:130px;padding:4px}.compare-portraits .real-product-photo figcaption{font-size:10px;padding:0 2px 8px}.compare-portraits .glance-name{font-size:13px;line-height:1.7}.compare-portraits .product-glance dl>div:not(:first-child){display:none}.compare-portraits .product-glance .text-link{font-size:11px}.search-result .real-product-photo img{height:110px;padding:8px}}

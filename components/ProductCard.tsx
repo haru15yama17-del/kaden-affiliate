@@ -1,3 +1,5 @@
+import { productPhoto } from "@/lib/productPhotos";
+import { ProductPhoto } from "./ProductPhoto";
 import Link from "next/link";
 import { categoryImage } from "@/data/editorial";
 import { EditorialImage } from "./EditorialImage";
@@ -22,7 +24,9 @@ export function ProductCard({ p }: { p: Product }) {
     >
       {/* Image / placeholder */}
       <div className="relative flex h-36 items-center justify-center overflow-hidden rounded-t-2xl bg-gradient-to-br from-blush to-moss/40">
-        {p.image ? (
+        {productPhoto(p.slug) ? (
+          <ProductPhoto slug={p.slug} name={p.name} compact credit={false}/>
+        ) : p.image ? (
           <img src={p.image} alt={p.name} loading="lazy" decoding="async" width={480} height={320} className="h-full w-full object-contain p-4" />
         ) : (
           <EditorialImage {...categoryImage(p.category, p.slug)} className="h-full w-full" />
