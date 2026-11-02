@@ -69,14 +69,14 @@
   "mitsubishi-mj-p180yx-dehumidifier": {
     "rakutenUrl": "",
     "officialUrl": "https://item.rakuten.co.jp/value-shopping/4573637000430/",
-    "ctaLabel": "販売店でMJ-P180YXを見る",
+    "ctaLabel": "販売店の商品情報を見る（在庫要確認）",
     "isAffiliateLink": false,
     "selectionNote": "MJ-P180YX-W（ホワイト）の販売店ページです。在庫・納期は販売店でご確認ください。"
   },
   "daikin-s223ates-aircon": {
     "rakutenUrl": "",
     "officialUrl": "https://item.rakuten.co.jp/airmatsu/s223atesw-koji-area/",
-    "ctaLabel": "販売店でS223ATESを見る",
+    "ctaLabel": "販売店の商品情報を見る（在庫要確認）",
     "isAffiliateLink": false,
     "selectionNote": "S223ATES-W・2023年モデルの標準工事セットです。工事対応地域が限定されています。対象地域と追加費用をご確認ください。"
   },
@@ -100,6 +100,10 @@
   "watami-takushoku-direct": {
     "ctaLabel": "公式サイトで継続割の条件を見る",
     "selectionNote": "リンク先は「ちゃんと家ごはん」の継続割プランです。注文回数・配送・変更や停止の条件をご確認ください。"
+  },
+  "aquaclara": {
+    "ctaLabel": "公式サイトで新規入会の条件を見る",
+    "selectionNote": "リンク先は新規入会キャンペーンです。無料お試しとは異なります。対象サーバー・料金・最低利用期間・退会費用をご確認ください。"
   },
   "tria-frx-beautydevice": {
     "selectionNote": "リンク先の公式サイトで「FRX」を選んでください。脱毛器など別製品とは用途が異なります。"

@@ -38,6 +38,13 @@ export function publishProduct(p: Product): Product {
     },
   };
   if (p.slug === "iris-rc-ik50-ricecooker") p = {...p, name: p.name.replace("（5合）", "（5.5合）"), specs:p.specs.map(s=>s.label==="容量" ? {...s,value:"5.5合（白米）"}:s), pros:p.pros.map(s=>s.replace(/^5合で/, "5.5合で"))};
+  // 掲載中のA8広告は新規入会向け。無料お試しとは申込条件が異なる。
+  if (p.slug === "aquaclara") p = {
+    ...p,
+    specs: p.specs.map(s => s.label === "お試し" ? {label: "リンク先の申込", value: "新規入会キャンペーン（無料お試しとは異なります）"} : s),
+    pros: p.pros.filter(s => s !== "お試しを検討する場合は、利用条件を確認してから申し込む"),
+    bestFor: p.bestFor.map(s => s === "お試しの条件を確認してから導入を決めたい人" ? "RO水とサポート内容を確認して導入したい人" : s),
+  };
   return {
     ...p,
     updatedAt: correctedSlugs.includes(p.slug) && p.updatedAt.slice(0,10) < "2026-11-01" ? "2026-11-01" : p.updatedAt,
