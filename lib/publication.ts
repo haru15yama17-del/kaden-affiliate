@@ -1,3 +1,4 @@
+import modelCorrections from "@/data/verified-model-corrections.json";
 import { productPhoto } from "@/lib/productPhotos";
 import correctedSlugs from "@/data/editorial-correction-products.json";
 import corrections from "@/data/editorial-corrections.json";
@@ -8,6 +9,8 @@ const money = /[0-9０-９][0-9０-９,.，．〜～万千百\s+-]*円/;
 
 // DB・ローカルどちらにも適用。個人の体験談本文には適用しない。
 export function publishProduct(p: Product): Product {
+  const modelCorrection = (modelCorrections as Record<string, Partial<Product>>)[p.slug];
+  if (modelCorrection) p = {...p, ...modelCorrection, rating: undefined};
   const correct = (text: string) => (corrections as Record<string, string>)[text] ?? text;
   // 完全一致の編集修正のみを適用し、URL・型番・体験談本文は書き換えない。
   p = {

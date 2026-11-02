@@ -1,0 +1,55 @@
+{
+  "lenovo-ideapad-slim5i-gen9": {
+    "name": "Lenovo IdeaPad Slim 5i Gen 9（15.3型・15IRU9）",
+    "specs": [
+      {
+        "label": "モデル",
+        "value": "IdeaPad Slim 5 15IRU9（シリーズ）"
+      },
+      {
+        "label": "ディスプレイ",
+        "value": "15.3型 WUXGA IPS（1920×1200、16:10）"
+      },
+      {
+        "label": "CPU",
+        "value": "Core 5 120U / Core 7 150U（構成による）"
+      },
+      {
+        "label": "メモリ",
+        "value": "8GB / 16GB / 32GB（構成による・増設不可）"
+      },
+      {
+        "label": "ストレージ",
+        "value": "512GB / 1TB SSD（構成による）"
+      },
+      {
+        "label": "重量",
+        "value": "約1.79kg（構成による）"
+      },
+      {
+        "label": "カメラ",
+        "value": "FHD 1080p・プライバシーシャッター付き（IR対応は構成による）"
+      },
+      {
+        "label": "購入時の確認",
+        "value": "国内の販売構成・Officeの有無は製品番号ごとに確認"
+      }
+    ],
+    "pros": [
+      "縦に広い16:10の画面で文書や表を表示できる",
+      "テンキー付きで数字を入力できる",
+      "USB-C・USB-A・HDMI・microSDに対応"
+    ],
+    "cons": [
+      "メモリは基板実装のため購入後に増設できない",
+      "CPU・メモリ・SSDは製品番号ごとに確認が必要",
+      "バッテリー駆動時間は構成・使用条件により異なる"
+    ],
+    "source": {
+      "label": "Lenovo公式仕様書（15IRU9・地域と構成により仕様が異なります）",
+      "url": "https://psref.lenovo.com/syspool/Sys/PDF/IdeaPad/IdeaPad_Slim_5_15IRU9/IdeaPad_Slim_5_15IRU9_Spec.pdf",
+      "checkedAt": "2026-11-02"
+    },
+    "updatedAt": "2026-11-02"
+  }
+}

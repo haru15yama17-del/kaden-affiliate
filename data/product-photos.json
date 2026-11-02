@@ -395,5 +395,13 @@
     "caption": "Gシリーズの機種例。畳数・年式・型番は購入先の選択内容で異なります。",
     "checkedAt": "2026-11-02",
     "kind": "model-example"
+  },
+  "lenovo-ideapad-slim5i-gen9": {
+    "src": "https://p4-ofp.static.pub//fes/cms/2024/09/13/syj9vjc4b7l04myn64ebdfes9ad3bk812161.png?height=584&width=584",
+    "caption": "IdeaPad Slim 5i Gen 9 15.3型（15IRU9）の公式掲載画像。キーボード・OS・構成は販売モデルにより異なります。",
+    "sourceUrl": "https://www.lenovo.com/jp/ja/p/laptops/ideapad/ideapad-slim-5-series/lenovo-ideapad-slim-5i-gen-9-15-inch-intel/len101i0090",
+    "sourceLabel": "Lenovo日本公式",
+    "checkedAt": "2026-11-02",
+    "kind": "model-example"
   }
 }
