@@ -37,7 +37,7 @@ export function compareSlug(slugs: string[]): string {
 const groups = [
   ['sharp-kn-mn16h-hotkook','sharp-kn-hw24h-hotkook','sharp-kn-hw16h-hotkook','sharp-kn-hw10g-hotkook','iris-kpc-ma4-pressurecooker'],
   ['panasonic-np-tml1-solota-dishwasher','sanko-rakua-mini-color-dishwasher'],
-  ['iris-dcf-jm151t-fan','balmuda-egf1800-fan','balmuda-egf3400-cirq','iris-woozoo-stf-dc15tec'],
+  ['balmuda-egf1800-fan','balmuda-egf3400-cirq','iris-woozoo-stf-dc15tec'],
   ['aircon-set-6jo-omakase','iris-g-aircon-set'],
   ['daikin-s285ates-aircon','mitsubishi-msz-zw5625s-aircon','panasonic-cs-635dex2-aircon'],
   ['premium-water','cosmo-water','frecious','aquaclara'],

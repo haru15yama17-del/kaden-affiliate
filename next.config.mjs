@@ -19,11 +19,17 @@ const nextConfig = {
       "oisix-vs-yoshikei",
       "palsystem-vs-seikatsu-club",
     ];
-    return retiredFoodDeliveryCompareSlugs.map((slug) => ({
+    const retiredFan = "iris-dcf-jm151t-fan";
+    const replacement = "iris-woozoo-stf-dc15tec";
+    const fanRedirects = [{source:`/reviews/${retiredFan}`,destination:`/reviews/${replacement}`,permanent:true}];
+    for (const partner of ["balmuda-egf1800-fan","balmuda-egf3400-cirq",replacement]) {
+      for (const pair of [[retiredFan,partner],[partner,retiredFan]]) fanRedirects.push({source:`/compare/${pair.join("-vs-")}`,destination:partner===replacement?`/reviews/${replacement}`:`/compare/${[partner,replacement].sort().join("-vs-")}`,permanent:true});
+    }
+    return [...fanRedirects, ...retiredFoodDeliveryCompareSlugs.map((slug) => ({
       source: `/compare/${slug}`,
       destination: "/category/food-delivery",
       permanent: true,
-    }));
+    }))];
   }
 };
 export default nextConfig;

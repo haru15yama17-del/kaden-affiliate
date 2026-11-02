@@ -51,5 +51,75 @@
       "checkedAt": "2026-11-02"
     },
     "updatedAt": "2026-11-02"
+  },
+  "iris-woozoo-stf-dc15tec": {
+    "name": "アイリスオーヤマ WOOZOO STF-DC15TEC（ベーシックモデル）",
+    "specs": [
+      {
+        "label": "用途",
+        "value": "扇風機・空気循環の兼用"
+      },
+      {
+        "label": "風量段階",
+        "value": "5段階"
+      },
+      {
+        "label": "首振り",
+        "value": "上下・左右自動"
+      },
+      {
+        "label": "消費電力",
+        "value": "24W（定格）"
+      },
+      {
+        "label": "重量",
+        "value": "約1.9kg（ACアダプターを含まず）"
+      },
+      {
+        "label": "高さ調整",
+        "value": "50・65・80cmの3段階"
+      },
+      {
+        "label": "適用畳数",
+        "value": "20畳（空気循環の目安）"
+      },
+      {
+        "label": "お手入れ",
+        "value": "ガード・羽根を工具不要で分解して水洗い可能。本体は水洗い不可"
+      },
+      {
+        "label": "付属品",
+        "value": "リモコン・専用ACアダプター"
+      },
+      {
+        "label": "購入時の確認",
+        "value": "ベーシックモデル STF-DC15TECを選択。STF-SDC15TECは別機種"
+      }
+    ],
+    "pros": [
+      "高さを3段階に変えられ、床置きの使い方に合わせられる",
+      "上下・左右の自動首振りで空気循環にも使える",
+      "ガードと羽根を外して水洗いできる"
+    ],
+    "cons": [
+      "販売先で上位モデルも選べるため、注文時に型番の確認が必要",
+      "他機種とは運転音の測定条件が異なり、数値だけで静かさを比較できない",
+      "本体やACアダプターは水洗いできない"
+    ],
+    "bestFor": [
+      "扇風機と部屋の空気循環に1台を使いたい方",
+      "高さを変えて置き場所に合わせたい方",
+      "ガード・羽根を外して手入れしたい方"
+    ],
+    "notFor": [
+      "コードレスで使いたい方",
+      "運転音の同条件での比較を購入判断に必須とする方"
+    ],
+    "source": {
+      "label": "アイリスオーヤマ公式商品仕様（STF-DC15TEC）",
+      "url": "https://www.irisohyama.co.jp/products/electrical-appliances/seasonal-appliances/circulator/circulator-fan/standardtype-circulator-fan-24/",
+      "checkedAt": "2026-11-02"
+    },
+    "updatedAt": "2026-11-02"
   }
 }

@@ -54,7 +54,7 @@ const compactSpecs: Record<string, { label: string; value: string }[]> = {
   "iris-woozoo-stf-dc15tec": [
     { label: "静音性", value: "比較できる運転音データは未確認" },
     { label: "消費電力", value: "24W（定格）" },
-    { label: "最大の強み", value: "分解丸洗いのお手入れ性とコスパ" },
+    { label: "最大の強み", value: "ガード・羽根の水洗いと高さ3段階" },
   ],
 };
 
@@ -249,6 +249,7 @@ export default async function SenpukiKoukaiPage() {
       </section>
 <section className="reading-section">
 <h2>3機種をざっくり比較</h2>
+      <p>WOOZOOの比較対象はベーシックモデルのSTF-DC15TECです。販売先には上位モデルSTF-SDC15TECもあるため、注文時に型番を確認してください。24Wは定格値で、他機種の最小消費電力とそのまま比較できません。</p>
       <ComparisonTable items={compactItems} highlightBest={false} />
       <p className="text-sm text-ink/55">
         ※「優劣」ではなく「扇風機かサーキュレーターか、兼用モデルか」を軸にしているため、おすすめバッジは表示していません。

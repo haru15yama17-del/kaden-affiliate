@@ -44,7 +44,7 @@ export async function getAllProducts(): Promise<Product[]> {
     cache = localProducts;
     return cache;
   }
-  cache = data.map(mapRow).map(publishProduct);
+  cache = data.filter(r => r.slug !== "iris-dcf-jm151t-fan").map(mapRow).map(publishProduct);
   return cache;
 }
 

@@ -119,6 +119,7 @@ export default async function ReviewPage({ params }: { params: { slug: string } 
 
       {p.image ? <><ProductGlance p={p} link={false}/><ReadingSteps category={p.category} slug={p.slug}/></> : <ArticleWelcome category={p.category} slug={p.slug} />}
       {p.slug === "lenovo-ideapad-slim5i-gen9" && <aside className="rounded-xl border border-ink/15 bg-white p-4 text-sm not-prose"><strong>掲載仕様を訂正しました（2026年11月2日）</strong><p>以前の15.6型・Core i5-1334Uの表記を訂正し、メーカー公式の15.3型・15IRU9シリーズの情報を掲載しています。特定の製品番号を示すページではありません。メモリやSSD、Officeの有無は購入先の製品番号でご確認ください。</p></aside>}
+      {p.slug === "iris-woozoo-stf-dc15tec" && <aside className="rounded-xl border border-ink/15 bg-white p-4 text-sm not-prose"><strong>購入時は「ベーシックモデル STF-DC15TEC」を確認</strong><p>販売先には上位モデルSTF-SDC15TECもあります。このページの写真・仕様はSTF-DC15TECです。確認できなかった旧掲載商品DCF-JM151Tの紹介は終了し、公式情報と販売先を確認できる本商品へ案内を統合しました。旧商品の評価・体験を引き継いだものではありません。</p></aside>}
       <div className="quick-match not-prose"><span>こんな暮らしに</span><p>{p.bestFor[0] || "使いたい場面と仕様を確認して選びましょう。"}</p></div>
       <h2>はじめに</h2>
       <p>{body.intro ? <RichText text={body.intro} /> : p.slug === "lenovo-ideapad-slim5i-gen9" ? "15.3型の画面を備えた15IRU9シリーズについて、メーカー公開情報から仕様と選ぶ際の確認点を整理しました。CPU・メモリ・SSDは構成で異なります。使うアプリの要件、持ち運ぶ頻度、Officeの有無を確認して選びましょう。" : `${p.name}を、${cat.selectionPoints.slice(0, 3).join("・")}の観点で評価しました。結論から言うと、${p.bestFor[0]}に向いた選択肢です。`}</p>
