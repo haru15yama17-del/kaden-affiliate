@@ -46,6 +46,11 @@ export function AffiliateButtons({
             </svg>
           </TrackedLink>
           {aff.selectionNote && <p className="mt-3 text-sm leading-relaxed text-ink/75">{aff.selectionNote}</p>}
+          {isAffiliateLink && aff.impressionUrl && (
+            // ASP発行コードの表示計測画像。本文の写真とは異なるため代替テキストは空。
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={aff.impressionUrl} width={1} height={1} alt="" className="border-0" />
+          )}
           {isAffiliateLink && (
             <p className="mt-3 text-center text-xs text-ink/40">
               ※アフィリエイト広告を利用しています

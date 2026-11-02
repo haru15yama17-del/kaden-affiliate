@@ -101,6 +101,13 @@
     "ctaLabel": "公式サイトで継続割の条件を見る",
     "selectionNote": "リンク先は「ちゃんと家ごはん」の継続割プランです。注文回数・配送・変更や停止の条件をご確認ください。"
   },
+  "oisix": {
+    "officialUrl": "https://px.a8.net/svt/ejp?a8mat=4BGBN4+E22GZ6+3RK+2TBJQA",
+    "impressionUrl": "https://www13.a8.net/0.gif?a8mat=4BGBN4+E22GZ6+3RK+2TBJQA",
+    "ctaLabel": "Oisixのおためしセットを見る",
+    "isAffiliateLink": true,
+    "selectionNote": "リンク先は初めて利用する方向けのおためしセットです。1世帯1回限り。セット内容・価格・配送条件は申込画面でご確認ください。"
+  },
   "aquaclara": {
     "ctaLabel": "公式サイトで新規入会の条件を見る",
     "selectionNote": "リンク先は新規入会キャンペーンです。無料お試しとは異なります。対象サーバー・料金・最低利用期間・退会費用をご確認ください。"

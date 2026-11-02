@@ -32,6 +32,7 @@ export interface AffiliateLinks {
   moshimoUrl?: string;
   a8Url?: string;
   officialUrl?: string;  // サービス系商品の公式サイトCTAリンク
+  impressionUrl?: string; // ASP管理画面で発行された表示計測用画像URL
   ctaLabel?: string;     // ボタン文言（例："無料お試しに申し込む"）
   isAffiliateLink?: boolean; // officialUrlが提携リンクか（未設定=true）。提携否認等で素のURLを入れる場合はfalse
 }
